@@ -12,7 +12,14 @@
     {% endblock %}
 
     {% block main_css %}<!-- remove if not used! -->
+        <!-- bootstrap link -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- custom css link -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- google font -->
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+        <!-- font awesome link -->
+        <script src="https://kit.fontawesome.com/bfcbb8f6a3.js" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block extra_css %}<!-- remove if not used! -->
@@ -20,14 +27,60 @@
 
     <title>Slurps | {% block tab_title %}{% endblock %}</title>
 </head>
-    <body>
+    <body> 
+        <!-- bootstrap navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand" href="#">Slurps</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Juices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Smoothies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign Up/Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
         {% if messages %}<!-- remove if not used! -->
         {% endif %}
 
         {% block page_header %}<!-- remove if not used! -->
         {% endblock %}
 
-        {% block content %}<!-- remove if not used! -->
+        {% block page_title %}
+        {% endblock %}
+
+        {% block context %}
         {% endblock %}
 
 

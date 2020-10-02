@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
-<title>Slurps | {% block tab_title %}Home{% endblock %}</title>
+<title>{% block tab_title %}Home{% endblock %}</title>
 
-{% block content %}
-    <p class="text-danger">Hi there world!</p>
+{% block page_title %}
+{% endblock %}
+
+{% block context %}
 {% endblock %}
