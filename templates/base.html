@@ -29,7 +29,7 @@
 </head>
     <body> 
         <!-- bootstrap navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
             <a class="navbar-brand" href="{% url 'home' %}">Slurps</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,18 +48,31 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up/Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Log Out</a>
-                    </li>
+                    {% if request.user.is_superuser %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Administration</a>
+                        </li>
+                    {% endif %}
+                    {% if not request.user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up/Log In</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                    {% endif %}
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    {% csrf_token %}
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
         </nav>
 
         <div class="text-right">
-            <a href="#"><i class="fa-2x fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fa-2x fas fa-shopping-cart text-secondary"></i></a>
         </div>
 
         <h1 class="text-center">{% block page_title_1 %}{% endblock %}</h1>
@@ -68,7 +81,7 @@
         <h1 class="text-center">{% block page_title_4 %}{% endblock %}</h1>
 
         <div class="text-right">
-            <a href="#"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
+            <a href="#"><i class="fa-2x fas fa-arrow-circle-up text-secondary"></i></a>
         </div>
 
 
@@ -83,14 +96,16 @@
 
 
         <footer>
-            <div class="card border-primary mb-3">
-                <div class="card-footer bg-primary border-primary text-center">
+            <div class="card border-success mb-3">
+                <div class="card-footer bg-success border-success text-center">
                     <i class="fa-2x fab fa-youtube"></i>
                     <i class="fa-2x fab fa-twitter-square"></i>
                     <i class="fa-2x fab fa-snapchat-square"></i>
                     <i class="fa-2x fab fa-facebook-square"></i>
                     <i class="fa-2x fab fa-instagram"></i>
-                    <p>+585 8415 7327 <br> slurps@civoo.com <br> Slurps 91 North Street, Winterfield, E92 3QB.</p>                  
+                    <p>
+                        +585 8415 7327<br>slurps@civoo.com<br> Slurps 91 North Street, Winterfield, E92 3QB.
+                    </p>                  
                 </div>
             </div>
         </footer>
