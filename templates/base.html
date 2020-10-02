@@ -25,12 +25,12 @@
     {% block extra_css %}<!-- remove if not used! -->
     {% endblock %}
 
-    <title>Slurps | {% block tab_title %}{% endblock %}</title>
+    <title>Slurps {% block tab_title %}{% endblock %}</title>
 </head>
     <body> 
         <!-- bootstrap navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <a class="navbar-brand" href="#">Slurps</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Slurps</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,17 +58,10 @@
             </div>
         </nav>
         
-
-
-
-
-
-
-
-
-
-
-
+        <h1 class="text-center">{% block page_title_1 %}{% endblock %}</h1>
+        <h1 class="text-center">{% block page_title_2 %}{% endblock %}</h1>
+        <h1 class="text-center">{% block page_title_3 %}{% endblock %}</h1>
+        <h1 class="text-center">{% block page_title_4 %}{% endblock %}</h1>
 
 
         {% if messages %}<!-- remove if not used! -->
@@ -77,11 +70,22 @@
         {% block page_header %}<!-- remove if not used! -->
         {% endblock %}
 
-        {% block page_title %}
-        {% endblock %}
-
         {% block context %}
         {% endblock %}
+
+
+        <footer>
+            <div class="card border-primary mb-3">
+                <div class="card-footer bg-primary border-primary text-center">
+                    <i class="fa-2x fab fa-youtube"></i>
+                    <i class="fa-2x fab fa-twitter-square"></i>
+                    <i class="fa-2x fab fa-snapchat-square"></i>
+                    <i class="fa-2x fab fa-facebook-square"></i>
+                    <i class="fa-2x fab fa-instagram"></i>
+                    <p>+585 8415 7327 <br> slurps@civoo.com <br> Slurps 91 North Street, Winterfield, E92 3QB.</p>                  
+                </div>
+            </div>
+        </footer>
 
 
 
@@ -107,6 +111,8 @@
         {% endblock %}
 
         {% block extra_js %}<!-- remove if not used! -->
+            <!-- jquery cdn link-->
+            <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
         {% endblock %}
     </body>
 </html>
