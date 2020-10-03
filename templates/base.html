@@ -15,7 +15,7 @@
         <!-- bootstrap link -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <!-- custom css link -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <!-- google font -->
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
         <!-- font awesome link -->
@@ -72,7 +72,16 @@
         </nav>
 
         <div class="text-right">
-            <a href="#"><i class="fa-2x fas fa-shopping-cart text-secondary"></i></a>
+            <a href="#">
+                <i class="fa-2x fas fa-shopping-cart text-dark"></i>
+                <p>
+                    {% if grand_total %}
+                        £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                        £0.00
+                    {% endif %}
+                </p>
+            </a>
         </div>
 
         <h1 class="text-center">{% block page_title_1 %}{% endblock %}</h1>
@@ -81,7 +90,7 @@
         <h1 class="text-center">{% block page_title_4 %}{% endblock %}</h1>
 
         <div class="text-right">
-            <a href="#"><i class="fa-2x fas fa-arrow-circle-up text-secondary"></i></a>
+            <a href="#"><i class="fa-2x fas fa-arrow-circle-up text-dark"></i></a>
         </div>
 
 
