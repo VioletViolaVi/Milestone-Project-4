@@ -1,0 +1,34 @@
+/******************************************* universal */
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+.fixed-cart,
+.fixed-arrow {
+  position: absolute;
+  right: 0em;
+}
+
+.fixed-arrow {
+    top: 35em;
+}
+
+/******************************************* footer */
+body {
+  position: relative;
+  padding-bottom: 150px;
+  min-height: 100vh;
+  padding-top: 4em;
+}
+
+.card {
+  border-radius: 0px;
+}
+
+.footer-contacts {
+  position: absolute;
+}

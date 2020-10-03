@@ -14,12 +14,12 @@
     {% block main_css %}<!-- remove if not used! -->
         <!-- bootstrap link -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <!-- custom css link -->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <!-- google font -->
-        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <!-- font awesome link -->
         <script src="https://kit.fontawesome.com/bfcbb8f6a3.js" crossorigin="anonymous"></script>
+        <!-- custom css link -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 
     {% block extra_css %}<!-- remove if not used! -->
@@ -27,86 +27,80 @@
 
     <title>Slurps {% block tab_title %}{% endblock %}</title>
 </head>
-    <body> 
+    <body class="text-center text-body"> 
         <!-- bootstrap navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-warning">
             <a class="navbar-brand" href="{% url 'home' %}">Slurps</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span><i class="fa-1x fas fa-bars text-body"></i></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link text-body" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Juices</a>
+                        <a class="nav-link text-body" href="#">Juices</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Smoothies</a>
+                        <a class="nav-link text-body" href="#">Smoothies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link text-body" href="#">About Us</a>
                     </li>
                     {% if request.user.is_superuser %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Administration</a>
+                            <a class="nav-link text-body" href="#">Administration</a>
                         </li>
                     {% endif %}
                     {% if not request.user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'account_signup' %}">Sign Up/Log In</a>
+                            <a class="nav-link text-body" href="{% url 'account_signup' %}">Sign Up/Log In</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log Out</a>
+                            <a class="nav-link text-body" href="#">Log Out</a>
                         </li>
                     {% endif %}
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     {% csrf_token %}
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-dark my-2 my-sm-0 mx-auto" type="submit">Search</button>
                 </form>
             </div>
         </nav>
 
-        <div class="text-right">
-            <a href="#">
-                <i class="fa-2x fas fa-shopping-cart text-dark"></i>
-                <p>
-                    {% if grand_total %}
-                        £{{ grand_total|floatformat:2 }}
-                    {% else %}
-                        £0.00
-                    {% endif %}
-                </p>
-            </a>
+        <div class="fixed-arrow">
+            <a href="#" class="text-body"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
         </div>
 
-        <h1 class="text-center">{% block page_title_1 %}{% endblock %}</h1>
-        <h1 class="text-center">{% block page_title_2 %}{% endblock %}</h1>
-        <h1 class="text-center">{% block page_title_3 %}{% endblock %}</h1>
-        <h1 class="text-center">{% block page_title_4 %}{% endblock %}</h1>
+        {% block content %}
+        {% endblock %}
 
-        <div class="text-right">
-            <a href="#"><i class="fa-2x fas fa-arrow-circle-up text-dark"></i></a>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         {% if messages %}<!-- remove if not used! -->
         {% endif %}
 
         {% block page_header %}<!-- remove if not used! -->
-        {% endblock %}
+        {% endblock %}        
 
-        {% block content %}
-        {% endblock %}
-
-
-        <footer>
-            <div class="card border-success mb-3">
-                <div class="card-footer bg-success border-success text-center">
+        <footer class="footer-contacts">
+            <div class="card border-warning">
+                <div class="card-footer bg-warning border-warning text-center pb-0">
                     <i class="fa-2x fab fa-youtube"></i>
                     <i class="fa-2x fab fa-twitter-square"></i>
                     <i class="fa-2x fab fa-snapchat-square"></i>
@@ -118,20 +112,6 @@
                 </div>
             </div>
         </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {% block postloadjs %}<!-- remove if not used! -->
         {% endblock %}
