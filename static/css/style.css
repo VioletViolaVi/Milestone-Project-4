@@ -7,14 +7,61 @@
   list-style: none;
 }
 
-.fixed-cart,
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
+
 .fixed-arrow {
+  top: 35em;
   position: absolute;
   right: 0em;
 }
 
-.fixed-arrow {
-    top: 35em;
+/******************************************* header */
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  background-color: lightgray;
+  transition: 0.5s;
+}
+
+.history-trolley-border {
+  background-color: lightgray;
+  height: 3.5em;
+  position: absolute;
+  width: 100%;
+  top: 3.5em;
+}
+
+.checkout-history-btn {
+  background-color: gray;
+  border-radius: 0.2em;
+  padding: 0.5em;
+  display: inline;
+  margin-right: 1em;
+}
+
+.trolley-price {
+  font-size: 1.2em;
+}
+
+.fas.fa-shopping-cart {
+  font-size: 2em;
+  margin-top: 0.2em;
 }
 
 /******************************************* footer */

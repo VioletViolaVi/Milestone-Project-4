@@ -3,24 +3,10 @@
 
 {% block tab_title %}| Home{% endblock %}
 
-{% block home %}
-    <div class="fixed-cart position-fixed mr-1">
-        <a href="#" class="text-body">
-            <i class="fa-2x fas fa-shopping-cart"></i>
-            <p>
-                {% if grand_total %}
-                    £{{ grand_total|floatformat:2 }}
-                {% else %}
-                    £0.00
-                {% endif %}
-            </p>
-        </a>
-    </div> 
-    
+{% block home %}   
     {% include "includes/new-drinks.html" %}
     {% include "includes/juices.html" %}   
     {% include "includes/smoothies.html" %}  
-    {% include "includes/about-us.html" %} 
-    
+    {% include "includes/about-us.html" %}   
 {% endblock %}
     

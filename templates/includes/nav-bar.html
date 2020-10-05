@@ -1,6 +1,6 @@
 <!-- bootstrap navbar -->
-<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand" href="{% url 'home' %}">Slurps</a>
+<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand font-weight-bold" href="{% url 'home' %}">Slurps</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa-1x fas fa-bars text-body"></i></span>
     </button>
@@ -36,7 +36,6 @@
         <form class="form-inline my-2 my-lg-0">
             {% csrf_token %}
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-dark my-2 my-sm-0 mx-auto" type="submit">Search</button>
         </form>
     </div>
 </nav>

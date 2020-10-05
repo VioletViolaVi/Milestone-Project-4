@@ -28,49 +28,41 @@
     <title>Slurps {% block tab_title %}{% endblock %}</title>
 </head>
     <body class="text-center text-body"> 
-        {% include "includes/nav-bar.html" %}
-
+        <header>
+            {% include "includes/nav-bar.html" %}
+            <div class="history-trolley-border">
+                <a href="#" class="text-body">
+                    <div class="checkout-history-btn font-weight-bold">CHECKOUT HISTORY</div>
+                </a>
+                
+                <a href="#" class="text-body">                    
+                    <i class="fas fa-shopping-cart"></i> 
+                    <span class="trolley-price font-weight-bold">
+                        {% if grand_total %}
+                            £{{ grand_total|floatformat:2 }}
+                        {% else %}
+                            £0.00
+                        {% endif %}
+                    </span>                                    
+                </a> 
+            </div>
+        </header>
+        
         <div class="fixed-arrow">
             <a href="#" class="text-body"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
         </div>
 
+        <br><br>
         {% block home %}
         {% endblock %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {% if messages %}<!-- remove if not used! -->
         {% endif %}
 
         {% block page_header %}<!-- remove if not used! -->
-        {% endblock %}        
+        {% endblock %}  
 
-        <footer class="footer-contacts">
-            <div class="card border-warning">
-                <div class="card-footer bg-warning border-warning text-center pb-0">
-                    <i class="fa-2x fab fa-youtube"></i>
-                    <i class="fa-2x fab fa-twitter-square"></i>
-                    <i class="fa-2x fab fa-snapchat-square"></i>
-                    <i class="fa-2x fab fa-facebook-square"></i>
-                    <i class="fa-2x fab fa-instagram"></i>
-                    <p>
-                        +585 8415 7327<br>slurps@civoo.com<br> Slurps 91 North Street, Winterfield, E92 3QB.
-                    </p>                  
-                </div>
-            </div>
-        </footer>
+        {% include "includes/footer.html" %}
 
         {% block postloadjs %}<!-- remove if not used! -->
         {% endblock %}
