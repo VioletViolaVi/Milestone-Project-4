@@ -13,29 +13,25 @@
                 <a class="nav-link text-body" href="#">Juices</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-body" href="#">Smoothies</a>
+                <a class="nav-link text-body" href="#">Milkshakes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-body" href="#">About Us</a>
             </li>
-            {% if request.user.is_superuser %}
-                <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Administration</a>
-                </li>
-            {% endif %}
-            {% if not request.user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link text-body" href="{% url 'account_signup' %}">Sign Up/Log In</a>
-                </li>
-            {% else %}
-                <li class="nav-item">
-                    <a class="nav-link text-body" href="#">Log Out</a>
-                </li>
-            {% endif %}
+            <li class="nav-item">
+                <a class="nav-link text-body" href="#">Administration</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="{% url 'account_signup' %}">Sign Up/Log In</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-body" href="#">Log Out</a>
+            </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form method="GET" action="#" class="form-inline my-2 my-lg-0">
             {% csrf_token %}
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control mr-sm-2 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0 text-body font-weight-bold" type="submit">Search</button>
         </form>
     </div>
 </nav>
