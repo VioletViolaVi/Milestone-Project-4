@@ -41,30 +41,15 @@
     <body class="text-center text-body"> 
         <header>
             {% include "includes/nav-bar.html" %}
-            <div class="history-and-trolley-bg">
-                <a href="#" class="text-body">
-                    <div class="checkout-history-btn font-weight-bold text-uppercase">checkout history</div>
-                </a>
-                
-                <a href="#" class="{% if grand_total %}text-secondary{% else %}text-body{% endif %}">                    
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="trolley-counter">0</span>
-                    <span class="trolley-price font-weight-bold">
-                        {% if grand_total %}
-                            £{{ grand_total|floatformat:2 }}
-                        {% else %}
-                            £0.00
-                        {% endif %}
-                    </span>                                    
-                </a> 
-            </div>
+            {% include "includes/history-and-trolley.html" %}
+            {% include "includes/delivery-cost.html" %}            
         </header>
         
         <div class="fixed-arrow">
             <a href="#" class="text-body"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
         </div>
 
-        <br><br>
+        <br><br><br><br>
         {% block home %}
         {% endblock %}
 

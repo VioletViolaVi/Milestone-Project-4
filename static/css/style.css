@@ -24,29 +24,35 @@ a:focus {
 /******************************************* header */
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus {
+.navbar-toggler-icon:focus,
+.navbar input[type="search"]:focus {
   outline: none;
   box-shadow: none;
   border: gray solid 0.2em;
 }
 
-.nav-link {
+.nav-link,
+.trolley-price,
+.trolley-counter {
   font-size: 1.2em;
+}
+
+.nav-link {
   font-weight: bold;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.history-and-trolley-bg,
+mark {
   background-color: lightgray;
+}
+
+.nav-link:hover {
   transition: 0.5s;
 }
 
 .navbar input[type="search"] {
   border: gray solid 0.1em;
-}
-
-.navbar input[type="search"]:focus {
-  box-shadow: none;
-  border: gray solid 0.2em;
 }
 
 .navbar-collapse input.form-control {
@@ -57,16 +63,33 @@ a:focus {
   width: 30%;
 }
 
-.history-and-trolley-bg {
-  background-color: lightgray;
-  height: 3.6em;
+.history-and-trolley-bg,
+.delivery-cost {
   width: 100%;
-  top: 3.5em;
   position: fixed;
 }
 
-.checkout-history-btn {
+.checkout-history-btn,
+.delivery-cost {
   background-color: gray;
+}
+
+.trolley-price,
+.trolley-counter {
+  position: absolute;
+}
+
+.trolley-counter,
+.delivery-cost {
+  font-weight: 900;
+}
+
+.history-and-trolley-bg {
+  height: 3.7em;
+  top: 3.5em;
+}
+
+.checkout-history-btn {
   border-radius: 0.2em;
   padding: 0.5em;
   display: inline;
@@ -78,8 +101,6 @@ a:focus {
 }
 
 .trolley-price {
-  font-size: 1.2em;
-  position: absolute;
   right: 1.5em;
   top: 1.7em;
 }
@@ -90,10 +111,16 @@ a:focus {
 }
 
 .trolley-counter {
-  position: absolute;
-  font-size: 1.2em;
-  font-weight: 900;
   top: -0.2em;
+}
+
+.delivery-cost {
+  margin-top: 2.1em;
+  font-size: 1.5em;
+}
+
+mark {
+  padding: 0em 0.2em 0 0.1em;
 }
 
 /******************************************* footer */
