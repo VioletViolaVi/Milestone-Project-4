@@ -41,13 +41,14 @@
     <body class="text-center text-body"> 
         <header>
             {% include "includes/nav-bar.html" %}
-            <div class="history-trolley-border">
+            <div class="history-and-trolley-bg">
                 <a href="#" class="text-body">
-                    <div class="checkout-history-btn font-weight-bold">CHECKOUT HISTORY</div>
+                    <div class="checkout-history-btn font-weight-bold text-uppercase">checkout history</div>
                 </a>
                 
-                <a href="#" class="text-body">                    
-                    <i class="fas fa-shopping-cart"></i> 
+                <a href="#" class="{% if grand_total %}text-secondary{% else %}text-body{% endif %}">                    
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="trolley-counter">0</span>
                     <span class="trolley-price font-weight-bold">
                         {% if grand_total %}
                             £{{ grand_total|floatformat:2 }}

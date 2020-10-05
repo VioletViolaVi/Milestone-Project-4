@@ -57,9 +57,9 @@ a:focus {
   width: 30%;
 }
 
-.history-trolley-border {
+.history-and-trolley-bg {
   background-color: lightgray;
-  height: 3.5em;
+  height: 3.6em;
   width: 100%;
   top: 3.5em;
   position: fixed;
@@ -79,11 +79,21 @@ a:focus {
 
 .trolley-price {
   font-size: 1.2em;
+  position: absolute;
+  right: 1.5em;
+  top: 1.7em;
 }
 
 .fas.fa-shopping-cart {
   font-size: 2em;
   margin-top: 0.2em;
+}
+
+.trolley-counter {
+  position: absolute;
+  font-size: 1.2em;
+  font-weight: 900;
+  top: -0.2em;
 }
 
 /******************************************* footer */
