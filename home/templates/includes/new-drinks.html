@@ -1,25 +1,37 @@
 <section>
-    <h1 class="text-capitalize">new drinks</h1><p>{{ new_juices }}</p>
-    <div>
+    <h1 class="text-capitalize">new drinks</h1>
+    <div class="text-left">
         {% for new_drink in new_drinks %}
-            <div class="drinks_img">
-                <img src="{{ new_drink.image }}" alt="{{ new_drink.drink_name }}">
+            <div class="container">                
+                <div class="row">
+                    
+                    <div class="col pr-0">
+                        <div class="drinks_img">
+                            <img src="{{ new_drink.image }}" alt="{{ new_drink.drink_name }}">
+                        </div>
+                    </div>
+                    <div class="col pl-1">
+                        <ul class="mb-0">
+                            <li class="text-capitalize">{{ new_drink.drink_name }}</li> 
+                            <li>1x{{ new_drink.millilitres }}ml</li>                            
+                            <li>£{{ new_drink.price}}</li>                            
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="row mb-5">
+                    
+                    <div class="col text-center mt-2">
+                        <form method="GET" action="#" class="quantity-selection">
+                            {% csrf_token %}
+                            <label for="drinkSelections"></label>
+                            <input type="number" id="drinkSelections" name="drinkSelections">
+                            <button type="submit" class="text-uppercase">add to cart</button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
-            <div class="text-capitalize">
-                {{ new_drink.drink_name }}
-            </div>
-            <div>
-                £{{ new_drink.price}}
-            </div>            
-            <div>
-                1x{{ new_drink.millilitres }}ml
-            </div>
-            <form method="GET" action="#" class="quantity-selection">
-                {% csrf_token %}
-                <label for="drinkSelections"></label>
-                <input type="number" id="drinkSelections" name="drinkSelections">
-                <button type="submit" class="text-uppercase">add to cart</button>
-            </form>
         {% endfor %}
     </div>
 </section>

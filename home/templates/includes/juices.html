@@ -1,25 +1,37 @@
 <section>
     <h1 class="text-capitalize">juices</h1>
-    <div>
+    <div class="text-left">
         {% for juice in juices %}
-            <div class="drinks_img">
-                <img src="{{ juice.image }}" alt="{{ juice.drink_name }}">
+            <div class="container">                
+                <div class="row">
+
+                    <div class="col pr-0">
+                        <div class="drinks_img">
+                            <img src="{{ juice.image }}" alt="{{ juice.drink_name }}">
+                        </div>
+                    </div>
+                    <div class="col pl-1">
+                        <ul class="mb-0">
+                            <li class="text-capitalize">{{ juice.drink_name }}</li> 
+                            <li>1x{{ juice.millilitres }}ml</li>                            
+                            <li>£{{ juice.price}}</li>                            
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="row mb-5"> 
+
+                    <div class="col text-center mt-2">
+                        <form method="GET" action="#" class="quantity-selection">
+                            {% csrf_token %}
+                            <label for="drinkSelections"></label>
+                            <input type="number" id="drinkSelections" name="drinkSelections">
+                            <button type="submit" class="text-uppercase">add to cart</button>
+                        </form>
+                    </div>
+
+                </div>
             </div>
-            <div class="text-capitalize">
-                {{ juice.drink_name }}
-            </div>
-            <div>
-                £{{ juice.price}}
-            </div>            
-            <div>
-                1x{{ juice.millilitres }}ml
-            </div>
-            <form method="GET" action="#" class="quantity-selection">
-                {% csrf_token %}
-                <label for="drinkSelections"></label>
-                <input type="number" id="drinkSelections" name="drinkSelections">
-                <button type="submit" class="text-uppercase">add to cart</button>
-            </form>
         {% endfor %}
     </div>
 </section>

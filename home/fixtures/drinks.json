@@ -169,9 +169,9 @@
     "pk": 16,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-cookies.jpg",
-      "drink_name": "ferrero rocher ice cream and cookies milkshake",
-      "price": 15,
+      "image": "media/milkshake-strawberry.jpg",
+      "drink_name": "light strawberry creamed milkshake",
+      "price": 12,
       "millilitres": 700,
       "drink_type": 3
     }
@@ -202,9 +202,9 @@
     "pk": 19,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-strawberry.jpg",
-      "drink_name": "light strawberry creamed milkshake",
-      "price": 12,
+      "image": "media/milkshake-cookies.jpg",
+      "drink_name": "ferrero rocher ice cream and cookies milkshake",
+      "price": 15,
       "millilitres": 700,
       "drink_type": 3
     }
