@@ -4,7 +4,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-carrot.jpg",
-      "drink_name": "ginger carrot apricot and mammee juice",
+      "drink_name": "ginger carrot apricot & mammee juice",
       "price": 18,
       "millilitres": 800,
       "drink_type": 2
@@ -15,7 +15,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-cucumber.jpg",
-      "drink_name": "cucumber and watercress juice",
+      "drink_name": "cucumber & watercress juice",
       "price": 11,
       "millilitres": 700,
       "drink_type": 2
@@ -26,7 +26,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-double.jpg",
-      "drink_name": "blackberry strawberry and blueberry juice",
+      "drink_name": "blackberry strawberry & blueberry juice",
       "price": 19,
       "millilitres": 800,
       "drink_type": 2
@@ -48,7 +48,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-kiwi.jpg",
-      "drink_name": "kiwi and lemon citrus juice",
+      "drink_name": "kiwi & lemon citrus juice",
       "price": 11,
       "millilitres": 700,
       "drink_type": 2
@@ -59,7 +59,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-lime.jpg",
-      "drink_name": "lime and spinach juice",
+      "drink_name": "lime & spinach juice",
       "price": 13,
       "millilitres": 700,
       "drink_type": 2
@@ -70,7 +70,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-mango.jpg",
-      "drink_name": "mango lemon and lime juice",
+      "drink_name": "mango lemon & lime juice",
       "price": 17,
       "millilitres": 800,
       "drink_type": 2
@@ -81,7 +81,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-melon.jpg",
-      "drink_name": "melon papaya persimmon and apricot juice",
+      "drink_name": "melon papaya persimmon & apricot juice",
       "price": 12,
       "millilitres": 700,
       "drink_type": 2
@@ -92,7 +92,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-pomegranate.jpg",
-      "drink_name": "pomegranate and banana juice",
+      "drink_name": "pomegranate & banana juice",
       "price": 17,
       "millilitres": 800,
       "drink_type": 2
@@ -103,7 +103,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-spotty.jpg",
-      "drink_name": "strawberry figs and acai berry juice",
+      "drink_name": "strawberry figs & acai berry juice",
       "price": 16,
       "millilitres": 800,
       "drink_type": 2
@@ -115,7 +115,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/milkshake-banana.jpg",
-      "drink_name": "banana crumble and whipped cream milkshake",
+      "drink_name": "banana crumble & whipped cream milkshake",
       "price": 20,
       "millilitres": 800,
       "drink_type": 3
@@ -137,7 +137,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/milkshake-berries.jpg",
-      "drink_name": "raspberry and blueberry milkshake",
+      "drink_name": "raspberry & blueberry milkshake",
       "price": 13,
       "millilitres": 700,
       "drink_type": 3
@@ -203,7 +203,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/milkshake-cookies.jpg",
-      "drink_name": "ferrero rocher ice cream and cookies milkshake",
+      "drink_name": "ferrero rocher ice cream & cookies milkshake",
       "price": 15,
       "millilitres": 700,
       "drink_type": 3
@@ -214,7 +214,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/milkshake-twix.jpg",
-      "drink_name": "clotted cream and milk chocolate twix milkshake",
+      "drink_name": "clotted cream & milk chocolate twix milkshake",
       "price": 14,
       "millilitres": 700,
       "drink_type": 3
@@ -226,7 +226,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-kiwi.jpg",
-      "drink_name": "kiwi and lemon citrus juice",
+      "drink_name": "kiwi & lemon citrus juice",
       "price": 11,
       "millilitres": 700,
       "drink_type": 1
@@ -237,7 +237,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/milkshake-twix.jpg",
-      "drink_name": "clotted cream and milk chocolate twix milkshake",
+      "drink_name": "clotted cream & milk chocolate twix milkshake",
       "price": 14,
       "millilitres": 700,
       "drink_type": 1
@@ -259,7 +259,7 @@
     "model": "home.drink",
     "fields": {
       "image": "media/juice-spotty.jpg",
-      "drink_name": "strawberry figs and acai berry juice",
+      "drink_name": "strawberry figs & acai berry juice",
       "price": 16,
       "millilitres": 800,
       "drink_type": 1

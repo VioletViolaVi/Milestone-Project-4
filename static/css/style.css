@@ -139,7 +139,7 @@ body {
   position: absolute;
 }
 
-/******************************************* drinks selection form */
+/******************************************* drink imgs & selection forms */
 .quantity-selection button:active,
 .quantity-selection button:focus {
   background-color: lightslategray;
@@ -171,8 +171,7 @@ body {
   padding: 0 0.5em;
 }
 
-/******************************************* drinks */
 .drinks_img img {
-  width: 100%;
+  width: 10em;
   height: 10em;
 }
