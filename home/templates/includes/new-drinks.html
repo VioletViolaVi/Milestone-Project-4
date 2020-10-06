@@ -1,11 +1,11 @@
 <section>
-    <h1 class="text-capitalize">new drinks</h1>
+    <h1 class="text-capitalize">new drinks</h1><p>{{ new_juices }}</p>
     <div>
         {% for new_drink in new_drinks %}
             <div class="drinks_img">
                 <img src="{{ new_drink.image }}" alt="{{ new_drink.drink_name }}">
             </div>
-            <div>
+            <div class="text-capitalize">
                 {{ new_drink.drink_name }}
             </div>
             <div>
