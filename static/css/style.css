@@ -66,7 +66,6 @@ mark {
 .history-and-trolley-bg,
 .delivery-cost {
   width: 100%;
-  position: fixed;
 }
 
 .checkout-history-btn,
@@ -115,7 +114,7 @@ mark {
 }
 
 .delivery-cost {
-  margin-top: 2.1em;
+  margin-top: 4.8em;
   font-size: 1.5em;
 }
 
