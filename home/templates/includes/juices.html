@@ -1,9 +1,25 @@
 <section>
     <h1 class="text-capitalize">juices</h1>
-    <form method="GET" action="#" class="quantity-selection">
-        {% csrf_token %}
-        <label for="drinkSelections"></label>
-        <input type="number" id="drinkSelections" name="drinkSelections">
-        <button type="submit" class="text-uppercase">add to cart</button>
-    </form>
+    <div>
+        {% for juice in juices %}
+            <div class="drinks_img">
+                <img src="{{ juice.image }}" alt="{{ juice.drink_name }}">
+            </div>
+            <div>
+                {{ juice.drink_name }}
+            </div>
+            <div>
+                £{{ juice.price}}
+            </div>            
+            <div>
+                1x{{ juice.millilitres }}ml
+            </div>
+            <form method="GET" action="#" class="quantity-selection">
+                {% csrf_token %}
+                <label for="drinkSelections"></label>
+                <input type="number" id="drinkSelections" name="drinkSelections">
+                <button type="submit" class="text-uppercase">add to cart</button>
+            </form>
+        {% endfor %}
+    </div>
 </section>

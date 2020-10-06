@@ -170,3 +170,9 @@ body {
   background-color: gray;
   padding: 0 0.5em;
 }
+
+/******************************************* drinks */
+.drinks_img img {
+  width: 100px;
+  height: 100px;
+}

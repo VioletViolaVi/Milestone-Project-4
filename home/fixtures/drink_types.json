@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "drinks.drink_type",
+    "model": "home.drink_type",
     "fields": {
       "programmatic_name": "new_drinks",
       "friendly_name": "New Drinks"
@@ -9,7 +9,7 @@
   },
   {
     "pk": 2,
-    "model": "drinks.drink_type",
+    "model": "home.drink_type",
     "fields": {
       "programmatic_name": "juices",
       "friendly_name": "Juices"
@@ -17,7 +17,7 @@
   },
   {
     "pk": 3,
-    "model": "drinks.drink_type",
+    "model": "home.drink_type",
     "fields": {
       "programmatic_name": "milkshakes",
       "friendly_name": "Milkshakes"
