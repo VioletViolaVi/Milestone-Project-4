@@ -3,11 +3,12 @@
     "pk": 1,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-carrot",
       "image": "juice-carrot.jpg",
-      "name": "GINGER CARROT APRICOT AND MAMMEE JUICE",
-      "price": 15,
-      "rating": 5,
+      "drink_name": "GINGER CARROT APRICOT AND MAMMEE JUICE",
+      "price": 18,
+      "millilitres": 800,
+      "drink_type": 2,
+      "image_name": "juice-carrot",
       "url": "https://unsplash.com/photos/hVk0-hqA69k"
     }
   },
@@ -15,11 +16,12 @@
     "pk": 2,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-cucumber",
       "image": "juice-cucumber.jpg",
-      "name": "CUCUMBER AND WATERCRESS JUICE",
+      "drink_name": "CUCUMBER AND WATERCRESS JUICE",
       "price": 11,
-      "rating": 4,
+      "millilitres": 700,
+      "drink_type": 2,
+      "image_name": "juice-cucumber",
       "url": "https://unsplash.com/photos/kQ_LOSqR-70"
     }
   },
@@ -27,11 +29,12 @@
     "pk": 3,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-double",
       "image": "juice-double.jpg",
-      "name": "BLACKBERRY STRAWBERRY AND BLUEBERRY JUICE",
-      "price": 18,
-      "rating": 5,
+      "drink_name": "BLACKBERRY STRAWBERRY AND BLUEBERRY JUICE",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 2,
+      "image_name": "juice-double",
       "url": "https://unsplash.com/photos/cjiJUfFCoUs"
     }
   },
@@ -39,11 +42,12 @@
     "pk": 4,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-dragonfruit",
       "image": "juice-dragonfruit.jpg",
-      "name": "DRAGON FRUIT JUICE",
-      "price": 18,
-      "rating": 5,
+      "drink_name": "DRAGON FRUIT JUICE",
+      "price": 15,
+      "millilitres": 700,
+      "drink_type": 2,
+      "image_name": "juice-dragonfruit",
       "url": "https://unsplash.com/photos/bdAG56v1YGQ"
     }
   },
@@ -51,11 +55,12 @@
     "pk": 5,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-kiwi",
       "image": "juice-kiwi.jpg",
-      "name": "KIWI AND LEMON CITRUS JUICE",
+      "drink_name": "KIWI AND LEMON CITRUS JUICE",
       "price": 11,
-      "rating": 5,
+      "millilitres": 700,
+      "drink_type": 2,
+      "image_name": "juice-kiwi",
       "url": "https://unsplash.com/photos/TF4jwR8pllw"
     }
   },
@@ -63,11 +68,12 @@
     "pk": 6,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-lime",
       "image": "juice-lime.jpg",
-      "name": "LIME AND SPINACH JUICE",
-      "price": 16,
-      "rating": 4,
+      "drink_name": "LIME AND SPINACH JUICE",
+      "price": 13,
+      "millilitres": 700,
+      "drink_type": 2,
+      "image_name": "juice-lime",
       "url": "https://unsplash.com/photos/jH1PBHevj38"
     }
   },
@@ -75,11 +81,12 @@
     "pk": 7,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-mango",
       "image": "juice-mango.jpg",
-      "name": "MANGO LEMON AND LIME JUICE",
-      "price": 18,
-      "rating": 4,
+      "drink_name": "MANGO LEMON AND LIME JUICE",
+      "price": 17,
+      "millilitres": 800,
+      "drink_type": 2,
+      "image_name": "juice-mango",
       "url": "https://unsplash.com/photos/lw8GflbJwLc"
     }
   },
@@ -87,11 +94,12 @@
     "pk": 8,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-melon",
       "image": "juice-melon.jpg",
-      "name": "MELON PAPAYA PERSIMMON AND APRICOT JUICE",
+      "drink_name": "MELON PAPAYA PERSIMMON AND APRICOT JUICE",
       "price": 12,
-      "rating": 4,
+      "millilitres": 700,
+      "drink_type": 2,
+      "image_name": "juice-melon",
       "url": "https://unsplash.com/photos/pPhN8HFzkDE"
     }
   },
@@ -99,144 +107,210 @@
     "pk": 9,
     "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-pomegranate",
       "image": "juice-pomegranate.jpg",
-      "name": "POMEGRANATE AND BANANA JUICE",
+      "drink_name": "POMEGRANATE AND BANANA JUICE",
       "price": 17,
-      "rating": 7,
+      "millilitres": 800,
+      "drink_type": 2,
+      "image_name": "juice-pomegranate",
       "url": "https://unsplash.com/photos/yIE7pZUmT_s"
     }
   },
   {
-    "pk": 10
-    "model": "drinks.drink",,
+    "pk": 10,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "juice-spotty",
       "image": "juice-spotty.jpg",
-      "name": "STRAWBERRY FIGS AND ACAI BERRY JUICE",
+      "drink_name": "STRAWBERRY FIGS AND ACAI BERRY JUICE",
       "price": 16,
-      "rating": 4,
+      "millilitres": 800,
+      "drink_type": 2,
+      "image_name": "juice-spotty",
       "url": "https://unsplash.com/photos/n73TTunlskE"
     }
   },
+
   {
-    "pk": 11
-    "model": "drinks.drink",,
+    "pk": 11,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-banana",
       "image": "milkshake-banana.jpg",
-      "name": "BANANA CRUMBLE AND WHIPPED CREAM MILKSHAKE",
+      "drink_name": "BANANA CRUMBLE AND WHIPPED CREAM MILKSHAKE",
       "price": 20,
-      "rating": 4,
+      "millilitres": 800,
+      "drink_type": 3,
+      "image_name": "milkshake-banana",
       "url": "https://unsplash.com/photos/MOY2HiJxgyA"
     }
   },
   {
-    "pk": 12
-    "model": "drinks.drink",,
+    "pk": 12,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-beans",
       "image": "milkshake-beans.jpg",
-      "name": "CHOCOLATE COFFEE PUDDING MILKSHAKE",
-      "price": 11,
-      "rating": 5,
+      "drink_name": "CHOCOLATE COFFEE PUDDING MILKSHAKE",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 3,
+      "image_name": "milkshake-beans",
       "url": "https://unsplash.com/photos/K3aaLUeCnIg"
     }
   },
   {
-    "pk": 13
-    "model": "drinks.drink",,
+    "pk": 13,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-berries",
       "image": "milkshake-berrie.jpg",
-      "name": "RASPBERRY AND BLUEBERRY MILKSHAKE",
-      "price": 16,
-      "rating": 5,
+      "drink_name": "RASPBERRY AND BLUEBERRY MILKSHAKE",
+      "price": 13,
+      "millilitres": 700,
+      "drink_type": 3,
+      "image_name": "milkshake-berries",
       "url": "https://unsplash.com/photos/h6ccJcVHh20"
     }
   },
   {
-    "pk": 14
-    "model": "drinks.drink",,
+    "pk": 14,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-blueberries",
       "image": "milkshake-blueberries.jpg",
-      "name": "DOUBLE CREAMED BLUEBERRY MILKSHAKE",
+      "drink_name": "DOUBLE CREAMED BLUEBERRY MILKSHAKE",
       "price": 16,
-      "rating": 4,
+      "millilitres": 800,
+      "drink_type": 3,
+      "image_name": "milkshake-blueberries",
       "url": "https://unsplash.com/photos/GPcoF-s6_DI"
     }
   },
   {
-    "pk": 15
-    "model": "drinks.drink",,
+    "pk": 15,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-coconut",
       "image": "milkshake-coconut.jpg",
-      "name": "COCONUT MILKSHAKE",
+      "drink_name": "COCONUT MILKSHAKE",
       "price": 20,
-      "rating": 4,
+      "millilitres": 800,
+      "drink_type": 3,
+      "image_name": "milkshake-coconut",
       "url": "https://unsplash.com/photos/w8POFpfCRP8"
     }
   },
   {
-    "pk": 16
-    "model": "drinks.drink",,
+    "pk": 16,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-cookies",
       "image": "milkshake-cookies.jpg",
-      "name": "FERRERO ROCHER ICE CREAM AND COOKIES MILKSHAKE",
+      "drink_name": "FERRERO ROCHER ICE CREAM AND COOKIES MILKSHAKE",
       "price": 15,
-      "rating": 5,
+      "millilitres": 700,
+      "drink_type": 3,
+      "image_name": "milkshake-cookies",
       "url": "https://unsplash.com/photos/NWTPcPE1nJI"
     }
   },
   {
-    "pk": 17
-    "model": "drinks.drink",,
+    "pk": 17,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-raspberry",
       "image": "milkshake-raspberry.jpg",
-      "name": "CREME FRAICHE RASPBERRY MILKSHAKE",
+      "drink_name": "CREME FRAICHE RASPBERRY MILKSHAKE",
       "price": 14,
-      "rating": 5,
+      "millilitres": 700,
+      "drink_type": 3,
+      "image_name": "milkshake-raspberry",
       "url": "https://unsplash.com/photos/8oIo60aLztg"
     }
   },
   {
-    "pk": 18
-    "model": "drinks.drink",,
+    "pk": 18,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-shortcake",
       "image": "milkshake-shortcake.jpg",
-      "name": "STRAWBERRY SHORTCAKE MILKSHAKE",
+      "drink_name": "STRAWBERRY SHORTCAKE MILKSHAKE",
       "price": 18,
-      "rating": 4,
+      "millilitres": 800,
+      "drink_type": 3,
+      "image_name": "milkshake-shortcake",
       "url": "https://unsplash.com/photos/wBIeri0fLuw"
     }
   },
   {
-    "pk": 19
-    "model": "drinks.drink",,
+    "pk": 19,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-strawberry",
       "image": "milkshake-strawberry.jpg",
-      "name": "LIGHT STRAWBERRY CREAMED MILKSHAKE",
+      "drink_name": "LIGHT STRAWBERRY CREAMED MILKSHAKE",
       "price": 12,
-      "rating": 5,
+      "millilitres": 700,
+      "drink_type": 3,
+      "image_name": "milkshake-strawberry",
       "url": "https://unsplash.com/photos/rwBJaJdesGg"
     }
   },
   {
-    "pk": 20
-    "model": "drinks.drink",,
+    "pk": 20,
+    "model": "drinks.drink",
     "fields": {
-      "image_name": "milkshake-twix",
       "image": "milkshake-twix.jpg",
-      "name": "CLOTTED CREAM AND MILK CHOCOLATE TWIX MILKSHAKE",
+      "drink_name": "CLOTTED CREAM AND MILK CHOCOLATE TWIX MILKSHAKE",
       "price": 14,
-      "rating": 5,
+      "millilitres": 700,
+      "drink_type": 3,
+      "image_name": "milkshake-twix",
       "url": "https://unsplash.com/photos/uy9DJw9e_vs"
+    }
+  },
+
+  {
+    "pk": 21,
+    "model": "drinks.drink",
+    "fields": {
+      "image": "juice-kiwi.jpg",
+      "drink_name": "KIWI AND LEMON CITRUS JUICE",
+      "price": 11,
+      "millilitres": 700,
+      "drink_type": 1,
+      "image_name": "juice-kiwi",
+      "url": "https://unsplash.com/photos/TF4jwR8pllw"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "drinks.drink",
+    "fields": {
+      "image": "milkshake-twix.jpg",
+      "drink_name": "CLOTTED CREAM AND MILK CHOCOLATE TWIX MILKSHAKE",
+      "price": 14,
+      "millilitres": 700,
+      "drink_type": 1,
+      "image_name": "milkshake-twix",
+      "url": "https://unsplash.com/photos/uy9DJw9e_vs"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "drinks.drink",
+    "fields": {
+      "image": "milkshake-coconut.jpg",
+      "drink_name": "COCONUT MILKSHAKE",
+      "price": 20,
+      "millilitres": 800,
+      "drink_type": 1,
+      "image_name": "milkshake-coconut",
+      "url": "https://unsplash.com/photos/w8POFpfCRP8"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "drinks.drink",
+    "fields": {
+      "image": "juice-spotty.jpg",
+      "drink_name": "STRAWBERRY FIGS AND ACAI BERRY JUICE",
+      "price": 16,
+      "millilitres": 800,
+      "drink_type": 1,
+      "image_name": "juice-spotty",
+      "url": "https://unsplash.com/photos/n73TTunlskE"
     }
   }
 ]
