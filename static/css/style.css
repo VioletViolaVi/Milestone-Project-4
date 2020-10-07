@@ -47,6 +47,10 @@ mark {
   background-color: lightgray;
 }
 
+.fixed-top.navbar.navbar-expand-lg.navbar-light {
+  z-index: 1070;
+}
+
 .nav-link:hover {
   transition: 0.5s;
 }
@@ -64,44 +68,48 @@ mark {
 }
 
 .history-and-trolley-bg,
-.delivery-cost {
+.delivery-cost-bg {
   width: 100%;
 }
 
 .checkout-history-btn,
-.delivery-cost {
+.delivery-cost-bg {
   background-color: gray;
 }
 
-.trolley-price,
-.trolley-counter {
-  position: absolute;
-}
-
 .trolley-counter,
-.delivery-cost {
+.delivery-cost-bg {
   font-weight: 900;
 }
 
 .history-and-trolley-bg {
-  height: 3.7em;
-  top: 3.5em;
+  height: 6em;
+  margin-top: 3.4em;
 }
 
 .checkout-history-btn {
   border-radius: 0.2em;
-  padding: 0.5em;
   display: inline;
-  margin-right: 1em;
 }
 
 .checkout-history-btn:active {
   background-color: lightslategray;
 }
 
+.trolley-counter {
+  position: absolute;
+}
+
+.counter-circle {
+  height: 25px;
+  width: 25px;
+  background-color: slategray;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .trolley-price {
-  right: 1.5em;
-  top: 1.7em;
+  text-align: right;
 }
 
 .fas.fa-shopping-cart {
@@ -113,8 +121,8 @@ mark {
   top: -0.2em;
 }
 
-.delivery-cost {
-  margin-top: 4.8em;
+.delivery-cost-bg {
+  margin-top: 5.5em;
   font-size: 1.5em;
 }
 
@@ -125,7 +133,6 @@ mark {
 /******************************************* footer */
 body {
   position: relative;
-  padding-bottom: 150px;
   min-height: 100vh;
   padding-top: 4em;
 }
@@ -134,8 +141,8 @@ body {
   border-radius: 0px;
 }
 
-.footer-contacts {
-  position: absolute;
+.card-footer:last-child {
+  border-radius: 0;
 }
 
 /******************************************* home page */
@@ -174,4 +181,12 @@ body {
 .about_us_img img {
   width: 10em;
   height: 10em;
+}
+
+/******************************************* media queries ********************************************/
+@media (min-width: 992px) {
+/******************************************* universal */
+
+
+
 }
