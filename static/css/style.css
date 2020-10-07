@@ -138,7 +138,7 @@ body {
   position: absolute;
 }
 
-/******************************************* drink imgs & selection forms */
+/******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
   background-color: lightslategray;
@@ -170,7 +170,8 @@ body {
   padding: 0 0.5em;
 }
 
-.drinks_img img {
+.drinks_img img,
+.about_us_img img {
   width: 10em;
   height: 10em;
 }
