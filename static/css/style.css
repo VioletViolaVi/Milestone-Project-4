@@ -112,13 +112,17 @@ mark {
 
 .trolley-counter {
   position: absolute;
+  top: -0.2em;
+  right: 0.4em;
 }
 
 .counter-circle {
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .trolley-price {
@@ -128,10 +132,6 @@ mark {
 .fas.fa-shopping-cart {
   font-size: 2em;
   margin-top: 0.2em;
-}
-
-.trolley-counter {
-  top: -0.2em;
 }
 
 .delivery-cost-bg {
@@ -199,7 +199,33 @@ body {
   height: 13em;
 }
 
+.new-drinks-circle {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  position: absolute;
+  left: 2.5em;
+  top: -1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /******************************************* media queries ******************************************* */
+@media (min-width: 576px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 4em;
+  }
+}
+
 @media (min-width: 992px) {
   /******************************************* header */
   .text-left .navbar-brand.text-body {
@@ -229,5 +255,9 @@ body {
   .desktop-links li {
     display: inline;
     font-size: 2em;
+  }
+
+  .new-drinks-circle {
+    left: 1em;
   }
 }

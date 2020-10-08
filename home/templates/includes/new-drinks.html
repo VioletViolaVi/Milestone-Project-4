@@ -1,5 +1,5 @@
 <section>
-    <h1 class="text-capitalize mt-4">new drinks</h1>
+    <h1 class="text-capitalize my-4">new drinks</h1>
     <div class="container">
         <div class="row">     
             {% for new_drink in new_drinks %}
@@ -7,6 +7,7 @@
                     <div class="container">                
                         <div class="row">
                             <div class="col">
+                                <div class="new-drinks-circle text-capitalize bg-secondary font-weight-bold">new!</div>
                                 <div class="drinks_img">
                                     <img src="{{ new_drink.image }}" alt="{{ new_drink.drink_name }}" class="rounded">
                                 </div>
@@ -19,7 +20,7 @@
                                     {% csrf_token %}
                                     <label for="drinkSelections"></label>
                                     <input value="1" type="number" id="drinkSelections" name="drinkSelections">
-                                    <button type="submit" class="text-uppercase bg-secondary">add to cart</button>
+                                    <button type="submit" class="text-uppercase bg-secondary mb-5">add to cart</button>
                                 </form>
                             </div>
                         </div>
