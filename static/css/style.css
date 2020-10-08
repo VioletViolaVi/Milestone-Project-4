@@ -182,7 +182,6 @@ body {
 .drinks_img img,
 .about_us_img img {
   width: 10em;
-  height: 10em;
 }
 
 .quantity-selection input[type="number"] {
@@ -200,7 +199,11 @@ body {
 }
 
 .drinks_img img {
-  height: 13em;
+  height: 15em;
+}
+
+.about_us_img img {
+  height: 10em;
 }
 
 .new-drinks-circle {
