@@ -21,6 +21,10 @@ a:focus {
   right: 0em;
 }
 
+html {
+  scroll-padding-top: 11em;
+}
+
 /******************************************* header */
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -247,6 +251,10 @@ body {
     display: block;
   }
 
+.trolley-counter {
+    right: 2.4em;
+}
+
   .desktop-links-nav {
     margin-top: 5.1em;
     background-color: lightgray;
@@ -260,4 +268,11 @@ body {
   .new-drinks-circle {
     left: 1em;
   }
+}
+
+@media (min-width: 1200px) {
+  /******************************************* header */
+.trolley-counter {
+    right: 3.1em;
+    }
 }
