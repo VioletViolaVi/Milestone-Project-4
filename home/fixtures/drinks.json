@@ -225,10 +225,10 @@
     "pk": 21,
     "model": "home.drink",
     "fields": {
-      "image": "media/juice-kiwi.PNG",
-      "drink_name": "kiwi & lemon citrus juice",
-      "price": 11,
-      "millilitres": 700,
+      "image": "media/milkshake-blueberries.PNG",
+      "drink_name": "double creamed blueberry milkshake",
+      "price": 16,
+      "millilitres": 800,
       "drink_type": 1
     }
   },
@@ -236,9 +236,9 @@
     "pk": 22,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-twix.PNG",
-      "drink_name": "clotted cream & milk chocolate twix milkshake",
-      "price": 14,
+      "image": "media/juice-melon.PNG",
+      "drink_name": "melon papaya persimmon & apricot juice",
+      "price": 12,
       "millilitres": 700,
       "drink_type": 1
     }
