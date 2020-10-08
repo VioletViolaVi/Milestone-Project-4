@@ -5,7 +5,7 @@
         <span><i class="fa-1x fas fa-bars text-body"></i></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mt-2 mt-lg-0">
+        <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link text-body text-capitalize" href="{% url 'home' %}">home<span class="sr-only">(current)</span></a>
             </li>
@@ -32,11 +32,18 @@
                     <a class="nav-link text-body text-capitalize" href="#">log out</a>
                 </li>
             {% endif %}
+            <li class="nav-item">
+                <form method="GET" action="#" class="form-inline">
+                    {% csrf_token %}
+                    <div class="search-box-and-btn">
+                        <input class="form-control mr-0 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search" name="search">
+                        <button class="search-btn my-2 my-sm-0 text-body" type="submit">      
+                            <i class="fas fa-search text-body font-weight-bold"></i>
+                        </button>
+                    </div>
+                </form>
+            </li>
         </ul>
-        <form method="GET" action="#" class="form-inline my-2 my-lg-0">
-            {% csrf_token %}
-            <input class="form-control mr-sm-2 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search" name="search">
-            <button class="btn btn-outline-dark my-2 my-sm-0 text-body font-weight-bold text-capitalize" type="submit">search</button>
-        </form>
+
     </div>
 </nav>
