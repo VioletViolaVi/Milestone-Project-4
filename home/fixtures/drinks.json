@@ -169,7 +169,7 @@
     "pk": 16,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-strawberry.jpg",
+      "image": "media/milkshake-strawberry.PNG",
       "drink_name": "light strawberry creamed milkshake",
       "price": 12,
       "millilitres": 700,
@@ -213,7 +213,7 @@
     "pk": 20,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-twix.jpg",
+      "image": "media/milkshake-twix.PNG",
       "drink_name": "clotted cream & milk chocolate twix milkshake",
       "price": 14,
       "millilitres": 700,
@@ -236,7 +236,7 @@
     "pk": 22,
     "model": "home.drink",
     "fields": {
-      "image": "media/milkshake-twix.jpg",
+      "image": "media/milkshake-twix.PNG",
       "drink_name": "clotted cream & milk chocolate twix milkshake",
       "price": 14,
       "millilitres": 700,

@@ -1,5 +1,5 @@
 <!-- bootstrap navbar -->
-<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-secondary">
+<nav class="d-lg-none fixed-top navbar navbar-expand-lg navbar-light bg-secondary">
     <a class="navbar-brand font-weight-bold text-capitalize" href="{% url 'home' %}">slurps</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span><i class="fa-1x fas fa-bars text-body"></i></span>
@@ -18,6 +18,11 @@
             <li class="nav-item">
                 <a class="nav-link text-body text-capitalize" href="#">about us</a>
             </li>
+            {% if request.user.is_superuser %}
+                <li class="nav-item">
+                    <a class="nav-link text-body text-capitalize" href="#">admin</a>
+                </li>
+            {% endif %}
             {% if not request.user.is_authenticated %}            
                 <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="{% url 'account_signup' %}">sign up/log in</a>
@@ -25,11 +30,6 @@
             {% else %}
                 <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="#">log out</a>
-                </li>
-            {% endif %}
-            {% if request.user.is_superuser %}
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="#">administration</a>
                 </li>
             {% endif %}
         </ul>

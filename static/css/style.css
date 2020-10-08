@@ -72,11 +72,6 @@ mark {
   width: 100%;
 }
 
-.checkout-history-btn,
-.delivery-cost-bg {
-  background-color: gray;
-}
-
 .trolley-counter,
 .delivery-cost-bg {
   font-weight: 900;
@@ -103,7 +98,6 @@ mark {
 .counter-circle {
   height: 25px;
   width: 25px;
-  background-color: slategray;
   border-radius: 50%;
   display: inline-block;
 }
@@ -173,7 +167,6 @@ body {
 }
 
 .quantity-selection button {
-  background-color: gray;
   padding: 0 0.5em;
 }
 
@@ -183,10 +176,35 @@ body {
   height: 10em;
 }
 
-/******************************************* media queries ********************************************/
+/******************************************* media queries ******************************************* */
 @media (min-width: 992px) {
-/******************************************* universal */
+  /******************************************* header */
+  .text-left .navbar-brand.text-body {
+    font-size: 3em;
+  }
 
+  input[type="search"] {
+    border-radius: 5px;
+    border: 0.2em lightgray solid;
+    height: 2.5em;
+  }
 
+  .checkout-history-btn,
+  .counter-circle {
+    background-color: lightgray;
+  }
 
+  .checkout-history-btn {
+    display: block;
+  }
+
+  .desktop-links-nav {
+    margin-top: 5.1em;
+    background-color: lightgray;
+  }
+
+  .desktop-links li {
+    display: inline;
+    font-size: 2em;
+  }
 }

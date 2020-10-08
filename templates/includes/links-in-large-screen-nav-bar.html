@@ -1,0 +1,30 @@
+<nav class="desktop-links-nav d-none fixed-top d-lg-block">
+    <ul class="desktop-links">
+        <li>
+            <a class="text-body text-capitalize" href="{% url 'home' %}">home |<span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+            <a class="text-body text-capitalize" href="#">juices |</a>
+        </li>
+        <li>
+            <a class="text-body text-capitalize" href="#">milkshakes |</a>
+        </li>
+        <li>
+            <a class="text-body text-capitalize" href="#">about us |</a>
+        </li>
+        {% if request.user.is_superuser %}
+            <li>
+                <a class="text-body text-capitalize" href="#">admin |</a>
+            </li>
+        {% endif %}        
+        {% if not request.user.is_authenticated %}            
+            <li>
+                <a class="text-body text-capitalize" href="{% url 'account_signup' %}">sign up/log in</a>
+            </li>
+        {% else %}
+            <li>
+                <a class="text-body text-capitalize" href="#">log out</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
