@@ -33,10 +33,10 @@
                 </li>
             {% endif %}
             <li class="nav-item">
-                <form method="GET" action="#" class="form-inline">
+                <form method="GET" action="{% url 'home' %}" class="form-inline">
                     {% csrf_token %}
                     <div class="search-box-and-btn">
-                        <input class="form-control mr-0 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search" name="search">
+                        <input class="form-control mr-0 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search" name="search" required>
                         <button class="search-btn my-2 my-sm-0 text-body" type="submit">      
                             <i class="fas fa-search text-body font-weight-bold"></i>
                         </button>
