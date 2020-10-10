@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Drink
 
 
@@ -23,6 +24,14 @@ def home(request):
             sort = sort_key
             sort_key == "price"
 
+        if sort_key == "drink_name":
+            sort_key == "lower_case_name"
+            new_drinks = new_drinks.annotate(
+                lower_case_name=Lower("drink_name"))
+            juices = juices.annotate(lower_case_name=Lower("drink_name"))
+            milkshakes = milkshakes.annotate(
+                lower_case_name=Lower("drink_name"))
+
             if "direction" in request.GET:
                 direction = request.GET["direction"]
                 if direction == "desc":
@@ -37,7 +46,6 @@ def home(request):
                 Q(drink_name__icontains=drink_search))
 
     price_sorting = f"{sort}_{direction}"
-    alphabetical_sorting = f"{sort}_{direction}"
 
     context = {
         "new_drinks": new_drinks,
@@ -46,7 +54,6 @@ def home(request):
         "drink_search_results": drink_search_results,
         "typed_in_search": drink_search,
         "price_sorting": price_sorting,
-        "alphabetical_sorting": alphabetical_sorting,
     }
 
     # shows homepage

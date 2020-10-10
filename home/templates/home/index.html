@@ -6,12 +6,14 @@
 {% block home %}   
 
     <div class="sort-by-btn ml-1 fixed-top dropdown text-left">
-        <button class="btn text-body font-weight-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          sort by price
+        <button class=" sortBtn btn text-body font-weight-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          sort by...
         </button>
         <div class="dropdown-menu text-body" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Low to High</a>
+            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Low to High</a>
             <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc">High to Low</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc">A-Z</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc">Z-A</a>
         </div>
     </div>
 
@@ -20,5 +22,14 @@
     {% include "includes/juices.html" %}   
     {% include "includes/milkshakes.html" %}  
     {% include "includes/about-us.html" %}   
+
+<!-- <script type="text/javascript">
+    $(document).ready(function() {
+        $(".ascendingLink").click(function () {
+            $(".sortBtn").html("Low to High");
+            console.log("hi")
+        })
+    });
+</script> -->
+
 {% endblock %}
-    
