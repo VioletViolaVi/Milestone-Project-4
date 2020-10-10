@@ -25,7 +25,7 @@ html {
   scroll-padding-top: 11em;
 }
 
-/******************************************* header */
+/******************************************* headers */
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
@@ -206,6 +206,10 @@ body {
   height: 10em;
 }
 
+.new-drinks-title {
+  margin-top: 1.5em;
+}
+
 .new-drinks-circle {
   height: 3em;
   width: 3em;
@@ -218,6 +222,18 @@ body {
   justify-content: center;
 }
 
+.sort-by-btn {
+  margin-top: 10.8em;
+}
+
+.sort-by-btn a:hover {
+  background-color: gray;
+}
+
+.sort-by-btn a:active {
+  color: black;
+  font-weight: 900;
+}
 /******************************************* media queries ******************************************* */
 @media (min-width: 576px) {
   /******************************************* home page */
@@ -254,9 +270,9 @@ body {
     display: block;
   }
 
-.trolley-counter {
+  .trolley-counter {
     right: 2.4em;
-}
+  }
 
   .desktop-links-nav {
     margin-top: 5.1em;
@@ -275,7 +291,7 @@ body {
 
 @media (min-width: 1200px) {
   /******************************************* header */
-.trolley-counter {
+  .trolley-counter {
     right: 3.1em;
-    }
+  }
 }
