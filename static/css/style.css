@@ -226,6 +226,10 @@ body {
   margin-top: 10.8em;
 }
 
+.sort-by-btn button {
+  background-color: lightgray;
+}
+
 .sort-by-btn a:hover {
   background-color: gray;
 }
@@ -234,6 +238,7 @@ body {
   color: black;
   font-weight: 900;
 }
+
 /******************************************* media queries ******************************************* */
 @media (min-width: 576px) {
   /******************************************* home page */

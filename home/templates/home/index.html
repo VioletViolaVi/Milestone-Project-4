@@ -6,28 +6,14 @@
 {% block home %}   
 
     <div class="sort-by-btn ml-1 fixed-top dropdown text-left">
-        <button class="btn btn-secondary text-body font-weight-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn text-body font-weight-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           sort by price
         </button>
         <div class="dropdown-menu text-body" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Low to High</a>
-            <a class="dropdown-item" href="#">High to Low</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Low to High</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc">High to Low</a>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     {% include "includes/search-drinks.html" %} 
     {% include "includes/new-drinks.html" %}
