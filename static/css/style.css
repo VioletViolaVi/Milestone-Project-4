@@ -240,6 +240,42 @@ body {
 }
 
 /******************************************* media queries ******************************************* */
+@media (min-width: 356px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 4em;
+  }
+}
+
+@media (min-width: 400px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 5.5em;
+  }
+}
+
+@media (min-width: 442px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 7em;
+  }
+}
+
+@media (min-width: 472px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 8em;
+  }
+}
+
+@media (min-width: 526px) {
+  /******************************************* home page */
+  .new-drinks-circle {
+    left: 9.5em;
+  }
+}
+
+/* bootstrap media query */
 @media (min-width: 576px) {
   /******************************************* home page */
   .new-drinks-circle {
@@ -247,6 +283,7 @@ body {
   }
 }
 
+/* bootstrap media query */
 @media (min-width: 768px) {
   /******************************************* home page */
   .new-drinks-circle {
@@ -254,6 +291,7 @@ body {
   }
 }
 
+/* bootstrap media query */
 @media (min-width: 992px) {
   /******************************************* header */
   .text-left .navbar-brand.text-body {
@@ -294,6 +332,7 @@ body {
   }
 }
 
+/* bootstrap media query */
 @media (min-width: 1200px) {
   /******************************************* header */
   .trolley-counter {
