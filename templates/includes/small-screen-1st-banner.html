@@ -35,12 +35,14 @@
             <li class="nav-item">
                 <form method="GET" action="{% url 'home' %}" class="form-inline">
                     {% csrf_token %}
-                    <div class="search-box-and-btn">
-                        <input class="form-control mr-0 text-body font-weight-bold" type="search" placeholder="Search" aria-label="Search" name="search" required>
-                        <button class="search-btn my-2 my-sm-0 text-body" type="submit">      
-                            <i class="fas fa-search text-body font-weight-bold"></i>
-                        </button>
-                    </div>
+                    <div id="search-bar" class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="search-btn-bg input-group-text" id="basic-addon1" type="submit">
+                               <i class="fas fa-search text-body font-weight-bold"></i>
+                            </button>
+                        </div>
+                        <input type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
+                    </div>                    
                 </form>
             </li>
         </ul>

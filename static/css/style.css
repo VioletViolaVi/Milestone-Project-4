@@ -29,10 +29,10 @@ html {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
-.navbar input[type="search"]:focus {
+.fixed-top.navbar input[type="search"]:focus {
   outline: none;
   box-shadow: none;
-  border: gray solid 0.2em;
+  border: slategray solid 0.2em;
 }
 
 .nav-link,
@@ -59,27 +59,17 @@ mark {
   transition: 0.5s;
 }
 
-.navbar input[type="search"] {
-  border: gray solid 0.1em;
+.fixed-top.navbar input[type="search"] {
+  border: lightgray solid 0.2em;
 }
 
-.search-box-and-btn {
-  margin: 0 auto;
-  display: block;
-}
-
-.search-box-and-btn .form-control {
-  display: inline;
-}
-
-.search-btn {
-  padding: 0.3em;
-  visibility: hidden;
+.search-btn-bg {
+  background-color: lightgray;
 }
 
 .fas.fa-search {
   visibility: visible;
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 
 .navbar-collapse input.form-control {
@@ -277,6 +267,11 @@ body {
 
 /* bootstrap media query */
 @media (min-width: 576px) {
+  /******************************************* headers */
+  #search-bar {
+    width: 100%;
+  }
+
   /******************************************* home page */
   .new-drinks-circle {
     left: 1em;
@@ -302,6 +297,19 @@ body {
     border-radius: 5px;
     border: 0.2em lightgray solid;
     height: 2.5em;
+  }
+
+  .large-screen-search-bar {
+    position: absolute;
+    left: 8.1em;
+    top: 1.2em;
+    background-color: white;
+  }
+
+  .lg-search-bar.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: lightslategray solid 0.3em;
   }
 
   .checkout-history-btn,
