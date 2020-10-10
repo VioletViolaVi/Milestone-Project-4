@@ -16,13 +16,21 @@ a:focus {
 }
 
 .fixed-arrow {
-  top: 35em;
-  position: absolute;
-  right: 0em;
+  display: none;
+  bottom: 1em;
+  position: fixed;
+  right: 0.5em;
+  z-index: 1;
+}
+
+.fas.fa-arrow-circle-up {
+  background-color: lightgray;
+  border-radius: 2em;
 }
 
 html {
   scroll-padding-top: 11em;
+  scroll-behavior: smooth;
 }
 
 /******************************************* headers */

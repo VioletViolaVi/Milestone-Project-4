@@ -48,7 +48,7 @@
         </header>
         
         <div class="fixed-arrow">
-            <a href="#" class="text-body"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
+            <a href="#" class="back-to-top-link text-body"><i class="fa-2x fas fa-arrow-circle-up"></i></a>
         </div>
 
         <br><br><br><br>
@@ -63,7 +63,27 @@
 
         {% include "includes/footer.html" %}        
 
-        {% block postloadjs %}<!-- remove if not used! -->
+        {% block postloadjs %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+
+	        	    $(".back-to-top-link").click(function(e) {
+                        window.scrollTo({
+                            top: 0, 
+                            behavior: 'smooth'
+                        });
+                    })
+
+                    $(window).scroll(function(){
+                        if ($(this).scrollTop() > 300) {
+                            $('.fixed-arrow').show();
+                        } else {
+                            $('.fixed-arrow').hide();
+                        }
+                    });
+
+                });
+	        </script>
         {% endblock %}
     </body>
 </html>

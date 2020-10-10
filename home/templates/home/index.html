@@ -10,10 +10,10 @@
           sort by...
         </button>
         <div class="dropdown-menu text-body" aria-labelledby="dropdownMenuButton">
-            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Low to High</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc">High to Low</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc">A-Z</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc">Z-A</a>
+            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Price (Low-High)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc">Price (High-Low)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc">Drink Name (A-Z)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc">Drink Name (Z-A)</a>
         </div>
     </div>
 

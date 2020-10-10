@@ -10,7 +10,7 @@ def home(request):
     juices = Drink.objects.filter(drink_type=2)
     milkshakes = Drink.objects.filter(drink_type=3)
 
-    searchable_drinks = Drink.objects.exclude(drink_type=1)
+    searched_drinks = Drink.objects.exclude(drink_type=1)
     drink_search = None
     drink_search_results = ""
 
@@ -31,10 +31,12 @@ def home(request):
                 juices = juices.annotate(lower_case_name=Lower("drink_name"))
                 milkshakes = milkshakes.annotate(
                     lower_case_name=Lower("drink_name"))
+                # searched_drinks = searched_drinks.annotate(
+                #     lower_case_name=Lower("drink_name"))
 
-            # if sort_key == "drink_name":
-            #     sort_key == "lower_case_name"
-            #     searchable_drinks = searchable_drinks.annotate(
+            # if sort_key == searched_drinks:
+            #     sort_key == "searched_drinks"
+            #     searched_drinks = searched_drinks.annotate(
             #         lower_case_name=Lower("drink_name"))
 
             if "direction" in request.GET:
@@ -44,12 +46,17 @@ def home(request):
             new_drinks = new_drinks.order_by(sort_key)
             juices = juices.order_by(sort_key)
             milkshakes = milkshakes.order_by(sort_key)
-            # searchable_drinks = searchable_drinks.order_by(sort_key)
+            # searched_drinks = searched_drinks.order_by(sort_key)
 
         if "search" in request.GET:
             drink_search = request.GET["search"]
-            drink_search_results = searchable_drinks.filter(
+            drink_search_results = searched_drinks.filter(
                 Q(drink_name__icontains=drink_search))
+
+            # if sort_key == "drink_name":
+            #     sort_key == "searched_drinks"
+            #     searched_drinks = searched_drinks.annotate(
+            #         lower_case_name=Lower("drink_name"))
 
     drink_sorting = f"{sort}_{direction}"
 

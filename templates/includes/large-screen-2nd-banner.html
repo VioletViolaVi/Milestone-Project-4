@@ -1,20 +1,20 @@
 <nav class="desktop-links-nav d-none fixed-top d-lg-block">
     <ul class="desktop-links">
         <li>
-            <a class="text-body text-capitalize" href="{% url 'home' %}">home |<span class="sr-only">(current)</span></a>
+            <a class="text-body text-capitalize" href="{% url 'home' %}">home <span>|</span><span class="sr-only">(current)</span></a>
         </li>
         <li>
-            <a class="text-body text-capitalize" href="#juiceSection">juices |</a>
+            <a class="text-body text-capitalize" href="#juiceSection">juices <span>|</span></a>
         </li>
         <li>
-            <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes |</a>
+            <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes <span>|</span></a>
         </li>
         <li>
-            <a class="text-body text-capitalize" href="#aboutUsSection">about us |</a>
+            <a class="text-body text-capitalize" href="#aboutUsSection">about us <span>|</span></a>
         </li>
         {% if request.user.is_superuser %}
             <li>
-                <a class="text-body text-capitalize" href="#">admin |</a>
+                <a class="text-body text-capitalize" href="#">admin <span>|</span></a>
             </li>
         {% endif %}        
         {% if not request.user.is_authenticated %}            
