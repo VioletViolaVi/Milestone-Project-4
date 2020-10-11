@@ -27,7 +27,7 @@
             </div>
 
             <div class="col-2 mt-2">
-                <a href="#" class="{% if grand_total %}text-secondary{% else %}text-body{% endif %}"> 
+                <a href="{% url 'shopping_cart' %}" class="{% if grand_total %}text-secondary{% else %}text-body{% endif %}"> 
                     <i class="fas fa-shopping-cart"></i>
                     <span class="trolley-counter counter-circle text-center">0</span>
                     <div class="col-sm">

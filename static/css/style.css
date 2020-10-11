@@ -152,6 +152,14 @@ body {
   padding-top: 4em;
 }
 
+#aboutUsSection {
+  padding-bottom: 8em;
+}
+
+.footer-contacts {
+  width: 100%;
+}
+
 .card {
   border-radius: 0px;
 }
