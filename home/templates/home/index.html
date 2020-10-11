@@ -10,10 +10,10 @@
           sort by...
         </button>
         <div class="dropdown-menu text-body" aria-labelledby="dropdownMenuButton">
-            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc">Price (Low-High)</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc">Price (High-Low)</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc">Drink Name (A-Z)</a>
-            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc">Drink Name (Z-A)</a>
+            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Price (Low-High)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Price (High-Low)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Drink Name (A-Z)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Drink Name (Z-A)</a>
         </div>
     </div>
 
@@ -22,14 +22,5 @@
     {% include "includes/juices.html" %}   
     {% include "includes/milkshakes.html" %}  
     {% include "includes/about-us.html" %}   
-
-<!-- <script type="text/javascript">
-    $(document).ready(function() {
-        $(".ascendingLink").click(function () {
-            $(".sortBtn").html("Low to High");
-            console.log("hi")
-        })
-    });
-</script> -->
 
 {% endblock %}
