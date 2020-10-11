@@ -245,6 +245,39 @@ body {
   font-weight: 900;
 }
 
+/******************************************* checkout view */
+.checkout-pg {
+  margin-bottom: 5em;
+}
+
+.table-bordered {
+  border: 0.2em solid slategray;
+}
+
+table.table-bordered > thead > tr > th,
+table.table-bordered > tbody > tr > th {
+  border: 0.1em solid slategray;
+}
+
+.checkout-edit-btn {
+  display: inline;
+}
+
+.fas.fa-trash-alt {
+  font-size: 1.5em;
+}
+.checkout-totals {
+  font-weight: 900;
+}
+
+.pay-btn {
+  font-weight: 900;
+  font-size: 1.7em;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+}
+
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */
@@ -292,6 +325,11 @@ body {
   .new-drinks-circle {
     left: 1em;
   }
+
+  /******************************************* checkout view */
+  .checkout-totals {
+    margin-left: 7em;
+  }
 }
 
 /* bootstrap media query */
@@ -299,6 +337,11 @@ body {
   /******************************************* home page */
   .new-drinks-circle {
     left: 4em;
+  }
+
+  /******************************************* checkout view */
+  .checkout-totals {
+    margin-left: 11em;
   }
 }
 
@@ -354,6 +397,11 @@ body {
   .new-drinks-circle {
     left: 1em;
   }
+
+  /******************************************* checkout view */
+  .checkout-totals {
+    margin-left: 19em;
+  }
 }
 
 /* bootstrap media query */
@@ -361,5 +409,10 @@ body {
   /******************************************* header */
   .trolley-counter {
     right: 3.1em;
+  }
+
+  /******************************************* checkout view */
+  .checkout-totals {
+    margin-left: 20em;
   }
 }
