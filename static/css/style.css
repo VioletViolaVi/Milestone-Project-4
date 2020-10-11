@@ -31,7 +31,6 @@ a:focus {
 html {
   scroll-padding-top: 11em;
   scroll-behavior: smooth;
-  min-height: 150vh;
 }
 
 /******************************************* headers */
@@ -56,7 +55,7 @@ html {
 
 .nav-link:hover,
 .history-and-trolley-bg,
-mark {
+.delivery-highlight {
   background-color: lightgray;
 }
 
@@ -142,14 +141,18 @@ mark {
   font-size: 1.5em;
 }
 
-mark {
+.delivery-highlight {
   padding: 0em 0.2em 0 0.1em;
 }
 
 /******************************************* footer */
+html,
+body {
+  min-height: 100vh;
+}
+
 body {
   position: relative;
-  min-height: 150vh;
   padding-top: 4em;
 }
 

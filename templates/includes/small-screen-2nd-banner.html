@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-4">
-                <a href="{% url 'shopping_cart' %}" class="{% if grand_total %}text-secondary{% else %}text-body{% endif %}">   
+                <a href="{% url 'shopping_cart' %}" class="{% if shopping_cart_items %}text-secondary{% else %}text-body{% endif %}">   
                     <div class="container text-right">
                         <div class="row">
                             <div class="col-sm pr-4 mt-2">
@@ -19,9 +19,9 @@
                         </div>
                         <div class="row">
                             <div class="col-sm">
-                                <span class="trolley-price font-weight-bold">
-                                    {% if grand_total %}
-                                        £{{ grand_total|floatformat:2 }}
+                                <span class="trolley-price font-weight-bold">                                  
+                                    {% if shopping_cart_items %}
+                                        £{{ subtotal|floatformat:2 }}
                                     {% else %}
                                         £0.00
                                     {% endif %}
