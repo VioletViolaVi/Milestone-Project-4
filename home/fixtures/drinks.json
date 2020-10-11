@@ -114,7 +114,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/juice-herb.PNG",
-            "drink_name": "red chilli peppers thyme and orange zest juice",
+            "drink_name": "red chilli peppers thyme & orange zest juice",
             "price": 13,
             "millilitres": 700,
             "drink_type": 2
@@ -246,7 +246,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/milkshake-almond.PNG",
-            "drink_name": "almond and avocado milkshake",
+            "drink_name": "almond & avocado milkshake",
             "price": 20,
             "millilitres": 800,
             "drink_type": 3
@@ -257,7 +257,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/milkshake-eggs.PNG",
-            "drink_name": "lavender and raspberry milkshake",
+            "drink_name": "lavender & raspberry milkshake",
             "price": 17,
             "millilitres": 800,
             "drink_type": 3
