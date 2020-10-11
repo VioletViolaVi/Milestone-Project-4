@@ -31,6 +31,7 @@ a:focus {
 html {
   scroll-padding-top: 11em;
   scroll-behavior: smooth;
+  min-height: 150vh;
 }
 
 /******************************************* headers */
@@ -148,7 +149,7 @@ mark {
 /******************************************* footer */
 body {
   position: relative;
-  min-height: 100vh;
+  min-height: 150vh;
   padding-top: 4em;
 }
 
@@ -158,6 +159,8 @@ body {
 
 .footer-contacts {
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .card {
@@ -246,10 +249,6 @@ body {
 }
 
 /******************************************* checkout view */
-.checkout-pg {
-  margin-bottom: 5em;
-}
-
 .table-bordered {
   border: 0.2em solid slategray;
 }
@@ -266,16 +265,25 @@ table.table-bordered > tbody > tr > th {
 .fas.fa-trash-alt {
   font-size: 1.5em;
 }
+
 .checkout-totals {
   font-weight: 900;
 }
 
-.pay-btn {
+.pay-btn,
+.back-to-home-pg-btn {
   font-weight: 900;
-  font-size: 1.7em;
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
+}
+
+.pay-btn {
+  font-size: 1.7em;
+}
+
+.back-to-home-pg-btn {
+  font-size: 1em;
 }
 
 /******************************************* media queries ******************************************* */

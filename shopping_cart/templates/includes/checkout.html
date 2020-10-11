@@ -1,6 +1,7 @@
-<h2 class="text-capitalize mt-3">checkout</h2>
+<h2 class="text-capitalize mt-3 mb-5">checkout</h2>
 
-    <div class="container checkout-pg">
+{% if shopping_cart_items %}
+    <div class="container">
         <div class="row">
             
             <div class="col-12 col-sm-3">
@@ -52,3 +53,28 @@
 
         </div>
     </div>
+ {% else %} 
+    <div>
+        <p>Your shopping cart is empty!</p>
+        <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body" href="{% url 'home' %}">back to home</a>
+    </div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
