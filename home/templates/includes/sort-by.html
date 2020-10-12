@@ -1,0 +1,11 @@
+    <div class="sort-by-section dropdown text-left">
+        <button class="btn text-body font-weight-bold dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          sort by...
+        </button>
+        <div class="dropdown-menu text-body" aria-labelledby="dropdownMenuButton">
+            <a class="ascendingLink dropdown-item" href="{% url 'home' %}?sort=price&direction=asc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Price (Low-High)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=price&direction=desc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Price (High-Low)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=asc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Drink Name (A-Z)</a>
+            <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Drink Name (Z-A)</a>
+        </div>
+    </div>

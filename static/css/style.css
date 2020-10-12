@@ -29,7 +29,7 @@ a:focus {
 }
 
 html {
-  scroll-padding-top: 34em;
+  scroll-padding-top: 13em;
   scroll-behavior: smooth;
 }
 
@@ -196,6 +196,39 @@ body {
   width: 10em;
 }
 
+.new-drinks-circle1,
+.new-drinks-circle2 {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  position: absolute;
+  left: 2.5em;
+  top: -1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-by-section {
+  position: fixed;
+  right: 0.3em;
+  top: 10.8em;
+  z-index: 1;
+}
+
+.sort-by-section button {
+  background-color: lightgray;
+}
+
+.sort-by-section a:hover {
+  background-color: gray;
+}
+
+.sort-by-section a:active {
+  color: black;
+  font-weight: 900;
+}
+
 .buy-now-btn {
   font-weight: 900;
   padding: 0.3em;
@@ -227,36 +260,6 @@ body {
 
 .new-drinks-title {
   margin-top: 1.5em;
-}
-
-.new-drinks-circle1,
-.new-drinks-circle2 {
-  height: 3em;
-  width: 3em;
-  border-radius: 50%;
-  position: absolute;
-  left: 2.5em;
-  top: -1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.sort-by-btn {
-  margin-top: 10.8em;
-}
-
-.sort-by-btn button {
-  background-color: lightgray;
-}
-
-.sort-by-btn a:hover {
-  background-color: gray;
-}
-
-.sort-by-btn a:active {
-  color: black;
-  font-weight: 900;
 }
 
 /******************************************* checkout view */

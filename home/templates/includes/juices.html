@@ -3,14 +3,14 @@
         <div class="container">
             <div class="row">
                 {% for juice in juices %}
-                    <div class="col-sm-6 col-md-4 col-lg-3">                  
+                    <div id="juiceSelection_{{ juice.id }}" class="col-sm-6 col-md-4 col-lg-3">                  
                         <div class="container">                
                             <div class="row">
                                 <div class="col">
                                     <div class="drinks_img"> 
                                         {% for new_drink in new_drinks %}
                                             {% if juice.drink_name == new_drink.drink_name %}
-                                                <div class="new-drinks-circle2  text-capitalize bg-secondary font-weight-bold">new!</div>
+                                                <div class="new-drinks-circle2 text-capitalize bg-secondary font-weight-bold">new!</div>
                                             {% endif %}
                                         {% endfor %}
                                         <img src="{{ juice.image }}" alt="{{ juice.drink_name }}" class="rounded">
@@ -23,7 +23,7 @@
                                     <form method="POST" action="{% url 'add_to_shopping_cart' juice.id %}" class="quantity-selection">
                                         {% csrf_token %}
                                         <label for="juiceSelection"></label>
-                                        <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ juice.id }}" id="juiceSelection_{{ juice.id }}">
+                                        <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ juice.id }}">
                                         <button type="submit" class="text-uppercase bg-secondary mb-5">add to cart</button>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                     </form>                                
