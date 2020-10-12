@@ -3,11 +3,11 @@
     <div class="container">
         <div class="row">     
             {% for new_drink in new_drinks %}
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3 mb-5">
                     <div class="container">                
                         <div class="row">
                             <div class="col">
-                                <div class="new-drinks-circle text-capitalize bg-secondary font-weight-bold">new!</div>
+                                <div class="new-drinks-circle1 text-capitalize bg-secondary font-weight-bold">new!</div>
                                 <div class="drinks_img">
                                     <img src="{{ new_drink.image }}" alt="{{ new_drink.drink_name }}" class="rounded">
                                 </div>
@@ -19,23 +19,15 @@
 
                                 {% for juice in juices %}
                                     {% if new_drink.drink_name == juice.drink_name %}
-                                        <a href="#juiceSelection_{{ juice.id }}" class="matching-new-drinks text-uppercase">buy now</a>
+                                        <a href="#juiceSelection_{{ juice.id }}" class="buy-now-btn text-uppercase text-body bg-secondary">buy now</a>
                                     {% endif %} 
                                 {% endfor %} 
 
                                 {% for milkshake in milkshakes %}
                                     {% if new_drink.drink_name == milkshake.drink_name %}
-                                        <a href="#milkshakeSelection_{{ milkshake.id }}" class="matching-new-drinks text-uppercase">buy now</a>
+                                        <a href="#milkshakeSelection_{{ milkshake.id }}" class="buy-now-btn text-uppercase text-body bg-secondary">buy now</a>
                                     {% endif %} 
-                                {% endfor %} 
-
-                                <!-- <form method="POST" action="{% url 'add_to_shopping_cart' new_drink.id %}" class="quantity-selection">
-                                    {% csrf_token %}
-                                    <label for="newDrinkSelection"></label>
-                                    <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ new_drink.id }}" id="newDrinkSelection_{{ new_drink.id }}">
-                                    <button type="submit" class="text-uppercase bg-secondary mb-5">add to cart</button>
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </form> -->
+                                {% endfor %}                                 
                             </div>
                         </div>
                     </div>

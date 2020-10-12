@@ -29,7 +29,7 @@ a:focus {
 }
 
 html {
-  scroll-padding-top: 11em;
+  scroll-padding-top: 34em;
   scroll-behavior: smooth;
 }
 
@@ -196,6 +196,13 @@ body {
   width: 10em;
 }
 
+.buy-now-btn {
+  font-weight: 900;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+}
+
 .quantity-selection input[type="number"] {
   width: 4em;
   border: gray solid 0.1em;
@@ -222,7 +229,8 @@ body {
   margin-top: 1.5em;
 }
 
-.new-drinks-circle {
+.new-drinks-circle1,
+.new-drinks-circle2 {
   height: 3em;
   width: 3em;
   border-radius: 50%;
@@ -296,35 +304,40 @@ table.table-bordered > tbody > tr > th {
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 4em;
   }
 }
 
 @media (min-width: 400px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 5.5em;
   }
 }
 
 @media (min-width: 442px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 7em;
   }
 }
 
 @media (min-width: 472px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 8em;
   }
 }
 
 @media (min-width: 526px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 9.5em;
   }
 }
@@ -337,7 +350,8 @@ table.table-bordered > tbody > tr > th {
   }
 
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1,
+  .new-drinks-circle2 {
     left: 1em;
   }
 
@@ -350,7 +364,7 @@ table.table-bordered > tbody > tr > th {
 /* bootstrap media query */
 @media (min-width: 768px) {
   /******************************************* home page */
-  .new-drinks-circle {
+  .new-drinks-circle1 {
     left: 4em;
   }
 
@@ -409,7 +423,7 @@ table.table-bordered > tbody > tr > th {
     font-size: 2em;
   }
 
-  .new-drinks-circle {
+  .new-drinks-circle1 {
     left: 1em;
   }
 
