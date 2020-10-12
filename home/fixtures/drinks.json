@@ -37,7 +37,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/juice-dragonfruit.PNG",
-            "drink_name": "dragon fruit juice",
+            "drink_name": "dragon fruit & red grape juice",
             "price": 15,
             "millilitres": 700,
             "drink_type": 2
@@ -81,7 +81,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/juice-melon.PNG",
-            "drink_name": "melon papaya persimmon & apricot juice",
+            "drink_name": "melon papaya & apricot juice",
             "price": 12,
             "millilitres": 700,
             "drink_type": 2
@@ -125,7 +125,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/juice-pineapple.PNG",
-            "drink_name": "pinapple fruit salad juice",
+            "drink_name": "pinapple & pink peppercorn fruit salad juice",
             "price": 11,
             "millilitres": 700,
             "drink_type": 2
@@ -180,7 +180,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/milkshake-coconut.PNG",
-            "drink_name": "coconut milkshake",
+            "drink_name": "coconut mint & pistachio milkshake",
             "price": 20,
             "millilitres": 800,
             "drink_type": 3
@@ -279,7 +279,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/juice-melon.PNG",
-            "drink_name": "melon papaya persimmon & apricot juice",
+            "drink_name": "melon papaya & apricot juice",
             "price": 12,
             "millilitres": 700,
             "drink_type": 1
@@ -290,7 +290,7 @@
         "model": "home.drink",
         "fields": {
             "image": "media/milkshake-coconut.PNG",
-            "drink_name": "coconut milkshake",
+            "drink_name": "coconut mint & pistachio milkshake",
             "price": 20,
             "millilitres": 800,
             "drink_type": 1

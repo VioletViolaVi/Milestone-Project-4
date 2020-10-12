@@ -29,7 +29,7 @@ a:focus {
 }
 
 html {
-  scroll-padding-top: 13em;
+  scroll-padding-top: 12.5em;
   scroll-behavior: smooth;
 }
 
@@ -237,7 +237,7 @@ body {
 }
 
 .quantity-selection input[type="number"] {
-  width: 4em;
+  width: 2.4em;
   border: gray solid 0.1em;
   text-align: center;
 }
