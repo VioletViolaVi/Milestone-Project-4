@@ -23,9 +23,6 @@ def shopping_cart_contents(request):
             "item_id": item_id,
             "drink_quantity": drink_quantity,
             "drink": drink,
-            # "millilitres": millilitres,
-            # "price": price,
-            # "image": image,
         })
 
     context = {

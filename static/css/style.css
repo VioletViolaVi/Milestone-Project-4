@@ -103,12 +103,12 @@ html {
   margin-top: 3.4em;
 }
 
-.checkout-history-btn {
+.shopping-cart-history-btn {
   border-radius: 0.2em;
   display: inline;
 }
 
-.checkout-history-btn:active {
+.shopping-cart-history-btn:active {
   background-color: lightslategray;
 }
 
@@ -262,7 +262,7 @@ body {
   margin-top: 1.5em;
 }
 
-/******************************************* checkout view */
+/******************************************* shopping cart view */
 .table-bordered {
   border: 0.2em solid slategray;
 }
@@ -272,7 +272,7 @@ table.table-bordered > tbody > tr > th {
   border: 0.1em solid slategray;
 }
 
-.checkout-edit-btn {
+.shopping-cart-edit-btn {
   display: inline;
 }
 
@@ -280,7 +280,7 @@ table.table-bordered > tbody > tr > th {
   font-size: 1.5em;
 }
 
-.checkout-totals {
+.shopping-cart-totals {
   font-weight: 900;
 }
 
@@ -300,7 +300,11 @@ table.table-bordered > tbody > tr > th {
   font-size: 1em;
 }
 
-.checkout-section {
+.shopping-cart-section {
+  padding-bottom: 10em;
+}
+
+.subtotal-section {
   padding-bottom: 10em;
 }
 
@@ -358,8 +362,8 @@ table.table-bordered > tbody > tr > th {
     left: 1em;
   }
 
-  /******************************************* checkout view */
-  .checkout-totals {
+  /******************************************* shopping-cart view */
+  .shopping-cart-totals {
     margin-left: 7em;
   }
 }
@@ -371,8 +375,8 @@ table.table-bordered > tbody > tr > th {
     left: 4em;
   }
 
-  /******************************************* checkout view */
-  .checkout-totals {
+  /******************************************* shopping-cart view */
+  .shopping-cart-totals {
     margin-left: 11em;
   }
 }
@@ -403,12 +407,12 @@ table.table-bordered > tbody > tr > th {
     border: lightslategray solid 0.3em;
   }
 
-  .checkout-history-btn,
+  .shopping-cart-history-btn,
   .counter-circle {
     background-color: lightgray;
   }
 
-  .checkout-history-btn {
+  .shopping-cart-history-btn {
     display: block;
   }
 
@@ -430,8 +434,8 @@ table.table-bordered > tbody > tr > th {
     left: 1em;
   }
 
-  /******************************************* checkout view */
-  .checkout-totals {
+  /******************************************* shopping-cart view */
+  .shopping-cart-totals {
     margin-left: 19em;
   }
 }
@@ -443,8 +447,8 @@ table.table-bordered > tbody > tr > th {
     right: 3.1em;
   }
 
-  /******************************************* checkout view */
-  .checkout-totals {
+  /******************************************* shopping-cart view */
+  .shopping-cart-totals {
     margin-left: 20em;
   }
 }
