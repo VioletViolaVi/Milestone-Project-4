@@ -13,7 +13,7 @@
                 <div class="row">
 
                     <div class="drinks_img col-12 col-sm-3">                       
-                        <img src="{{ shopping_cart.item_id.image}}" class="rounded">                         
+                        <img src="{{ shopping_cart.drink.image }}" class="rounded">                   
                     </div>
 
                     <div class="col-12 col-sm-9"> 
@@ -84,10 +84,10 @@
 
     <div class="subtotal-section">
         <div class="shopping-cart-totals col-6 col-sm-4 text-capitalize ">
-            <ul class="text-left">
-                <li>subtotal: £</li>
-                <li>delivery cost: £</li>
-                <li>grand total: £</li>
+            <ul class="text-left text-capitalize">
+                <li>subtotal: £{{ subtotal|floatformat:2 }}</li>
+                <li>delivery cost: <s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</li>
+                <li>grand total: £{{ grand_total|floatformat:2 }}</li>
             </ul>
         </div>
 

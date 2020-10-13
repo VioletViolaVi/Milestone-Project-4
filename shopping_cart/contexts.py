@@ -6,18 +6,21 @@ from home.models import Drink
 def shopping_cart_contents(request):
 
     former_delivery_cost = settings.FORMER_DELIVERY_COST
+    delivery = settings.DELIVERY_COST
 
     shopping_cart_items = []
+
     subtotal = 0
     drink_counter = 0
+
     shopping_cart = request.session.get("shopping_cart", {})
 
-    delivery = settings.DELIVERY_COST
     grand_total = delivery + subtotal
 
     for item_id, drink_quantity in shopping_cart.items():
         drink = get_object_or_404(Drink, pk=item_id)
         subtotal += drink_quantity * drink.price
+        grand_total = subtotal + delivery
         drink_counter += drink_quantity
         shopping_cart_items.append({
             "item_id": item_id,
