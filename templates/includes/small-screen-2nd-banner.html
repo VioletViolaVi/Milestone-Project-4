@@ -9,12 +9,12 @@
             </div>
 
             <div class="col-4">
-                <a href="{% url 'shopping_cart' %}" class="{% if shopping_cart_items %}text-success{% else %}text-body{% endif %}">   
+                <a href="{% url 'shopping_cart' %}" class="text-body">   
                     <div class="container text-right">
                         <div class="row">
                             <div class="col-sm pr-4 mt-2">
                                 <i class="fas fa-shopping-cart"></i>
-                                <span class="trolley-counter counter-circle text-center bg-secondary">0</span>
+                                <span class="trolley-counter counter-circle text-center bg-secondary">{{ drink_counter}}</span>
                             </div>
                         </div>
                         <div class="row">

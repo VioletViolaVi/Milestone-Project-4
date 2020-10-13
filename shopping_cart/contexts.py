@@ -8,28 +8,30 @@ def shopping_cart_contents(request):
     former_delivery_cost = settings.FORMER_DELIVERY_COST
 
     shopping_cart_items = []
-    total = 0
+    subtotal = 0
     drink_counter = 0
     shopping_cart = request.session.get("shopping_cart", {})
 
-    subtotal = total
     delivery = settings.DELIVERY_COST
-    grand_total = delivery + total
+    grand_total = delivery + subtotal
 
     for item_id, drink_quantity in shopping_cart.items():
         drink = get_object_or_404(Drink, pk=item_id)
-        total += drink_quantity * drink.price
+        subtotal += drink_quantity * drink.price
         drink_counter += drink_quantity
         shopping_cart_items.append({
             "item_id": item_id,
             "drink_quantity": drink_quantity,
             "drink": drink,
+            # "millilitres": millilitres,
+            # "price": price,
+            # "image": image,
         })
 
     context = {
         "former_delivery_cost": former_delivery_cost,
         "shopping_cart_items": shopping_cart_items,
-        "total": total,
+        "subtotal": subtotal,
         "drink_counter": drink_counter,
         "subtotal": subtotal,
         "delivery": settings.DELIVERY_COST,

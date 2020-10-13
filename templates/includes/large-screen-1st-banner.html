@@ -27,9 +27,10 @@
             </div>
 
             <div class="col-2 mt-2">
-                <a href="{% url 'shopping_cart' %}" class="{% if shopping_cart_items %}text-success{% else %}text-body{% endif %}"> 
+                <a href="{% url 'shopping_cart' %}" class="text-body"> 
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="trolley-counter counter-circle text-center">0</span>
+                    <span class="trolley-counter counter-circle text-center bg-secondary">{{ drink_counter}}</span>   
+                    <span class="trolley-counter counter-circle text-center">{{ drink_counter}}</span>
                     <div class="col-sm">
                         <span class="trolley-price font-weight-bold">
                             {% if shopping_cart_items %}
