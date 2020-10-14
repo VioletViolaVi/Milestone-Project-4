@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
   // smooth scroll to screen top using arrow
-  $(".back-to-top-link").click(function () {      
+  $(".back-to-top-link").click(function () {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -16,5 +15,23 @@ $(document).ready(function () {
       $(".fixed-arrow").hide();
     }
   });
+
+//   // to update drink quantity
+//   $(".edit-btn").click(function () {
+//     let editForm = $(this).prev(".edit-form");
+//     editForm.submit();
+//   });
+
+//   // to delete drinks
+//   $(".bin-btn").click(function () {
+//     let csrfToken = "{{ csrf_token }}";
+//     let itemId = $(this).attr("id").split("edit_")[1];
+//     let url = `/shopping_cart/edit/${itemId}`;
+//     let data = { "csrfmiddlewaretoken": csrfToken };
+
+//     $.post(url, data).done(function () {
+//       location.reload();
+//     });
+//   });
 
 });

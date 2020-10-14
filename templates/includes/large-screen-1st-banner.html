@@ -3,7 +3,7 @@
         <div class="row">
            
             <div class="col-3 text-left mr-0">
-                <a class="navbar-brand text-body font-weight-bold" href="#">Slurps</a>
+                <a class="navbar-brand text-body font-weight-bolder" href="#">Slurps</a>
             </div>
 
             <div class="col-4 pl-0">
@@ -12,7 +12,7 @@
                     <div class="input-group">
                         <div class="input-group-prepend">                            
                             <button class="search-btn-bg input-group-text" id="basic-addon1" type="submit">
-                               <i class="fas fa-search text-body font-weight-bold"></i>
+                               <i class="fas fa-search text-body font-weight-bolder"></i>
                             </button>                        
                         </div>
                         <input type="search" name="search" class="lg-search-bar form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
@@ -22,7 +22,7 @@
 
             <div class="col-3 mt-4">
                 <a href="#" class="text-body">
-                    <div class="checkout-history-btn font-weight-bold text-uppercase p-2">checkout history</div>
+                    <div class="checkout-history-btn font-weight-bolder text-uppercase p-2">checkout history</div>
                 </a>
             </div>
 
@@ -32,7 +32,7 @@
                     <span class="trolley-counter counter-circle text-center bg-secondary">{{ drink_counter}}</span>   
                     <span class="trolley-counter counter-circle text-center">{{ drink_counter}}</span>
                     <div class="col-sm">
-                        <span class="trolley-price font-weight-bold">
+                        <span class="trolley-price font-weight-bolder">
                             {% if shopping_cart_items %}
                                 £{{ subtotal|floatformat:2 }}
                             {% else %}

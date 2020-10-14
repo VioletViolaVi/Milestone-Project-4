@@ -6,55 +6,44 @@
 {% block home %}
 
 <h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
+    <div class="container">
+        <div class="row">  
+            {% if shopping_cart_items %}
 
-    {% if shopping_cart_items %}
-        {% for shopping_cart in shopping_cart_items %} 
-            <div class="shopping-cart-section container">
-                <div class="row">
+                {% for shopping_cart in shopping_cart_items %} 
+                    <div class="col-sm-6 col-lg-4 mb-5">
 
-                    <div class="drinks_img col-12 col-sm-3">                       
-                        <img src="{{ shopping_cart.drink.image }}" class="rounded">                   
-                    </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 col-md-5 col-lg-5 col-xl-4 px-0">   
+                                    <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">                                                        
+                                </div>
 
-                    <div class="col-12 col-sm-9"> 
+                                <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">                     
+                                    <ul class="text-capitalize text-left">
+                                        <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                                        <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                                        <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                                        <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
+                                        <li><span class="font-weight-bolder">sub total:</span> £{{ shopping_cart.drink.subtotal }}</li>
+                                    </ul>                    
+                                </div>
 
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr class="text-capitalize table-secondary">
-                                    <th scope="col">name</th>
-                                    <th scope="col">size</th>
-                                    <th scope="col">quantity</th>
-                                    <th scope="col">price</th>
-                                    <th scope="col">sub total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="text-capitalize">
-                                    <th>{{ shopping_cart.drink.drink_name }}</th>
-                                    <th class="text-lowercase">1x{{ shopping_cart.drink.millilitres }}ml</th>
-                                    <th>{{ shopping_cart.drink_quantity }}</th>
-                                    <th>£{{ shopping_cart.drink.price }}</th>
-                                    <th>£{{ shopping_cart.drink.subtotal }}</th>
-                                </tr>
-                            </tbody>
-                        </table> 
-                    </div>
+                                <div class="col-7 col-sm-9 col-md-11 col-lg-12">                   
+                                    <form method="POST" action="{% url 'edit_shopping_cart' 'item.item_id' %}" class="edit-form quantity-selection shopping-cart-edit-btn">
+                                            {% csrf_token %}
+                                            <label for="editDrinks"></label>
+                                            <button type="submit" class="text-uppercase bg-secondary mb-5">edit</button>
+                                            <input value="{{ shopping_cart.drink_quantity }}" type="number" id="editDrinks" name="editDrinks">
+                                    </form>
+                                    <i class="bin-btn fas fa-trash-alt ml-1" data-toggle="modal" data-target="#bin{{ shopping_cart.item_id }}"></i>                                   
+                                </div>
 
-                    <div class="col-12 ">
-                        <form method="GET" action="#" class="quantity-selection shopping-cart-edit-btn">
-                            {% csrf_token %}
-                            <label for="#"></label>
-                            <button type="submit" class="text-uppercase bg-secondary mb-5">edit</button>
-                            <input value="#" type="number" id="#" name="#">
-                        </form> 
-                        <i class="fas fa-trash-alt ml-1" data-toggle="modal" data-target="#bin{{ shopping_cart.item_id }}"></i>
-                    </div>
+                            </div>                
+                        </div>
 
-                </div>
-            </div>
-
-            <!-- modal from bootstrap -->
-            <div class="modal fade mt-5" id="bin{{ shopping_cart.item_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <!-- modal from bootstrap -->
+                    <div class="modal fade mt-5" id="bin{{ shopping_cart.item_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header text-center">
@@ -73,27 +62,42 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}   
-    {% else %} 
-        <div>
-            <p>Your shopping cart is empty!</p>
-            <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body" href="{% url 'home' %}">back to home</a>
-        </div>
-    {% endif %}
+                    </div>
 
-    <div class="subtotal-section">
-        <div class="shopping-cart-totals col-6 col-sm-4 text-capitalize ">
-            <ul class="text-left text-capitalize">
-                <li>subtotal: £{{ subtotal|floatformat:2 }}</li>
-                <li>delivery cost: <s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</li>
-                <li>grand total: £{{ grand_total|floatformat:2 }}</li>
-            </ul>
-        </div>
+                    </div>
+                {% endfor %}   
 
-        <div class="col-6 col-sm-2 text-uppercase">
-            <a href="#" class="pay-btn text-capitalize bg-secondary text-body">pay</a>
-        </div>
+            {% else %} 
+                <div>
+                    <p>Your shopping cart is empty!</p>
+                    <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body" href="{% url 'home' %}">back to home</a>
+                </div>
+            {% endif %}
+        </div>    
     </div>
 
+
+    <div class="container">
+        <div class="row">  
+
+                <div class="container">
+                    <div class="row">     
+
+                        <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
+                            <ul class="font-weight-bolder text-capitalize">
+                                <li>subtotal: £{{ subtotal|floatformat:2 }}</li>
+                                <li>delivery: <s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</li>
+                                <li>grand total: £{{ grand_total|floatformat:2 }}</li>
+                            </ul>
+                        </div> 
+
+                        <div class="pay-btn-holder text-left col-4 col-sm-6">
+                            <a href="#" class="pay-btn bg-secondary text-body text-uppercase">pay</a> 
+                        </div>
+
+                    </div>
+                </div>
+                
+        </div>
+    </div>
 {% endblock %}

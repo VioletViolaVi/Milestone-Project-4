@@ -103,12 +103,13 @@ html {
   margin-top: 3.4em;
 }
 
-.shopping-cart-history-btn {
+.checkout-history-btn {
   border-radius: 0.2em;
   display: inline;
+  background-color: lightgray;
 }
 
-.shopping-cart-history-btn:active {
+.checkout-history-btn:active {
   background-color: lightslategray;
 }
 
@@ -162,8 +163,8 @@ body {
 
 .footer-contacts {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .card {
@@ -272,24 +273,25 @@ table.table-bordered > tbody > tr > th {
   border: 0.1em solid slategray;
 }
 
-.shopping-cart-edit-btn {
-  display: inline;
-}
-
-.fas.fa-trash-alt {
-  font-size: 1.5em;
-}
-
-.shopping-cart-totals {
-  font-weight: 900;
-}
-
 .pay-btn,
 .back-to-home-pg-btn {
   font-weight: 900;
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
+}
+
+.shopping_cart_img {
+  height: 12em;
+  width: 7em;
+}
+
+.shopping-cart-edit-btn {
+  display: inline;
+}
+
+.fas.fa-trash-alt {
+  font-size: 1.5em;
 }
 
 .pay-btn {
@@ -300,20 +302,18 @@ table.table-bordered > tbody > tr > th {
   font-size: 1em;
 }
 
-.shopping-cart-section {
-  padding-bottom: 10em;
-}
-
-.subtotal-section {
-  padding-bottom: 10em;
-}
-
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 4em;
+  }
+
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 13em;
+    width: 9em;
   }
 }
 
@@ -323,6 +323,12 @@ table.table-bordered > tbody > tr > th {
   .new-drinks-circle2 {
     left: 5.5em;
   }
+
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 14em;
+    width: 10em;
+  }
 }
 
 @media (min-width: 442px) {
@@ -330,6 +336,12 @@ table.table-bordered > tbody > tr > th {
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 7em;
+  }
+
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 15em;
+    width: 11em;
   }
 }
 
@@ -339,6 +351,12 @@ table.table-bordered > tbody > tr > th {
   .new-drinks-circle2 {
     left: 8em;
   }
+
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 16em;
+    width: 12em;
+  }
 }
 
 @media (min-width: 526px) {
@@ -346,6 +364,12 @@ table.table-bordered > tbody > tr > th {
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 9.5em;
+  }
+
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 17em;
+    width: 13em;
   }
 }
 
@@ -362,9 +386,18 @@ table.table-bordered > tbody > tr > th {
     left: 1em;
   }
 
-  /******************************************* shopping-cart view */
-  .shopping-cart-totals {
-    margin-left: 7em;
+  /******************************************* shopping cart view */
+  .shopping_cart_img {
+    height: 12em;
+    width: 7em;
+  }
+
+  .shopping-cart-costs {
+    padding: 0em 0em 0em 6em;
+  }
+
+  .pay-btn-holder {
+    padding: 0em 0em 0em 4em;
   }
 }
 
@@ -375,9 +408,13 @@ table.table-bordered > tbody > tr > th {
     left: 4em;
   }
 
-  /******************************************* shopping-cart view */
-  .shopping-cart-totals {
-    margin-left: 11em;
+  /******************************************* shopping cart view */
+  .shopping-cart-costs {
+    padding: 0em 0em 0em 11em;
+  }
+
+  .pay-btn-holder {
+    padding: 0em 0em 0em 2em;
   }
 }
 
@@ -434,9 +471,13 @@ table.table-bordered > tbody > tr > th {
     left: 1em;
   }
 
-  /******************************************* shopping-cart view */
-  .shopping-cart-totals {
-    margin-left: 19em;
+  /******************************************* shopping cart view */
+  .shopping-cart-costs {
+    padding: 0em 0em 0em 19em;
+  }
+
+  .pay-btn-holder {
+    padding: 0em 0em 0em 2em;
   }
 }
 
@@ -447,8 +488,12 @@ table.table-bordered > tbody > tr > th {
     right: 3.1em;
   }
 
-  /******************************************* shopping-cart view */
-  .shopping-cart-totals {
-    margin-left: 20em;
+  /******************************************* shopping cart view */
+  .shopping-cart-costs {
+    padding: 0em 0em 0em 24em;
+  }
+
+  .pay-btn-holder {
+    padding: 0em 0em 0em 1em;
   }
 }
