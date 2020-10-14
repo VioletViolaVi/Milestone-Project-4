@@ -163,8 +163,8 @@ body {
 
 .footer-contacts {
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
+  bottom: 0;
+  position: absolute;
 }
 
 .card {
@@ -403,6 +403,12 @@ table.table-bordered > tbody > tr > th {
 
 /* bootstrap media query */
 @media (min-width: 768px) {
+  /******************************************* footer */
+  .footer-contacts {
+    position: absolute;
+    bottom: 0;
+  }
+
   /******************************************* home page */
   .new-drinks-circle1 {
     left: 4em;

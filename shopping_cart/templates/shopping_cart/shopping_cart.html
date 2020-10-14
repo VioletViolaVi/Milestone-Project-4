@@ -19,7 +19,7 @@
                                     <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">                                                        
                                 </div>
 
-                                <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">                     
+                                <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">         
                                     <ul class="text-capitalize text-left">
                                         <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
                                         <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
@@ -29,7 +29,7 @@
                                     </ul>                    
                                 </div>
 
-                                <div class="col-7 col-sm-9 col-md-11 col-lg-12">                   
+                                <div class="col-12">                   
                                     <form method="POST" action="{% url 'edit_shopping_cart' 'item.item_id' %}" class="edit-form quantity-selection shopping-cart-edit-btn">
                                             {% csrf_token %}
                                             <label for="editDrinks"></label>
@@ -67,8 +67,32 @@
                     </div>
                 {% endfor %}   
 
+                <div class="container">
+                    <div class="row">  
+
+                            <div class="container">
+                                <div class="row">     
+
+                                    <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
+                                        <ul class="font-weight-bolder text-capitalize">
+                                            <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                                            <li>delivery: <span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
+                                            <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                                        </ul>
+                                    </div> 
+
+                                    <div class="pay-btn-holder text-left col-4 col-sm-6">
+                                        <a href="#" class="pay-btn bg-secondary text-body text-uppercase">pay</a> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
             {% else %} 
-                <div>
+                <div class="col-12 mb-5 text-center">
                     <p>Your shopping cart is empty!</p>
                     <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body" href="{% url 'home' %}">back to home</a>
                 </div>
@@ -76,28 +100,4 @@
         </div>    
     </div>
 
-
-    <div class="container">
-        <div class="row">  
-
-                <div class="container">
-                    <div class="row">     
-
-                        <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
-                            <ul class="font-weight-bolder text-capitalize">
-                                <li>subtotal: £{{ subtotal|floatformat:2 }}</li>
-                                <li>delivery: <s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</li>
-                                <li>grand total: £{{ grand_total|floatformat:2 }}</li>
-                            </ul>
-                        </div> 
-
-                        <div class="pay-btn-holder text-left col-4 col-sm-6">
-                            <a href="#" class="pay-btn bg-secondary text-body text-uppercase">pay</a> 
-                        </div>
-
-                    </div>
-                </div>
-                
-        </div>
-    </div>
 {% endblock %}

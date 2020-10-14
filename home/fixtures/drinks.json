@@ -1,310 +1,310 @@
 [
-    {
-        "pk": 1,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-carrot.PNG",
-            "drink_name": "ginger carrot apricot & mammee juice",
-            "price": 18,
-            "millilitres": 800,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 2,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-cucumber.PNG",
-            "drink_name": "cucumber & watercress juice",
-            "price": 11,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 3,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-double.PNG",
-            "drink_name": "blackberry strawberry & blueberry juice",
-            "price": 19,
-            "millilitres": 800,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 4,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-dragonfruit.PNG",
-            "drink_name": "dragon fruit & red grape juice",
-            "price": 15,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 5,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-kiwi.PNG",
-            "drink_name": "kiwi & lemon citrus juice",
-            "price": 11,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 6,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-lime.PNG",
-            "drink_name": "lime & spinach juice",
-            "price": 13,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 7,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-mango.PNG",
-            "drink_name": "mango lemon & lime juice",
-            "price": 17,
-            "millilitres": 800,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 8,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-melon.PNG",
-            "drink_name": "melon papaya & apricot juice",
-            "price": 12,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 9,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-pomegranate.PNG",
-            "drink_name": "pomegranate & banana juice",
-            "price": 17,
-            "millilitres": 800,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 10,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-spotty.PNG",
-            "drink_name": "strawberry figs & acai berry juice",
-            "price": 16,
-            "millilitres": 800,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 11,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-herb.PNG",
-            "drink_name": "red chilli peppers thyme & orange zest juice",
-            "price": 13,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 12,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-pineapple.PNG",
-            "drink_name": "pinapple & pink peppercorn fruit salad juice",
-            "price": 11,
-            "millilitres": 700,
-            "drink_type": 2
-        }
-    },
-    {
-        "pk": 13,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-banana.PNG",
-            "drink_name": "banana crumble & whipped cream milkshake",
-            "price": 20,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 14,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-beans.PNG",
-            "drink_name": "chocolate coffee pudding milkshake",
-            "price": 19,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 15,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-berries.PNG",
-            "drink_name": "raspberry & blueberry milkshake",
-            "price": 13,
-            "millilitres": 700,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 16,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-blueberries.PNG",
-            "drink_name": "double creamed blueberry milkshake",
-            "price": 16,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 17,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-coconut.PNG",
-            "drink_name": "coconut mint & pistachio milkshake",
-            "price": 20,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 18,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-strawberry.PNG",
-            "drink_name": "light strawberry creamed milkshake",
-            "price": 12,
-            "millilitres": 700,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 19,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-raspberry.PNG",
-            "drink_name": "creme fraiche raspberry milkshake",
-            "price": 14,
-            "millilitres": 700,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 20,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-shortcake.PNG",
-            "drink_name": "strawberry shortcake milkshake",
-            "price": 18,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 21,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-cookies.PNG",
-            "drink_name": "ferrero rocher ice cream & cookies milkshake",
-            "price": 15,
-            "millilitres": 700,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 22,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-twix.PNG",
-            "drink_name": "clotted cream & milk chocolate twix milkshake",
-            "price": 14,
-            "millilitres": 700,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 23,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-almond.PNG",
-            "drink_name": "almond & avocado milkshake",
-            "price": 20,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 24,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-eggs.PNG",
-            "drink_name": "lavender & raspberry milkshake",
-            "price": 17,
-            "millilitres": 800,
-            "drink_type": 3
-        }
-    },
-    {
-        "pk": 25,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-blueberries.PNG",
-            "drink_name": "double creamed blueberry milkshake",
-            "price": 16,
-            "millilitres": 800,
-            "drink_type": 1
-        }
-    },
-    {
-        "pk": 26,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-melon.PNG",
-            "drink_name": "melon papaya & apricot juice",
-            "price": 12,
-            "millilitres": 700,
-            "drink_type": 1
-        }
-    },
-    {
-        "pk": 27,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/milkshake-coconut.PNG",
-            "drink_name": "coconut mint & pistachio milkshake",
-            "price": 20,
-            "millilitres": 800,
-            "drink_type": 1
-        }
-    },
-    {
-        "pk": 28,
-        "model": "home.drink",
-        "fields": {
-            "image": "media/juice-spotty.PNG",
-            "drink_name": "strawberry figs & acai berry juice",
-            "price": 16,
-            "millilitres": 800,
-            "drink_type": 1
-        }
+  {
+    "pk": 1,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-carrot.PNG",
+      "drink_name": "ginger carrot apricot & mammee juice",
+      "price": 18,
+      "millilitres": 800,
+      "drink_type": 2
     }
+  },
+  {
+    "pk": 2,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-cucumber.PNG",
+      "drink_name": "cucumber & watercress juice",
+      "price": 11,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 3,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-double.PNG",
+      "drink_name": "blackberry strawberry & blueberry juice",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 4,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-dragonfruit.PNG",
+      "drink_name": "dragon fruit & red grape juice",
+      "price": 15,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 5,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-kiwi.PNG",
+      "drink_name": "kiwi & lemon citrus juice",
+      "price": 11,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 6,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-lime.PNG",
+      "drink_name": "lime & spinach juice",
+      "price": 13,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 7,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-mango.PNG",
+      "drink_name": "mango lemon & lime juice",
+      "price": 17,
+      "millilitres": 800,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 8,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-melon.PNG",
+      "drink_name": "melon & papaya juice",
+      "price": 12,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 9,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-pomegranate.PNG",
+      "drink_name": "pomegranate & banana juice",
+      "price": 17,
+      "millilitres": 800,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 10,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-spotty.PNG",
+      "drink_name": "strawberry figs & acai berry juice",
+      "price": 16,
+      "millilitres": 800,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 11,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-herb.PNG",
+      "drink_name": "red chilli peppers thyme & orange zest juice",
+      "price": 13,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 12,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-pineapple.PNG",
+      "drink_name": "pineapple & peppercorn fruit salad juice",
+      "price": 11,
+      "millilitres": 700,
+      "drink_type": 2
+    }
+  },
+  {
+    "pk": 13,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-banana.PNG",
+      "drink_name": "banana crumble & whipped cream milkshake",
+      "price": 20,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 14,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-beans.PNG",
+      "drink_name": "chocolate coffee pudding milkshake",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 15,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-berries.PNG",
+      "drink_name": "raspberry & blueberry milkshake",
+      "price": 13,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 16,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-blueberries.PNG",
+      "drink_name": "double creamed blueberry milkshake",
+      "price": 16,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 17,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-coconut.PNG",
+      "drink_name": "coconut mint & pistachio milkshake",
+      "price": 20,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 18,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-strawberry.PNG",
+      "drink_name": "light strawberry creamed milkshake",
+      "price": 12,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 19,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-raspberry.PNG",
+      "drink_name": "creme fraiche raspberry milkshake",
+      "price": 14,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 20,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-shortcake.PNG",
+      "drink_name": "strawberry shortcake milkshake",
+      "price": 18,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 21,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-cookies.PNG",
+      "drink_name": "ferrero rocher ice cream & cookies milkshake",
+      "price": 15,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 22,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-twix.PNG",
+      "drink_name": "clotted cream & milk chocolate twix milkshake",
+      "price": 14,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 23,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-almond.PNG",
+      "drink_name": "almond & avocado milkshake",
+      "price": 20,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 24,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-eggs.PNG",
+      "drink_name": "lavender & raspberry milkshake",
+      "price": 17,
+      "millilitres": 800,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 25,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-beans.PNG",
+      "drink_name": "chocolate coffee pudding milkshake",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 1
+    }
+  },
+  {
+    "pk": 26,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-double.PNG",
+      "drink_name": "blackberry strawberry & blueberry juice",
+      "price": 19,
+      "millilitres": 800,
+      "drink_type": 1
+    }
+  },
+  {
+    "pk": 27,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/milkshake-coconut.PNG",
+      "drink_name": "coconut mint & pistachio milkshake",
+      "price": 20,
+      "millilitres": 800,
+      "drink_type": 1
+    }
+  },
+  {
+    "pk": 28,
+    "model": "home.drink",
+    "fields": {
+      "image": "media/juice-spotty.PNG",
+      "drink_name": "strawberry figs & acai berry juice",
+      "price": 16,
+      "millilitres": 800,
+      "drink_type": 1
+    }
+  }
 ]
