@@ -18,20 +18,20 @@ $(document).ready(function () {
 
   // to update drink quantity
   $(".edit-btn").click(function () {
-    let editForm = $(this).prev(".edit-form");
+    let editForm = $(this).parent();
     editForm.submit();
   });
 
   // to delete drinks
   $(".bin-btn").click(function () {
+      
     let csrfToken = "{{ csrf_token }}";
-    let itemId = $(this).attr("id").split("edit_")[1];
-    let url = `/shopping_cart/edit/${itemId}`;
+    let itemId = $(this).attr("id").split("delete_")[1];
+    let url = `/shopping_cart/edit/${itemId}/`;
     let data = { "csrfmiddlewaretoken": csrfToken };
 
     $.post(url, data).done(function () {
       location.reload();
     });
   });
-
 });

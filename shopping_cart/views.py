@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
 
 def shopping_cart(request):
@@ -27,16 +28,34 @@ def add_to_shopping_cart(request, item_id):
 def edit_shopping_cart(request, item_id):
     # edit quantity of specified drink in cart
 
+    drink_quantity = int(request.POST.get("editDrinks"))
     shopping_cart = request.session.get("shopping_cart", {})
-    edited_drink_quantity = int(request.POST.get("editDrinks"))
 
-    edited_drink_quantity.save()
-
-    if edited_drink_quantity.save() > 0:
-        shopping_cart[item_id] = edited_drink_quantity.save()
+    if drink_quantity > 0 and drink_quantity < 100:
+        shopping_cart[item_id] = drink_quantity
     else:
-        shopping_cart.pop[item_id]
+        messages.info(request, "Please pick a number from 1 to 99.")
+        return render(request, "shopping_cart/shopping_cart.html")
 
     request.session["shopping_cart"] = shopping_cart
 
     return redirect(reverse("shopping_cart"))
+
+
+def delete_shopping_cart_item(request, item_id):
+    # delete specified drink in cart
+
+    try:
+        drink_quantity = int(request.POST.get("editDrinks"))
+        shopping_cart = request.session.get("shopping_cart", {})
+
+        if drink_quantity > 0 and drink_quantity < 100:
+            shopping_cart[item_id] = drink_quantity
+        else:
+            shopping_cart.pop(item_id)
+
+        request.session["shopping_cart"] = shopping_cart
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)

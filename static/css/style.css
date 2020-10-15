@@ -175,6 +175,14 @@ body {
   border-radius: 0;
 }
 
+.fab.fa-youtube,
+.fab.fa-twitter-square,
+.fab.fa-snapchat-square,
+.fab.fa-facebook-square,
+.fab.fa-instagram {
+  cursor: pointer;
+}
+
 /******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
@@ -292,6 +300,7 @@ table.table-bordered > tbody > tr > th {
 
 .fas.fa-trash-alt {
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 .pay-btn {
@@ -300,6 +309,10 @@ table.table-bordered > tbody > tr > th {
 
 .back-to-home-pg-btn {
   font-size: 1em;
+}
+
+.shopping-cart-footer {
+  padding-bottom: 10em;
 }
 
 /******************************************* media queries ******************************************* */
