@@ -26,6 +26,7 @@ a:focus {
 .fas.fa-arrow-circle-up {
   background-color: lightgray;
   border-radius: 2em;
+  cursor: pointer;
 }
 
 html {

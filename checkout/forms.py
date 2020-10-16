@@ -5,7 +5,7 @@ from .models import DrinkOrder
 class DrinkOrderForm(forms.ModelForm):
     class Meta:
         model = DrinkOrder
-        fields = ("order_number", "full_name", "email", "phone_number",
+        fields = ("full_name", "email", "phone_number",
                   "street_address1", "street_address2", "postcode",
                   "country",)
 
@@ -14,8 +14,8 @@ class DrinkOrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             "full_name": "Full Name",
-            "email": "",
-            "phone_numEmail Addressber": "Phone Number",
+            "email": "Email",
+            "phone_number": "Phone Number",
             "street_address1": "Street Address 1",
             "street_address2": "Street Address 2",
             "postcode": "Postal Code",

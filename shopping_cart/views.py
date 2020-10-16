@@ -45,17 +45,8 @@ def edit_shopping_cart(request, item_id):
 def delete_shopping_cart_item(request, item_id):
     # delete specified drink in cart
 
-    try:
-        drink_quantity = int(request.POST.get("drinkSelections"))
-        shopping_cart = request.session.get("shopping_cart", {})
-
-        if drink_quantity > 0 and drink_quantity < 100:
-            shopping_cart[item_id] = drink_quantity
-        else:
-            shopping_cart.pop(item_id)
-
-        request.session["shopping_cart"] = shopping_cart
-        return HttpResponse(status=200)
-
-    except Exception as e:
-        return HttpResponse(status=500)
+    shopping_cart = request.session.get("shopping_cart", {})
+    shopping_cart.pop(item_id)
+    request.session["shopping_cart"] = shopping_cart
+    return HttpResponse(status=200)
+    return redirect(reverse("shopping_cart"))

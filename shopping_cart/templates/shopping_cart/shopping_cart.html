@@ -4,16 +4,13 @@
 
 {% block tab_title %}| Shopping Cart{% endblock %}
 
-{% block home %}
-
-<h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
+{% block shopping_cart %}
+    <h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
     <div class="shopping-cart-footer container">
         <div class="row">  
             {% if shopping_cart_items %}
-
                 {% for shopping_cart in shopping_cart_items %} 
                     <div class="col-sm-6 col-lg-4 mb-5">
-
                         <div class="container">
                             <div class="row"> 
                                 {% if messages %}
@@ -24,7 +21,6 @@
                                 <div class="col-6 col-md-5 col-lg-5 col-xl-4 px-0">   
                                     <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">                                                        
                                 </div>
-
                                 <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">         
                                     <ul class="text-capitalize text-left">
                                         <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
@@ -34,7 +30,6 @@
                                         <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
                                     </ul>                    
                                 </div>
-
                                 <div class="col-12">                   
                                     <form method="POST" action="{% url 'edit_shopping_cart' shopping_cart.item_id %}" class="quantity-selection shopping-cart-edit-btn">
                                         {% csrf_token %}
@@ -44,41 +39,39 @@
                                     </form>
                                     <i class="fas fa-trash-alt ml-1" data-toggle="modal" data-target="#delete_{{ shopping_cart.item_id }}"></i>                                                                       
                                 </div>
-                                                     
+
                             </div>                
                         </div>
-
-                    <!-- modal from bootstrap -->
-                    <div class="delete-modal modal fade mt-5" id="delete_{{ shopping_cart.item_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body text-capitalize">
-                                    <h5 class="modal-title text-capitalize font-weight-bolder" id="exampleModalLabel">are you sure you want to delete</h5>
-                                    <br><br>
-                                    <p>"{{ shopping_cart.drink.drink_name }}"?</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger text-capitalize" data-dismiss="modal">no</button>
-                                    <button type="button" class="bin-btn btn btn-success text-capitalize">yes</button>
+                        <!-- modal from bootstrap -->
+                        <div class="delete-modal modal fade mt-5" id="delete_{{ shopping_cart.item_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header text-center">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-capitalize">
+                                        <h5 class="modal-title text-capitalize font-weight-bolder" id="exampleModalLabel">are you sure you want to delete?</h5>
+                                        <br><br>
+                                        <p>"{{ shopping_cart.drink.drink_name }}"</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger text-capitalize" data-dismiss="modal">no</button>
+                                        <form method="POST" action="{% url 'delete_shopping_cart_item' shopping_cart.item_id %}">
+                                            {% csrf_token %}                                   
+                                            <button type="submit" class="bin-btn btn btn-success text-capitalize">yes</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    </div>
                 {% endfor %}   
-
                 <div class="container">
                     <div class="row">  
-
                             <div class="container">
                                 <div class="row">     
-
                                     <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
                                         <ul class="font-weight-bolder text-capitalize">
                                             <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
@@ -86,17 +79,13 @@
                                             <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
                                         </ul>
                                     </div> 
-
                                     <div class="pay-btn-holder text-left col-4 col-sm-6">
                                         <a href="#" class="pay-btn bg-secondary text-body text-uppercase">pay</a> 
                                     </div>
-
                                 </div>
                             </div>
-
                     </div>
                 </div>
-
             {% else %} 
                 <div class="col-12 mb-5 text-center">
                     <p>Your shopping cart is empty!</p>
@@ -105,5 +94,19 @@
             {% endif %}
         </div>    
     </div>
+{% endblock %}
 
+{% block postloadjs %}
+    <script>            
+        // to delete drinks
+        $(".bin-btn").click(function () { 
+          let csrfToken = "{{ csrf_token }}";
+          let itemId = $(".delete-modal").attr("id").split("delete_")[1];
+          let url = `/shopping_cart/delete/${itemId}/`;
+          let data = { "csrfmiddlewaretoken": csrfToken };
+          $.post(url, data).done(function () {
+            location.reload();
+          });
+        });
+    </script>
 {% endblock %}

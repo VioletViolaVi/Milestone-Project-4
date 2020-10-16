@@ -57,6 +57,12 @@
         {% block home %}
         {% endblock %}
 
+        {% block shopping_cart %}
+        {% endblock %}
+
+        {% block checkout %}
+        {% endblock %}
+
         {% if messages %}<!-- remove if not used! -->
         {% endif %}
 
@@ -65,22 +71,8 @@
 
         {% include "includes/footer.html" %}        
 
-        {% block postloadjs %}<!-- remove if not used! -->
+        {% block postloadjs %}
         {% endblock %}
-
-        <script>            
-                // to delete drinks
-                $(".bin-btn").click(function () { 
-                  let csrfToken = "{{ csrf_token }}";
-                  let itemId = $(".delete-modal").attr("id").split("delete_")[1];
-                  let url = `/shopping_cart/edit/${itemId}/`;
-                  let data = { "csrfmiddlewaretoken": csrfToken };
-    
-                  $.post(url, data).done(function () {
-                    location.reload();
-                  });
-                });
-        </script>
 
     </body>
 
