@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     "home",
     "shopping_cart",
+    "checkout"
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 # taken from django-allauth docs
 AUTHENTICATION_BACKENDS = [
@@ -175,3 +178,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FORMER_DELIVERY_COST = 35
 DELIVERY_COST = 5
+
+
+# MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

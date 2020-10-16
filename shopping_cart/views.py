@@ -46,7 +46,7 @@ def delete_shopping_cart_item(request, item_id):
     # delete specified drink in cart
 
     try:
-        drink_quantity = int(request.POST.get("editDrinks"))
+        drink_quantity = int(request.POST.get("drinkSelections"))
         shopping_cart = request.session.get("shopping_cart", {})
 
         if drink_quantity > 0 and drink_quantity < 100:
