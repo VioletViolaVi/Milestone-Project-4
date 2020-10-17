@@ -7,7 +7,7 @@ class DrinkOrderLineItemAdminInline(admin.TabularInline):
     readonly_fields = ("lineitem_total",)
 
 
-class DrinkOrdersAdmin(admin.ModelAdmin):
+class DrinkOrderAdmin(admin.ModelAdmin):
     inlines = (DrinkOrderLineItemAdminInline,)
 
     readonly_fields = ("order_number", "date",
@@ -26,4 +26,4 @@ class DrinkOrdersAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 
-admin.site.register(DrinkOrder, DrinkOrdersAdmin)
+admin.site.register(DrinkOrder, DrinkOrderAdmin)

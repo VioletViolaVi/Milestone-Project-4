@@ -9,7 +9,7 @@
         <h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
         
         <div class="col-6 mb-2 back-link">
-            <a class="text-info text-lowercase font-weight-bolder" href="{% url 'home' %}">back to home</a> 
+            <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}">back to home</a> 
         </div>
         
         <div class="footer-pusher container">
@@ -19,7 +19,7 @@
                         <div class="col-sm-6 col-lg-4 mb-5">
                             <div class="container">
                                 <div class="row"> 
-                                    {% if messages %}
+                                    {% if messages %} <!-- NOT WORKING -->
                                         {% for message in messages %}
                                             <p class="font-weight-bolder text-danger">{{ message }}</p>                           
                                         {% endfor %}
@@ -71,25 +71,22 @@
                             </div>                                                
                         </div>
                     {% endfor %}  
-                    
+                                      
                     <div class="container">
-                        <div class="row">  
-                                <div class="container">
-                                    <div class="row">     
-                                        <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
-                                            <ul class="font-weight-bolder text-capitalize">
-                                                <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
-                                                <li>delivery: <span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
-                                                <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
-                                            </ul>
-                                        </div> 
-                                        <div class="pay-btn-holder text-left col-4 col-sm-6">
-                                            <a href="{% url 'checkout' %}" class="pay-btn bg-secondary text-body text-uppercase font-weight-bolder">pay</a> 
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="row">     
+                            <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
+                                <ul class="font-weight-bolder text-capitalize">
+                                    <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                                    <li>delivery: <span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
+                                    <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                                </ul>
+                            </div> 
+                            <div class="pay-btn-holder text-left col-4 col-sm-6">
+                                <a href="{% url 'checkout' %}" class="pay-btn bg-secondary text-body text-uppercase font-weight-bolder">pay</a> 
+                            </div>
                         </div>
                     </div>
+                      
                 {% else %} 
                     <div class="col-12 mb-5 text-center">
                         <p>Your shopping cart is empty!</p>

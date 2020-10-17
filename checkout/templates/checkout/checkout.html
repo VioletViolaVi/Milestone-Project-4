@@ -4,15 +4,51 @@
 
 {% block tab_title %}| Make Payment{% endblock %}
 
-{% block payment %}
+{% block checkout %}
     <section class="footer-pusher">
         <h2 class="text-capitalize mt-3">make payment</h2>
 
-        <div class="drink-order-box col-12 text-left">
-            <p>#</p>
-            <div class="text-center mt-3">
+        <div class="drink-order-box col-12 text-left px-0">
+            
+            <p class="text-body text-center font-weight-bolder mb-1">Order Summary ({{ drink_counter }})</p>  
+            <div class="container">
+                <div class="row">     
+                    <div class="shopping-cart-costs text-left col-12 pl-1"> 
+                        <ul class="font-weight-bolder text-capitalize mb-1">
+                            <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                            <li>delivery: <span class="font-weight-normal">£{{ delivery|floatformat:2 }}</span></li>
+                            <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+            <hr class="m-0 p-0 mx-2 mb-2">
+
+            {% for shopping_cart in shopping_cart_items %} 
+                <div class="col-sm-6 col-lg-4 mb-0 p-1">
+                    <div class="container">
+                        <div class="row">  
+                            <div class="col-5 col-md-5 col-lg-5 col-xl-4 px-0">   
+                                <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">                                                        
+                            </div>
+                            <div class="col-7 col-md-7 col-lg-7 col-xl-8 px-0">         
+                                <ul class="text-capitalize text-left">
+                                    <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                                    <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                                    <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
+                                    <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                                    <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
+                                </ul>                    
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+            {% endfor %}      
+            
+            <div class="text-center mb-3">
                 <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary mr-2 font-weight-bolder" href="{% url 'shopping_cart' %}">change order</a>
             </div>
+            
         </div>
         <br>        
 
