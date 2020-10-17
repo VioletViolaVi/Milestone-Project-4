@@ -5,8 +5,24 @@
 {% block tab_title %}| Shopping Cart{% endblock %}
 
 {% block checkout %}
-
-<h2 class="text-capitalize mt-3 mb-5">checkout</h2>
-
-
+    <section class="footer-pusher">
+        <h2 class="text-capitalize mt-3">make payment</h2>
+        <div class="col-12">
+            <p>Please enter your payment details to complete your order.</p>
+            <form class="payment-form-border p-2 text-body" action="{% url 'checkout' %}" method="POST" id="paymentForm">
+                {% csrf_token %}
+                {{ drink_order_form.full_name | as_crispy_field }}
+                {{ drink_order_form.email | as_crispy_field }}
+                {{ drink_order_form.phone_number | as_crispy_field }}
+                {{ drink_order_form.street_address1 | as_crispy_field }}
+                {{ drink_order_form.street_address2 | as_crispy_field }}
+                {{ drink_order_form.postcode | as_crispy_field }}
+                {{ drink_order_form.country | as_crispy_field }}
+            </form>
+        </div>
+        <br>
+        <div class="drink-order-box col-12 text-left">
+            <p>#</p>
+        </div>
+    </section>
 {% endblock %}

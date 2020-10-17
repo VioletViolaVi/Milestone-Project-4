@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "home",
     "shopping_cart",
     "checkout",
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'slurps.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -77,10 +80,13 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shopping_cart.contexts.shopping_cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
-
 
 
 # taken from django-allauth docs
@@ -178,6 +184,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FORMER_DELIVERY_COST = 35
 DELIVERY_COST = 5
-
-
-# MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

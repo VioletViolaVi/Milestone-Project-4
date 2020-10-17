@@ -1,3 +1,4 @@
+<section>
     <div class="sort-by-section dropdown text-left">
         <button class="btn text-body font-weight-bolder dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           sort by...
@@ -9,3 +10,4 @@
             <a class="dropdown-item" href="{% url 'home' %}?sort=drink_name&direction=desc{% if typed_in_search != None %}&search={{typed_in_search}}{% endif %}">Drink Name (Z-A)</a>
         </div>
     </div>
+</section>

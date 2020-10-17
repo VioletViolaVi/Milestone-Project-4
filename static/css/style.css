@@ -158,6 +158,10 @@ body {
   padding-top: 4em;
 }
 
+.footer-pusher {
+  padding-bottom: 10em;
+}
+
 #aboutUsSection {
   padding-bottom: 8em;
 }
@@ -312,8 +316,32 @@ table.table-bordered > tbody > tr > th {
   font-size: 1em;
 }
 
-.shopping-cart-footer {
-  padding-bottom: 10em;
+/******************************************* checkout */
+.payment-form-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+}
+
+.payment-form-border div {
+  border-radius: 0.2em;
+}
+
+.payment-form-border input:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
+#div_id_country {
+  margin-bottom: 0em;
+}
+
+.drink-order-box {
+  height: 100vw;
+  width: 90vw;
+  border: solid darkgray 0.2em;
+  margin: auto;
+  overflow: scroll;
 }
 
 /******************************************* media queries ******************************************* */
