@@ -28,8 +28,12 @@
                 <div class="col-sm-6 col-lg-4 mb-0 p-1">
                     <div class="container">
                         <div class="row">  
-                            <div class="col-5 col-md-5 col-lg-5 col-xl-4 px-0">   
-                                <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">                                                        
+                            <div class="col-5 col-md-5 col-lg-5 col-xl-4 px-0"> 
+                            {% if shopping_cart.drink.image %}  
+                                <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}" alt="{{ shopping_cart.drink.drink_name}}">                                                        
+                            {% else %}
+                                <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
+                            {% endif %}                                                                          
                             </div>
                             <div class="col-7 col-md-7 col-lg-7 col-xl-8 px-0">         
                                 <ul class="text-capitalize text-left">
@@ -46,9 +50,9 @@
             {% endfor %}      
             
             <div class="text-center mb-3">
-                <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary mr-2 font-weight-bolder" href="{% url 'shopping_cart' %}">change order</a>
+                <a class="back-to-home-pg-btn text-body bg-secondary mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
             </div>
-            
+
         </div>
         <br>        
 
