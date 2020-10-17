@@ -7,6 +7,11 @@
 {% block shopping_cart %}
     <section>
         <h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
+        
+        <div class="col-6 mb-2 back-link">
+            <a class="text-info text-lowercase font-weight-bolder" href="{% url 'home' %}">back to home</a> 
+        </div>
+        
         <div class="footer-pusher container">
             <div class="row">  
                 {% if shopping_cart_items %}
@@ -35,8 +40,8 @@
                                         <form method="POST" action="{% url 'edit_shopping_cart' shopping_cart.item_id %}" class="quantity-selection shopping-cart-edit-btn">
                                             {% csrf_token %}
                                             <label for="editDrinks"></label>
-                                            <button type="submit" class="edit-btn text-uppercase bg-secondary mb-5">edit</button>
-                                            <input value="{{ shopping_cart.drink_quantity }}" type="number" id="editDrinks" name="editDrinks">
+                                            <button type="submit" class="edit-btn text-uppercase bg-secondary mb-5 font-weight-bolder">edit</button>
+                                            <input value="{{ shopping_cart.drink_quantity }}" type="number" id="editDrinks" name="editDrinks" class="font-weight-bolder">
                                         </form>
                                         <i class="fas fa-trash-alt ml-1" data-target="#remove_{{ shopping_cart.item_id }}" data-toggle="modal"></i>                                                                       
                                     </div>
@@ -65,7 +70,8 @@
                                 </div>
                             </div>                                                
                         </div>
-                    {% endfor %}   
+                    {% endfor %}  
+                    
                     <div class="container">
                         <div class="row">  
                                 <div class="container">
@@ -78,7 +84,7 @@
                                             </ul>
                                         </div> 
                                         <div class="pay-btn-holder text-left col-4 col-sm-6">
-                                            <a href="{% url 'checkout' %}" class="pay-btn bg-secondary text-body text-uppercase">pay</a> 
+                                            <a href="{% url 'checkout' %}" class="pay-btn bg-secondary text-body text-uppercase font-weight-bolder">pay</a> 
                                         </div>
                                     </div>
                                 </div>

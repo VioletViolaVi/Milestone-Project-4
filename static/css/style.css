@@ -50,10 +50,6 @@ html {
   font-size: 1.2em;
 }
 
-.nav-link {
-  font-weight: bold;
-}
-
 .nav-link:hover,
 .history-and-trolley-bg,
 .delivery-highlight {
@@ -92,11 +88,6 @@ html {
 .history-and-trolley-bg,
 .delivery-cost-bg {
   width: 100%;
-}
-
-.trolley-counter,
-.delivery-cost-bg {
-  font-weight: 900;
 }
 
 .history-and-trolley-bg {
@@ -196,7 +187,6 @@ body {
 
 .quantity-selection input[type="number"],
 .quantity-selection button {
-  font-weight: 900;
   border-radius: 0.2em;
 }
 
@@ -234,17 +224,21 @@ body {
   background-color: lightgray;
 }
 
+.sort-by-section button:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
 .sort-by-section a:hover {
   background-color: gray;
 }
 
 .sort-by-section a:active {
   color: black;
-  font-weight: 900;
 }
 
 .buy-now-btn {
-  font-weight: 900;
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -277,6 +271,10 @@ body {
 }
 
 /******************************************* shopping cart view */
+.back-link {
+  text-decoration: underline;
+}
+
 .table-bordered {
   border: 0.2em solid slategray;
 }
@@ -288,7 +286,6 @@ table.table-bordered > tbody > tr > th {
 
 .pay-btn,
 .back-to-home-pg-btn {
-  font-weight: 900;
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -316,7 +313,7 @@ table.table-bordered > tbody > tr > th {
   font-size: 1em;
 }
 
-/******************************************* checkout */
+/******************************************* payment */
 .payment-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
@@ -334,6 +331,15 @@ table.table-bordered > tbody > tr > th {
 
 #div_id_country {
   margin-bottom: 0em;
+}
+
+.form-submit-btn {
+  border-radius: 0.2em;
+  outline: none;
+  margin: -0.5em 0em 0em 0em;
+  border: gray solid 0.1em;
+  text-align: center;
+  padding: 0.2em;
 }
 
 .drink-order-box {

@@ -29,8 +29,7 @@
             <div class="col-2 mt-2">
                 <a href="{% url 'shopping_cart' %}" class="text-body"> 
                     <i class="fas fa-shopping-cart"></i>
-                    <span class="trolley-counter counter-circle text-center bg-secondary">{{ drink_counter}}</span>   
-                    <span class="trolley-counter counter-circle text-center">{{ drink_counter}}</span>
+                    <span class="trolley-counter counter-circle text-center font-weight-bolder">{{ drink_counter}}</span>   
                     <div class="col-sm">
                         <span class="trolley-price font-weight-bolder">
                             {% if shopping_cart_items %}

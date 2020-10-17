@@ -2,11 +2,20 @@
 {% load static %}
 {% load shopping_cart_tools %}
 
-{% block tab_title %}| Shopping Cart{% endblock %}
+{% block tab_title %}| Make Payment{% endblock %}
 
-{% block checkout %}
+{% block payment %}
     <section class="footer-pusher">
         <h2 class="text-capitalize mt-3">make payment</h2>
+
+        <div class="drink-order-box col-12 text-left">
+            <p>#</p>
+            <div class="text-center mt-3">
+                <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary mr-2 font-weight-bolder" href="{% url 'shopping_cart' %}">change order</a>
+            </div>
+        </div>
+        <br>        
+
         <div class="col-12">
             <p>Please enter your payment details to complete your order.</p>
             <form class="payment-form-border p-2 text-body" action="{% url 'checkout' %}" method="POST" id="paymentForm">
@@ -18,11 +27,31 @@
                 {{ drink_order_form.street_address2 | as_crispy_field }}
                 {{ drink_order_form.postcode | as_crispy_field }}
                 {{ drink_order_form.country | as_crispy_field }}
+                <label for="#"></label>
+                <button type="submit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
             </form>
         </div>
-        <br>
-        <div class="drink-order-box col-12 text-left">
-            <p>#</p>
+
+        <div class="col-12 px-1">
+            {% if user.is_authenticated %}
+		    	<label for="#">Save payment details to my profile</label>
+                <input type="checkbox" checked>
+		    {% else %}
+		    	<label for="#">
+                    <a class="text-info font-weight-bolder" href="{% url 'account_signup' %}">Create an account</a> or 
+                    <a class="text-info font-weight-bolder" href="{% url 'account_login' %}">login</a> to save this information
+                </label>
+		    {% endif %}
         </div>
+
+        <div class="col-12">
+            <p class="small text-danger my-0">
+				<span class="icon">
+					<i class="fas fa-exclamation-circle"></i>
+				</span>
+				<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+			</p>
+        </div>
+
     </section>
 {% endblock %}

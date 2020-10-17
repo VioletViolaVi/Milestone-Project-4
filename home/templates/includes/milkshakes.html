@@ -23,8 +23,8 @@
                                 <form method="POST" action="{% url 'add_to_shopping_cart' milkshake.id %}" class="quantity-selection">
                                     {% csrf_token %}
                                     <label for="milkshakeSelection"></label>
-                                    <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ milkshake.id }}">
-                                    <button type="submit" class="text-uppercase bg-secondary mb-5">add to cart</button>
+                                    <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ milkshake.id }}" class=" font-weight-bolder">
+                                    <button type="submit" class="text-uppercase bg-secondary mb-5 font-weight-bolder">add to cart</button>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </form>
                                 </div>
