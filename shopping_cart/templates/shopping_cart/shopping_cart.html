@@ -37,35 +37,32 @@
                                         <button type="submit" class="edit-btn text-uppercase bg-secondary mb-5">edit</button>
                                         <input value="{{ shopping_cart.drink_quantity }}" type="number" id="editDrinks" name="editDrinks">
                                     </form>
-                                    <i class="fas fa-trash-alt ml-1" data-toggle="modal" data-target="#delete_{{ shopping_cart.item_id }}"></i>                                                                       
+                                    <i class="fas fa-trash-alt ml-1" data-target="#remove_{{ shopping_cart.item_id }}" data-toggle="modal"></i>                                                                       
                                 </div>
-
                             </div>                
                         </div>
-                        <!-- modal from bootstrap -->
-                        <div class="delete-modal modal fade mt-5" id="delete_{{ shopping_cart.item_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        
+                        <!-- bootstrap modal -->
+                        <div class="delete-modal modal fade text-center" id="remove_{{ shopping_cart.item_id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header text-center">
+                                    <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body text-capitalize">
+                                    <div class="modal-body">
                                         <h5 class="modal-title text-capitalize font-weight-bolder" id="exampleModalLabel">are you sure you want to delete?</h5>
                                         <br><br>
-                                        <p>"{{ shopping_cart.drink.drink_name }}"</p>
+                                        <p class="text-capitalize font-weight-bolder">"{{ shopping_cart.drink.drink_name }}"</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger text-capitalize" data-dismiss="modal">no</button>
-                                        <form method="POST" action="{% url 'delete_shopping_cart_item' shopping_cart.item_id %}">
-                                            {% csrf_token %}                                   
-                                            <button type="submit" class="bin-btn btn btn-success text-capitalize">yes</button>
-                                        </form>
+                                        <button type="button" class="btn btn-secondary btn-danger text-capitalize" data-dismiss="modal">no</button>
+                                        <button type="button" class="bin-icon btn btn-success text-capitalize" id="delete_{{ shopping_cart.item_id }}">yes</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>                                                
                     </div>
                 {% endfor %}   
                 <div class="container">
@@ -99,9 +96,9 @@
 {% block postloadjs %}
     <script>            
         // to delete drinks
-        $(".bin-btn").click(function () { 
+        $(".bin-icon").click(function () { 
           let csrfToken = "{{ csrf_token }}";
-          let itemId = $(".delete-modal").attr("id").split("delete_")[1];
+          let itemId = $(this).attr("id").split("delete_")[1];
           let url = `/shopping_cart/delete/${itemId}/`;
           let data = { "csrfmiddlewaretoken": csrfToken };
           $.post(url, data).done(function () {

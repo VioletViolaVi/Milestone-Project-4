@@ -21,16 +21,4 @@ $(document).ready(function () {
     let editForm = $(this).parent();
     editForm.submit();
   });
-
-//   // to delete drinks
-//   $(".bin-btn").click(function () { 
-//     let csrfToken = "{{ csrf_token }}";
-//     let itemId = $(".delete-modal").attr("id").split("delete_")[1];
-//     let url = `/shopping_cart/edit/${itemId}/`;
-//     let data = { "csrfmiddlewaretoken": csrfToken };
-
-//     $.post(url, data).done(function () {
-//       location.reload();
-//     });
-//   });
 });

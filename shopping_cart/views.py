@@ -44,9 +44,10 @@ def edit_shopping_cart(request, item_id):
 
 def delete_shopping_cart_item(request, item_id):
     # delete specified drink in cart
-
-    shopping_cart = request.session.get("shopping_cart", {})
-    shopping_cart.pop(item_id)
-    request.session["shopping_cart"] = shopping_cart
-    return HttpResponse(status=200)
-    return redirect(reverse("shopping_cart"))
+    try:
+        shopping_cart = request.session.get("shopping_cart", {})
+        shopping_cart.pop(item_id)
+        request.session["shopping_cart"] = shopping_cart
+        return redirect(reverse("shopping_cart"))
+    except Exception as e:
+        return HttpResponse(status=500)
