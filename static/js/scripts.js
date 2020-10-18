@@ -23,15 +23,16 @@ $(document).ready(function () {
   });
 
   // stripe elements
-  let stripe_public_key = $("#id_stripe_public_key").text().slice(1, -1);
-  let client_secret = $("#id_client_secret").text().slice(1, -1);
-  let stripe = Stripe(stripe_public_key);
+  let stripePublicKey = $("#id_stripe_public_key").text().slice(1, -1);
+  let clientSecret = $("#id_client_secret").text().slice(1, -1);
+  let stripe = Stripe(stripePublicKey);
   let elements = stripe.elements();
   let style = {
     base: {
       color: "#212529",
       fontFamily: "sans-serif",
-      src: "local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2')",//delete if not used
+      src:
+        "local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2')", //delete if not used
       fontSmoothing: "antialiased",
       fontSize: "16px",
       "::placeholder": {
@@ -45,4 +46,50 @@ $(document).ready(function () {
   };
   let card = elements.create("card", { style: style });
   card.mount("#stripeCard");
+
+  // deals with realtime validation errors on card
+  card.addEventListener("change", function (event) {
+    let errorDiv = document.getElementById("cardErrors");
+    if (event.error) {
+      let html = `
+            <span>
+                <i class="fas fa-times"></i>
+            </span>
+            <span>${event.error.message}</span>
+        `;
+      $(errorDiv).html(html);
+    } else {
+      errorDiv.textContent = "";
+    }
+  });
+
+  // deals with form submit
+  let form = document.getElementById("paymentForm");
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    card.update({ "disabled": true });
+    $("#stripeFormSubmit").attr("disabled", true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+        },
+      })
+      .then(function (result) {
+        if (result.error) {
+          let errorDiv = document.getElementById("cardErrors");
+          let html = `<span>
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <span>${result.error.message}</span>`;
+          $(errorDiv).html(html);
+          card.update({ "disabled": false });
+          $("#stripeFormSubmit").attr("disabled", false);
+        } else {
+          if (result.paymentIntent.status === "succeeded") {
+            form.submit();
+          }
+        }
+      });
+  });
 });

@@ -69,8 +69,9 @@
                     {{ drink_order_form.postcode | as_crispy_field }}
                     {{ drink_order_form.country | as_crispy_field }}
                     <div class="mt-3" id="stripeCard"></div>
+                    <div class="mt-3 text-danger" id="cardErrors" role="alert"></div>
                     <label for="#"></label>
-                    <button type="submit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
+                    <button type="submit" id="stripeFormSubmit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
                 </fieldset>
             </form>
         </div>
