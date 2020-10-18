@@ -329,6 +329,10 @@ table.table-bordered > tbody > tr > th {
   border: slategray solid 0.2em;
 }
 
+#paymentFormInputs {
+  color: #212529;
+}
+
 #div_id_country {
   margin-bottom: 0em;
 }
@@ -348,6 +352,33 @@ table.table-bordered > tbody > tr > th {
   border: solid darkgray 0.2em;
   margin: auto;
   overflow: scroll;
+}
+
+/******************************************* stripe */
+.StripeElement,
+.stripe-style-input {
+  height: 40px;
+  padding: 10px 12px;
+  background-color: white;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus {
+  border: slategray solid 0.2em;
+}
+
+/*remove if not working*/
+/* .stripe-style-input {
+  font-family: "Montserrat", sans-serif !important;
+} */
+
+.StripeElement--invalid {
+  border-color: red;
+}
+
+.stripe-style-input::placeholder,
+.stripe-style-input {
+  color: #212529;
 }
 
 /******************************************* media queries ******************************************* */
