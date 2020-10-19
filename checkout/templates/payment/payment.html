@@ -4,7 +4,7 @@
 
 {% block tab_title %}| Make Payment{% endblock %}
 
-{% block checkout %}
+{% block payment %}
     <section class="footer-pusher">
         <h2 class="text-capitalize mt-3">make payment</h2>
 
@@ -24,30 +24,32 @@
             </div>
             <hr class="m-0 p-0 mx-2 mb-2">
 
-            {% for shopping_cart in shopping_cart_items %} 
-                <div class="col-sm-6 col-lg-4 mb-0 p-1">
-                    <div class="container">
-                        <div class="row">  
-                            <div class="col-5 col-md-5 col-lg-5 col-xl-4 px-0"> 
-                            {% if shopping_cart.drink.image %}  
-                                <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}" alt="{{ shopping_cart.drink.drink_name}}">                                                        
-                            {% else %}
-                                <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
-                            {% endif %}                                                                          
+
+            <div class="container">
+                <div class="row">
+                    {% for shopping_cart in shopping_cart_items %} 
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-3 text-center">     
+                            <div class="shopping_cart_img"> 
+                                {% if shopping_cart.drink.image %}  
+                                    <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}" alt="{{ shopping_cart.drink.drink_name}}">                                                        
+                                {% else %}
+                                    <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
+                                {% endif %} 
                             </div>
-                            <div class="col-7 col-md-7 col-lg-7 col-xl-8 px-0">         
-                                <ul class="text-capitalize text-left">
-                                    <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
-                                    <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
-                                    <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
-                                    <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
-                                    <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
-                                </ul>                    
-                            </div>
-                        </div>                
-                    </div>
+                            <ul class="text-capitalize text-left">
+                                <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                                <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                                <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
+                                <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                                <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
+                            </ul> 
+                        </div>                                                           
+                    {% endfor %}                    
                 </div>
-            {% endfor %}      
+            </div>
+
+                
+              
             
             <div class="text-center mb-3">
                 <a class="back-to-home-pg-btn text-body bg-secondary mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
@@ -58,7 +60,7 @@
 
         <div class="col-12">
             <p>Please enter your payment details to complete your order.</p>
-            <form class="payment-form-border p-2" action="{% url 'checkout' %}" method="POST" id="paymentForm">
+            <form class="payment-form-border p-2" action="{% url 'payment' %}" method="POST" id="paymentForm">
                 {% csrf_token %}
                 <fieldset>
                     {{ drink_order_form.full_name | as_crispy_field }}
@@ -70,16 +72,16 @@
                     {{ drink_order_form.country | as_crispy_field }}
                     <div class="mt-3" id="stripeCard"></div>
                     <div class="mt-3 text-danger" id="cardErrors" role="alert"></div>
-                    <label for="#"></label>
-                    <button type="submit" id="stripeFormSubmit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
+                    <label for="stripeFormSubmit"></label>
+                    <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
                 </fieldset>
             </form>
         </div>
 
         <div class="col-12 px-1">
             {% if user.is_authenticated %}
-		    	<label for="#">Save payment details to my profile</label>
-                <input type="checkbox" checked>
+		    	<label for="saveInfo">Save payment details to my profile</label>
+                <input type="checkbox" checked name="saveInfo" id="saveInfo">
 		    {% else %}
 		    	<label for="#">
                     <a class="text-info font-weight-bolder" href="{% url 'account_signup' %}">Create an account</a> or 

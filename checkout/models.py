@@ -30,7 +30,7 @@ class DrinkOrder(models.Model):
 
     def update_total(self):
         self.subtotal = self.lineitems.aggregate(Sum("lineitem_total"))[
-            "lineitem_total__sum"]
+            "lineitem_total__sum"] or 0
         self.delivery_cost = settings.DELIVERY_COST
         self.grand_total = self.subtotal + self.delivery_cost
         self.save()
@@ -61,7 +61,7 @@ class DrinkOrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
 
-        self.lineitem_total = self.drink.price * self.quantity
+        self.lineitem_total = self.drink.price * self.drink_quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
