@@ -1,5 +1,14 @@
 <section>
+
     <h1 class="new-drinks-title text-capitalize mb-4">new drinks</h1>
+<!-- NOT WORKING!!!!!! -->
+    {% if messages %} 
+        {% for message in messages %}
+            <p class="font-weight-bolder text-danger">{{ message }}</p>                           
+        {% endfor %}
+    {% endif %}
+<!-- NOT WORKING!!!!!! -->
+
     <div class="container">
         <div class="row">     
             {% for new_drink in new_drinks %}
