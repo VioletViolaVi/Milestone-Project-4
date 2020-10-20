@@ -381,6 +381,14 @@ table.table-bordered > tbody > tr > th {
   color: #212529;
 }
 
+/******************************************* payment & history */
+.payment-summary {
+  border: lightgray 0.2em solid;
+  margin: auto;
+  width: 95vw;
+  padding: 10px;
+}
+
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */
@@ -479,13 +487,13 @@ table.table-bordered > tbody > tr > th {
     padding: 0em 0em 0em 4em;
   }
 
- /******************************************* shopping cart view */
+  /******************************************* shopping cart view */
   .drink-order-box {
-          height: 50vh;
-              width: 80vw;
+    height: 50vh;
+    width: 80vw;
   }
 
-  .payment-form-border{
+  .payment-form-border {
     width: 80vw;
     margin: auto;
   }
@@ -512,14 +520,14 @@ table.table-bordered > tbody > tr > th {
   .pay-btn-holder {
     padding: 0em 0em 0em 2em;
   }
-   /******************************************* shopping cart view */
+  /******************************************* shopping cart view */
   .drink-order-box {
-          height: 40vh;
-              width: 75vw;
+    height: 40vh;
+    width: 75vw;
   }
   .payment-form-border {
-        width: 70vw;
-}
+    width: 70vw;
+  }
 }
 
 /* bootstrap media query */
@@ -583,14 +591,19 @@ table.table-bordered > tbody > tr > th {
   .pay-btn-holder {
     padding: 0em 0em 0em 2em;
   }
-   /******************************************* shopping cart view */
+  /******************************************* shopping cart view */
   .drink-order-box {
-          height: 30vh;
+    height: 30vh;
   }
 
   .payment-form-border {
-        width: 60vw;
-}
+    width: 60vw;
+  }
+
+  /******************************************* payment & history */
+  .payment-summary {
+    width: 70vw;
+  }
 }
 
 /* bootstrap media query */
@@ -609,7 +622,12 @@ table.table-bordered > tbody > tr > th {
     padding: 0em 0em 0em 1em;
   }
 
-    .payment-form-border {
-        width: 50vw;
-}
+  .payment-form-border {
+    width: 50vw;
+  }
+
+  /******************************************* payment & history */
+  .payment-summary {
+    width: 55vw;
+  }
 }
