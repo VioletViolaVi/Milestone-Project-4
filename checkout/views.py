@@ -96,7 +96,7 @@ def payment1(request):
     return render(request, template, context)
 
 
-def payment_success(request, order_number):
+def payment_success1(request, order_number):
     saved_info = request.session.get("saveInfo")
     order = get_object_or_404(DrinkOrder1, order_number=order_number)
     messages.success(request, f"Order successfully processed! \

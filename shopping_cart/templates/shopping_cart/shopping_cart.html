@@ -5,8 +5,9 @@
 {% block tab_title %}| Shopping Cart{% endblock %}
 
 {% block shopping_cart %}
-    <section>
-        <h2 class="text-capitalize mt-3 mb-5">shopping cart</h2>
+    <section class="text-capitalize">
+
+        <h2 class="mt-3 mb-5">shopping cart</h2>
         
         <div class="footer-pusher container">
             <div class="row">  
@@ -21,13 +22,11 @@
                             <div class="container">
                                 <div class="row"> 
 
-                               <!-- NOT WORKING --><!-- NOT WORKING -->   <!-- NOT WORKING -->  
                                     {% if messages %} 
                                         {% for message in messages %}
                                             <p class="font-weight-bolder text-danger">{{ message }}</p>                           
                                         {% endfor %}
                                     {% endif %}
-                                <!-- NOT WORKING --> <!-- NOT WORKING --> <!-- NOT WORKING -->   
                                 
                                     <div class="col-6 col-md-5 col-lg-5 col-xl-4 px-0">  
                                         {% if shopping_cart.drink.image %}   
@@ -37,7 +36,7 @@
                                         {% endif %}                                                      
                                     </div>
                                     <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">         
-                                        <ul class="text-capitalize text-left">
+                                        <ul class="text-left">
                                             <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
                                             <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
                                             <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
@@ -67,13 +66,13 @@
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <h5 class="modal-title text-capitalize font-weight-bolder" id="exampleModalLabel">are you sure you want to delete?</h5>
+                                            <h5 class="modal-title font-weight-bolder" id="exampleModalLabel">are you sure you want to delete?</h5>
                                             <br><br>
-                                            <p class="text-capitalize font-weight-bolder">"{{ shopping_cart.drink.drink_name }}"</p>
+                                            <p class="font-weight-bolder">"{{ shopping_cart.drink.drink_name }}"</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary btn-danger text-capitalize" data-dismiss="modal">no</button>
-                                            <button type="button" class="bin-icon btn btn-success text-capitalize" id="delete_{{ shopping_cart.item_id }}">yes</button>
+                                            <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">no</button>
+                                            <button type="button" class="bin-icon btn btn-success" id="delete_{{ shopping_cart.item_id }}">yes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -84,7 +83,7 @@
                     <div class="container">
                         <div class="row">     
                             <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
-                                <ul class="font-weight-bolder text-capitalize">
+                                <ul class="font-weight-bolder">
                                     <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
                                     <li>delivery: <span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
                                     <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
@@ -98,8 +97,8 @@
                       
                 {% else %} 
                     <div class="col-12 mb-5 text-center">
-                        <p>Your shopping cart is empty!</p>
-                        <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body" href="{% url 'home' %}">back to home</a>
+                        <p>your shopping cart is empty</p>
+                        <a class="back-to-home-pg-btn text-body bg-secondary text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
                     </div>
                 {% endif %}
             </div>    
