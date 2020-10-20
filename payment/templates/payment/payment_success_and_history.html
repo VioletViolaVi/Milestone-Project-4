@@ -17,14 +17,26 @@
         <div class="payment-summary container mt-3">
             <div class="row text-capitalize">
                 <div class="col-12 col-sm-7 col-lg-8">
-                    <ul>
-                        <li><h5 class="font-weight-bolder">drink order</h5></li>                     
+                    <ul class=" mb-sm-0">
                         <li><b class="font-weight-bolder">order number:</b> <small>{{ drink_order.order_number }}</small></li>
-                        {% for drink_item in drink_order.lineitems.all %}
+                        <br>
+                        <li><h5 class="font-weight-bolder"><u>orders</u></h5></li>
+                        {% for drink_item in drink_order.lineitems.all %}                            
                             <li><b class="font-weight-bolder">name:</b> {{ drink_item.drink.drink_name }}</li>
                             <li><b class="font-weight-bolder">quantity:</b> {{ drink_item.drink_quantity }}</li>
                             <li><b class="font-weight-bolder">price:</b> {{ drink_item.drink.price }}</li>
                         {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-5 col-lg-4">
+                    <ul class=" mb-0">
+                        <li><b class="font-weight-bolder">full name:</b> {{ drink_order.full_name }}</li>
+                        <li><b class="font-weight-bolder">street address 1:</b> {{ drink_order.street_address1 }}</li>
+                        <li><b class="font-weight-bolder">street address 2:</b> {{ drink_order.street_address2 }}</li>
+                        <li><b class="font-weight-bolder">postcode:</b> {{ drink_order.postcode }}</li>
+                        <li><b class="font-weight-bolder">country:</b> {{ drink_order.country }}</li>
+                        <li><b class="font-weight-bolder">phone number:</b> {{ drink_order.phone_number }}</li>
+                        <li><b class="font-weight-bolder">email:</b> <span class="text-lowercase">{{ drink_order.email }}</span></li>
                         <br>
                         <li><b class="font-weight-bolder">subtotal:</b> {{ drink_order.subtotal }}</li>
                         <li><b class="font-weight-bolder">delivery cost:</b> {{ drink_order.delivery_cost }}</li>
@@ -33,69 +45,20 @@
                         <li><b class="font-weight-bolder">date:</b> {{ drink_order.date }}</li>
                     </ul>
                 </div>
-                <div class="col-12 col-sm-5 col-lg-4">
-                    <ul>
-                        <li><h5 class="font-weight-bolder">personal details</h5></li>
-                        <li><b class="font-weight-bolder">full name:</b> {{ drink_order.full_name }}</li>
-                        <li><b class="font-weight-bolder">street address 1:</b> {{ drink_order.street_address1 }}</li>
-                        <li><b class="font-weight-bolder">street address 2:</b> {{ drink_order.street_address2 }}</li>
-                        <li><b class="font-weight-bolder">postcode:</b> {{ drink_order.postcode }}</li>
-                        <li><b class="font-weight-bolder">country:</b> {{ drink_order.country }}</li>
-                        <li><b class="font-weight-bolder">phone number:</b> {{ drink_order.phone_number }}</li>
-                        <li><b class="font-weight-bolder">email:</b> <span class="text-lowercase">{{ drink_order.email }}</span></li>
-                    </ul>
-                </div>
             </div>
         </div>
 
-
-                            
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- <ul class="mb-sm-0 ml-lg-2">
-                <ul class="mb-0 ml-md-1"> -->
-                <!-- <div class="col-12 col-sm-4 px-1">
-                    <ul>
-                        <li><h5 class="font-weight-bolder">costs</h5></li>
-                        <li><b class="font-weight-bolder">subtotal:</b> {{ drink_order.subtotal }}</li>
-                        <li><b class="font-weight-bolder">delivery cost:</b> {{ drink_order.delivery_cost }}</li>
-                        <li><b class="font-weight-bolder">grand total:</b> {{ drink_order.grand_total }}</li>
-                    </ul>
-                </div> -->
-
-
-
-
-
-
-
-
-        <h2 class="text-capitalize">payment history</h2> 
+        <h2 class="text-capitalize text-center mt-3">order history</h2> 
         {% if payment_history %} 
             <p>#</p>
         {% else %}           
-            <div class="col-12 text-capitalize">
-                <p>your payment history is empty</p>
+            <div class="col-12 text-capitalize text-center">
+                <p>your order history is empty</p>
             </div>
         {% endif %}
     
-        <div class="col-12">
-            <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary text-body font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+        <div class="col-12 text-center">
+            <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
         </div>
 
     </section>
