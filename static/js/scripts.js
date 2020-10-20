@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   // deals with realtime validation errors on card
   card.addEventListener("change", function (event) {
-    let errorDiv = document.getElementById("cardErrors");
+    let errorDiv = document.getElementById("stripeCardErrors");
     if (event.error) {
       let html = `
             <span>
@@ -77,7 +77,7 @@ $(document).ready(function () {
       })
       .then(function (result) {
         if (result.error) {
-          let errorDiv = document.getElementById("cardErrors");
+          let errorDiv = document.getElementById("stripeCardErrors");
           let html = `<span>
                             <i class="fas fa-times"></i>
                         </span>

@@ -10,7 +10,7 @@ from shopping_cart.contexts import shopping_cart_contents
 import stripe
 
 
-def payment(request):
+def payment1(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -86,7 +86,7 @@ def payment(request):
         messages.warning(request, "Stripe public key is missing. \
             Did you forget to set it in your environment?")
 
-    template = "payment/payment.html"
+    template = "payment/payment1.html"
     context = {
         "drink_order_form": drink_order_form,
         "stripe_public_key": stripe_public_key,
