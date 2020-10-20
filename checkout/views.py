@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import DrinkOrderForm
-from .models import DrinkOrder, DrinkOrderLineItem
+from .models import DrinkOrder1, DrinkOrderLineItem1
 from home.models import Drink
 from shopping_cart.contexts import shopping_cart_contents
 
@@ -33,7 +33,7 @@ def payment(request):
                 try:
                     drink = Drink.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        drink_order_line_item = DrinkOrderLineItem(
+                        drink_order_line_item = DrinkOrderLineItem1(
                             order=drink_order,
                             drink=drink,
                             drink_quantity=item_data,
@@ -98,7 +98,7 @@ def payment(request):
 
 def payment_success(request, order_number):
     saved_info = request.session.get("saveInfo")
-    order = get_object_or_404(DrinkOrder, order_number=order_number)
+    order = get_object_or_404(DrinkOrder1, order_number=order_number)
     messages.success(request, f"Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.")

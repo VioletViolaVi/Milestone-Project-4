@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import DrinkOrder, DrinkOrderLineItem
+from .models import DrinkOrder1, DrinkOrderLineItem1
 
 
 class DrinkOrderLineItemAdminInline(admin.TabularInline):
-    model = DrinkOrderLineItem
+    model = DrinkOrderLineItem1
     readonly_fields = ("lineitem_total",)
 
 
@@ -26,4 +26,4 @@ class DrinkOrderAdmin(admin.ModelAdmin):
     ordering = ('-date',)
 
 
-admin.site.register(DrinkOrder, DrinkOrderAdmin)
+admin.site.register(DrinkOrder1, DrinkOrderAdmin)

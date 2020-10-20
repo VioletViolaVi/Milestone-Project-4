@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
     "home",
     "shopping_cart",
+    "payment",
     "checkout",
     "crispy_forms",
 ]

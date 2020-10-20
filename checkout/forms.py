@@ -1,10 +1,10 @@
 from django import forms
-from .models import DrinkOrder
+from .models import DrinkOrder1
 
 
 class DrinkOrderForm(forms.ModelForm):
     class Meta:
-        model = DrinkOrder
+        model = DrinkOrder1
         fields = ("full_name", "email", "phone_number",
                   "street_address1", "street_address2", "postcode",
                   "country",)
