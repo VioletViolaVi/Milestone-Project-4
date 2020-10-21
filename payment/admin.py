@@ -12,12 +12,12 @@ class DrinkOrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ("order_number", "date",
                        "delivery_cost", "subtotal",
-                       "grand_total",)
+                       "grand_total", "original_shopping_cart", "stripe_pid")
 
     fields = ("order_number", "full_name", "email", "phone_number",
               "street_address1", "street_address2", "postcode",
               "country", "subtotal", "delivery_cost",
-              "grand_total", "date")
+              "grand_total", "date", "original_shopping_cart", "stripe_pid")
 
     list_display = ("order_number", "date", "full_name",
                     "subtotal", "delivery_cost",

@@ -48,7 +48,11 @@ def payment(request):
         drink_order_form = DrinkOrderForm(form_data)
 
         if drink_order_form.is_valid():
-            drink_order = drink_order_form.save()
+            drink_order = drink_order_form.save(commit=False)
+            pid = request.POST.get("client_secret").split("_secret")[0]
+            drink_order.stripe_pid = pid
+            drink_order.original_shopping_cart = json.dumps(shopping_cart)
+            drink_order.save()
             for item_id, item_data in shopping_cart.items():
                 try:
                     drink = Drink.objects.get(id=item_id)

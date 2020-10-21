@@ -66,10 +66,13 @@
                     {{ drink_order_form.street_address2 | as_crispy_field }}
                     {{ drink_order_form.postcode | as_crispy_field }}
                     {{ drink_order_form.country | as_crispy_field }}
+                    <!-- for stripe card element -->
                     <div class="mt-3" id="stripeCard"></div>
+                    <!-- displays stripe card errors -->
                     <div class="mt-3 text-danger" id="stripeCardErrors" role="alert"></div>
                     <label for="stripeFormSubmit"></label>
                     <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">complete order</button>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
             </form>
         </div>

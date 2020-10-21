@@ -34,7 +34,7 @@ def edit_shopping_cart(request, item_id):
     if drink_quantity > 0 and drink_quantity < 100:
         shopping_cart[item_id] = drink_quantity
     else:
-        messages.info(request, "Please pick a number from 1 to 99.")
+        messages.info(request, "Please pick a number from 1-99.")
         return render(request, "shopping_cart/shopping_cart.html")
 
     request.session["shopping_cart"] = shopping_cart

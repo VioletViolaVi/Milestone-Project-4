@@ -14,20 +14,21 @@
                 {% if shopping_cart_items %}
                 
                     <div class="text-left col-12 mb-4">
-                        <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}"><u>back to home</u></a> 
-                    </div>      
+                        <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}"><u>keep shopping</u></a> 
+                    </div>                      
+
+                    {% if messages %} 
+                        {% for message in messages %}
+                            <div class="font-weight-bolder text-danger text-left col-12 mb-4 text-center">
+                                <p>{{ message }}</p>                           
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                              
                     {% for shopping_cart in shopping_cart_items %} 
                         <div class="col-sm-6 col-lg-4 mb-5">
                             <div class="container">
-                                <div class="row"> 
-
-                                    {% if messages %} 
-                                        {% for message in messages %}
-                                            <p class="font-weight-bolder text-danger">{{ message }}</p>                           
-                                        {% endfor %}
-                                    {% endif %}
-                                
+                                <div class="row">                                                          
                                     <div class="col-6 col-md-5 col-lg-5 col-xl-4 px-0">  
                                         {% if shopping_cart.drink.image %}   
                                             <img class="mb-1 shopping_cart_img rounded" src="/{{ shopping_cart.drink.image }}">   
