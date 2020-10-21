@@ -13,8 +13,8 @@
             <div class="row">  
                 {% if shopping_cart_items %}
                 
-                    <div class="back-link text-left col-12 mb-4">
-                        <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}">back to home</a> 
+                    <div class="text-left col-12 mb-4">
+                        <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}"><u>back to home</u></a> 
                     </div>      
                              
                     {% for shopping_cart in shopping_cart_items %} 

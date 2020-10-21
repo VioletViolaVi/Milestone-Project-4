@@ -271,10 +271,6 @@ body {
 }
 
 /******************************************* shopping cart view */
-.back-link {
-  text-decoration: underline;
-}
-
 .table-bordered {
   border: 0.2em solid slategray;
 }
