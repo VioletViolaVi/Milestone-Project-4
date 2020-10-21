@@ -8,5 +8,7 @@ urlpatterns = [
         "payment_success_and_history/<order_number>",
         views.payment_success,
         name="payment_success"),
+    path("cache_payment_data/", views.cache_payment_data,
+         name="cache_payment_data"),
     path("wh/", webhook, name="webhook"),
 ]
