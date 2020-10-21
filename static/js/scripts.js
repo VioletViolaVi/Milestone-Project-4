@@ -69,6 +69,8 @@ $(document).ready(function () {
         ev.preventDefault();
         card.update({ "disabled": true });
         $("#stripeFormSubmit").attr("disabled", true);
+         $("#paymentForm").fadeToggle(100);
+         $("#loadingOverlay").fadeToggle(100);
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
@@ -82,6 +84,8 @@ $(document).ready(function () {
                             </span>
                             <span>${result.error.message}</span>`;
                 $(errorDiv).html(html);
+                $("#paymentForm").fadeToggle(100);
+                $("#loadingOverlay").fadeToggle(100);
                 card.update({ "disabled": false });
                 $("#stripeFormSubmit").attr("disabled", false);
             } else {
@@ -91,8 +95,5 @@ $(document).ready(function () {
                 }
             });
         });
-
-
-
 
 });
