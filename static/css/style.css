@@ -325,12 +325,14 @@ table.table-bordered > tbody > tr > th {
   border: slategray solid 0.2em;
 }
 
-#paymentFormInputs {
+select,
+select option {
   color: #212529;
 }
 
-#div_id_country {
-  margin-bottom: 0em;
+select:invalid,
+select option[value=""] {
+  color: #6c757d !important;
 }
 
 .form-submit-btn {
@@ -363,6 +365,14 @@ table.table-bordered > tbody > tr > th {
   border: slategray solid 0.2em;
 }
 
+.stripe-style-input {
+  color: #212529;
+}
+
+.stripe-style-input::placeholder {
+  color: #6c757d !important;
+}
+
 /*remove if not working*/
 /* .stripe-style-input {
   font-family: "Montserrat", sans-serif !important;
@@ -370,11 +380,6 @@ table.table-bordered > tbody > tr > th {
 
 .StripeElement--invalid {
   border-color: red;
-}
-
-.stripe-style-input::placeholder,
-.stripe-style-input {
-  color: #212529;
 }
 
 /******************************************* payment & history */

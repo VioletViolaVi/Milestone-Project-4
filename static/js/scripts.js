@@ -31,12 +31,13 @@ $(document).ready(function () {
     let style = {
         base: {
             color: "#212529",
-            fontFamily: "sans-serif",
+            fontFamily: "'Montserrat', sans-serif",
+            // not working font
             src: "local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2')", //delete if not used
             fontSmoothing: "antialiased",
             fontSize: "16px",
             "::placeholder": {
-                color: "#495057",
+                color: "#6c757d",
             },
         },
         invalid: {
