@@ -179,6 +179,23 @@ body {
   cursor: pointer;
 }
 
+/******************************************* signup */
+.signup-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  margin: auto;
+  width: 80vw;
+  height: 54vh;
+}
+
+#signup_form label {
+  display: none;
+}
+
+#signup_form input {
+  margin: 1em;
+}
+
 /******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
