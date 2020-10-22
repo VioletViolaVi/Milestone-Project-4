@@ -7,10 +7,14 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from home.models import Drink
+from user_profiles.models import UserProfiles
 
 
 class DrinkOrder(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(
+        UserProfiles, on_delete=models.SET_NULL,
+        null=True, blank=False, related_name="drink_orders")
     full_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
