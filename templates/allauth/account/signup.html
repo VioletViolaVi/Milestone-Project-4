@@ -1,43 +1,65 @@
 {% extends "account/base.html" %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<section class="footer-pusher">
-    <h1 class="mt-2 text-capitalize">{% trans "sign up" %}/{% trans "log in" %}</h1>
+    <section class="footer-pusher">
+        <h1 class="mt-2 text-capitalize">{% trans "sign up" %} <span class="d-sm-none">/</span> <span class="d-none d-sm-inline text-lowercase">or</span> {% trans "log in" %}</h1>
+        <hr class="mx-3 font-weight-bolder bg-secondary">
 
+        <div class="container">
+            <div class="row">
 
-    <h2 class="mt-4 mb-0 text-capitalize">{% trans "sign up" %}</h2>
-    <p class="mb-0 mt-2">{% blocktrans %}Already have an account? Then please <a href="#login" class="font-weight-bolder">log in</a> below.{% endblocktrans %}</p>
-    <div class="signup-login-border">
-        <form class="text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
-            {% csrf_token %}
-            {{ form.as_ul }}
-            {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <div class="text-center">
-                <button type="submit" class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder">{% trans "sign up" %}</button>
+                <div class="vertical-line col-12 col-md-6">
+                    <h2 class="text-capitalize" id="signup">{% trans "sign up" %}</h2>
+                    <p class="">{% blocktrans %}Already have an account? <span class="text-info font-weight-bolder d-none d-sm-block">login</span><a href="#login" class="font-weight-bolder d-sm-none">log in</a> {% endblocktrans %}</p>                   
+                    <form class="signup-login-border text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                        {% csrf_token %}
+                        {{ form.as_ul }}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div class="text-center">
+                            <button type="submit" class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder">{% trans "sign up" %}</button>
+                        </div>
+                    </form>                                        
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <h2 class="text-capitalize" id="login">{% trans "log in" %}</h2>
+                    <p class="">{% blocktrans %}Don't already have an account? <span class="text-info font-weight-bolder d-none d-sm-block">sign up</span><a href="#signup" class="font-weight-bolder d-sm-none">sign up</a>{% endblocktrans %}</p>               
+                    <form class="signup-login-border login" method="POST" id="login_form" action="{% url 'account_login' %}">
+                        {% csrf_token %}
+                        {{ form.as_ul }}
+                        {% if redirect_field_value %}
+                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}            
+                        <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder primaryAction" type="submit">{% trans "log in" %}</button>
+                    </form>                                          
+                </div>
+            
             </div>
-        </form>    
-    </div>
+        </div>
 
-    <hr class="mx-3 font-weight-bolder bg-secondary">
-
-    <h2 class="mt-1 mb-0 text-capitalize" id="login">{% trans "log in" %}</h2>
-    <div class="signup-login-border mb-1">
-        <form class="login" method="POST" id="login_form" action="{% url 'account_login' %}">
-            {% csrf_token %}
-            {{ form.as_ul }}
-            {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        <div class="col-12 mt-5">
+            {% get_providers as socialaccount_providers %}   
+            {% if socialaccount_providers %}
+                <p class="mb-1">{% blocktrans with site.name as site_name %}Log in with your Google account!{% endblocktrans %}</p> 
+                <div class="socialaccount_ballot">
+                    <ul class="socialaccount_providers mb-2">
+                        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                    </ul>
+                </div>
+                {% include "socialaccount/snippets/login_extra.html" %}
             {% endif %}            
-            <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder primaryAction" type="submit">{% trans "log in" %}</button>
-        </form>        
-    </div>
-    <a class="button secondaryAction font-weight-bolder" href="{% url 'account_reset_password' %}">{% trans "Forgot password? Click me!" %}</a>
-
-</section>
+        </div>
+        
+        <div class="col-12 mt-5">
+            <a class="button secondaryAction font-weight-bolder" href="{% url 'account_reset_password' %}">{% trans "Forgot password? Click me!" %}</a>
+        </div>
+            
+    </section>
 {% endblock %}

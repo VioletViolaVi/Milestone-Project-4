@@ -179,36 +179,6 @@ body {
   cursor: pointer;
 }
 
-/******************************************* signup */
-.signup-login-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
-  margin: auto;
-  width: 80vw;
-  height: 60vh;
-}
-
-#signup_form label,
-#login_form label {
-  display: none;
-}
-
-#signup_form input,
-#login_form input {
-  margin: 1em;
-  height: 2.4em;
-  background-color: white;
-  border-radius: 0.2em;
-  padding: 0em 0.2em;
-  border: none;
-}
-
-#signup_form input:focus,
-#login_form input:focus {
-  outline: none;
-  border: slategray solid 0.2em;
-}
-
 /******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
@@ -300,7 +270,7 @@ body {
   margin-top: 1.5em;
 }
 
-/******************************************* shopping cart view */
+/******************************************* shopping cart */
 .table-bordered {
   border: 0.2em solid slategray;
 }
@@ -382,6 +352,30 @@ select option[value=""] {
   overflow: scroll;
 }
 
+.payment-summary {
+  border: lightgray 0.2em solid;
+  margin: auto;
+  width: 95vw;
+  padding: 10px;
+}
+
+#loadingOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(211, 211, 211, 0.63);
+  z-index: 9999;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 /******************************************* stripe */
 .StripeElement,
 .stripe-style-input {
@@ -412,29 +406,35 @@ select option[value=""] {
   border-color: red;
 }
 
-/******************************************* payment & history */
-.payment-summary {
-  border: lightgray 0.2em solid;
+/******************************************* signup & login */
+.signup-login-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  width: 300px;
+  height: 350px;
   margin: auto;
-  width: 95vw;
-  padding: 10px;
 }
 
-#loadingOverlay {
+#signup_form label,
+#login_form label {
   display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(211, 211, 211, 0.63);
-  z-index: 9999;
 }
 
-.spinner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+#signup_form input,
+#login_form input {
+  margin: 1em;
+  height: 2.4em;
+  background-color: white;
+  border-radius: 0.2em;
+  padding: 0em 0.2em;
+  border: none;
+  width: 16em;
+}
+
+#signup_form input:focus,
+#login_form input:focus {
+  outline: none;
+  border: slategray solid 0.2em;
 }
 
 /******************************************* media queries ******************************************* */
@@ -445,7 +445,7 @@ select option[value=""] {
     left: 4em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 13em;
     width: 9em;
@@ -459,7 +459,7 @@ select option[value=""] {
     left: 5.5em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 14em;
     width: 10em;
@@ -473,7 +473,7 @@ select option[value=""] {
     left: 7em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 15em;
     width: 11em;
@@ -487,7 +487,7 @@ select option[value=""] {
     left: 8em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 16em;
     width: 12em;
@@ -501,7 +501,7 @@ select option[value=""] {
     left: 9.5em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 17em;
     width: 13em;
@@ -521,7 +521,7 @@ select option[value=""] {
     left: 1em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping_cart_img {
     height: 12em;
     width: 7em;
@@ -535,7 +535,7 @@ select option[value=""] {
     padding: 0em 0em 0em 4em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* payment */
   .drink-order-box {
     height: 50vh;
     width: 80vw;
@@ -560,7 +560,7 @@ select option[value=""] {
     left: 4em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 11em;
   }
@@ -568,13 +568,19 @@ select option[value=""] {
   .pay-btn-holder {
     padding: 0em 0em 0em 2em;
   }
-  /******************************************* shopping cart view */
+
+  /******************************************* payment */
   .drink-order-box {
     height: 40vh;
     width: 75vw;
   }
   .payment-form-border {
     width: 70vw;
+  }
+
+  /******************************************* signup & login */
+  .vertical-line {
+    border-right: solid #6c757d 0.1em;
   }
 }
 
@@ -631,7 +637,7 @@ select option[value=""] {
     left: 1em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 19em;
   }
@@ -639,7 +645,8 @@ select option[value=""] {
   .pay-btn-holder {
     padding: 0em 0em 0em 2em;
   }
-  /******************************************* shopping cart view */
+
+  /******************************************* payment */
   .drink-order-box {
     height: 30vh;
   }
@@ -648,9 +655,20 @@ select option[value=""] {
     width: 60vw;
   }
 
-  /******************************************* payment & history */
   .payment-summary {
     width: 70vw;
+  }
+
+  /******************************************* signup & login */
+  .signup-login-border {
+    width: 400px;
+    height: 380px;
+  }
+
+  #signup_form input,
+  #login_form input {
+    height: 3em;
+    width: 22em;
   }
 }
 
@@ -661,7 +679,7 @@ select option[value=""] {
     right: 3.1em;
   }
 
-  /******************************************* shopping cart view */
+  /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 24em;
   }
@@ -674,8 +692,18 @@ select option[value=""] {
     width: 50vw;
   }
 
-  /******************************************* payment & history */
+  /******************************************* payment */
   .payment-summary {
     width: 55vw;
+  }
+
+  /******************************************* signup & login */
+  .signup-login-border {
+    width: 500px;
+  }
+
+  #signup_form input,
+  #login_form input {
+    width: 28em;
   }
 }
