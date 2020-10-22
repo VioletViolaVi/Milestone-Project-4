@@ -6,25 +6,38 @@
 
 {% block content %}
 <section class="footer-pusher">
-    <h1 class="mt-2">{% trans "Sign Up" %}/{% trans "Log In" %}</h1>
+    <h1 class="mt-2 text-capitalize">{% trans "sign up" %}/{% trans "log in" %}</h1>
 
 
-    <h2 class="mt-4 mb-0">{% trans "Sign Up" %}</h2>
-    <div class="signup-border">
-        <form class="signup text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
-          {% csrf_token %}
-          {{ form.as_ul }}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
-          <div class="text-center">
-            <button type="submit" class="text-uppercase bg-secondary mt-2 form-submit-btn font-weight-bolder">{% trans "Sign Up" %}</button>
-          </div>
+    <h2 class="mt-4 mb-0 text-capitalize">{% trans "sign up" %}</h2>
+    <p class="mb-0 mt-2">{% blocktrans %}Already have an account? Then please <a href="#login" class="font-weight-bolder">log in</a> below.{% endblocktrans %}</p>
+    <div class="signup-login-border">
+        <form class="text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
+            {% csrf_token %}
+            {{ form.as_ul }}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="text-center">
+                <button type="submit" class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder">{% trans "sign up" %}</button>
+            </div>
         </form>    
     </div>
-    <p class="mb-0 mt-2">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="font-weight-bolder">log in</a> below.{% endblocktrans %}</p>
 
-    <h2 class="mt-4 mb-0">{% trans "Log In" %}</h2>
+    <hr class="mx-3 font-weight-bolder bg-secondary">
+
+    <h2 class="mt-1 mb-0 text-capitalize" id="login">{% trans "log in" %}</h2>
+    <div class="signup-login-border mb-1">
+        <form class="login" method="POST" id="login_form" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form.as_ul }}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}            
+            <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder primaryAction" type="submit">{% trans "log in" %}</button>
+        </form>        
+    </div>
+    <a class="button secondaryAction font-weight-bolder" href="{% url 'account_reset_password' %}">{% trans "Forgot password? Click me!" %}</a>
 
 </section>
 {% endblock %}
