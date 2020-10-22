@@ -185,7 +185,7 @@ body {
   border: solid darkgray 0.2em;
   margin: auto;
   width: 80vw;
-  height: 54vh;
+  height: 60vh;
 }
 
 #signup_form label {
@@ -194,6 +194,16 @@ body {
 
 #signup_form input {
   margin: 1em;
+  height: 2.4em;
+  background-color: white;
+  border-radius: 0.2em;
+  padding: 0em 0.2em;
+  border: none;
+}
+
+#signup_form input:focus {
+  outline: none;
+  border: slategray solid 0.2em;
 }
 
 /******************************************* home page */
