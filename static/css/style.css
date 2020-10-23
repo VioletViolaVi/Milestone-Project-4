@@ -320,7 +320,8 @@ table.table-bordered > tbody > tr > th {
   border-radius: 0.2em;
 }
 
-.payment-form-border input:focus {
+.payment-form-border input:focus,
+.payment-form-border select:focus {
   outline: none;
   box-shadow: none;
   border: slategray solid 0.2em;
@@ -388,6 +389,7 @@ select option[value=""] {
 .StripeElement--focus,
 .stripe-style-input:focus {
   border: slategray solid 0.2em;
+  outline: none;
 }
 
 .stripe-style-input {
@@ -398,14 +400,14 @@ select option[value=""] {
   color: #6c757d !important;
 }
 
+.StripeElement--invalid {
+  border-color: red;
+}
+
 /*remove if not working*/
 /* .stripe-style-input {
   font-family: "Montserrat", sans-serif !important;
 } */
-
-.StripeElement--invalid {
-  border-color: red;
-}
 
 /******************************************* signup & login & allauth pages */
 .signup-border,
@@ -488,6 +490,27 @@ label[for="id_remember"] {
 .errorlist {
   color: #dc3545;
   font-weight: 900;
+}
+
+/******************************************* profiles */
+.update-form-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  width: 18em;
+  margin: auto;
+  overflow: scroll;
+  height: 22em;
+}
+
+.update-form-border input:focus,
+.update-form-border select:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
+select#id_default_country {
+  color: #6c757d !important;
 }
 
 /******************************************* media queries ******************************************* */
