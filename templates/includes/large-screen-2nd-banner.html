@@ -19,7 +19,10 @@
         {% endif %}        
         {% if not request.user.is_authenticated %}            
             <li>
-                <a class="text-body text-capitalize" href="{% url 'account_signup' %}">sign up/log in</a>
+                <a class="text-body text-capitalize" href="{% url 'account_signup' %}">sign up <span>|</span></a>
+            </li>
+            <li>
+                <a class="text-body text-capitalize" href="{% url 'account_login' %}">log in <span></span></a>
             </li>
         {% else %}
             <li>
