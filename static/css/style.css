@@ -509,8 +509,20 @@ label[for="id_remember"] {
   border: slategray solid 0.2em;
 }
 
-select#id_default_country {
-  color: #6c757d !important;
+.profile-countries#id_default_phone_number.form-control ,
+.profile-countries#id_default_street_address1.form-control ,
+.profile-countries#id_default_street_address2.form-control ,
+.profile-countries#id_default_postcode.form-control ,
+select:valid {
+  color: #212529;
+}
+
+.profile-countries .form-control {
+  color: #212529;
+}
+
+.profile-countries input::placeholder {
+  color: #6c757d;
 }
 
 /******************************************* media queries ******************************************* */
