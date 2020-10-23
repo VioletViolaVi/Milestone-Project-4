@@ -313,6 +313,7 @@ table.table-bordered > tbody > tr > th {
 .payment-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
+  overflow: scroll;
 }
 
 .payment-form-border div {
@@ -414,6 +415,7 @@ select option[value=""] {
   border: solid darkgray 0.2em;
   width: 18em;
   margin: auto;
+  overflow: scroll;
 }
 
 #signup_form input,
@@ -481,6 +483,11 @@ label[for="id_remember"] {
   box-sizing: border-box;
   padding: 0;
   height: none;
+}
+
+.errorlist {
+  color: #dc3545;
+  font-weight: 900;
 }
 
 /******************************************* media queries ******************************************* */

@@ -1,11 +1,30 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block tab_title %}| Payment{% endblock %}
+{% block tab_title %}| My Profile{% endblock %}
 
 {% block payment %}
     <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">my profile</h2>
+        <h1 class="text-capitalize mt-3">my profile</h1> 
+
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-capitalize">personal details</h2>
+                    <form id="updateProfileForm" method="POST" action="{% url 'user_profiles' %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                    </form>
+                    <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder" type="submit">update information</button>
+                </div>
+
+                <div class="col-12">
+                    <h2 class="text-capitalize">order history</h2>  
+                    {{ drink_orders }}                  
+                </div>
+            </div>
+        </div>
+
         {{ user_profiles }}
     </section>
 {% endblock %}
