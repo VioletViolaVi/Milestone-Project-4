@@ -419,7 +419,10 @@ select option[value=""] {
 #signup_form input,
 #login_form input#id_login,
 #login_form input#id_password,
-#allauth-border li #id_email {
+#allauth-border li #id_email,
+#allauth-border li #id_oldpassword,
+#allauth-border li #id_password1,
+#allauth-border li #id_password2 {
   margin: 1em;
   height: 2.4em;
   background-color: white;
@@ -434,13 +437,20 @@ select option[value=""] {
 #signup_form input#id_password2,
 #login_form input#id_login,
 #login_form input#id_password,
-#allauth-border li #id_email {
+#allauth-border li #id_email,
+#allauth-border li #id_oldpassword,
+#allauth-border li #id_password1,
+#allauth-border li #id_password2 {
   width: 16em;
 }
 
 #signup_form input:focus,
 #login_form input:focus,
-#allauth-border li #id_email:focus {
+#allauth-border li #id_email:focus,
+#allauth-border li #id_oldpassword:focus,
+#allauth-border li #id_password1:focus,
+#allauth-border li #id_password2:focus,
+button[type="submit"]:focus {
   outline: none;
   border: slategray solid 0.2em;
 }
@@ -450,7 +460,8 @@ label[for="id_username"],
 label[for="id_password1"],
 label[for="id_password2"],
 label[for="id_login"],
-label[for="id_password"] {
+label[for="id_password"],
+label[for="id_oldpassword"] {
   display: none;
 }
 

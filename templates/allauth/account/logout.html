@@ -3,6 +3,7 @@
 {% load i18n %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block tab_title %}| Log Out{% endblock %}
 
 {% block content %}
 <h1 class="mt-5">{% trans "Sign Out" %}</h1>
@@ -14,7 +15,7 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
+  <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder" type="submit">{% trans 'Sign Out' %}</button>
 </form>
 
 

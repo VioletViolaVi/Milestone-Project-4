@@ -26,7 +26,10 @@
             </li>
         {% else %}
             <li>
-                <a class="text-body text-capitalize" href="#">log out</a>
+                <a class="text-body text-capitalize" href="{% url 'user_profiles' %}">my profile <span>|</span></a>
+            </li>
+            <li>
+                <a class="text-body text-capitalize" href="{% url 'account_logout' %}">log out</a>
             </li>
         {% endif %}
     </ul>
