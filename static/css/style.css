@@ -407,27 +407,27 @@ select option[value=""] {
 }
 
 /******************************************* signup & login */
-.signup-login-border {
+.signup-border,
+.login-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   width: 300px;
-  height: 350px;
   margin: auto;
 }
 
-#signup_form label,
-#login_form label {
-  display: none;
-}
-
 #signup_form input,
-#login_form input {
+#login_form input#id_login,
+#login_form input#id_password {
   margin: 1em;
   height: 2.4em;
   background-color: white;
   border-radius: 0.2em;
   padding: 0em 0.2em;
   border: none;
+}
+
+#signup_form input [type="text"],
+#login_form input [type="text"] {
   width: 16em;
 }
 
@@ -435,6 +435,33 @@ select option[value=""] {
 #login_form input:focus {
   outline: none;
   border: slategray solid 0.2em;
+}
+
+label[for="id_email"],
+label[for="id_username"],
+label[for="id_password1"],
+label[for="id_password2"],
+label[for="id_login"],
+label[for="id_password"] {
+  display: none;
+}
+
+.signup-border {
+  height: 350px;
+}
+
+.login-border {
+  height: 230px;
+}
+
+.login-border input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+  height: none;
+}
+
+label[for="id_remember"] {
+  display: inline;
 }
 
 /******************************************* media queries ******************************************* */
@@ -577,11 +604,6 @@ select option[value=""] {
   .payment-form-border {
     width: 70vw;
   }
-
-  /******************************************* signup & login */
-  .vertical-line {
-    border-right: solid #6c757d 0.1em;
-  }
 }
 
 /* bootstrap media query */
@@ -660,7 +682,8 @@ select option[value=""] {
   }
 
   /******************************************* signup & login */
-  .signup-login-border {
+  .signup-border,
+  .login-border {
     width: 400px;
     height: 380px;
   }
@@ -698,7 +721,8 @@ select option[value=""] {
   }
 
   /******************************************* signup & login */
-  .signup-login-border {
+  .signup-border,
+  .login-border {
     width: 500px;
   }
 
