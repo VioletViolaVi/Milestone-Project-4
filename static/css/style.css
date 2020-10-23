@@ -406,9 +406,10 @@ select option[value=""] {
   border-color: red;
 }
 
-/******************************************* signup & login */
+/******************************************* signup & login & allauth pages */
 .signup-border,
-.login-border {
+.login-border,
+.allauth-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   width: 18em;
@@ -417,7 +418,8 @@ select option[value=""] {
 
 #signup_form input,
 #login_form input#id_login,
-#login_form input#id_password {
+#login_form input#id_password,
+#allauth-border li #id_email {
   margin: 1em;
   height: 2.4em;
   background-color: white;
@@ -431,12 +433,14 @@ select option[value=""] {
 #signup_form input#id_password1,
 #signup_form input#id_password2,
 #login_form input#id_login,
-#login_form input#id_password {
+#login_form input#id_password,
+#allauth-border li #id_email {
   width: 16em;
 }
 
 #signup_form input:focus,
-#login_form input:focus {
+#login_form input:focus,
+#allauth-border li #id_email:focus {
   outline: none;
   border: slategray solid 0.2em;
 }
