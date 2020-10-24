@@ -313,7 +313,7 @@ table.table-bordered > tbody > tr > th {
 .payment-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .payment-form-border div {
@@ -351,7 +351,7 @@ select option[value=""] {
   width: 90vw;
   border: solid darkgray 0.2em;
   margin: auto;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .payment-summary {
@@ -417,7 +417,7 @@ select option[value=""] {
   border: solid darkgray 0.2em;
   width: 18em;
   margin: auto;
-  overflow: scroll;
+  overflow: auto;
 }
 
 #signup_form input,
@@ -498,8 +498,9 @@ label[for="id_remember"] {
   border: solid darkgray 0.2em;
   width: 18em;
   margin: auto;
-  overflow: scroll;
+  overflow: auto;
   height: 22em;
+  padding: 0.5em;
 }
 
 .update-form-border input:focus,
@@ -509,10 +510,10 @@ label[for="id_remember"] {
   border: slategray solid 0.2em;
 }
 
-.profile-countries#id_default_phone_number.form-control ,
-.profile-countries#id_default_street_address1.form-control ,
-.profile-countries#id_default_street_address2.form-control ,
-.profile-countries#id_default_postcode.form-control ,
+.profile-countries#id_default_phone_number.form-control,
+.profile-countries#id_default_street_address1.form-control,
+.profile-countries#id_default_street_address2.form-control,
+.profile-countries#id_default_postcode.form-control,
 select:valid {
   color: #212529;
 }
@@ -648,6 +649,13 @@ select:valid {
   #login_form input#id_password {
     width: 21em;
   }
+
+  /******************************************* profiles */
+  .update-form-border {
+    width: 32em;
+    padding: 1em;
+    height: 25em;
+  }
 }
 
 /* bootstrap media query */
@@ -694,6 +702,13 @@ select:valid {
   #login_form input#id_login,
   #login_form input#id_password {
     width: 27em;
+  }
+
+  /******************************************* profiles */
+  .update-form-border {
+    width: 40em;
+    padding: 2em;
+    height: 26em;
   }
 }
 
@@ -820,5 +835,10 @@ select:valid {
   #login_form input#id_login,
   #login_form input#id_password {
     width: 32em;
+  }
+
+  /******************************************* profiles */
+  .update-form-border {
+    width: 45em;
   }
 }

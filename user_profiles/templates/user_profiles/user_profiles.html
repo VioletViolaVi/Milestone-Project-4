@@ -11,10 +11,10 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-capitalize">personal details</h2>
-                    <form id="updateProfileForm" class="update-form-border mb-5 pt-2 px-1" method="POST" action="{% url 'user_profiles' %}">
+                    <form id="updateProfileForm" class="update-form-border mb-5" method="POST" action="{% url 'user_profiles' %}">
                         {% csrf_token %}
                         {{ form|crispy }}                    
-                        <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder" type="submit">update information</button>
+                        <button class="form-submit-btn text-uppercase bg-secondary mt-4 font-weight-bolder" type="submit">update information</button>
                     </form>
                 </div>
 
