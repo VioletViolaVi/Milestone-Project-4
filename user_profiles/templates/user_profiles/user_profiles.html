@@ -7,6 +7,14 @@
     <section class="footer-pusher">
         <h1 class="text-capitalize mt-3">my profile</h1> 
 
+        {% if messages %} 
+            {% for message in messages %}
+                <div class="font-weight-bolder text-danger text-left col-12 mb-4 text-center">
+                    <p>{{ message }}</p>                           
+                </div>
+            {% endfor %}
+        {% endif %}
+
         <div class="container mt-3">
             <div class="row">
                 <div class="col-12">

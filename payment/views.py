@@ -124,7 +124,7 @@ def payment_success(request, order_number):
     if "shopping_cart" in request.session:
         del request.session["shopping_cart"]
 
-    template = "payment/payment_success_and_history.html"
+    template = "payment/payment_success.html"
     context = {
         "drink_order": drink_order,
     }

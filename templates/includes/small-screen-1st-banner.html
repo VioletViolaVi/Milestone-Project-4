@@ -9,15 +9,17 @@
             <li class="nav-item">
                 <a class="nav-link text-body text-capitalize" href="{% url 'home' %}">home<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-body text-capitalize" href="/#juiceSection">juices</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-body text-capitalize" href="/#milkshakeSection">milkshakes</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-body text-capitalize" href="/#aboutUsSection">about us</a>
-            </li>
+            {% if this_is_the_homepage %}
+                <li class="nav-item">
+                    <a class="nav-link text-body text-capitalize" href="/#juiceSection">juices</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body text-capitalize" href="/#milkshakeSection">milkshakes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-body text-capitalize" href="/#aboutUsSection">about us</a>
+                </li>
+            {% endif %}
             {% if request.user.is_superuser %}
                 <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="#">admin</a>

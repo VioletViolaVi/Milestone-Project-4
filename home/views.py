@@ -57,6 +57,7 @@ def home(request):
         "drink_search_results": drink_search_results,
         "typed_in_search": drink_search,
         "drink_sorting": drink_sorting,
+        "this_is_the_homepage":  True,
     }
 
     # shows homepage

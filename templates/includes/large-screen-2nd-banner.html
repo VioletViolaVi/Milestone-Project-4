@@ -3,15 +3,17 @@
         <li>
             <a class="text-body text-capitalize" href="{% url 'home' %}">home <span>|</span><span class="sr-only">(current)</span></a>
         </li>
-        <li>
-            <a class="text-body text-capitalize" href="#juiceSection">juices <span>|</span></a>
-        </li>
-        <li>
-            <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes <span>|</span></a>
-        </li>
-        <li>
-            <a class="text-body text-capitalize" href="#aboutUsSection">about us <span>|</span></a>
-        </li>
+        {% if this_is_the_homepage %}
+            <li>
+                <a class="text-body text-capitalize" href="#juiceSection">juices <span>|</span></a>
+            </li>
+            <li>
+                <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes <span>|</span></a>
+            </li>
+            <li>
+                <a class="text-body text-capitalize" href="#aboutUsSection">about us <span>|</span></a>
+            </li>
+        {% endif %} 
         {% if request.user.is_superuser %}
             <li>
                 <a class="text-body text-capitalize" href="#">admin <span>|</span></a>
