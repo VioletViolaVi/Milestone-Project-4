@@ -514,15 +514,14 @@ label[for="id_remember"] {
 .profile-countries#id_default_street_address1.form-control,
 .profile-countries#id_default_street_address2.form-control,
 .profile-countries#id_default_postcode.form-control,
+#id_default_country,
+#id_default_country option:not(first-child),
 select:valid {
   color: #212529;
 }
 
-.profile-countries .form-control {
-  color: #212529;
-}
-
-.profile-countries input::placeholder {
+.profile-countries input::placeholder,
+#id_default_country option:first-child {
   color: #6c757d;
 }
 

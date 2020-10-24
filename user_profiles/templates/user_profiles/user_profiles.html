@@ -28,3 +28,24 @@
         {{ user_profiles }}
     </section>
 {% endblock %}
+
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        //  controls chaning text color of country field
+        let selectedCountry = $("#id_default_country").val();
+        if (!selectedCountry){
+            $("#id_default_country").css("color", "#6c757d");
+        };
+        $("#id_default_country").change(function() {
+            selectedCountry = $(this).val()
+            if(!selectedCountry){
+                $(this).css("color", "#6c757d");
+            }else{
+                $(this).css("color", "#212529");
+            }
+        }); 
+    </script>
+{% endblock %}
+

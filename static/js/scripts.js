@@ -81,7 +81,7 @@ $(document).ready(function () {
             "csrfmiddlewaretoken": csrfToken,
             "client_secret": clientSecret,
             "save_info": saveInfo,
-        };
+            };
 
         let url = "/payment/cache_payment_data/";
 
@@ -110,28 +110,29 @@ $(document).ready(function () {
                             country: $.trim(form.country.value),
                         }
                     },                
-                }).then(function (result) {
-                    if (result.error) {            
-                        let errorDiv = document.getElementById("stripeCardErrors");
-                        let html = `<span>
-                                        <i class="fas fa-times"></i>
-                                    </span>
-                                    <span>${result.error.message}</span>`;
-                        $(errorDiv).html(html);
-                        $("#paymentForm").fadeToggle(100);
-                        $("#loadingOverlay").fadeToggle(100);
-                        card.update({ "disabled": false });
-                        $("#stripeFormSubmit").attr("disabled", false);
-                    } else {
-                        if (result.paymentIntent.status === "succeeded") {
-                                form.submit();
-                            }
+            }).then(function (result) {
+                if (result.error) {            
+                    let errorDiv = document.getElementById("stripeCardErrors");
+                    let html = `<span>
+                                    <i class="fas fa-times"></i>
+                                </span>
+                                <span>${result.error.message}</span>`;
+                    $(errorDiv).html(html);
+                    $("#paymentForm").fadeToggle(100);
+                    $("#loadingOverlay").fadeToggle(100);
+                    card.update({ "disabled": false });
+                    $("#stripeFormSubmit").attr("disabled", false);
+                } else {
+                    if (result.paymentIntent.status === "succeeded") {
+                            form.submit();
                         }
-                    });
-                }).fail(function () {      
-                    // just reload the page, the error will be in django messages
-                    location.reload();
+                    }
+                });
+        }).fail(function () {      
+                // just reload the page, the error will be in django messages
+                location.reload();
                 })
     });
+
 
 });
