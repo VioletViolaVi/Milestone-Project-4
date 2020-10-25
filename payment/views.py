@@ -101,7 +101,23 @@ def payment(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        drink_order_form = DrinkOrderForm()
+
+        if request.user.is_authenticated:
+            try:
+                user_profiles = UserProfiles.objects.get(user=request.user)
+                drink_order_form = DrinkOrderForm(initial={
+                    "full_name": user_profiles.user.get_full_name(),
+                    "email": user_profiles.user.email,
+                    "phone_number": user_profiles.default_phone_number,
+                    "street_address1": user_profiles.default_street_address1,
+                    "street_address2": user_profiles.default_street_address2,
+                    "postcode": user_profiles.default_postcode,
+                    "country": user_profiles.default_country,
+                })
+            except UserProfiles.DoesNotExist:
+                drink_order_form = DrinkOrderForm()
+        else:
+            drink_order_form = DrinkOrderForm()
 
     if not stripe_public_key:
         messages.warning(request, "Stripe public key is missing. \
@@ -118,7 +134,6 @@ def payment(request):
 
 
 def payment_success(request, drink_order_number):
-    print("success")
     saved_info = request.session.get("saveInfo")
     drink_order = get_object_or_404(DrinkOrder,
                                     drink_order_number=drink_order_number)
