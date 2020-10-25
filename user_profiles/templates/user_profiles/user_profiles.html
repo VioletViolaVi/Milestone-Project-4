@@ -26,40 +26,48 @@
                         <button class="form-submit-btn text-uppercase bg-secondary mt-4 font-weight-bolder" type="submit">update information</button>
                     </form>
                 </div>
+                                                  
+                <div class="text-center">
+                    <h2 class="text-center text-capitalize">order history</h2>   
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr class=" text-capitalize">
+                                    <th><strong>date</strong></th>
+                                    <th><strong>grand total</strong></th>
+                                    <th><strong>drink order number</strong></th>
+                                    <th><strong>drink name</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for drink_order in drink_orders %}
+                                    <tr>
+                                        <td>
+                                            <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">
+                                                {{ drink_order.drink_order_number|truncatechars:6 }}
+                                            </a>
+                                        </td>
+                                        <td>{{ drink_order.date }}</td>
+                                        <td>
+                                            <ul class="list-unstyled">
+                                                {% for drink_item in drink_order.lineitems.all %}
+                                                    <li class="small text-capitalize">
+                                                        {{ drink_item.drink }} x{{ drink_item.drink_quantity }}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </td>
+                                        <td>£{{ drink_order.grand_total }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>                                          
+                </div>   
 
-                <div class="col-12 col-md-6">
-                    <h2 class="text-capitalize">order history</h2> 
-                    {% for drink_order in drink_orders %}  
-                        <ul class="text-capitalize text-left order-history-border">
-                            <li>
-                                <strong>date: </strong>
-                                {{ drink_order.date }}
-                            </li>
-                            <li>
-                                <strong>grand total: </strong>
-                                £{{ drink_order.grand_total }}
-                            </li>
-                            <li>
-                                <strong>drink order number: </strong>
-                                <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">{{ drink_order.drink_order_number|truncatechars:9 }}</a>
-                            </li>
-                            {% for drink_item in drink_order.lineitems.all %}
-                                <li>
-                                    <strong>drink name: </strong>
-                                    {{ drink_item.drink }}
-                                </li>
-                                <li>
-                                    <strong>drink quantity: </strong>
-                                    {{ drink_item.drink_quantity }}
-                                </li>
-                            {% endfor %} 
-                        </ul>
-                    {% endfor %}                
-                </div>
             </div>
         </div>
-
-        {{ user_profiles }}
+        
     </section>
 {% endblock %}
 

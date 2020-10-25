@@ -493,16 +493,6 @@ label[for="id_remember"] {
 }
 
 /******************************************* profiles */
-.update-form-border,
-.order-history-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
-  width: 18em;
-  margin: auto;
-  overflow: auto;
-  padding: 0.5em;
-}
-
 .update-form-border input:focus,
 .update-form-border select:focus {
   outline: none;
@@ -520,18 +510,30 @@ select:valid {
   color: #212529;
 }
 
+.update-form-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  width: 18em;
+  margin: auto;
+  overflow: auto;
+  padding: 0.5em;
+  height: 22em;
+}
+
 .profile-countries input::placeholder,
 #id_default_country option:first-child {
   color: #6c757d;
 }
 
-.update-form-border {
-  height: 22em;
+.order-history-border{
+    width: 50em;
 }
 
-.order-history-border {
-  height: 10em;
-}
+/* .order-history-border {
+  border-left: solid 0.2em darkgray;
+  border-right: solid 0.2em darkgray;
+  border-top: solid 0.2em darkgray;
+} */
 
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
