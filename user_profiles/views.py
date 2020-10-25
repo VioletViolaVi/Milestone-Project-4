@@ -18,7 +18,7 @@ def user_profiles(request):
 
     form = UserProfilesForm(instance=profile)
     drink_orders = profile.drink_orders.all()
-    print(drink_orders)
+    
     template = "user_profiles/user_profiles.html"
     context = {
         "form": form,

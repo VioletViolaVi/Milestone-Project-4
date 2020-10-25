@@ -271,15 +271,6 @@ body {
 }
 
 /******************************************* shopping cart */
-.table-bordered {
-  border: 0.2em solid slategray;
-}
-
-table.table-bordered > thead > tr > th,
-table.table-bordered > tbody > tr > th {
-  border: 0.1em solid slategray;
-}
-
 .pay-btn,
 .back-to-home-pg-btn {
   padding: 0.3em;
@@ -310,16 +301,6 @@ table.table-bordered > tbody > tr > th {
 }
 
 /******************************************* payment */
-.payment-form-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
-  overflow: auto;
-}
-
-.payment-form-border div {
-  border-radius: 0.2em;
-}
-
 .payment-form-border input:focus,
 .payment-form-border select:focus {
   outline: none;
@@ -335,6 +316,20 @@ select option {
 select:invalid,
 select option[value=""] {
   color: #6c757d !important;
+}
+
+.payment-message {
+  font-size: 0.9em;
+}
+
+.payment-form-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  overflow: auto;
+}
+
+.payment-form-border div {
+  border-radius: 0.2em;
 }
 
 .form-submit-btn {
@@ -525,15 +520,10 @@ select:valid {
   color: #6c757d;
 }
 
-.order-history-border{
-    width: 50em;
+.order-history-border {
+  height: 15em;
+  border: solid darkgray 0.2em;
 }
-
-/* .order-history-border {
-  border-left: solid 0.2em darkgray;
-  border-right: solid 0.2em darkgray;
-  border-top: solid 0.2em darkgray;
-} */
 
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
@@ -848,6 +838,6 @@ select:valid {
 
   /******************************************* profiles */
   .update-form-border {
-    width: 45em;
+    width: 35em;
   }
 }

@@ -18,7 +18,7 @@
         <div class="container mt-3">
             <div class="row">
 
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 col-lg-5 col-xl-7">
                     <h2 class="text-capitalize">personal details</h2>
                     <form id="updateProfileForm" class="update-form-border mb-5" method="POST" action="{% url 'user_profiles' %}">
                         {% csrf_token %}
@@ -27,42 +27,49 @@
                     </form>
                 </div>
                                                   
-                <div class="text-center">
-                    <h2 class="text-center text-capitalize">order history</h2>   
-                    <div class="table-responsive">
-                        <table class="table table-sm table-borderless">
-                            <thead>
-                                <tr class=" text-capitalize">
-                                    <th><strong>date</strong></th>
-                                    <th><strong>grand total</strong></th>
-                                    <th><strong>drink order number</strong></th>
-                                    <th><strong>drink name</strong></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for drink_order in drink_orders %}
-                                    <tr>
-                                        <td>
-                                            <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">
-                                                {{ drink_order.drink_order_number|truncatechars:6 }}
-                                            </a>
-                                        </td>
-                                        <td>{{ drink_order.date }}</td>
-                                        <td>
-                                            <ul class="list-unstyled">
-                                                {% for drink_item in drink_order.lineitems.all %}
-                                                    <li class="small text-capitalize">
-                                                        {{ drink_item.drink }} x{{ drink_item.drink_quantity }}
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </td>
-                                        <td>£{{ drink_order.grand_total }}</td>
+                <div class="col-12 col-md-6 col-lg-7 col-xl-5 text-center px-1">
+                    <h2 class="text-center text-capitalize">order history</h2>  
+                    {% if drink_orders %} 
+                        <div class="order-history-border table-responsive table-borderless">
+                            <table class="table-sm table-hover">
+                                <thead class="bg-secondary">
+                                    <tr class=" text-capitalize">
+                                        <th><strong>date</strong></th>
+                                        <th><strong>drink name</strong></th>
+                                        <th><strong>grand total</strong></th>
+                                        <th><strong>drink order number</strong></th>
                                     </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>                                          
+                                </thead>
+                                <tbody class="text-left">
+                                    {% for drink_order in drink_orders %}
+                                        <tr>
+                                            <td>{{ drink_order.date }}</td>
+                                            <td>
+                                                <ul class="list-unstyled">
+                                                    {% for drink_item in drink_order.lineitems.all %}
+                                                        <li class="small text-capitalize">
+                                                            {{ drink_item.drink }} x{{ drink_item.drink_quantity }}
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </td>
+                                            <td>£{{ drink_order.grand_total }}</td>
+                                            <td>
+                                                <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">
+                                                    {{ drink_order.drink_order_number|truncatechars:6 }}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="col-12 mb-5 text-center">
+                            <p>Your order history is empty.</p>
+                            <a class="back-to-home-pg-btn text-uppercase bg-secondary text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
+                        </div>  
+                    {%endif %}                                        
                 </div>   
 
             </div>
