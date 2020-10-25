@@ -5,7 +5,7 @@ from .webhooks import webhook
 urlpatterns = [
     path("", views.payment, name="payment"),
     path(
-        "payment_success_and_history/<order_number>",
+        "payment_success/<drink_order_number>",
         views.payment_success,
         name="payment_success"),
     path("cache_payment_data/", views.cache_payment_data,

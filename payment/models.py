@@ -11,8 +11,9 @@ from user_profiles.models import UserProfiles
 
 
 class DrinkOrder(models.Model):
-    order_number = models.CharField(max_length=32, null=False, editable=False)
-    user_profile = models.ForeignKey(
+    drink_order_number = models.CharField(
+        max_length=32, null=False, editable=False)
+    user_profiles = models.ForeignKey(
         UserProfiles, on_delete=models.SET_NULL,
         null=True, blank=True, related_name="drink_orders")
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -45,12 +46,12 @@ class DrinkOrder(models.Model):
         self.save()
 
     def save(self, *args, **kwargs):
-        if not self.order_number:
-            self.order_number = self._generate_order_number()
+        if not self.drink_order_number:
+            self.drink_order_number = self._generate_order_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.order_number
+        return self.drink_order_number
 
 
 class DrinkOrderLineItem(models.Model):
@@ -69,4 +70,4 @@ class DrinkOrderLineItem(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f"Drink order number: {self.drink_order.order_number}"
+        return f"Drink order number: {self.drink_order.drink_order_number}"

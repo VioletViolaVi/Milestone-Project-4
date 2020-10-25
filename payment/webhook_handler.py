@@ -23,8 +23,9 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         shopping_cart = intent.metadata.shopping_cart
-        # ask why below is here as there's an error
-        save_info = intent.metadata.save_info
+
+        # ask why below is here as there's an error REMOVE OTHERWISE
+        saved_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping

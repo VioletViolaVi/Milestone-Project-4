@@ -17,7 +17,8 @@
 
         <div class="container mt-3">
             <div class="row">
-                <div class="col-12">
+
+                <div class="col-12 col-md-6">
                     <h2 class="text-capitalize">personal details</h2>
                     <form id="updateProfileForm" class="update-form-border mb-5" method="POST" action="{% url 'user_profiles' %}">
                         {% csrf_token %}
@@ -26,9 +27,34 @@
                     </form>
                 </div>
 
-                <div class="col-12">
-                    <h2 class="text-capitalize">order history</h2>  
-                    {{ drink_orders }}                  
+                <div class="col-12 col-md-6">
+                    <h2 class="text-capitalize">order history</h2> 
+                    {% for drink_order in drink_orders %}  
+                        <ul class="text-capitalize text-left order-history-border">
+                            <li>
+                                <strong>date: </strong>
+                                {{ drink_order.date }}
+                            </li>
+                            <li>
+                                <strong>grand total: </strong>
+                                £{{ drink_order.grand_total }}
+                            </li>
+                            <li>
+                                <strong>drink order number: </strong>
+                                <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">{{ drink_order.drink_order_number|truncatechars:9 }}</a>
+                            </li>
+                            {% for drink_item in drink_order.lineitems.all %}
+                                <li>
+                                    <strong>drink name: </strong>
+                                    {{ drink_item.drink }}
+                                </li>
+                                <li>
+                                    <strong>drink quantity: </strong>
+                                    {{ drink_item.drink_quantity }}
+                                </li>
+                            {% endfor %} 
+                        </ul>
+                    {% endfor %}                
                 </div>
             </div>
         </div>

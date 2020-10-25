@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (render, redirect, reverse,
+                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -6,6 +7,8 @@ from django.conf import settings
 from .forms import DrinkOrderForm
 from .models import DrinkOrder, DrinkOrderLineItem
 from home.models import Drink
+from user_profiles.models import UserProfiles
+from user_profiles.forms import UserProfilesForm
 from shopping_cart.contexts import shopping_cart_contents
 
 import stripe
@@ -74,7 +77,7 @@ def payment(request):
 
             request.session["saveInfo"] = "saveInfo" in request.POST
             return redirect(reverse("payment_success",
-                                    args=[drink_order.order_number]))
+                                    args=[drink_order.drink_order_number]))
         else:
             messages.error(
                 request, "There was an error with your form. \
@@ -114,11 +117,33 @@ def payment(request):
     return render(request, template, context)
 
 
-def payment_success(request, order_number):
+def payment_success(request, drink_order_number):
+    print("success")
     saved_info = request.session.get("saveInfo")
-    drink_order = get_object_or_404(DrinkOrder, order_number=order_number)
+    drink_order = get_object_or_404(DrinkOrder,
+                                    drink_order_number=drink_order_number)
+    if request.user.is_authenticated:
+        user_profiles = UserProfiles.objects.get(user=request.user)
+        # Attach user's profile to drink order
+        drink_order.user_profiles = user_profiles
+        drink_order.save()
+
+        # Save user's info
+        if saved_info:
+            user_profiles_data = {
+                "default_phone_number": drink_order.phone_number,
+                "default_street_address1": drink_order.street_address1,
+                "default_street_address2": drink_order.street_address2,
+                "default_postcode": drink_order.postcode,
+                "default_country": drink_order.country,
+            }
+            user_profiles_form = UserProfilesForm(
+                user_profiles_data, instance=user_profiles)
+            if user_profiles_form.is_valid():
+                user_profiles_form.save()
+
     messages.success(request, f"Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
+        Your order number is {drink_order_number}. A confirmation \
         email will be sent to {drink_order.email}.")
 
     if "shopping_cart" in request.session:

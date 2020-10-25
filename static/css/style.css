@@ -493,13 +493,13 @@ label[for="id_remember"] {
 }
 
 /******************************************* profiles */
-.update-form-border {
+.update-form-border,
+.order-history-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   width: 18em;
   margin: auto;
   overflow: auto;
-  height: 22em;
   padding: 0.5em;
 }
 
@@ -523,6 +523,14 @@ select:valid {
 .profile-countries input::placeholder,
 #id_default_country option:first-child {
   color: #6c757d;
+}
+
+.update-form-border {
+  height: 22em;
+}
+
+.order-history-border {
+  height: 10em;
 }
 
 /******************************************* media queries ******************************************* */
@@ -705,7 +713,7 @@ select:valid {
 
   /******************************************* profiles */
   .update-form-border {
-    width: 40em;
+    width: 20em;
     padding: 2em;
     height: 26em;
   }

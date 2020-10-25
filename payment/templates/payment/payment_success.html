@@ -32,7 +32,7 @@
             <div class="row text-capitalize">
                 <div class="col-12 col-sm-7 col-lg-8">
                     <ul class=" mb-sm-0">
-                        <li><b class="font-weight-bolder text-secondary">order number:</b> <small>{{ drink_order.order_number }}</small></li>
+                        <li><b class="font-weight-bolder text-secondary">order number:</b> <small>{{ drink_order.drink_order_number }}</small></li>
                         <br>
                         <li><h5 class="font-weight-bolder">orders</h5></li>
                         {% for drink_item in drink_order.lineitems.all %}                            
@@ -65,18 +65,13 @@
                 </div>
             </div>
         </div>
-
-        <h2 class="text-capitalize text-center mt-3">order history</h2> 
-        {% if payment_history %} 
-            <p>#</p>
-        {% else %}           
-            <div class="col-12 text-capitalize text-center">
-                <p>your order history is empty</p>
-            </div>
-        {% endif %}
     
-        <div class="col-12 text-center">
-            <a class="back-to-home-pg-btn text-body text-capitalize bg-secondary font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+        <div class="col-12 text-center mt-3 text-uppercase">
+            {% if taken_from_user_profiles %}
+                <a class="back-to-home-pg-btn text-body bg-secondary font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
+            {% else %}
+                <a class="back-to-home-pg-btn text-body bg-secondary font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+            {% endif %}
         </div>
 
     </section>
