@@ -526,7 +526,8 @@ select:valid {
 }
 
 /******************************************* admin */
-.add-drinks-form-border input:focus {
+.add-drinks-form-border input:focus,
+.add-drinks-form-border select:focus {
   outline: none;
   box-shadow: none;
   border: slategray solid 0.2em;
@@ -538,8 +539,15 @@ select:valid {
   overflow: auto;
 }
 
-.add-drinks-form-border div {
+.add-drinks-form-border #id_drink_name,
+.add-drinks-form-border #id_price,
+.add-drinks-form-border #id_millilitres,
+.add-drinks-form-border #id_drink_type {
   border-radius: 0.2em;
+}
+
+.add-drinks-form-border a {
+  padding: 0.4em;
 }
 
 /******************************************* media queries ******************************************* */
@@ -726,6 +734,11 @@ select:valid {
     padding: 2em;
     height: 26em;
   }
+
+  /******************************************* admin */
+  .add-drinks-form-border {
+    margin: 0em 3em;
+  }
 }
 
 /* bootstrap media query */
@@ -811,6 +824,11 @@ select:valid {
   .login-border {
     height: 230px;
   }
+
+  /******************************************* admin */
+  .add-drinks-form-border {
+    margin: 0em 10em;
+  }
 }
 
 /* bootstrap media query */
@@ -856,5 +874,10 @@ select:valid {
   /******************************************* profiles */
   .update-form-border {
     width: 35em;
+  }
+
+  /******************************************* admin */
+  .add-drinks-form-border {
+    margin: 0em 15em;
   }
 }

@@ -6,16 +6,16 @@
 {% block add_drinks %}
     <section class="footer-pusher">
         <h2 class="text-capitalize mt-3">drink management</h2>
-        <h5>add a drink</h5>
+        <h5 class="text-capitalize">add drinks</h5>
         <div class="container">        
             <div class="row">
                 <div class="col">
-                    <form class="add-drinks-form-border" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">
+                    <form class="add-drinks-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
-                            <a href="{% url 'home' %}" class="form-submit-btn text-body p-1 text-uppercase bg-danger mt-4 font-weight-bolder">cancel</a>
-                            <button class="form-submit-btn text-uppercase bg-success mt-4 font-weight-bolder" type="submit">add drink</button>
+                            <a href="{% url 'home' %}" class="form-submit-btn text-body text-uppercase bg-secondary mt-2 font-weight-bolder">cancel</a>
+                            <button class="form-submit-btn text-uppercase bg-secondary font-weight-bolder mt-2" type="submit">add drink</button>
                         </div>
                     </form>
                 </div>
