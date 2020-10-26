@@ -17,20 +17,24 @@ def webhook(request):
 
     # gets webhook data and verifys its signature
     payload = request.body
-    sig_header = request.META['HTTP_STRIPE_SIGNATURE']
+    sig_header = request.META["HTTP_STRIPE_SIGNATURE"]
     event = None
 
     try:
         event = stripe.Webhook.construct_event(
             payload, sig_header, wh_secret
         )
+        print("no. 1")
     except ValueError as e:
         # Invalid payload
+        print("no. 2")
         return HttpResponse(status=400)
     except stripe.error.SignatureVerificationError as e:
+        print("no. 3")
         # Invalid signature
         return HttpResponse(status=400)
     except Exception as e:
+        print("no. 4")
         return HttpResponse(content=e, status=400)
 
     # set up webhook handler
@@ -38,8 +42,8 @@ def webhook(request):
 
     # map webhook events to relevant handler functions
     event_map = {
-        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed':
+        "payment_intent.succeeded": handler.handle_payment_intent_succeeded,
+        "payment_intent.payment_failed":
         handler.handle_payment_intent_payment_failed,
     }
 

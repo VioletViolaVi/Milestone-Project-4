@@ -1,7 +1,11 @@
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.conf import settings
 
 from .models import DrinkOrder, DrinkOrderLineItem
 from home.models import Drink
+from user_profiles.models import UserProfiles
 
 import json
 import time
@@ -11,6 +15,28 @@ class StripeWH_Handler:
     # handles stripe webhooks
     def __init__(self, request):
         self.request = request
+
+    def _send_confirmation_email(self, drink_order):
+        # send users confirmation email
+        customer_email = drink_order.email
+        subject_txt = render_to_string(
+            "payment/confirmation_emails/confirmation_email_subject.txt",
+            {
+                "drink_order": drink_order
+            })
+        body_txt = render_to_string(
+            "payment/confirmation_emails/confirmation_email_body.txt",
+            {
+                "drink_order": drink_order,
+                "contact_email": settings.COMPANY_EMAIL
+            })
+
+        send_mail(
+            subject_txt,
+            body_txt,
+            settings.COMPANY_EMAIL,
+            [customer_email]
+        )
 
     def handle_event(self, event):
         # handles generic/unknown/unexpected webhook events
@@ -24,8 +50,8 @@ class StripeWH_Handler:
         pid = intent.id
         shopping_cart = intent.metadata.shopping_cart
 
-        # ask why below is here as there's an error REMOVE OTHERWISE
-        saved_info = intent.metadata.save_info
+        # error REMOVE OTHERWISE
+        save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
@@ -35,6 +61,19 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
+
+        # update user profile info when saveInfo is checked
+        user_profiles = None
+        username = intent.metadata.username
+        if username != "AnonymousUser":
+            user_profiles = UserProfiles.objects.get(user__username=username)
+            if save_info:
+                user_profiles.default_phone_number = shipping_details.phone
+                user_profiles.default_street_address1 = shipping_details.address.line1
+                user_profiles.default_street_address2 = shipping_details.address.line2
+                user_profiles.default_postcode = shipping_details.address.postal_code
+                user_profiles.default_country = shipping_details.address.country
+                user_profiles.save()
 
         drink_order_exists = False
         attempt = 1
@@ -58,6 +97,7 @@ class StripeWH_Handler:
                 attempt += 1
                 time.sleep(1)
         if drink_order_exists:
+            self._send_confirmation_email(drink_order)
             return HttpResponse(
                 content=f"Webhook received: {event['type']} \
                     | SUCCESS: Verified drink order already in database",
@@ -67,6 +107,7 @@ class StripeWH_Handler:
             try:
                 drink_order = DrinkOrder.objects.create(
                     full_name=shipping_details.name,
+                    user_profiles=user_profiles,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
                     street_address1=shipping_details.address.line1,
@@ -85,13 +126,21 @@ class StripeWH_Handler:
                             drink_quantity=item_data,
                         )
                         drink_order_line_item.save()
+                    else:
+                        for quantity in item_data.items():
+                            drink_order_line_item = DrinkOrderLineItem(
+                                drink_order=drink_order,
+                                drink=drink,
+                                drink_quantity=item_data,
+                            )
+                            drink_order_line_item.save()
             except Exception as e:
                 if drink_order:
                     drink_order.delete()
                 return HttpResponse(
                     content=f"Webhook received: {event['type']} | ERROR: {e}",
                     status=500)
-
+        self._send_confirmation_email(drink_order)
         return HttpResponse(
             content=f"Webhook received: {event['type']} \
                  | SUCCESS: Created drink order in webhook", status=200)

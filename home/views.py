@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Drink
+from .forms import DrinkForm
 
 
 def home(request):
@@ -62,3 +63,14 @@ def home(request):
 
     # shows homepage
     return render(request, "home/index.html", context)
+
+
+def add_drink(request):
+    # adds product to store
+    form = DrinkForm()
+    template = "home/add_drink.html"
+    context = {
+        "form": form,
+    }
+
+    return render(request, template, context)

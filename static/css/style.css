@@ -525,6 +525,23 @@ select:valid {
   border: solid darkgray 0.2em;
 }
 
+/******************************************* admin */
+.add-drinks-form-border input:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
+.add-drinks-form-border {
+  background-color: lightgray;
+  border: solid darkgray 0.2em;
+  overflow: auto;
+}
+
+.add-drinks-form-border div {
+  border-radius: 0.2em;
+}
+
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */

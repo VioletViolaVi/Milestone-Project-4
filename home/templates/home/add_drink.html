@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block tab_title %}| Management{% endblock %}
+
+{% block add_drinks %}
+    <section class="footer-pusher">
+        <h2 class="text-capitalize mt-3">drink management</h2>
+        <h5>add a drink</h5>
+        <div class="container">        
+            <div class="row">
+                <div class="col">
+                    <form class="add-drinks-form-border" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="text-center">
+                            <a href="{% url 'home' %}" class="form-submit-btn text-body p-1 text-uppercase bg-danger mt-4 font-weight-bolder">cancel</a>
+                            <button class="form-submit-btn text-uppercase bg-success mt-4 font-weight-bolder" type="submit">add drink</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
