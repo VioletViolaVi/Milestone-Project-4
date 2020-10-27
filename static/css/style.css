@@ -34,6 +34,10 @@ html {
   scroll-behavior: smooth;
 }
 
+input[type="text"]::placeholder {
+  text-transform: capitalize;
+}
+
 /******************************************* headers */
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -300,7 +304,7 @@ body {
   font-size: 1em;
 }
 
-/******************************************* payment */
+/******************************************* make payment */
 .payment-form-border input:focus,
 .payment-form-border select:focus {
   outline: none;
@@ -318,6 +322,13 @@ select option[value=""] {
   color: #6c757d !important;
 }
 
+.drink-order-box {
+  height: 100vh;
+  width: 90vw;
+  border: solid darkgray 0.2em;
+  margin: auto;
+  overflow: auto;
+}
 .payment-message {
   font-size: 0.9em;
 }
@@ -332,6 +343,21 @@ select option[value=""] {
   border-radius: 0.2em;
 }
 
+input[type="text"]#id_full_name,
+input[type="text"]#id_street_address1,
+input[type="text"]#id_street_address2,
+select#id_country {
+  text-transform: capitalize;
+}
+
+input[type="text"]#id_email {
+  text-transform: lowercase;
+}
+
+input[type="text"]#id_postcode {
+  text-transform: uppercase;
+}
+
 .form-submit-btn {
   border-radius: 0.2em;
   outline: none;
@@ -339,38 +365,6 @@ select option[value=""] {
   border: gray solid 0.1em;
   text-align: center;
   padding: 0.2em;
-}
-
-.drink-order-box {
-  height: 100vh;
-  width: 90vw;
-  border: solid darkgray 0.2em;
-  margin: auto;
-  overflow: auto;
-}
-
-.payment-summary {
-  border: lightgray 0.2em solid;
-  margin: auto;
-  width: 95vw;
-  padding: 10px;
-}
-
-#loadingOverlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(211, 211, 211, 0.63);
-  z-index: 9999;
-}
-
-.spinner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
 }
 
 /******************************************* stripe */
@@ -404,7 +398,32 @@ select option[value=""] {
   font-family: "Montserrat", sans-serif !important;
 } */
 
-/******************************************* signup & login & allauth pages */
+/******************************************* processing payment */
+#loadingOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(211, 211, 211, 0.63);
+  z-index: 9999;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.payment-summary {
+  border: lightgray 0.2em solid;
+  margin: auto;
+  width: 95vw;
+  padding: 10px;
+}
+
+/******************************************* signup, login, allauth pgs */
 .signup-border,
 .login-border,
 .allauth-border {
@@ -505,6 +524,11 @@ select:valid {
   color: #212529;
 }
 
+.profile-countries input::placeholder,
+#id_default_country option:first-child {
+  color: #6c757d;
+}
+
 .update-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
@@ -515,14 +539,19 @@ select:valid {
   height: 22em;
 }
 
-.profile-countries input::placeholder,
-#id_default_country option:first-child {
-  color: #6c757d;
-}
-
 .order-history-border {
   height: 15em;
   border: solid darkgray 0.2em;
+}
+
+input[type="text"]#id_default_street_address1,
+input[type="text"]#id_default_street_address2,
+select#id_default_country {
+  text-transform: capitalize;
+}
+
+input[type="text"]#id_default_postcode {
+  text-transform: uppercase;
 }
 
 /******************************************* admin */
@@ -546,7 +575,8 @@ select:valid {
   border-radius: 0.2em;
 }
 
-.add-drinks-form-border a {
+.add-drinks-form-border a,
+.add-drinks-form-border button {
   padding: 0.4em;
 }
 

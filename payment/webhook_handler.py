@@ -51,7 +51,7 @@ class StripeWH_Handler:
         shopping_cart = intent.metadata.shopping_cart
 
         # error REMOVE OTHERWISE
-        save_info = intent.metadata.save_info
+        saveInfo = intent.metadata.saveInfo
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
@@ -67,7 +67,7 @@ class StripeWH_Handler:
         username = intent.metadata.username
         if username != "AnonymousUser":
             user_profiles = UserProfiles.objects.get(user__username=username)
-            if save_info:
+            if saveInfo:
                 user_profiles.default_phone_number = shipping_details.phone
                 user_profiles.default_street_address1 = shipping_details.address.line1
                 user_profiles.default_street_address2 = shipping_details.address.line2

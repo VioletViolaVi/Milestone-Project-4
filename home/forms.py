@@ -16,4 +16,4 @@ class DrinkForm(forms.ModelForm):
 
         self.fields["drink_type"].choices = friendly_names
         # for field_name, field in self.fields.items():
-        #     field.widget.attrs["class"] = "border-black rounded-0"
+        #     field.widget.attrs["class"] = "stripe-style-input"

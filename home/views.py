@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Drink
@@ -66,11 +67,23 @@ def home(request):
 
 
 def add_drink(request):
-    # adds product to store
-    form = DrinkForm()
+    # adds drinks to shop
+    if request.method == "POST":
+        drink_form = DrinkForm(request.POST, request.FILES)
+        if drink_form.is_valid():
+            drink_form.save()
+            messages.success(request, "Drink successfully added!")
+            return redirect(reverse("add_drink"))
+        else:
+            messages.error(request,
+                           "Failed to add drink. Please \
+                                ensure the form is valid.")
+    else:
+        drink_form = DrinkForm()
+
     template = "home/add_drink.html"
     context = {
-        "form": form,
+        "drink_form": drink_form,
     }
 
     return render(request, template, context)

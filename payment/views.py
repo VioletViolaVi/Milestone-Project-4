@@ -23,7 +23,7 @@ def cache_payment_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             "shopping_cart": json.dumps(
                 request.session.get("shopping_cart", {})),
-            "save_info": request.POST.get("saveInfo"),
+            "saveInfo": request.POST.get("saveInfo"),
             "username": request.user,
         })
         return HttpResponse(status=200)
@@ -134,7 +134,7 @@ def payment(request):
 
 
 def payment_success(request, drink_order_number):
-    save_info = request.session.get("saveInfo")
+    saveInfo = request.session.get("saveInfo")
     drink_order = get_object_or_404(DrinkOrder,
                                     drink_order_number=drink_order_number)
     if request.user.is_authenticated:
@@ -144,7 +144,7 @@ def payment_success(request, drink_order_number):
         drink_order.save()
 
         # Save user's info
-        if save_info:
+        if saveInfo:
             user_profiles_data = {
                 "default_phone_number": drink_order.phone_number,
                 "default_street_address1": drink_order.street_address1,
