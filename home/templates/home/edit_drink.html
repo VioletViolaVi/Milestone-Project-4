@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block tab_title %}| Management-Add Drinks{% endblock %}
+{% block tab_title %}| Management-Edit Drinks{% endblock %}
 
 {% block add_drink %}
     <section class="footer-pusher">
@@ -10,8 +10,8 @@
         <div class="container">        
             <div class="row">
 
-                <div class="col-12">                    
-                    <h5 class="text-capitalize">add drinks</h5>  
+                <div class="col-12">                
+                    <h5 class="text-capitalize">edit drink</h5>  
                     {% if messages %}
                         <ul class="messages">
                             {% for message in messages %}
@@ -19,16 +19,16 @@
                             {% endfor %}
                         </ul>
                     {% endif %}    
-                    <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">
+                    <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'edit_drink' drink.id %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
                             <a href="{% url 'home' %}" class="form-submit-btn mr-2 text-uppercase text-body bg-secondary font-weight-bolder mt-2" type="submit">cancel</a>
-                            <button class="form-submit-btn text-uppercase ml-2 bg-secondary font-weight-bolder mt-2" type="submit">add drink</button>
+                            <button class="form-submit-btn text-uppercase ml-2 bg-secondary font-weight-bolder mt-2" type="submit">update drink</button>
                         </div>
                     </form>
                 </div>
-                
+
             </div>
         </div>
 

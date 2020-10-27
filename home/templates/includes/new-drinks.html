@@ -42,7 +42,21 @@
                                     {% if new_drink.drink_name == milkshake.drink_name %}
                                         <a href="#milkshakeSelection_{{ milkshake.id }}" class="buy-now-btn text-uppercase text-body bg-secondary font-weight-bolder">buy now</a>
                                     {% endif %} 
-                                {% endfor %}                                 
+                                {% endfor %}    
+
+                                {% if request.user.is_superuser %}
+                                    <div class="edit-delete-btn mt-2 mb-5">
+                                        <small>
+                                            <span>                                                
+                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' %}">edit</a>                                               
+                                            </span>
+                                            <span>                                              
+                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body ml-3" href="{% url 'delete_drink' %}">delete</a>                                               
+                                            </span>  
+                                        </small>  
+                                    </div>                                                                               
+                                {% endif %} 
+
                             </div>
                         </div>
                     </div>

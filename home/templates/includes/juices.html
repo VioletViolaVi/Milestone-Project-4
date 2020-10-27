@@ -31,9 +31,21 @@
                                         {% csrf_token %}
                                         <label for="juiceSelection"></label>
                                         <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ juice.id }}" class=" font-weight-bolder">
-                                        <button type="submit" class="text-uppercase bg-secondary mb-5 font-weight-bolder">add to cart</button>
+                                        <button type="submit" class="text-uppercase bg-secondary mb-1 font-weight-bolder">add</button>
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    </form>                                
+                                    </form>   
+                                    {% if request.user.is_superuser %}
+                                        <div class="edit-delete-btn mt-1 mb-5">
+                                            <small>
+                                                <span>                                                
+                                                    <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' %}">edit</a>                                               
+                                                </span>
+                                                <span>                                              
+                                                    <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body ml-3" href="{% url 'delete_drink' %}">delete</a>                                               
+                                                </span>  
+                                            </small>  
+                                        </div>                                                                               
+                                    {% endif %}                             
                                 </div>
                             </div>
                         </div>                                                        

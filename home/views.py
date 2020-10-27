@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Drink
 from .forms import DrinkForm
 
@@ -71,11 +72,11 @@ def add_drink(request):
     if request.method == "POST":
         form = DrinkForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            drink = form.save()
             messages.success(request, "Drink successfully added!")
             print("issue here")
             print(messages.success(request, "Drink successfully added!"))
-            return redirect(reverse("add_drink"))
+            return redirect(reverse("home", args=[drink.id]))
         else:
             messages.error(request,
                            "Failed to add drink. Please \
@@ -89,3 +90,37 @@ def add_drink(request):
     }
 
     return render(request, template, context)
+
+
+def edit_drink(request, drink_id):
+    # edit drinks in store
+    drink = get_object_or_404(Drink, pk=drink_id)
+    if request.method == "POST":
+        form = DrinkForm(request.POST, request.FILES, instance=drink)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Drink successfully updated!")
+            return redirect(reverse("drink_detail", args=[drink.id]))
+        else:
+            messages.error(request, "Failed to update drink. \
+                 Please ensure the form is valid.")
+    else:
+        form = DrinkForm(instance=drink)
+        messages.info(request, f"You are editing {drink.name}")
+
+    template = "home/edit_drink.html"
+    context = {
+        "form": form,
+        "drink": drink,
+    }
+
+    return render(request, template, context)
+
+
+def delete_drink(request, drink_id):
+    # delete drink from store
+    drink = get_object_or_404(Drink, pk=drink_id)
+    drink.delete()
+    messages.success(request, "Drink deleted!")
+
+    return redirect(reverse("home"))
