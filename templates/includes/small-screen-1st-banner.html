@@ -22,7 +22,7 @@
             {% endif %}
             {% if request.user.is_superuser %}
                 <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="#">admin</a>
+                    <a class="nav-link text-body text-capitalize" href="{% url 'add_drink' %}">admin</a>
                 </li>
             {% endif %}
             {% if not request.user.is_authenticated %}            
@@ -33,7 +33,7 @@
                     <a class="nav-link text-body text-capitalize" href="{% url 'account_login' %}">log in</a>
                 </li>
             {% else %}
-                <li class="nav-item mb-2">
+                <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="{% url 'user_profiles' %}">my profile</a>
                 </li>
                 <li class="nav-item mb-2">

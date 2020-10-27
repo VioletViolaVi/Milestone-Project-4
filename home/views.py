@@ -69,21 +69,23 @@ def home(request):
 def add_drink(request):
     # adds drinks to shop
     if request.method == "POST":
-        drink_form = DrinkForm(request.POST, request.FILES)
-        if drink_form.is_valid():
-            drink_form.save()
+        form = DrinkForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
             messages.success(request, "Drink successfully added!")
+            print("issue here")
+            print(messages.success(request, "Drink successfully added!"))
             return redirect(reverse("add_drink"))
         else:
             messages.error(request,
                            "Failed to add drink. Please \
                                 ensure the form is valid.")
     else:
-        drink_form = DrinkForm()
+        form = DrinkForm()
 
     template = "home/add_drink.html"
     context = {
-        "drink_form": drink_form,
+        "form": form,
     }
 
     return render(request, template, context)
