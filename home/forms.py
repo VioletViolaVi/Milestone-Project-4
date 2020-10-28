@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput
 from .models import Drink, Drink_type
 
 
@@ -7,6 +8,8 @@ class DrinkForm(forms.ModelForm):
     class Meta:
         model = Drink
         fields = "__all__"
+
+    image = forms.ImageField(widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

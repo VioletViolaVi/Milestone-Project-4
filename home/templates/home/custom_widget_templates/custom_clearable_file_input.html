@@ -1,0 +1,9 @@
+{% if widget.is_initial %}
+    <div>
+        <img src="/{{ widget.value }}" alt="{{ widget.value }}" width="90" height="100" class="rounded">    
+    </div>
+    {{ widget.input_text }}
+{% endif %}
+<div class="btn rounded pl-0">
+    <input type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+</div>
