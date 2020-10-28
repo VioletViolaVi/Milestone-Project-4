@@ -562,6 +562,10 @@ input[type="text"]#id_default_postcode {
   border: slategray solid 0.2em;
 }
 
+.management-drinks-form-border input#id_image:focus{
+border: none;
+}
+
 .management-drinks-form-border #id_drink_name,
 .management-drinks-form-border #id_price,
 .management-drinks-form-border #id_millilitres,
