@@ -562,8 +562,8 @@ input[type="text"]#id_default_postcode {
   border: slategray solid 0.2em;
 }
 
-.management-drinks-form-border input#id_image:focus{
-border: none;
+.management-drinks-form-border input#id_image:focus {
+  border: none;
 }
 
 .management-drinks-form-border #id_drink_name,
@@ -593,6 +593,10 @@ select#id_drink_type {
   border-radius: 0.3em;
   border: solid 0.1em #6c757d;
   padding: 0.1em;
+}
+
+#adminBrowseImage {
+  color: lightgray;
 }
 
 /******************************************* media queries ******************************************* */

@@ -5,13 +5,12 @@
 
 {% block add_drink %}
     <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">drink management</h2>      
+        <h2 class="text-capitalize mt-3">management</h2>      
         
         <div class="container">        
             <div class="row">
 
                 <div class="col-12">                
-                    <h5 class="text-capitalize">edit drink</h5>  
                     {% if messages %}
                         <ul class="messages">
                             {% for message in messages %}
@@ -20,6 +19,7 @@
                         </ul>
                     {% endif %}    
                     <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'edit_drink' drink.id %}" enctype="multipart/form-data">
+                        <h5 class="text-capitalize text-center">edit drink</h5>  
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
@@ -33,4 +33,14 @@
         </div>
 
     </section>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $("#adminBrowseImage").change(function() {
+            let file = $("#adminBrowseImage")[0].files[0];
+            $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
+        });
+    </script>
 {% endblock %}
