@@ -38,6 +38,10 @@ input[type="text"]::placeholder {
   text-transform: capitalize;
 }
 
+select, input[type="checkbox"]{
+    cursor: pointer;
+}
+
 /******************************************* headers */
 .navbar-toggler:focus,
 .navbar-toggler:active,
