@@ -4,7 +4,13 @@
 {% block tab_title %}| Home{% endblock %}
 
 {% block home %}   
-
+<!-- NOT WORKING!!!!!! -->
+    {% if messages %} 
+        {% for message in messages %}
+            <p class="font-weight-bolder text-danger">{{ message }}</p>                           
+        {% endfor %}
+    {% endif %}
+<!-- NOT WORKING!!!!!! -->
     {% include "includes/sort-by.html" %} 
     {% include "includes/search-drinks.html" %} 
     {% include "includes/new-drinks.html" %}

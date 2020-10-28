@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -67,12 +68,18 @@ def home(request):
     return render(request, "home/index.html", context)
 
 
+@login_required
 def add_drink(request):
     # adds drinks to shop
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied. \
+            Only administrators are allowed.")
+        return redirect(reverse("home"))
+
     if request.method == "POST":
         form = DrinkForm(request.POST, request.FILES)
         if form.is_valid():
-            drink = form.save()
+            form.save()
             messages.success(request, "Drink successfully added!")
             return redirect(reverse("add_drink"))
         else:
@@ -91,17 +98,20 @@ def add_drink(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_drink(request, drink_id):
     # edit drinks in store
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied. \
+            Only administrators are allowed.")
+        return redirect(reverse("home"))
+
     drink = get_object_or_404(Drink, pk=drink_id)
     if request.method == "POST":
         form = DrinkForm(request.POST, request.FILES, instance=drink)
         if form.is_valid():
             form.save()
             messages.success(request, "Drink successfully updated!")
-            # return redirect(reverse("home"))
-            # return redirect(reverse("home", args=[drink.id]))
-            # return redirect("home", args=[drink.id])
             return redirect(reverse("home"))
         else:
             messages.error(request, "Failed to update drink. \
@@ -119,8 +129,14 @@ def edit_drink(request, drink_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_drink(request, drink_id):
     # delete drink from store
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied. \
+            Only administrators are allowed.")
+        return redirect(reverse("home"))
+
     drink = get_object_or_404(Drink, pk=drink_id)
     drink.delete()
     messages.success(request, "Drink deleted!")

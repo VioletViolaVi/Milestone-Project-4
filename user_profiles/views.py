@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import UserProfiles
 from .forms import UserProfilesForm
@@ -7,6 +8,7 @@ from .forms import UserProfilesForm
 from payment.models import DrinkOrder
 
 
+@login_required
 def user_profiles(request):
     # displays user profiles
     profile = get_object_or_404(UserProfiles, user=request.user)
@@ -32,6 +34,7 @@ def user_profiles(request):
     return render(request, template, context)
 
 
+@login_required
 def drink_order_history(request, drink_order_number):
     drink_order = get_object_or_404(
         DrinkOrder, drink_order_number=drink_order_number)
