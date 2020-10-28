@@ -74,9 +74,7 @@ def add_drink(request):
         if form.is_valid():
             drink = form.save()
             messages.success(request, "Drink successfully added!")
-            print("issue here")
-            print(messages.success(request, "Drink successfully added!"))
-            return redirect(reverse("home", args=[drink.id]))
+            return redirect(reverse("add_drink"))
         else:
             messages.error(request,
                            "Failed to add drink. Please \
@@ -87,6 +85,7 @@ def add_drink(request):
     template = "home/add_drink.html"
     context = {
         "form": form,
+        # "drink": drink,
     }
 
     return render(request, template, context)
@@ -100,13 +99,16 @@ def edit_drink(request, drink_id):
         if form.is_valid():
             form.save()
             messages.success(request, "Drink successfully updated!")
-            return redirect(reverse("drink_detail", args=[drink.id]))
+            # return redirect(reverse("home"))
+            # return redirect(reverse("home", args=[drink.id]))
+            # return redirect("home", args=[drink.id])
+            return redirect(reverse("home"))
         else:
             messages.error(request, "Failed to update drink. \
                  Please ensure the form is valid.")
     else:
         form = DrinkForm(instance=drink)
-        messages.info(request, f"You are editing {drink.name}")
+        messages.info(request, f"You are editing {drink.drink_name}.")
 
     template = "home/edit_drink.html"
     context = {

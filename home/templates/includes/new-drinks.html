@@ -45,13 +45,13 @@
                                 {% endfor %}    
 
                                 {% if request.user.is_superuser %}
-                                    <div class="edit-delete-btn mt-2 mb-5">
+                                    <div class="edit-delete-btn mt-2 mb-0">
                                         <small>
                                             <span>                                                
-                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' %}">edit</a>                                               
+                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' new_drink.id %}">edit</a>                                               
                                             </span>
                                             <span>                                              
-                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body ml-3" href="{% url 'delete_drink' %}">delete</a>                                               
+                                                <a class="text-uppercase bg-secondary mb-1 font-weight-bolder text-body ml-3" href="{% url 'delete_drink' new_drink.id %}">delete</a>                                               
                                             </span>  
                                         </small>  
                                     </div>                                                                               
