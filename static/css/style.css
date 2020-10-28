@@ -595,6 +595,10 @@ select#id_drink_type {
   padding: 0.1em;
 }
 
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
 #adminBrowseImage {
   color: lightgray;
 }
