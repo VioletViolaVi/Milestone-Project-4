@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block tab_title %}| Management-Edit Drinks{% endblock %}
+{% block tab_title %}| Edit Drink{% endblock %}
 
 {% block add_drink %}
     <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">management</h2>      
+        <h2 class="text-capitalize mt-3">edit drink</h2>      
         
         <div class="container">        
             <div class="row">
@@ -19,7 +19,6 @@
                         </ul>
                     {% endif %}    
                     <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'edit_drink' drink.id %}" enctype="multipart/form-data">
-                        <h5 class="text-capitalize text-center">edit drink</h5>  
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">

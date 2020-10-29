@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block tab_title %}| Management-Add Drinks{% endblock %}
+{% block tab_title %}| Add Drinks{% endblock %}
 
 {% block add_drink %}
     <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">management</h2>      
+        <h2 class="text-capitalize mt-3">add drinks</h2>      
         
         <div class="container">        
             <div class="row">
@@ -18,8 +18,7 @@
                             {% endfor %}
                         </ul>
                     {% endif %}    
-                    <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">
-                        <h5 class="text-capitalize text-center">add drinks</h5>  
+                    <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">  
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
