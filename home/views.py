@@ -92,7 +92,6 @@ def add_drink(request):
     template = "home/add_drink.html"
     context = {
         "form": form,
-        # "drink": drink,
     }
 
     return render(request, template, context)

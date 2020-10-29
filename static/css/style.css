@@ -429,10 +429,12 @@ input[type="text"]#id_postcode {
   padding: 10px;
 }
 
-/******************************************* signup, login, allauth pgs */
+/******************************************* allauth pages */
 .signup-border,
 .login-border,
 .reset-password-border,
+.change-password-border,
+.change-password-border,
 .allauth-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
@@ -445,6 +447,8 @@ input[type="text"]#id_postcode {
 #login_form input#id_login,
 #login_form input#id_password,
 #resetPassword input#id_email,
+#changePasswordForm input#id_password1,
+#changePasswordForm input#id_password2,
 #allauth-border li #id_email,
 #allauth-border li #id_oldpassword,
 #allauth-border li #id_password1,
@@ -471,9 +475,16 @@ input[type="text"]#id_postcode {
   width: 16em;
 }
 
+#changePasswordForm input#id_password1,
+#changePasswordForm input#id_password2 {
+  width: 15em;
+}
+
 #signup_form input:focus,
 #login_form input:focus,
 #resetPassword input#id_email:focus,
+#changePasswordForm input#id_password1:focus,
+#changePasswordForm input#id_password2:focus,
 #allauth-border li #id_email:focus,
 #allauth-border li #id_oldpassword:focus,
 #allauth-border li #id_password1:focus,
@@ -493,6 +504,12 @@ label[for="id_oldpassword"] {
   display: none;
 }
 
+#changePasswordForm input[name="password1"],
+#changePasswordForm input[name="password2"],
+#changePasswordForm input[type="submit"] {
+  margin-top: 1em;
+}
+
 .signup-border {
   height: 350px;
 }
@@ -503,6 +520,11 @@ label[for="id_oldpassword"] {
 
 .reset-password-border {
   height: 130px;
+}
+
+.change-password-border {
+  height: 210px;
+  margin-top: 1em;
 }
 
 label[for="id_remember"] {
@@ -726,10 +748,11 @@ input[type="file"]::-webkit-file-upload-button {
     margin: auto;
   }
 
-  /******************************************* signup & login */
+  /******************************************* allauth pages */
   .signup-border,
   .login-border,
-  .reset-password-border {
+  .reset-password-border,
+  .change-password-border {
     width: 24em;
   }
 
@@ -740,6 +763,11 @@ input[type="file"]::-webkit-file-upload-button {
   #login_form input#id_login,
   #login_form input#id_password {
     width: 21em;
+  }
+
+  .change-password-border {
+    height: 220px;
+     margin-top: 2em;
   }
 
   /******************************************* profiles */
@@ -781,9 +809,10 @@ input[type="file"]::-webkit-file-upload-button {
     width: 70vw;
   }
 
-  /******************************************* signup & login */
+  /******************************************* allauth pages */
   .signup-border,
-  .login-border {
+  .login-border,
+  .change-password-border {
     width: 30em;
   }
 
@@ -794,6 +823,10 @@ input[type="file"]::-webkit-file-upload-button {
   #login_form input#id_login,
   #login_form input#id_password {
     width: 27em;
+  }
+
+  .change-password-border {
+    height: 230px;
   }
 
   /******************************************* profiles */
@@ -884,7 +917,7 @@ input[type="file"]::-webkit-file-upload-button {
     width: 70vw;
   }
 
-  /******************************************* signup & login */
+  /******************************************* allauth pages */
   .signup-border {
     height: 350px;
   }
@@ -900,6 +933,10 @@ input[type="file"]::-webkit-file-upload-button {
   #resetPassword input#id_email {
     margin-top: 1em;
   }
+
+  /* .change-password-border {
+    margin-top: 3em;
+  } */
 
   /******************************************* admin */
   .management-drinks-form-border {
@@ -932,9 +969,10 @@ input[type="file"]::-webkit-file-upload-button {
     width: 55vw;
   }
 
-  /******************************************* signup & login */
+  /******************************************* allauth pages */
   .signup-border,
-  .login-border {
+  .login-border,
+  .change-password-border {
     width: 35em;
   }
 
@@ -943,7 +981,9 @@ input[type="file"]::-webkit-file-upload-button {
   #signup_form input#id_password1,
   #signup_form input#id_password2,
   #login_form input#id_login,
-  #login_form input#id_password {
+  #login_form input#id_password,
+  #changePasswordForm input#id_password1,
+  #changePasswordForm input#id_password2 {
     width: 32em;
   }
 
