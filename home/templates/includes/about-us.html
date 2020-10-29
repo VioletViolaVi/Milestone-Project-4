@@ -1,53 +1,24 @@
 <section id="aboutUsSection">
-    <div class="container mt-1">        
+    <div class="container mt-1"> 
         <div class="row">
-            <div class="col-12">
-                <h1 class="text-capitalize mt-0">about us</h1>
-                <div>
-                    <p>
-                      Our mission is to provide our customers with high quality delicious drinks
-                      at very affordable prices. We believe in working effectively with our
-                      partners in achieving this and are proud of the contributions Slurps have
-                      made in empowering our workers along the way.
-                    </p>    
-                </div>             
-            </div>    
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4">          
-                <div class="about_us_img">
-                    <img src="media/about-people.jpg" class="rounded" alt="Image of two people holding drinks.">
-                    <h2 class="text-capitalize">our customers</h2>   
-                    <p>
-                      We are proud of the feedback we’ve received from our customers. 
-                      Our drinks are continuously accepted well. We strive to further 
-                      improve the quality of our products to meet satisfactory demands 
-                      and help us grow stronger.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4">
-                <div class="about_us_img">
-                    <img src="media/about-farm.PNG" class="rounded" alt="Image of a tractor on a farm.">
-                    <h2 class="text-capitalize">ethical sourcing</h2>  
-                    <p>
-                      We ensure all our ingredients are ethically sourced in a responsible and
-                      sustainable way where minimising negative environmental and social impacts
-                      are made a priority during the sourcing process.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="about_us_img">
-                    <img src="media/about-maker.jpg" class="rounded" alt="Image of a person manufacturing chocolate.">
-                    <h2 class="text-capitalize">our employees</h2>  
-                    <p>
-                      All our employees work under safe and fair conditions as attested by the
-                      Health and Safety Executive in the United Kingdom. We highly value our
-                      workers as the experienced and skilled professionals that they are.
-                    </p>
-                </div>                
-            </div>            
+            {% for about in about_us %}
+                {% if forloop.first %}
+                    <div class="col-12">
+                        <h1 class="text-capitalize mt-0">{{ about.title }}</h1>
+                        <p>{{ about.paragraph }}</p>
+                    </div>
+                {% else %}
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="about_us_img">
+                            {% if about.image %}
+                                <img src="media/{{ about.image }}" class="rounded" alt="{{ about.image_alt }}">
+                            {% endif %}
+                            <h2>{{ about.title }}</h2>
+                            <p>{{ about.paragraph }}</p>
+                        </div>
+                    </div>                      
+                {% endif %}
+            {% endfor %}          
         </div>
     </div>
 </section>

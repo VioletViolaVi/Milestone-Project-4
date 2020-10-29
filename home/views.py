@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import Drink
 from .forms import DrinkForm
+from .models import About_us
 
 
 def home(request):
@@ -13,6 +14,7 @@ def home(request):
     new_drinks = Drink.objects.filter(drink_type=1)
     juices = Drink.objects.filter(drink_type=2)
     milkshakes = Drink.objects.filter(drink_type=3)
+    about_us = About_us.objects.all()
 
     searched_drinks = Drink.objects.exclude(drink_type=1)
     drink_search = None
@@ -58,6 +60,7 @@ def home(request):
         "new_drinks": new_drinks,
         "juices": juices,
         "milkshakes": milkshakes,
+        "about_us": about_us,
         "drink_search_results": drink_search_results,
         "typed_in_search": drink_search,
         "drink_sorting": drink_sorting,
