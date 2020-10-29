@@ -14,7 +14,7 @@
 <!-- NOT WORKING!!!!!! -->
     {% if request.user.is_superuser %}
         <div class="text-left col-12 mt-4">
-            <a class="text-body text-lowercase font-weight-bolder" href="{% url 'admin:index' %}"><u>django admin</u></a> 
+            <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
         </div>
     {% endif %}
     {% include "includes/sort-by.html" %} 
