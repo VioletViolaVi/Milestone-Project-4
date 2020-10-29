@@ -4,6 +4,7 @@
 {% block tab_title %}| Home{% endblock %}
 
 {% block home %}   
+
 <!-- NOT WORKING!!!!!! -->
     {% if messages %} 
         {% for message in messages %}
@@ -11,7 +12,11 @@
         {% endfor %}
     {% endif %}
 <!-- NOT WORKING!!!!!! -->
-    <a href="{% url 'admin:index' %}">link to admin panel</a>
+    {% if request.user.is_superuser %}
+        <div class="text-left col-12 mt-4">
+            <a class="text-body text-lowercase font-weight-bolder" href="{% url 'admin:index' %}"><u>django admin</u></a> 
+        </div>
+    {% endif %}
     {% include "includes/sort-by.html" %} 
     {% include "includes/search-drinks.html" %} 
     {% include "includes/new-drinks.html" %}
