@@ -17,7 +17,9 @@
                 {% else %}
                     <div class="col-12 col-sm-6 col-md-4 mb-3">
                         <div class="about_us_img">
-                            <img src="media/{{ about.image }}" class="rounded" alt="{{ about.image_alt }}">
+                            {% if about.image %}
+                                <img src="media/{{ about.image }}" class="rounded" alt="{{ about.image_alt }}">
+                            {% endif %}
                             <h2>{{ about.title }}</h2>
                             <p class="mb-0">{{ about.paragraph }}</p>
                         </div>
@@ -46,7 +48,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">no</button>
-                                <a href="#" class="bin-icon btn btn-success">yes</a>
+                                <a href="{% url 'delete_about_us' about.id %}" class="bin-icon btn btn-success">yes</a>
                             </div>
                         </div>
                     </div>

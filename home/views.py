@@ -4,9 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Drink
+from .models import Drink, About_us
 from .forms import DrinkForm
-from .models import About_us
 
 
 def home(request):
@@ -142,5 +141,20 @@ def delete_drink(request, drink_id):
     drink = get_object_or_404(Drink, pk=drink_id)
     drink.delete()
     messages.success(request, "Drink deleted!")
+
+    return redirect(reverse("home"))
+
+
+@login_required
+def delete_about_us(request, about_us_id):
+    # delete about us section
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied. \
+            Only administrators are allowed.")
+        return redirect(reverse("home"))
+
+    about_us = get_object_or_404(About_us, pk=about_us_id)
+    about_us.delete()
+    messages.success(request, "About us section deleted!")
 
     return redirect(reverse("home"))

@@ -41,7 +41,7 @@ class About_us(models.Model):
     class Meta:
         verbose_name_plural = "About us"
 
-    image = models.ImageField()
+    image = models.ImageField(null=True, blank=True)
     image_alt = models.CharField(max_length=255, default="")
     title = models.CharField(max_length=255)
     paragraph = models.TextField()
