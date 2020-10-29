@@ -12,7 +12,7 @@
             <div class="row">
 
                 <div class="col-12">
-                    <h1 class="text-capitalize" id="login">{% trans "log in" %}</h1>
+                    <h1 class="text-capitalize">{% trans "log in" %}</h1>
                     <p class="">{% blocktrans %}Don't already have an account?<a href="{{ signup_url }}" class="font-weight-bolder"> sign up</a>{% endblocktrans %}</p>               
                     <form class="login-border login" method="POST" id="login_form" action="{% url 'account_login' %}">
                         {% csrf_token %}

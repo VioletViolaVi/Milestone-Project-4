@@ -34,12 +34,14 @@ html {
   scroll-behavior: smooth;
 }
 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
   text-transform: capitalize;
 }
 
-select, input[type="checkbox"]{
-    cursor: pointer;
+select,
+input[type="checkbox"] {
+  cursor: pointer;
 }
 
 /******************************************* headers */
@@ -354,7 +356,7 @@ select#id_country {
   text-transform: capitalize;
 }
 
-input[type="text"]#id_email {
+input[type="email"]#id_email {
   text-transform: lowercase;
 }
 
@@ -430,6 +432,7 @@ input[type="text"]#id_postcode {
 /******************************************* signup, login, allauth pgs */
 .signup-border,
 .login-border,
+.reset-password-border,
 .allauth-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
@@ -441,6 +444,7 @@ input[type="text"]#id_postcode {
 #signup_form input,
 #login_form input#id_login,
 #login_form input#id_password,
+#resetPassword input#id_email,
 #allauth-border li #id_email,
 #allauth-border li #id_oldpassword,
 #allauth-border li #id_password1,
@@ -459,6 +463,7 @@ input[type="text"]#id_postcode {
 #signup_form input#id_password2,
 #login_form input#id_login,
 #login_form input#id_password,
+#resetPassword input#id_email,
 #allauth-border li #id_email,
 #allauth-border li #id_oldpassword,
 #allauth-border li #id_password1,
@@ -468,6 +473,7 @@ input[type="text"]#id_postcode {
 
 #signup_form input:focus,
 #login_form input:focus,
+#resetPassword input#id_email:focus,
 #allauth-border li #id_email:focus,
 #allauth-border li #id_oldpassword:focus,
 #allauth-border li #id_password1:focus,
@@ -493,6 +499,10 @@ label[for="id_oldpassword"] {
 
 .login-border {
   height: 230px;
+}
+
+.reset-password-border {
+  height: 130px;
 }
 
 label[for="id_remember"] {
@@ -533,6 +543,12 @@ select:valid {
   color: #6c757d;
 }
 
+input[type="text"]#id_default_street_address1,
+input[type="text"]#id_default_street_address2,
+select#id_default_country {
+  text-transform: capitalize;
+}
+
 .update-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
@@ -546,12 +562,6 @@ select:valid {
 .order-history-border {
   height: 15em;
   border: solid darkgray 0.2em;
-}
-
-input[type="text"]#id_default_street_address1,
-input[type="text"]#id_default_street_address2,
-select#id_default_country {
-  text-transform: capitalize;
 }
 
 input[type="text"]#id_default_postcode {
@@ -582,15 +592,15 @@ input[type="text"]#id_default_postcode {
   padding: 0.4em;
 }
 
+input[type="text"]#id_drink_name,
+select#id_drink_type {
+  text-transform: capitalize;
+}
+
 .management-drinks-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   overflow: auto;
-}
-
-input[type="text"]#id_drink_name,
-select#id_drink_type {
-  text-transform: capitalize;
 }
 
 .edit-btn {
@@ -718,7 +728,8 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* signup & login */
   .signup-border,
-  .login-border {
+  .login-border,
+  .reset-password-border {
     width: 24em;
   }
 
@@ -880,6 +891,14 @@ input[type="file"]::-webkit-file-upload-button {
 
   .login-border {
     height: 230px;
+  }
+
+  .reset-password-border {
+    height: 150px;
+  }
+
+  #resetPassword input#id_email {
+    margin-top: 1em;
   }
 
   /******************************************* admin */
