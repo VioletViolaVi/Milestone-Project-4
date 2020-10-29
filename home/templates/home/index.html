@@ -19,3 +19,13 @@
     {% include "includes/about-us.html" %}  
 
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $("#adminBrowseImage").change(function() {
+            let file = $("#adminBrowseImage")[0].files[0];
+            $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
+        });
+    </script>
+{% endblock %}

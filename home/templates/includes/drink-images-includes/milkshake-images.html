@@ -1,0 +1,13 @@
+<div class="drinks_img"> 
+    {% for new_drink in new_drinks %}
+        {% if milkshake.drink_name == new_drink.drink_name %}
+            <div class="new-drinks-circle2 text-capitalize bg-secondary font-weight-bolder">new!</div>
+        {% endif %}
+    {% endfor %}
+
+    {% if milkshake.image %}  
+        <img src="{{ milkshake.image }}" alt="{{ milkshake.drink_name }}" class="rounded">
+    {% else %}
+        <img class="mb-1 rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
+    {% endif %}   
+</div>

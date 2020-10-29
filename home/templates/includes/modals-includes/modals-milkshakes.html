@@ -1,0 +1,36 @@
+{% if request.user.is_superuser %}
+    <div class="mt-1 mb-5">
+
+        <small>
+            <span>                                                
+                <a class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' milkshake.id %}">edit</a>                                               
+            </span>
+            <span>                                              
+                <i data-target="#adminRemove_{{ milkshake.id }}" data-toggle="modal" class="fas fa-trash-alt"></i>                                                                                                                                
+            </span>                                              
+        </small>  
+
+        <!-- bootstrap modal -->
+        <div class="modal fade text-center" id="adminRemove_{{ milkshake.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="modal-title font-weight-bolder" id="exampleModalLabel">Are you sure you want to delete?</h5>
+                        <br><br>
+                        <p class="font-weight-bolder text-capitalize">"{{ milkshake.drink_name }}"</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">no</button>
+                        <a href="{% url 'delete_drink' milkshake.id %}" class="bin-icon btn btn-success">yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>                                                                               
+{% endif %} 
