@@ -255,7 +255,7 @@ body {
 }
 
 .quantity-selection input[type="number"] {
-  width: 2.4em;
+  width: 3em;
   border: gray solid 0.1em;
   text-align: center;
 }
