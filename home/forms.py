@@ -26,6 +26,8 @@ class AboutUsForm(forms.ModelForm):
         model = About_us
         fields = "__all__"
 
+    image = forms.ImageField(widget=CustomClearableFileInput, required=False)
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         about_us_sections = About_us_section.objects.all()

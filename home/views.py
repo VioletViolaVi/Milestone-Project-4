@@ -167,7 +167,8 @@ def change_about_us(request, about_us_id):
     else:
         form = AboutUsForm(instance=about_us)
         messages.info(
-            request, f'You are editing the: "{about_us.title}".')
+            request, f'You are editing the: "{about_us.title}" \
+            portion of the about us section.')
 
     template = "home/edit_about_us.html"
     context = {

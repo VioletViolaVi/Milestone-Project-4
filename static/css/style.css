@@ -597,10 +597,6 @@ input[type="text"]#id_default_postcode {
   border: slategray solid 0.2em;
 }
 
-.management-form-border input#id_image:focus {
-  border: none;
-}
-
 .management-form-border #id_drink_name,
 .management-form-border #id_price,
 .management-form-border #id_millilitres,
@@ -618,16 +614,18 @@ select#id_drink_type {
   text-transform: capitalize;
 }
 
+.management-form-border input#id_image:focus {
+  border: none;
+}
+
+.modal.fade {
+  top: 5em;
+}
+
 .management-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   overflow: auto;
-}
-
-.edit-btn {
-  border-radius: 0.3em;
-  border: solid 0.1em #6c757d;
-  padding: 0.1em;
 }
 
 input[type="file"]::-webkit-file-upload-button {
@@ -638,8 +636,10 @@ input[type="file"]::-webkit-file-upload-button {
   color: lightgray;
 }
 
-.modal.fade {
-  top: 5em;
+.edit-btn {
+  border-radius: 0.3em;
+  border: solid 0.1em #6c757d;
+  padding: 0.1em;
 }
 
 /******************************************* media queries ******************************************* */
