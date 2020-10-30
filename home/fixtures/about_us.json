@@ -6,8 +6,8 @@
       "image": "",
       "title": "Mission Statement",
       "paragraph": "Our mission is to provide our customers with high quality delicious drinks at very affordable prices. We believe in working effectively with our partners in achieving this and are proud of the contributions Slurps have made in empowering our workers along the way.",
-      "image_alt": "",
-      "about_us_part": 1
+      "image_description": "",
+      "section": 1
     }
   },
 
@@ -18,8 +18,8 @@
       "image": "about-people.jpg",
       "title": "Our Customers",
       "paragraph": "We are proud of the feedback we’ve received from our customers. Our drinks are continuously accepted well. We strive to further improve the quality of our products to meet satisfactory demands and help us grow stronger.",
-      "image_alt": "Image of two people holding drinks.",
-      "about_us_part": 2
+      "image_description": "Image of two people holding drinks.",
+      "section": 2
     }
   },
 
@@ -30,8 +30,8 @@
       "image": "about-farm.PNG",
       "title": "Ethical Sourcing",
       "paragraph": "We ensure all our ingredients are ethically sourced in a responsible and sustainable way where minimising negative environmental and social impacts are made a priority during the sourcing process.",
-      "image_alt": "Image of a tractor on a farm.",
-      "about_us_part": 3
+      "image_description": "Image of a tractor on a farm.",
+      "section": 3
     }
   },
 
@@ -42,8 +42,8 @@
       "image": "about-maker.jpg",
       "title": "Our Employees",
       "paragraph": "All our employees work under safe and fair conditions as attested by the Health and Safety Executive in the United Kingdom. We highly value our workers as the experienced and skilled professionals that they are.",
-      "image_alt": "Image of a person manufacturing chocolate.",
-      "about_us_part": 4
+      "image_description": "Image of a person manufacturing chocolate.",
+      "section": 4
     }
   }
 ]

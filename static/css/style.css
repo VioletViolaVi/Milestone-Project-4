@@ -590,26 +590,26 @@ input[type="text"]#id_default_postcode {
 }
 
 /******************************************* admin */
-.management-drinks-form-border input:focus,
-.management-drinks-form-border select:focus {
+.management-form-border input:focus,
+.management-form-border select:focus {
   outline: none;
   box-shadow: none;
   border: slategray solid 0.2em;
 }
 
-.management-drinks-form-border input#id_image:focus {
+.management-form-border input#id_image:focus {
   border: none;
 }
 
-.management-drinks-form-border #id_drink_name,
-.management-drinks-form-border #id_price,
-.management-drinks-form-border #id_millilitres,
-.management-drinks-form-border #id_drink_type {
+.management-form-border #id_drink_name,
+.management-form-border #id_price,
+.management-form-border #id_millilitres,
+.management-form-border #id_drink_type {
   border-radius: 0.2em;
 }
 
-.management-drinks-form-border a,
-.management-drinks-form-border button {
+.management-form-border a,
+.management-form-border button {
   padding: 0.4em;
 }
 
@@ -618,7 +618,7 @@ select#id_drink_type {
   text-transform: capitalize;
 }
 
-.management-drinks-form-border {
+.management-form-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   overflow: auto;
@@ -834,7 +834,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* admin */
-  .management-drinks-form-border {
+  .management-form-border {
     margin: 0em 3em;
   }
 }
@@ -932,7 +932,7 @@ input[type="file"]::-webkit-file-upload-button {
   } */
 
   /******************************************* admin */
-  .management-drinks-form-border {
+  .management-form-border {
     margin: 0em 10em;
   }
 }
@@ -983,7 +983,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* admin */
-  .management-drinks-form-border {
+  .management-form-border {
     margin: 0em 15em;
   }
 }

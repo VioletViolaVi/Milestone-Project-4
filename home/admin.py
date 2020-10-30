@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Drink_type, Drink, About_us_part, About_us
+from .models import Drink_type, Drink, About_us_section, About_us
 
 
 class Drink_type_admin(admin.ModelAdmin):
@@ -23,7 +23,7 @@ admin.site.register(Drink_type, Drink_type_admin)
 admin.site.register(Drink, Drink_admin)
 
 
-class About_us_part_admin(admin.ModelAdmin):
+class About_us_section_admin(admin.ModelAdmin):
     list_display = (
         "programmatic_name",
         "friendly_name",
@@ -33,12 +33,12 @@ class About_us_part_admin(admin.ModelAdmin):
 class About_us_admin(admin.ModelAdmin):
     list_display = (
         "image",
-        "image_alt",
+        "image_description",
         "title",
         "paragraph",
-        "about_us_part",
+        "section",
     )
 
 
-admin.site.register(About_us_part, About_us_part_admin)
+admin.site.register(About_us_section, About_us_section_admin)
 admin.site.register(About_us, About_us_admin)

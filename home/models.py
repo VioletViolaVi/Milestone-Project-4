@@ -25,7 +25,7 @@ class Drink(models.Model):
         return self.drink_name
 
 
-class About_us_part(models.Model):
+class About_us_section(models.Model):
     programmatic_name = models.CharField(max_length=255)
     friendly_name = models.CharField(
         max_length=255, null=True, blank=True)
@@ -42,11 +42,11 @@ class About_us(models.Model):
         verbose_name_plural = "About us"
 
     image = models.ImageField(null=True, blank=True)
-    image_alt = models.CharField(max_length=255, default="")
+    image_description = models.CharField(max_length=255, null=True, blank=True)
     title = models.CharField(max_length=255)
     paragraph = models.TextField()
-    about_us_part = models.ForeignKey(
-        "About_us_part", null=True, blank=True, on_delete=models.SET_NULL)
+    section = models.ForeignKey(
+        "About_us_section", null=True, blank=False, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.title
