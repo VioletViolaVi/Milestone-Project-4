@@ -638,6 +638,10 @@ input[type="file"]::-webkit-file-upload-button {
   color: lightgray;
 }
 
+.modal.fade {
+  top: 5em;
+}
+
 /******************************************* media queries ******************************************* */
 @media (min-width: 356px) {
   /******************************************* home page */
@@ -737,8 +741,8 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* payment */
-  .drink-order-box{
-      height: 89vh;
+  .drink-order-box {
+    height: 89vh;
   }
 
   .payment-form-border {
