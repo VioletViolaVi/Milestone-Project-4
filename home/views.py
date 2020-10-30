@@ -130,38 +130,6 @@ def edit_drink(request, drink_id):
     return render(request, template, context)
 
 
-# TO FINISH EDITING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-@login_required
-def edit_about_us(request, about_us_id):
-    # edit about us section
-    if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
-        return redirect(reverse("home"))
-
-    about_us = get_object_or_404(About_us, pk=about_us_id)
-    if request.method == "POST":
-        form = AboutUsForm(request.POST, request.FILES, instance=about_us)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "About us section successfully updated!")
-            return redirect(reverse("home"))
-        else:
-            messages.error(request, "Failed to update about us section. \
-                 Please ensure the form is valid.")
-    else:
-        form = AboutUsForm(instance=about_us)
-        messages.info(request, f"You are editing {about_us.title}.")
-
-    template = "home/index.html"
-    context = {
-        "form": form,
-        "about_us": about_us,
-    }
-
-    return render(request, template, context)
-
-
 @login_required
 def delete_drink(request, drink_id):
     # delete drink from store
@@ -178,7 +146,41 @@ def delete_drink(request, drink_id):
 
 
 @login_required
-def delete_about_us(request, about_us_id):
+def change_about_us(request, about_us_id):
+    # edit about us section
+    if not request.user.is_superuser:
+        messages.error(request, "Access Denied. \
+            Only administrators are allowed.")
+        return redirect(reverse("home"))
+
+    about_us = get_object_or_404(About_us, pk=about_us_id)
+    if request.method == "POST":
+        form = AboutUsForm(
+            request.POST, request.FILES, instance=about_us)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "About us section successfully updated!")
+            return redirect(reverse("home"))
+        else:
+            messages.error(request, "Failed to update about us section. \
+                 Please ensure the form is valid.")
+    else:
+        form = AboutUsForm(instance=about_us)
+        messages.info(
+            request, f"You are editing the about us \
+                section called {about_us.title}.")
+
+    template = "home/edit_about_us.html"
+    context = {
+        "form": form,
+        "about_us": about_us,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def remove_about_us(request, about_us_id):
     # delete about us section
     if not request.user.is_superuser:
         messages.error(request, "Access Denied. \

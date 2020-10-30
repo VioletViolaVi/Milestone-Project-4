@@ -5,13 +5,13 @@
 
 {% block home %}   
 
-<!-- NOT WORKING!!!!!! -->
-    {% if messages %} 
+
+    {% if messages %}<!-- NOT WORKING!!!!!! --> 
         {% for message in messages %}
             <p class="font-weight-bolder text-danger">{{ message }}</p>                           
         {% endfor %}
-    {% endif %}
-<!-- NOT WORKING!!!!!! -->
+    {% endif %}<!-- NOT WORKING!!!!!! -->
+
     {% if request.user.is_superuser %}
         <div class="text-left col-12 mt-4">
             <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 

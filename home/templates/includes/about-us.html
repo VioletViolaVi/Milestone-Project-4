@@ -9,7 +9,7 @@
                         <p class="mb-0">{{ about.paragraph }}</p>
                         {% if request.user.is_superuser %}
                             <small>                                                                               
-                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" data-toggle="modal" data-target="#adminAboutUsEdit_{{ about.id }}">edit</a>                                                                           
+                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' about.id %}">edit</a>                                                                           
                                 <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ about.id }}"></a>
                             </small>
                         {% endif %}
@@ -25,7 +25,7 @@
                         </div>
                         {% if request.user.is_superuser %}
                             <small>                                                                               
-                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" data-toggle="modal" data-target="#adminAboutUsEdit_{{ about.id }}">edit</a>                                                                           
+                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' about.id %}">edit</a>                                                                           
                                 <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ about.id }}"></a>
                             </small>
                         {% endif %} 
@@ -47,50 +47,12 @@
                                 <p class="font-weight-bolder text-capitalize">"{{ about.title }} about us section"</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary btn-danger" data-dismiss="modal">no</button>
-                                <a href="{% url 'delete_about_us' about.id %}" class="bin-icon btn btn-success">yes</a>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">no</button>
+                                <a href="{% url 'remove_about_us' about.id %}" class="bin-icon btn btn-success">yes</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- EDITING bootstrap modal -->
-                <div class="modal fade" id="adminAboutUsEdit_{{ about.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="adminAboutUsEditLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title font-weight-bolder text-capitalize" id="adminAboutUsEditLabel">edit drink</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                              ...
-                            </div>
-                            <div class="modal-footer">
-                                <a href="{% url 'home' %}" class="form-submit-btn mr-2 text-uppercase text-body bg-secondary font-weight-bolder mt-2" type="submit">cancel</a>
-                                <button class="form-submit-btn text-uppercase ml-2 bg-secondary font-weight-bolder mt-2" type="submit">update drink</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             {% endfor %}          
         </div>
     </div>

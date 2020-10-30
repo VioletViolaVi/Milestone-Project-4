@@ -28,8 +28,8 @@ class AboutUsForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        about_us_parts = About_us_part.objects.all()
+        about_us_sections = About_us_part.objects.all()
         friendly_names = [(
-            about.id, about.get_friendly_name()) for about in about_us_parts]
+            a.id, a.get_friendly_name()) for a in about_us_sections]
 
-        self.fields["about_us_sections"].choices = friendly_names
+        self.fields["about_us_part"].choices = friendly_names

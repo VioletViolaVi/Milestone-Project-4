@@ -31,9 +31,10 @@ $(document).ready(function () {
     let style = {
         base: {
             color: "#212529",
-            fontFamily: "'Montserrat', sans-serif",
+            textTransform: "capitalize",
+            family: "'Montserrat', sans-serif",
             // not working font
-            src: "local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2')", //delete if not used
+            src: "url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)", //delete if not used
             fontSmoothing: "antialiased",
             fontSize: "16px",
             "::placeholder": {
