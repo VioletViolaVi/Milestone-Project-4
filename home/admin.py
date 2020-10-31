@@ -11,11 +11,11 @@ class Drink_type_admin(admin.ModelAdmin):
 
 class Drink_admin(admin.ModelAdmin):
     list_display = (
-        "image",
         "drink_name",
-        "price",
         "millilitres",
+        "price",
         "drink_type",
+        "image",
     )
 
 
@@ -32,11 +32,11 @@ class About_us_section_admin(admin.ModelAdmin):
 
 class About_us_admin(admin.ModelAdmin):
     list_display = (
-        "image",
-        "image_description",
         "title",
         "paragraph",
         "section",
+        "image",
+        "image_description",
     )
 
 
