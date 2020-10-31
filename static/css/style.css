@@ -466,16 +466,15 @@ input[type="text"]#id_postcode {
 #signup_form input#id_password2,
 #login_form input#id_login,
 #login_form input#id_password,
-#resetPassword input#id_email,
-#allauth-border li #id_email,
-#allauth-border li #id_oldpassword,
-#allauth-border li #id_password1,
-#allauth-border li #id_password2 {
+#resetPassword input#id_email {
   width: 16em;
 }
 
 #changePasswordForm input#id_password1,
-#changePasswordForm input#id_password2 {
+#changePasswordForm input#id_password2,
+#allauth-border li #id_oldpassword,
+#allauth-border li #id_password1,
+#allauth-border li #id_password2 {
   width: 15em;
 }
 
@@ -507,6 +506,10 @@ label[for="id_oldpassword"] {
 #changePasswordForm input[name="password2"],
 #changePasswordForm input[type="submit"] {
   margin-top: 1em;
+}
+
+#allauth-border li #id_email {
+  width: 15em;
 }
 
 .signup-border {
@@ -753,7 +756,8 @@ input[type="file"]::-webkit-file-upload-button {
   .signup-border,
   .login-border,
   .reset-password-border,
-  .change-password-border {
+  .change-password-border,
+  .allauth-border {
     width: 24em;
   }
 
@@ -762,7 +766,8 @@ input[type="file"]::-webkit-file-upload-button {
   #signup_form input#id_password1,
   #signup_form input#id_password2,
   #login_form input#id_login,
-  #login_form input#id_password {
+  #login_form input#id_password,
+  #allauth-border li #id_email {
     width: 21em;
   }
 

@@ -32,7 +32,7 @@ $(document).ready(function () {
         base: {
             color: "#212529",
             textTransform: "capitalize",
-            family: "'Montserrat', sans-serif",
+            fontFamily: "Montserrat, sans-serif",
             // not working font
             src: "url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)", //delete if not used
             fontSmoothing: "antialiased",
