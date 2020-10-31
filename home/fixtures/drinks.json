@@ -135,9 +135,9 @@
     "pk": 13,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-banana.PNG",
-      "drink_name": "banana crumble & whipped cream milkshake",
-      "price": 20,
+      "image": "milkshake-eggs.PNG",
+      "drink_name": "lavender & raspberry milkshake",
+      "price": 17,
       "millilitres": 800,
       "drink_type": 3
     }
@@ -223,9 +223,9 @@
     "pk": 21,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-eggs.PNG",
-      "drink_name": "lavender & raspberry milkshake",
-      "price": 17,
+      "image": "milkshake-banana.PNG",
+      "drink_name": "banana crumble & whipped cream milkshake",
+      "price": 20,
       "millilitres": 800,
       "drink_type": 3
     }
