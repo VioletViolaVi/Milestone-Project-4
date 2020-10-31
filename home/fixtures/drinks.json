@@ -36,9 +36,9 @@
     "pk": 4,
     "model": "home.drink",
     "fields": {
-      "image": "juice-dragonfruit.PNG",
-      "drink_name": "dragon fruit & red grape juice",
-      "price": 15,
+      "image": "juice-melon.PNG",
+      "drink_name": "melon & papaya juice",
+      "price": 12,
       "millilitres": 700,
       "drink_type": 2
     }
@@ -47,9 +47,9 @@
     "pk": 5,
     "model": "home.drink",
     "fields": {
-      "image": "juice-kiwi.PNG",
-      "drink_name": "kiwi & lemon citrus juice",
-      "price": 11,
+      "image": "juice-herb.PNG",
+      "drink_name": "red chilli peppers thyme & orange zest juice",
+      "price": 13,
       "millilitres": 700,
       "drink_type": 2
     }
@@ -80,9 +80,9 @@
     "pk": 8,
     "model": "home.drink",
     "fields": {
-      "image": "juice-melon.PNG",
-      "drink_name": "melon & papaya juice",
-      "price": 12,
+      "image": "juice-dragonfruit.PNG",
+      "drink_name": "dragon fruit & red grape juice",
+      "price": 15,
       "millilitres": 700,
       "drink_type": 2
     }
@@ -113,9 +113,9 @@
     "pk": 11,
     "model": "home.drink",
     "fields": {
-      "image": "juice-herb.PNG",
-      "drink_name": "red chilli peppers thyme & orange zest juice",
-      "price": 13,
+      "image": "juice-kiwi.PNG",
+      "drink_name": "kiwi & orange tat soi juice",
+      "price": 11,
       "millilitres": 700,
       "drink_type": 2
     }
@@ -168,6 +168,28 @@
     "pk": 16,
     "model": "home.drink",
     "fields": {
+      "image": "milkshake-slice.PNG",
+      "drink_name": "apple, banana, walnut & pecan milkshake",
+      "price": 12,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 17,
+    "model": "home.drink",
+    "fields": {
+      "image": "milkshake-avocado.PNG",
+      "drink_name": "creme fraiche avocado milkshake",
+      "price": 14,
+      "millilitres": 700,
+      "drink_type": 3
+    }
+  },
+  {
+    "pk": 18,
+    "model": "home.drink",
+    "fields": {
       "image": "milkshake-blueberries.PNG",
       "drink_name": "double creamed blueberry milkshake",
       "price": 16,
@@ -176,35 +198,13 @@
     }
   },
   {
-    "pk": 17,
-    "model": "home.drink",
-    "fields": {
-      "image": "milkshake-coconut.PNG",
-      "drink_name": "coconut mint & pistachio milkshake",
-      "price": 20,
-      "millilitres": 800,
-      "drink_type": 3
-    }
-  },
-  {
-    "pk": 18,
-    "model": "home.drink",
-    "fields": {
-      "image": "milkshake-strawberry.PNG",
-      "drink_name": "light strawberry creamed milkshake",
-      "price": 12,
-      "millilitres": 700,
-      "drink_type": 3
-    }
-  },
-  {
     "pk": 19,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-raspberry.PNG",
-      "drink_name": "creme fraiche raspberry milkshake",
-      "price": 14,
-      "millilitres": 700,
+      "image": "milkshake-almond.PNG",
+      "drink_name": "almond & avocado milkshake",
+      "price": 20,
+      "millilitres": 800,
       "drink_type": 3
     }
   },
@@ -223,10 +223,10 @@
     "pk": 21,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-cookies.PNG",
-      "drink_name": "ferrero rocher ice cream & cookies milkshake",
-      "price": 15,
-      "millilitres": 700,
+      "image": "milkshake-eggs.PNG",
+      "drink_name": "lavender & raspberry milkshake",
+      "price": 17,
+      "millilitres": 800,
       "drink_type": 3
     }
   },
@@ -234,8 +234,8 @@
     "pk": 22,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-twix.PNG",
-      "drink_name": "clotted cream & milk chocolate twix milkshake",
+      "image": "milkshake-party.PNG",
+      "drink_name": "clotted cream, yogurt & assortment biscuit milkshake",
       "price": 14,
       "millilitres": 700,
       "drink_type": 3
@@ -245,8 +245,8 @@
     "pk": 23,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-almond.PNG",
-      "drink_name": "almond & avocado milkshake",
+      "image": "milkshake-coconut.PNG",
+      "drink_name": "coconut mint & pistachio milkshake",
       "price": 20,
       "millilitres": 800,
       "drink_type": 3
@@ -256,10 +256,10 @@
     "pk": 24,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-eggs.PNG",
-      "drink_name": "lavender & raspberry milkshake",
-      "price": 17,
-      "millilitres": 800,
+      "image": "milkshake-cookies.PNG",
+      "drink_name": "ferrero rocher ice cream & cookies milkshake",
+      "price": 15,
+      "millilitres": 700,
       "drink_type": 3
     }
   },
