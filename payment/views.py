@@ -3,6 +3,7 @@ from django.shortcuts import (render, redirect, reverse,
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 
 from .forms import DrinkOrderForm
 from .models import DrinkOrder, DrinkOrderLineItem
@@ -33,6 +34,7 @@ def cache_payment_data(request):
         return HttpResponse(content=e, status=400)
 
 
+@login_required
 def payment(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -133,6 +135,7 @@ def payment(request):
     return render(request, template, context)
 
 
+@login_required
 def payment_success(request, drink_order_number):
     saveInfo = request.session.get("saveInfo")
     drink_order = get_object_or_404(DrinkOrder,

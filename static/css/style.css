@@ -331,7 +331,6 @@ select option[value=""] {
 .drink-order-box {
   height: 30vh;
   border: solid darkgray 0.2em;
-  /* margin: auto; */
   overflow: auto;
 }
 .payment-message {
@@ -745,7 +744,7 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* payment */
   .drink-order-box {
-    height: 89vh;
+    height: 90vh;
   }
 
   .payment-form-border {
@@ -804,11 +803,6 @@ input[type="file"]::-webkit-file-upload-button {
 
   .pay-btn-holder {
     padding: 0em 0em 0em 2em;
-  }
-
-  /******************************************* payment */
-  .drink-order-box {
-    height: 67vh;
   }
 
   /******************************************* allauth pages */
