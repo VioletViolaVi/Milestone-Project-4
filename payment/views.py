@@ -87,7 +87,6 @@ def payment(request):
     else:
         shopping_cart = request.session.get("shopping_cart", {})
         if not shopping_cart:
-            # not showing!!!!
             messages.error(request, "There's nothing in your shopping cart.")
             return redirect(reverse('home'))
 

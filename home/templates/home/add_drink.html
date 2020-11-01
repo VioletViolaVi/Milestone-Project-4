@@ -18,7 +18,7 @@
                             {% endfor %}
                         </ul>
                     {% endif %}    
-                    <form class="management-drinks-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">  
+                    <form class="management-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">  
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">

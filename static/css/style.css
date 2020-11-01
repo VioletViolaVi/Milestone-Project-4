@@ -397,11 +397,6 @@ input[type="text"]#id_postcode {
   border-color: red;
 }
 
-/*remove if not working*/
-/* .stripe-style-input {
-  font-family: "Montserrat", sans-serif !important;
-} */
-
 /******************************************* processing payment */
 #loadingOverlay {
   display: none;
@@ -536,6 +531,10 @@ label[for="id_remember"] {
   box-sizing: border-box;
   padding: 0;
   height: none;
+}
+
+input[type="text"]#id_username {
+  text-transform: capitalize;
 }
 
 .errorlist {

@@ -4,26 +4,24 @@
 {% block tab_title %}| Home{% endblock %}
 
 {% block home %}   
-
-
-    {% if messages %}<!-- NOT WORKING!!!!!! --> 
-        {% for message in messages %}
-            <p class="font-weight-bolder text-danger">{{ message }}</p>                           
-        {% endfor %}
-    {% endif %}<!-- NOT WORKING!!!!!! -->
-
     {% if request.user.is_superuser %}
         <div class="text-left col-12 mt-4">
             <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
         </div>
     {% endif %}
+    {% if messages %}
+        <ul class="messages mt-5 mb-0">
+            {% for message in messages %}
+                <li class="text-danger font-weight-bolder">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %} 
     {% include "includes/sort-by.html" %} 
     {% include "includes/search-drinks.html" %} 
     {% include "includes/new-drinks.html" %}
     {% include "includes/juices.html" %}   
     {% include "includes/milkshakes.html" %}  
     {% include "includes/about-us.html" %}  
-
 {% endblock %}
 
 {% block postloadjs %}

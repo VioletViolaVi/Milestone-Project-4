@@ -1,5 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
+from home.models import Drink
 
 
 def shopping_cart(request):
@@ -11,14 +13,21 @@ def shopping_cart(request):
 def add_to_shopping_cart(request, item_id):
     # add quantity of specified drink to cart
 
+    drink = get_object_or_404(Drink, pk=item_id)
     drink_quantity = int(request.POST.get("drinkSelections"))
     redirect_url = request.POST.get("redirect_url")
     shopping_cart = request.session.get("shopping_cart", {})
 
     if item_id in list(shopping_cart.keys()):
         shopping_cart[item_id] += drink_quantity
+        messages.info(request,
+                      f"{drink.drink_name.capitalize()} \
+                          has been added to your shopping cart.")
     else:
         shopping_cart[item_id] = drink_quantity
+        messages.info(request,
+                      f"{drink.drink_name.capitalize()} \
+                          has been added to your shopping cart.")
 
     request.session["shopping_cart"] = shopping_cart
 

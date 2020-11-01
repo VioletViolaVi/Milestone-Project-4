@@ -33,8 +33,6 @@ $(document).ready(function () {
             color: "#212529",
             textTransform: "capitalize",
             fontFamily: "Montserrat, sans-serif",
-            // not working font
-            src: "url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap)", //delete if not used
             fontSmoothing: "antialiased",
             fontSize: "16px",
             "::placeholder": {

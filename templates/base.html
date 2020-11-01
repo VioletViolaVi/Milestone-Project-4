@@ -55,6 +55,15 @@
         </div>
 
         <br><br><br><br>
+
+        {% if messages %} 
+            {% for message in messages %}
+                <div class="font-weight-bolder text-danger col-12 mt-3 text-center">
+                    <p>{{ message }}</p>                           
+                </div>
+            {% endfor %}
+        {% endif %}
+
         {% block content %}
         {% endblock %}
 
@@ -75,9 +84,6 @@
 
         {% block edit_about_us %}
         {% endblock %}
-
-        {% if messages %}<!-- remove if not used! -->
-        {% endif %}
 
         {% block page_header %}<!-- remove if not used! -->
         {% endblock %}  

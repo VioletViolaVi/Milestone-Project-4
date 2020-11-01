@@ -7,7 +7,7 @@
 {% block shopping_cart %}
     <section class="text-capitalize">
 
-        <h2 class="mt-3 mb-5">shopping cart</h2>
+        <h2 class="mt-3 mb-4">shopping cart</h2>
         
         <div class="footer-pusher container">
             <div class="row">  
@@ -16,14 +16,6 @@
                     <div class="text-left col-12 mb-4">
                         <a class="text-body text-lowercase font-weight-bolder" href="{% url 'home' %}"><u>keep shopping</u></a> 
                     </div>                      
-
-                    {% if messages %} 
-                        {% for message in messages %}
-                            <div class="font-weight-bolder text-danger text-left col-12 mb-4 text-center">
-                                <p>{{ message }}</p>                           
-                            </div>
-                        {% endfor %}
-                    {% endif %}
                              
                     {% for shopping_cart in shopping_cart_items %} 
                         <div class="col-sm-6 col-lg-4 mb-5">
