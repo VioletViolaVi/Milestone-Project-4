@@ -40,8 +40,9 @@ def drink_order_history(request, drink_order_number):
         DrinkOrder, drink_order_number=drink_order_number)
 
     messages.info(
-        request, ("This is a previous drink order confirmation letter. \
-            A confirmation email was sent to you on its said date."))
+        request, (f"This is a previous drink order confirmation letter. \
+            A confirmation email was sent to you on its said date.\
+                The drink order number is: {drink_order_number}"))
 
     template = "payment/payment_success.html"
     context = {

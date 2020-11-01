@@ -169,6 +169,7 @@ def payment_success(request, drink_order_number):
     template = "payment/payment_success.html"
     context = {
         "drink_order": drink_order,
+        "this_is_successful_payment_page": True,
     }
 
     return render(request, template, context)

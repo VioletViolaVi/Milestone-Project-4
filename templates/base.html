@@ -50,12 +50,14 @@
 
         <br><br><br><br>
 
-        {% if messages %} 
-            {% for message in messages %}
-                <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
-                    <p>{{ message }}</p>                           
-                </div>
-            {% endfor %}
+        {% if not this_is_the_homepage and this_is_successful_payment_page and taken_from_user_profiles %}
+            {% if messages %} 
+                {% for message in messages %}
+                    <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
+                        <p>{{ message }}</p>                           
+                    </div>
+                {% endfor %}
+            {% endif %}
         {% endif %}
 
         {% block content %}

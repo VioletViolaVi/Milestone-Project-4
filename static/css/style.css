@@ -25,6 +25,11 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
+html {
+  scroll-padding-top: 12.5em;
+  scroll-behavior: smooth;
+}
+
 .fixed-arrow {
   display: none;
   bottom: 1em;
@@ -39,9 +44,8 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-html {
-  scroll-padding-top: 12.5em;
-  scroll-behavior: smooth;
+.message {
+  font-size: 0.9em;
 }
 
 /******************************************* headers */
@@ -221,6 +225,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sort-by-section {
+  position: fixed;
+  top: 10.1em;
+  right: 0.1em;
 }
 
 .sort-by-section button {
