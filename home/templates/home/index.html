@@ -8,13 +8,6 @@
         <div class="text-left col-12 mt-4">
             <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
         </div>
-    {% endif %}
-    {% if messages %}
-        <ul class="messages mt-5 mb-0">
-            {% for message in messages %}
-                <li class="text-danger font-weight-bolder">{{ message }}</li>
-            {% endfor %}
-        </ul>
     {% endif %} 
     {% include "includes/sort-by.html" %} 
     {% include "includes/search-drinks.html" %} 

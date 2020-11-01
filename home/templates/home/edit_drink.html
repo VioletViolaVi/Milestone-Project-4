@@ -10,14 +10,7 @@
         <div class="container">        
             <div class="row">
 
-                <div class="col-12">                
-                    {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                                <li class="text-danger font-weight-bolder">{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}    
+                <div class="col-12">    
                     <form class="management-form-border text-left p-1" method="POST" action="{% url 'edit_drink' drink.id %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form|crispy }}

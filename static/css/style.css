@@ -223,13 +223,6 @@ body {
   justify-content: center;
 }
 
-.sort-by-section {
-  position: fixed;
-  right: 0.3em;
-  top: 10.8em;
-  z-index: 1;
-}
-
 .sort-by-section button {
   background-color: lightgray;
 }

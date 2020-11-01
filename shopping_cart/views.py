@@ -20,14 +20,24 @@ def add_to_shopping_cart(request, item_id):
 
     if item_id in list(shopping_cart.keys()):
         shopping_cart[item_id] += drink_quantity
-        messages.info(request,
-                      f"{drink.drink_name.capitalize()} \
-                          has been added to your shopping cart.")
+        if drink_quantity <= 1:
+            messages.info(request,
+                          f"{drink_quantity}x {drink.drink_name.capitalize()} \
+                                  has been added to your shopping cart.")
+        else:
+            messages.info(request,
+                          f"{drink_quantity}x {drink.drink_name.capitalize()}s \
+                                  have been added to your shopping cart.")
     else:
         shopping_cart[item_id] = drink_quantity
-        messages.info(request,
-                      f"{drink.drink_name.capitalize()} \
-                          has been added to your shopping cart.")
+        if drink_quantity <= 1:
+            messages.info(request,
+                          f"{drink_quantity}x {drink.drink_name.capitalize()} \
+                                  has been added to your shopping cart.")
+        else:
+            messages.info(request,
+                          f"{drink_quantity}x {drink.drink_name.capitalize()}s \
+                                  have been added to your shopping cart.")
 
     request.session["shopping_cart"] = shopping_cart
 

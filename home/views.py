@@ -74,8 +74,9 @@ def home(request):
 def add_drink(request):
     # adds drinks to shop
     if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
         return redirect(reverse("home"))
 
     if request.method == "POST":
@@ -103,8 +104,9 @@ def add_drink(request):
 def edit_drink(request, drink_id):
     # edit drinks in store
     if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
         return redirect(reverse("home"))
 
     drink = get_object_or_404(Drink, pk=drink_id)
@@ -112,14 +114,15 @@ def edit_drink(request, drink_id):
         form = DrinkForm(request.POST, request.FILES, instance=drink)
         if form.is_valid():
             form.save()
-            messages.success(request, "Drink successfully updated!")
+            messages.success(request, "Drink successfully edited!")
             return redirect(reverse("home"))
         else:
-            messages.error(request, "Failed to update drink. \
+            messages.error(request, "Failed to edit drink. \
                  Please ensure the form is valid.")
     else:
         form = DrinkForm(instance=drink)
-        messages.info(request, f"You are editing {drink.drink_name}.")
+        messages.info(request, f"You are editing \
+             {drink.drink_name.capitalize()}.")
 
     template = "home/edit_drink.html"
     context = {
@@ -134,8 +137,9 @@ def edit_drink(request, drink_id):
 def delete_drink(request, drink_id):
     # delete drink from store
     if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
         return redirect(reverse("home"))
 
     drink = get_object_or_404(Drink, pk=drink_id)
@@ -146,11 +150,43 @@ def delete_drink(request, drink_id):
 
 
 @login_required
+def append_about_us(request):
+    # add about us section
+    if not request.user.is_superuser:
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
+        return redirect(reverse("home"))
+
+    if request.method == "POST":
+        form = AboutUsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, "Mission statement section successfully added!")
+            return redirect(reverse("append_about_us"))
+        else:
+            messages.error(request,
+                           "Failed to add mission statement section. Please \
+                                ensure the form is valid.")
+    else:
+        form = AboutUsForm()
+
+    template = "home/append_about_us.html"
+    context = {
+        "form": form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
 def change_about_us(request, about_us_id):
     # edit about us section
     if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
         return redirect(reverse("home"))
 
     about_us = get_object_or_404(About_us, pk=about_us_id)
@@ -159,16 +195,17 @@ def change_about_us(request, about_us_id):
             request.POST, request.FILES, instance=about_us)
         if form.is_valid():
             form.save()
-            messages.success(request, "About us section successfully updated!")
+            messages.success(request,
+                             "Mission statement section successfully updated!")
             return redirect(reverse("home"))
         else:
-            messages.error(request, "Failed to update about us section. \
-                 Please ensure the form is valid.")
+            messages.error(request, f'Failed to update the: "{about_us.title}" section. \
+                 Please ensure the form is valid.')
     else:
         form = AboutUsForm(instance=about_us)
         messages.info(
             request, f'You are editing the: "{about_us.title}" \
-            portion of the about us section.')
+            section.')
 
     template = "home/edit_about_us.html"
     context = {
@@ -183,12 +220,13 @@ def change_about_us(request, about_us_id):
 def remove_about_us(request, about_us_id):
     # delete about us section
     if not request.user.is_superuser:
-        messages.error(request, "Access Denied. \
-            Only administrators are allowed.")
+        messages.error(
+            request, "Access Denied. \
+                Access restricted to administrators only.")
         return redirect(reverse("home"))
 
     about_us = get_object_or_404(About_us, pk=about_us_id)
     about_us.delete()
-    messages.success(request, "About us section deleted!")
+    messages.success(request, "Mission statement section deleted!")
 
     return redirect(reverse("home"))
