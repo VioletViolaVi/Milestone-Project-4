@@ -6,17 +6,21 @@
 {% block tab_title %}| Log Out{% endblock %}
 
 {% block content %}
-<h1 class="mt-5">{% trans "Log Out" %}</h1>
-
-<p>{% trans 'Are you sure you want to log out?' %}</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-  {% endif %}
-  <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder" type="submit">{% trans 'Log Out' %}</button>
-</form>
-
-
+    <section class="footer-pusher">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="mt-5">{% trans "Log Out" %}</h1>
+                    <p>{% trans 'Are you sure you want to log out?' %}</p>
+                    <form method="post" action="{% url 'account_logout' %}">
+                      {% csrf_token %}
+                      {% if redirect_field_value %}
+                      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                      {% endif %}
+                      <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder" type="submit">{% trans 'Log Out' %}</button>
+                    </form>
+                </div>  
+            </div>        
+        </div>   
+    </section>
 {% endblock %}

@@ -321,6 +321,29 @@ select option[value=""] {
   color: #6c757d !important;
 }
 
+input[type="text"]#id_full_name,
+input[type="text"]#id_street_address1,
+input[type="text"]#id_street_address2,
+select#id_country {
+  text-transform: capitalize;
+}
+
+.form-submit-btn,
+.change-password-btn {
+  border-radius: 0.2em;
+  outline: none;
+  margin: -0.5em 0em 0em 0em;
+  border: gray solid 0.1em;
+  text-align: center;
+  padding: 0.2em;
+}
+
+.change-password-btn:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
 .drink-order-box {
   height: 30vh;
   border: solid darkgray 0.2em;
@@ -337,28 +360,12 @@ select option[value=""] {
   border-radius: 0.2em;
 }
 
-input[type="text"]#id_full_name,
-input[type="text"]#id_street_address1,
-input[type="text"]#id_street_address2,
-select#id_country {
-  text-transform: capitalize;
-}
-
 input[type="email"]#id_email {
   text-transform: lowercase;
 }
 
 input[type="text"]#id_postcode {
   text-transform: uppercase;
-}
-
-.form-submit-btn {
-  border-radius: 0.2em;
-  outline: none;
-  margin: -0.5em 0em 0em 0em;
-  border: gray solid 0.1em;
-  text-align: center;
-  padding: 0.2em;
 }
 
 /******************************************* stripe */
