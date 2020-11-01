@@ -58,7 +58,7 @@
 
         {% if messages %} 
             {% for message in messages %}
-                <div class="font-weight-bolder text-danger col-12 mt-3 text-center">
+                <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
                     <p>{{ message }}</p>                           
                 </div>
             {% endfor %}
@@ -74,6 +74,9 @@
         {% endblock %}
 
         {% block payment %}
+        {% endblock %}
+
+        {% block payment_success %}
         {% endblock %}
 
         {% block add_drink %}

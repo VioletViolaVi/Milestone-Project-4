@@ -15,6 +15,16 @@ a:focus {
   text-decoration: none;
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  text-transform: capitalize;
+}
+
+select,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
 .fixed-arrow {
   display: none;
   bottom: 1em;
@@ -32,16 +42,6 @@ a:focus {
 html {
   scroll-padding-top: 12.5em;
   scroll-behavior: smooth;
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder {
-  text-transform: capitalize;
-}
-
-select,
-input[type="checkbox"] {
-  cursor: pointer;
 }
 
 /******************************************* headers */
@@ -325,9 +325,6 @@ select option[value=""] {
   height: 30vh;
   border: solid darkgray 0.2em;
   overflow: auto;
-}
-.payment-message {
-  font-size: 0.9em;
 }
 
 .payment-form-border {
