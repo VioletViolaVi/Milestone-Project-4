@@ -66,6 +66,11 @@ input[type="checkbox"] {
   background-color: lightgray;
 }
 
+.history-and-trolley-bg,
+.delivery-cost-bg {
+  width: 100%;
+}
+
 .fixed-top.navbar.navbar-expand-lg.navbar-light {
   z-index: 1070;
 }
@@ -93,11 +98,6 @@ input[type="checkbox"] {
 
 .navbar-collapse button.btn {
   width: 30%;
-}
-
-.history-and-trolley-bg,
-.delivery-cost-bg {
-  width: 100%;
 }
 
 .history-and-trolley-bg {
@@ -872,11 +872,16 @@ input[type="file"]::-webkit-file-upload-button {
   .desktop-links-nav {
     margin-top: 5.1em;
     background-color: lightgray;
+    height: 2.1em;
   }
 
   .desktop-links li {
     display: inline;
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  .delivery-cost-bg {
+    top: -0.7em;
   }
 
   .new-drinks-circle1 {
