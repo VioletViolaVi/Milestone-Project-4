@@ -3,32 +3,16 @@
     "pk": 1,
     "model": "home.about_us_section",
     "fields": {
-      "programmatic_name": "main_heading",
-      "friendly_name": "Main Heading"
+      "programmatic_name": "main_mission",
+      "friendly_name": "Main Mission"
     }
   },
   {
     "pk": 2,
     "model": "home.about_us_section",
     "fields": {
-      "programmatic_name": "sub_heading1",
-      "friendly_name": "Sub Heading 1"
-    }
-  },
-  {
-    "pk": 3,
-    "model": "home.about_us_section",
-    "fields": {
-      "programmatic_name": "sub_heading2",
-      "friendly_name": "Sub Heading 2"
-    }
-  },
-  {
-    "pk": 4,
-    "model": "home.about_us_section",
-    "fields": {
-      "programmatic_name": "sub_heading3",
-      "friendly_name": "Sub Heading 3"
+      "programmatic_name": "sub_mission",
+      "friendly_name": "Sub Mission"
     }
   }
 ]
