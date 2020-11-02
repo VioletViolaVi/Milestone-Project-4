@@ -1,3 +1,17 @@
+# My Fourth Project: Slurps
+
+## Activity Diagram
+This is an activity diagram showing how the Slurps app/website is intended to be used by the user.
+![Slurps Activity Diagram](/media/activity-diagram.jpg)
+
+
+
+
+
+
+
+
+
 # Credits
 ## Media
 The following images used for this app/website were taken from Unsplash:
