@@ -1,39 +1,19 @@
 <section id="aboutUsSection">
     <div class="container mt-1"> 
-        <div class="row">
-            {% for about in about_us %}
-
-                {% if forloop.first %}
-                    <div class="col-12 mb-4">
-                        <h1 class="text-capitalize mt-0">{{ about.title }}</h1>
-                        <p class="mb-0">{{ about.paragraph }}</p>
-                        {% if request.user.is_superuser %}
-                            <small>                                                                               
-                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' about.id %}">edit</a>                                                                           
-                                <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ about.id }}"></a>
-                            </small>
-                        {% endif %}
-                    </div>
-                {% else %}
-                    <div class="col-12 col-md-4 mb-3">
-                        <div class="about_us_img">
-                            {% if about.image %}
-                                <img src="media/{{ about.image }}" class="rounded" alt="{{ about.image_alt }}">
-                            {% endif %}
-                            <h2>{{ about.title }}</h2>
-                            <p class="mb-0">{{ about.paragraph }}</p>
-                        </div>
-                        {% if request.user.is_superuser %}
-                            <small>                                                                               
-                                <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' about.id %}">edit</a>                                                                           
-                                <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ about.id }}"></a>
-                            </small>
-                        {% endif %} 
-                    </div>                      
-                {% endif %}
-
+        <div class="row">           
+            {% for main in main_mission %}
+                <div class="col-12 mb-4">
+                    <h1 class="text-capitalize mt-0">{{ main.title }}</h1>
+                    <p class="mb-0">{{ main.paragraph }}</p>
+                    {% if request.user.is_superuser %}
+                        <small>                                                                               
+                            <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' main.id %}">edit</a>                                                                           
+                            <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ main.id }}"></a>
+                        </small>
+                    {% endif %}
+                </div> 
                 <!-- DELETING bootstrap modal -->
-                <div class="modal fade" id="adminAboutUsRemove_{{ about.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="adminAboutUsRemoveLabel" aria-hidden="true">
+                <div class="modal fade" id="adminAboutUsRemove_{{ main.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="adminAboutUsRemoveLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -44,16 +24,52 @@
                             <div class="modal-body">
                                 <h5 class="modal-title font-weight-bolder" id="adminAboutUsRemoveLabel">Are you sure you want to delete?</h5>
                                 <br><br>
-                                <p class="font-weight-bolder text-capitalize">"{{ about.title }} about us section"</p>
+                                <p class="font-weight-bolder text-capitalize">"{{ main.title }} about us section"</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">no</button>
-                                <a href="{% url 'remove_about_us' about.id %}" class="bin-icon btn btn-success">yes</a>
+                                <a href="{% url 'remove_about_us' main.id %}" class="bin-icon btn btn-success">yes</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}          
+            {% endfor %}
+            {% for sub in sub_mission %}
+                <div class="col-12 col-md-4 mb-3">
+                    <div class="about_us_img">
+                        <img src="media/{{ sub.image }}" class="rounded" alt="{{ sub.image_alt }}">                        
+                        <h2>{{ sub.title }}</h2>
+                        <p class="mb-0">{{ sub.paragraph }}</p>
+                    </div>
+                    {% if request.user.is_superuser %}
+                        <small>                                                                               
+                            <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' sub.id %}">edit</a>                                                                           
+                            <a type="button" class="fas fa-trash-alt text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ sub.id }}"></a>
+                        </small>
+                    {% endif %} 
+                </div>
+                <!-- DELETING bootstrap modal -->
+                <div class="modal fade" id="adminAboutUsRemove_{{ sub.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="adminAboutUsRemoveLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h5 class="modal-title font-weight-bolder" id="adminAboutUsRemoveLabel">Are you sure you want to delete?</h5>
+                                <br><br>
+                                <p class="font-weight-bolder text-capitalize">"{{ sub.title }} about us section"</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">no</button>
+                                <a href="{% url 'remove_about_us' sub.id %}" class="bin-icon btn btn-success">yes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            {% endfor %}        
         </div>
     </div>
 </section>
