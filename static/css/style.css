@@ -227,10 +227,17 @@ body {
   justify-content: center;
 }
 
+.django-admin-link {
+  top: 0.5em;
+  padding-left: 0.2em;
+  margin-bottom: 1.5em;
+}
+
 .sort-by-section {
   position: fixed;
   top: 10.1em;
   right: 0.1em;
+  z-index: 1;
 }
 
 .sort-by-section button {
@@ -900,6 +907,16 @@ input[type="file"]::-webkit-file-upload-button {
 
   .new-drinks-circle1 {
     left: 1em;
+  }
+
+  /******************************************* home page */
+  .sort-by-section {
+    top: 9.1em;
+  }
+
+  .django-admin-link {
+    top: -0.6em;
+    margin-bottom: 0em;
   }
 
   /******************************************* shopping cart */

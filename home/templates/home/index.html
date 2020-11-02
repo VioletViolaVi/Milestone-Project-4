@@ -5,15 +5,15 @@
 
 {% block home %}   
     {% if request.user.is_superuser %}
-        <div class="text-left col-12 mt-3 pl-2">
+        <div class="django-admin-link text-left col-12">
             <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
         </div>
     {% endif %} 
 
     {% if messages %} 
         {% for message in messages %}
-            <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
-                <p>{{ message }}</p>                           
+            <div class="font-weight-bolder text-danger col-12 text-center p-0">
+                <p class="mb-0">{{ message }}</p>                           
             </div>
         {% endfor %}
     {% endif %}
