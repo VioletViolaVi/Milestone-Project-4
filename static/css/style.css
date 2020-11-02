@@ -44,10 +44,6 @@ html {
   cursor: pointer;
 }
 
-.message {
-  font-size: 0.9em;
-}
-
 /******************************************* headers */
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -109,14 +105,17 @@ html {
   margin-top: 3.4em;
 }
 
-.checkout-history-btn {
+.profile-btn {
   border-radius: 0.2em;
   display: inline;
   background-color: lightgray;
+  box-shadow: 0.1em 0.1em;
 }
 
-.checkout-history-btn:active {
-  background-color: lightslategray;
+.profile-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: lightslategray solid 0.3em;
 }
 
 .trolley-counter {
@@ -161,6 +160,7 @@ body {
 body {
   position: relative;
   padding-top: 4em;
+  background-color: lightyellow;
 }
 
 .footer-pusher {
@@ -258,6 +258,11 @@ body {
   color: black;
 }
 
+.home-message {
+  margin-top: 3em;
+  margin-bottom: 0em;
+}
+
 .buy-now-btn {
   padding: 0.3em;
   border-radius: 0.2em;
@@ -287,7 +292,7 @@ body {
 }
 
 .new-drinks-title {
-  margin-top: 1.5em;
+  margin-top: 1.1em;
 }
 
 /******************************************* shopping cart */
@@ -312,8 +317,18 @@ body {
   cursor: pointer;
 }
 
+.fas.fa-trash-alt:hover,
+.fas.fa-trash-alt:active {
+  color: darkslategray;
+}
+
 .pay-btn {
   font-size: 1.7em;
+}
+
+.pay-btn:focus,
+.back-to-home-pg-btn:focus {
+  border: slategray solid 0.2em;
 }
 
 .back-to-home-pg-btn {
@@ -345,14 +360,21 @@ select#id_country {
   text-transform: capitalize;
 }
 
-.form-submit-btn,
-.change-password-btn {
+.form-submit-btn {
   border-radius: 0.2em;
   outline: none;
   margin: -0.5em 0em 0em 0em;
   border: gray solid 0.1em;
   text-align: center;
   padding: 0.2em;
+  box-shadow: 0.1em 0.1em;
+}
+
+.change-password-btn {
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+  font-size: 1em;
 }
 
 .change-password-btn:focus {
@@ -434,6 +456,10 @@ input[type="text"]#id_postcode {
   margin: auto;
   width: 95vw;
   padding: 10px;
+}
+
+.message {
+  font-size: 0.9em;
 }
 
 /******************************************* allauth pages */
@@ -537,14 +563,9 @@ label[for="id_oldpassword"] {
   margin-top: 1em;
 }
 
-label[for="id_remember"] {
-  display: inline;
-}
-
+label[for="id_remember"],
 .login-border input[type="checkbox"] {
-  box-sizing: border-box;
-  padding: 0;
-  height: none;
+  display: none;
 }
 
 input[type="text"]#id_username {
@@ -655,6 +676,13 @@ input[type="file"]::-webkit-file-upload-button {
   border-radius: 0.3em;
   border: solid 0.1em #6c757d;
   padding: 0.1em;
+  box-shadow: 0.1em 0.1em;
+}
+
+.edit-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
 }
 
 /******************************************* media queries ******************************************* */
@@ -741,6 +769,10 @@ input[type="file"]::-webkit-file-upload-button {
     left: 1em;
   }
 
+  .new-drinks-title {
+    margin-top: 0.9em;
+  }
+
   /******************************************* shopping cart */
   .shopping_cart_img {
     height: 12em;
@@ -756,8 +788,9 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* payment */
+  .payment-form-border,
   .drink-order-box {
-    height: 90vh;
+    height: 540px;
   }
 
   .payment-form-border {
@@ -807,6 +840,10 @@ input[type="file"]::-webkit-file-upload-button {
   /******************************************* home page */
   .new-drinks-circle1 {
     left: 4em;
+  }
+
+  .new-drinks-title {
+    margin-top: 0.7em;
   }
 
   /******************************************* shopping cart */
@@ -910,6 +947,10 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* home page */
+  .home-message {
+    margin-top: 1.5em;
+  }
+
   .sort-by-section {
     top: 9.1em;
   }
@@ -929,10 +970,6 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* payment */
-  .drink-order-box {
-    height: 512px;
-  }
-
   .payment-summary {
     width: 70vw;
   }
@@ -953,10 +990,6 @@ input[type="file"]::-webkit-file-upload-button {
   #resetPassword input#id_email {
     margin-top: 1em;
   }
-
-  /* .change-password-border {
-    margin-top: 3em;
-  } */
 
   /******************************************* admin */
   .management-form-border {
@@ -981,6 +1014,10 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* payment */
+  .payment-form-border,
+  .drink-order-box {
+    height: 530px;
+  }
 
   .payment-summary {
     width: 55vw;
