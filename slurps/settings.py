@@ -112,13 +112,16 @@ SOCIALACCOUNT_PROVIDERS = {
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
         'APP': {
-            'client_id': '123',
-            'secret': '456',
+            'client_id': 'GOOGLE_CLIENT_ID',
+            'secret': 'GOOGLE_CLIENT_SECRET',
             'key': ''
         }
     }
 }
 
+
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
