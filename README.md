@@ -1,15 +1,9 @@
 # My Fourth Project: Slurps
-
 ## Activity Diagram
 This is an activity diagram showing how the Slurps app/website is intended to be used by the user.
 ![Slurps Activity Diagram](/media/activity-diagram.jpg)
-
-
-
-
-
-
-
+## Wireframes
+![A wireframe of the signup and login page.](/media/wireframes/1.signupLogin-mobile.PNG)
 
 
 # Credits
