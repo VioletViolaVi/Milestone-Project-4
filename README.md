@@ -3,9 +3,41 @@
 This is an activity diagram showing how the Slurps app/website is intended to be used by the user.
 ![Slurps Activity Diagram](/media/activity-diagram.jpg)
 ## Wireframes
-![A wireframe of the signup and login page.](/media/wireframes/1.signupLogin-mobile.PNG)
-
-
+### Small Screens
+![A wireframe of the signup and login page on mobile screens.](/media/wireframes/1.signupLogin-mobile.PNG)
+![A wireframe of the navbar on mobile screens.](/media/wireframes/2.navbar-mobile.PNG)
+![A wireframe of the new drinks section of the homepage on mobile screens.](/media/wireframes/3.newDrinks-mobile.PNG)
+![A wireframe of the juice section of the homepage on mobile screens.](/media/wireframes/4.juices-mobile.PNG)
+![A wireframe of the milkshake section of the homepage on mobile screens.](/media/wireframes/5.milkshakes-mobile.PNG)
+![A wireframe of the about us section of the homepage on mobile screens.](/media/wireframes/6.aboutUs-mobile.PNG)
+![A wireframe of the search results on the homepage on mobile screens.](/media/wireframes/7.searchResults-mobile.PNG)
+![A wireframe of the checkout history and drink order receipt page on mobile screens.](/media/wireframes/8.checkoutHistory&DrinkOrderReceipt-mobile.PNG)
+![A wireframe of the checkout page on mobile screens.](/media/wireframes/9.checkout-mobile.PNG)
+![A wireframe of the checkout delete modal on mobile screens.](/media/wireframes/10.checkoutDeleteModal-mobile.PNG)
+![A wireframe of the payment page on mobile screens.](/media/wireframes/11.payment-mobile.PNG)
+### Medium Screens
+![A wireframe of the signup and login page on tablet screens.](/media/wireframes/12.signupLogin-tablet.PNG)
+![A wireframe of the navbar on tablet screens.](/media/wireframes/13.navbar-tablet.PNG)
+![A wireframe of the new drinks section of the homepage on tablet screens.](/media/wireframes/14.newDrinks-tablet.PNG)
+![A wireframe of the juice section of the homepage on tablet screens.](/media/wireframes/15.juices-tablet.PNG)
+![A wireframe of the milkshake section of the homepage on tablet screens.](/media/wireframes/16.milkshakes-tablet.PNG)
+![A wireframe of the about us section of the homepage on tablet screens.](/media/wireframes/17.aboutUs-tablet.PNG)
+![A wireframe of the search results on the homepage on tablet screens.](/media/wireframes/18.searchResults-tablet.PNG)
+![A wireframe of the checkout history and drink order receipt page on tablet screens.](/media/wireframes/19.checkoutHistory&DrinkOrderReceipt-tablet.PNG)
+![A wireframe of the checkout page on tablet screens.](/media/wireframes/20.checkout-tablet.PNG)
+![A wireframe of the checkout delete modal on tablet screens.](/media/wireframes/21.checkoutDeleteModal-tablet.PNG)
+![A wireframe of the payment page on tablet screens.](/media/wireframes/22.payment-tablet.PNG)
+### Large Screens
+![A wireframe of the signup and login page on desktop screens.](/media/wireframes/23.signupLogin-desktop.PNG)
+![A wireframe of the new drinks section of the homepage on desktop screens.](/media/wireframes/24.newDrinks-desktop.PNG)
+![A wireframe of the juice section of the homepage on desktop screens.](/media/wireframes/25.juices-desktop.PNG)
+![A wireframe of the milkshake section of the homepage on desktop screens.](/media/wireframes/26.milkshakes-desktop.PNG)
+![A wireframe of the about us section of the homepage on desktop screens.](/media/wireframes/27.aboutUs-desktop.PNG)
+![A wireframe of the search results on the homepage on desktop screens.](/media/wireframes/28.searchResults-desktop.PNG)
+![A wireframe of the checkout history and drink order receipt page on desktop screens.](/media/wireframes/29.checkoutHistory&DrinkOrderReceipt-desktop.PNG)
+![A wireframe of the checkout page on desktop screens.](/media/wireframes/30.checkout-desktop.PNG)
+![A wireframe of the checkout delete modal on desktop screens.](/media/wireframes/31.checkoutDeleteModal-desktop.PNG)
+![A wireframe of the payment page on desktop screens.](/media/wireframes/32.payment-desktop.PNG)
 # Credits
 ## Media
 The following images used for this app/website were taken from Unsplash:
