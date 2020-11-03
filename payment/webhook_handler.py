@@ -56,17 +56,18 @@ class StripeWH_Handler:
         shipping_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
-        # clean data in shipping details
+        # cleans data in shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
 
-        # update user profile info when saveInfo is checked
+        # updates user profile info when saveInfo is checked
         user_profiles = None
         username = intent.metadata.username
         if username != "AnonymousUser":
             user_profiles = UserProfiles.objects.get(user__username=username)
             if saveInfo:
+                user_profiles.default_full_name = shipping_details.name
                 user_profiles.default_phone_number = shipping_details.phone
                 user_profiles.default_street_address1 = shipping_details.address.line1
                 user_profiles.default_street_address2 = shipping_details.address.line2

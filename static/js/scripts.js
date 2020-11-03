@@ -8,7 +8,7 @@ $(document).ready(function () {
         });
     });
 
-    // shows or hides back to top arrow
+    // shows and hides back to top arrow
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
             $(".fixed-arrow").show();
@@ -17,7 +17,7 @@ $(document).ready(function () {
         }
     });
 
-    // to update drink quantity
+    // updates drink quantity
     $(".edit-btn").click(function () {
         let editForm = $(this).parent();
         editForm.submit();
@@ -128,7 +128,7 @@ $(document).ready(function () {
                     }
                 });
         }).fail(function () {      
-                // just reload the page, the error will be in django messages
+                // errors will be in django messages when reloaded
                 location.reload();
                 })
     });
