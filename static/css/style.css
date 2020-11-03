@@ -71,6 +71,20 @@ html {
   width: 100%;
 }
 
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 .fixed-top.navbar.navbar-expand-lg.navbar-light {
   z-index: 1070;
 }
@@ -224,12 +238,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.django-admin-link {
-  top: 0.5em;
-  padding-left: 0.2em;
-  margin-bottom: 1.5em;
 }
 
 .sort-by-section {
@@ -648,6 +656,12 @@ input[type="text"]#id_default_postcode {
 input[type="text"]#id_drink_name,
 select#id_drink_type {
   text-transform: capitalize;
+}
+
+.django-admin-link {
+  top: 0.5em;
+  padding-left: 0.2em;
+  margin-bottom: 1.5em;
 }
 
 .management-form-border input#id_image:focus {
