@@ -4,7 +4,7 @@ from home.models import Drink
 
 
 def shopping_cart_contents(request):
-
+    company_email = settings.COMPANY_EMAIL
     former_delivery_cost = settings.FORMER_DELIVERY_COST
     delivery = settings.DELIVERY_COST
 
@@ -34,8 +34,9 @@ def shopping_cart_contents(request):
         "subtotal": subtotal,
         "drink_counter": drink_counter,
         "subtotal": subtotal,
-        "delivery": settings.DELIVERY_COST,
+        "delivery": delivery,
         "grand_total": grand_total,
+        "company_email": company_email,
     }
 
     return context

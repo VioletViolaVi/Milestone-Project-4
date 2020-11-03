@@ -148,6 +148,7 @@ def payment_success(request, drink_order_number):
         # Save user's info
         if saveInfo:
             user_profiles_data = {
+                "default_full_name": drink_order.full_name,
                 "default_phone_number": drink_order.phone_number,
                 "default_street_address1": drink_order.street_address1,
                 "default_street_address2": drink_order.street_address2,

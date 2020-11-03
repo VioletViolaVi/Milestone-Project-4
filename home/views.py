@@ -104,7 +104,7 @@ def add_drink(request):
 
 @login_required
 def edit_drink(request, drink_id):
-    # edit drinks in store
+    # edits drinks in shop
     if not request.user.is_superuser:
         messages.error(
             request, "Access Denied. \
@@ -137,7 +137,7 @@ def edit_drink(request, drink_id):
 
 @login_required
 def delete_drink(request, drink_id):
-    # delete drink from store
+    # deletes drinks from shop
     if not request.user.is_superuser:
         messages.error(
             request, "Access Denied. \
@@ -153,7 +153,7 @@ def delete_drink(request, drink_id):
 
 @login_required
 def append_about_us(request):
-    # add about us section
+    # adds about us section
     if not request.user.is_superuser:
         messages.error(
             request, "Access Denied. \
@@ -184,7 +184,7 @@ def append_about_us(request):
 
 @login_required
 def change_about_us(request, about_us_id):
-    # edit about us section
+    # edits about us section
     if not request.user.is_superuser:
         messages.error(
             request, "Access Denied. \
@@ -220,7 +220,7 @@ def change_about_us(request, about_us_id):
 
 @login_required
 def remove_about_us(request, about_us_id):
-    # delete about us section
+    # deletes about us section
     if not request.user.is_superuser:
         messages.error(
             request, "Access Denied. \

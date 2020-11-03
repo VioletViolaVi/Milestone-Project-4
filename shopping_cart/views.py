@@ -5,14 +5,12 @@ from home.models import Drink
 
 
 def shopping_cart(request):
-
     # shows items in shopping cart
     return render(request, "shopping_cart/shopping_cart.html")
 
 
 def add_to_shopping_cart(request, item_id):
-    # add quantity of specified drink to cart
-
+    # adds quantity of specified drink to cart
     drink = get_object_or_404(Drink, pk=item_id)
     drink_quantity = int(request.POST.get("drinkSelections"))
     redirect_url = request.POST.get("redirect_url")
@@ -45,8 +43,7 @@ def add_to_shopping_cart(request, item_id):
 
 
 def edit_shopping_cart(request, item_id):
-    # edit quantity of specified drink in cart
-
+    # edits quantity of specified drink in cart
     drink_quantity = int(request.POST.get("editDrinks"))
     shopping_cart = request.session.get("shopping_cart", {})
 
@@ -62,7 +59,7 @@ def edit_shopping_cart(request, item_id):
 
 
 def delete_shopping_cart_item(request, item_id):
-    # delete specified drink in cart
+    # deletes specified drink in cart
     try:
         shopping_cart = request.session.get("shopping_cart", {})
         shopping_cart.pop(item_id)

@@ -17,7 +17,7 @@ class StripeWH_Handler:
         self.request = request
 
     def _send_confirmation_email(self, drink_order):
-        # send users confirmation email
+        # send users confirmation emails
         customer_email = drink_order.email
         subject_txt = render_to_string(
             "payment/confirmation_emails/confirmation_email_subject.txt",
@@ -50,7 +50,6 @@ class StripeWH_Handler:
         pid = intent.id
         shopping_cart = intent.metadata.shopping_cart
 
-        # error REMOVE OTHERWISE
         saveInfo = intent.metadata.saveInfo
 
         billing_details = intent.charges.data[0].billing_details

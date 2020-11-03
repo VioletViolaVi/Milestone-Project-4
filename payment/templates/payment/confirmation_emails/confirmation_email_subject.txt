@@ -1,1 +1,1 @@
-Slurps confirmation for order number {{ drink_order.drink_order }}.
+Slurps confirmation for drink order number {{ drink_order.drink_order }}.
