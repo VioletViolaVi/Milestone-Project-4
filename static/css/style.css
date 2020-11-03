@@ -201,42 +201,6 @@ body {
   position: absolute;
 }
 
-/******************************************* all form inputs */
-label[for="id_email"],
-label[for="id_email2"],
-label[for="id_username"],
-label[for="id_password1"],
-label[for="id_password2"],
-label[for="id_login"],
-label[for="id_password"],
-label[for="id_oldpassword"] {
-  display: none;
-}
-
-select,
-input[type="text"],
-input[type="text"]::placeholder,
-input[type="email"]::placeholder {
-  text-transform: capitalize;
-}
-
-input[type="email"] {
-  text-transform: lowercase;
-}
-
-input[type="text"]#id_postcode,
-input[type="text"]#id_default_postcode {
-  text-transform: uppercase;
-}
-
-input:focus,
-select:focus,
-button[type="submit"]:focus {
-  outline: none;
-  box-shadow: none;
-  border: slategray solid 0.2em;
-}
-
 /******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
@@ -393,21 +357,6 @@ select option[value=""] {
   color: #6c757d !important;
 }
 
-/* input[type="text"]#id_full_name,
-input[type="text"]#id_street_address1,
-input[type="text"]#id_street_address2,
-select#id_country {
-  text-transform: capitalize;
-} */
-
-/* input[type="email"]#id_email {
-  text-transform: lowercase;
-} */
-
-/* input[type="text"]#id_postcode {
-  text-transform: uppercase;
-} */
-
 .form-submit-btn {
   border-radius: 0.2em;
   outline: none;
@@ -497,92 +446,11 @@ select#id_country {
 }
 
 /******************************************* allauth pages */
-/* input[type="text"]::placeholder,
-input[type="email"]::placeholder {
-  text-transform: capitalize;
-} */
-
-/* input[type="text"]#id_username,
-input[type="text"]#id_login {
-  text-transform: capitalize;
-} */
-
-/* #signup_form input,
-#login_form input#id_login,
-#login_form input#id_password,
-#resetPassword input#id_email,
-#changePasswordForm input#id_password1,
-#changePasswordForm input#id_password2,
-#allauth-border li #id_email,
-#allauth-border li #id_oldpassword,
-#allauth-border li #id_password1,
-#allauth-border li #id_password2 {
-  margin: 1em;
-  height: 2.4em;
-  background-color: white;
-  border-radius: 0.2em;
-  padding: 0em 0.2em;
-  border: none;
-} */
-
-/* #signup_form input#id_email,
-#signup_form input#id_username,
-#signup_form input#id_password1,
-#signup_form input#id_password2,
-#login_form input#id_login,
-#login_form input#id_password,
-#resetPassword input#id_email {
-  width: 16em;
-} */
-
-/* #changePasswordForm input#id_password1,
-#changePasswordForm input#id_password2,
-#allauth-border li #id_oldpassword,
-#allauth-border li #id_password1,
-#allauth-border li #id_password2 {
-  width: 15em;
-} */
-
-/* #signup_form input:focus,
-#login_form input:focus,
-#resetPassword input#id_email:focus,
-#changePasswordForm input#id_password1:focus,
-#changePasswordForm input#id_password2:focus,
-#allauth-border li #id_email:focus,
-#allauth-border li #id_oldpassword:focus,
-#allauth-border li #id_password1:focus,
-#allauth-border li #id_password2:focus,
-button[type="submit"]:focus {
-  outline: none;
-  border: slategray solid 0.2em;
-} */
-
-/* #changePasswordForm input[name="password1"],
-#changePasswordForm input[name="password2"],
-#changePasswordForm input[type="submit"] {
-  margin-top: 1em;
-} */
-
-/* #allauth-border li #id_email {
-  width: 15em;
-} */
-
-/* #signup_form input:focus,
-#login_form input:focus,
-#resetPassword input:focus,
-#changePasswordForm input:focus,
-#allauth-border li:focus,
-button[type="submit"]:focus {
-  outline: none;
-  border: slategray solid 0.2em;
-} */
-
 .signup-border,
 .login-border,
 .reset-password-border,
 .change-password-border,
-.change-password-border,
-.allauth-border {
+.add-email-border {
   background-color: lightgray;
   border: solid darkgray 0.2em;
   width: 18em;
@@ -590,11 +458,11 @@ button[type="submit"]:focus {
   overflow: auto;
 }
 
-#signup_form input,
-#login_form input,
-#resetPassword input,
-#changePasswordForm input,
-#allauth-border li {
+.signup-border input,
+.login-border input,
+.change-password-border input,
+.add-email-border input[type="email"],
+.reset-password-border input[type="email"] {
   margin: 1em;
   height: 2.4em;
   background-color: white;
@@ -603,26 +471,28 @@ button[type="submit"]:focus {
   border: none;
 }
 
-#signup_form input,
-#changePasswordForm input,
-#allauth-border li {
+.signup-border input,
+.change-password-border input,
+.add-email-border input,
+.reset-password-border input[type="email"] {
   width: 15em;
 }
 
-#login_form input #resetPassword input {
-  width: 16em;
+.add-email-border input[type="radio"] {
+  width: 1em;
 }
 
 select {
   cursor: pointer;
 }
 
-#changePasswordForm input {
+.change-password-border {
+  height: 300px;
   margin-top: 1em;
 }
 
-#allauth-border li {
-  width: 15em;
+.change-password-border input {
+  margin-top: 1em;
 }
 
 .signup-border {
@@ -634,12 +504,7 @@ select {
 }
 
 .reset-password-border {
-  height: 130px;
-}
-
-.change-password-border {
-  height: 210px;
-  margin-top: 1em;
+  height: 150px;
 }
 
 .errorlist {
@@ -648,29 +513,6 @@ select {
 }
 
 /******************************************* profiles */
-/* input[type="text"]#id_default_street_address1,
-input[type="text"]#id_default_street_address2,
-select#id_default_country {
-  text-transform: capitalize;
-} */
-
-/* .profile-countries#id_default_phone_number.form-control,
-.profile-countries#id_default_street_address1.form-control,
-.profile-countries#id_default_street_address2.form-control,
-.profile-countries#id_default_postcode.form-control,
-#id_default_country,
-#id_default_country option:not(first-child),
-select:valid {
-  color: #212529;
-} */
-
-/* .update-form-border input:focus,
-.update-form-border select:focus {
-  outline: none;
-  box-shadow: none;
-  border: slategray solid 0.2em;
-} */
-
 .profile-countries,
 #id_default_country,
 #id_default_country option:not(first-child),
@@ -699,25 +541,6 @@ select:valid {
 }
 
 /******************************************* admin */
-/* input[type="text"]#id_drink_name,
-select#id_drink_type {
-  text-transform: capitalize;
-} */
-
-/* .management-form-border #id_drink_name,
-.management-form-border #id_price,
-.management-form-border #id_millilitres,
-.management-form-border #id_drink_type {
-  border-radius: 0.2em;
-} */
-
-/* .management-form-border input:focus,
-.management-form-border select:focus {
-  outline: none;
-  box-shadow: none;
-  border: slategray solid 0.2em;
-} */
-
 .management-form-border a,
 .management-form-border button {
   padding: 0.4em;
@@ -759,6 +582,42 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .edit-btn:active {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
+/******************************************* form fields */
+label[for="id_email"],
+label[for="id_email2"],
+label[for="id_username"],
+label[for="id_password1"],
+label[for="id_password2"],
+label[for="id_login"],
+label[for="id_password"],
+label[for="id_oldpassword"] {
+  display: none;
+}
+
+select,
+input[type="text"],
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  text-transform: capitalize;
+}
+
+input[type="email"] {
+  text-transform: lowercase;
+}
+
+input[type="text"]#id_postcode,
+input[type="text"]#id_default_postcode {
+  text-transform: uppercase;
+}
+
+input:focus,
+select:focus,
+button[type="submit"]:focus {
   outline: none;
   box-shadow: none;
   border: slategray solid 0.2em;
@@ -866,7 +725,7 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 0em 0em 0em 4em;
   }
 
-  /******************************************* payment */
+  /******************************************* make payment */
   .payment-form-border,
   .drink-order-box {
     height: 540px;
@@ -881,19 +740,19 @@ input[type="file"]::-webkit-file-upload-button {
   .login-border,
   .reset-password-border,
   .change-password-border,
-  .allauth-border {
+  .add-email-border {
     width: 24em;
   }
 
-  #signup_form input,
-  #login_form input,
-  #allauth-border li {
-    width: 21em;
+  .change-password-border {
+    height: 310px;
+    margin-top: 2em;
   }
 
-  .change-password-border {
-    height: 220px;
-    margin-top: 2em;
+  .signup-border input,
+  .login-border input,
+  .add-email-border input {
+    width: 21em;
   }
 
   /******************************************* profiles */
@@ -932,18 +791,17 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* allauth pages */
   .signup-border,
-  .login-border,
-  .change-password-border {
+  .login-border {
     width: 30em;
   }
 
-  #signup_form input,
-  #login_form input {
+  .signup-border input,
+  .login-border input {
     width: 27em;
   }
 
   .change-password-border {
-    height: 230px;
+    width: 25em;
   }
 
   /******************************************* profiles */
@@ -1040,7 +898,7 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 0em 0em 0em 2em;
   }
 
-  /******************************************* payment */
+  /******************************************* processing payment */
   .payment-summary {
     width: 70vw;
   }
@@ -1056,10 +914,6 @@ input[type="file"]::-webkit-file-upload-button {
 
   .reset-password-border {
     height: 150px;
-  }
-
-  #resetPassword input#id_email {
-    margin-top: 1em;
   }
 
   /******************************************* admin */
@@ -1084,12 +938,13 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 0em 0em 0em 1em;
   }
 
-  /******************************************* payment */
+  /******************************************* make payment */
   .payment-form-border,
   .drink-order-box {
     height: 530px;
   }
 
+  /******************************************* processing payment */
   .payment-summary {
     width: 55vw;
   }
@@ -1101,9 +956,9 @@ input[type="file"]::-webkit-file-upload-button {
     width: 35em;
   }
 
-  #signup_form input,
-  #login_form input,
-  #changePasswordForm input {
+  .signup-border input,
+  .login-border input,
+  .change-password-border input {
     width: 32em;
   }
 

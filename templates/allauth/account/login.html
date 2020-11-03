@@ -11,10 +11,10 @@
         <div class="container mt-3">
             <div class="row">
 
-                <div class="col-12">
+                <div class="col-12 mt-2">
                     <h1 class="text-capitalize">{% trans "log in" %}</h1>
-                    <p class="">{% blocktrans %}Don't already have an account?<a href="{{ signup_url }}" class="font-weight-bolder"> sign up</a>{% endblocktrans %}</p>               
-                    <form class="login-border login" method="POST" id="login_form" action="{% url 'account_login' %}">
+                    <p class="">{% blocktrans %}Don't have an account?<a href="{{ signup_url }}" class="font-weight-bolder"> sign up</a>{% endblocktrans %}</p>               
+                    <form class="login-border login" method="POST" action="{% url 'account_login' %}">
                         {% csrf_token %}
                         {{ form.as_ul }}
                         {% if redirect_field_value %}
@@ -22,19 +22,6 @@
                         {% endif %}            
                         <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder primaryAction" type="submit">{% trans "log in" %}</button>
                     </form>                                          
-                </div>
-
-                <div class="col-12 mt-1">
-                    {% get_providers as socialaccount_providers %}   
-                    {% if socialaccount_providers %}
-                        <p class="mb-1">{% blocktrans with site.name as site_name %}Log in with your Google account!{% endblocktrans %}</p> 
-                        <div class="socialaccount_ballot">
-                            <ul class="socialaccount_providers mb-2">
-                                {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                            </ul>
-                        </div>
-                        {% include "socialaccount/snippets/login_extra.html" %}
-                    {% endif %}            
                 </div>
 
                 <div class="col-12">
