@@ -1,6 +1,6 @@
 # My Fourth Project: Slurps
 ## Activity Diagram
-This is an activity diagram showing how the Slurps app/website is intended to be used by the user.
+This is an activity diagram showing how the Slurps website is intended to be used by the user.
 ![Slurps Activity Diagram](/media/activity-diagram.jpg)
 ## Wireframes
 ### Small Screens
@@ -40,7 +40,7 @@ This is an activity diagram showing how the Slurps app/website is intended to be
 ![A wireframe of the payment page on desktop screens.](/media/wireframes/32.payment-desktop.PNG)
 # Credits
 ## Media
-The following images used for this app/website were taken from Unsplash:
+The following images used for this website were taken from Unsplash:
 * Photos by Alexander Mils:
     * https://unsplash.com/photos/hVk0-hqA69k 
     * https://unsplash.com/photos/pPhN8HFzkDE

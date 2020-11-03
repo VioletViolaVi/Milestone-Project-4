@@ -160,7 +160,6 @@ body {
 body {
   position: relative;
   padding-top: 4em;
-  background-color: lightyellow;
 }
 
 .footer-pusher {
@@ -217,7 +216,7 @@ body {
 .new-drinks-circle1,
 .new-drinks-circle2 {
   height: 3em;
-  width: 3em;
+  width: 3.2em;
   border-radius: 50%;
   position: absolute;
   left: 2.5em;
@@ -360,6 +359,13 @@ select#id_country {
   text-transform: capitalize;
 }
 
+.change-password-btn:focus,
+.form-submit-btn:focus {
+  outline: none;
+  box-shadow: none;
+  border: slategray solid 0.2em;
+}
+
 .form-submit-btn {
   border-radius: 0.2em;
   outline: none;
@@ -375,12 +381,6 @@ select#id_country {
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
   font-size: 1em;
-}
-
-.change-password-btn:focus {
-  outline: none;
-  box-shadow: none;
-  border: slategray solid 0.2em;
 }
 
 .drink-order-box {

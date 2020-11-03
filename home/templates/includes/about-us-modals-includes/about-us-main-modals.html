@@ -1,0 +1,28 @@
+{% if request.user.is_superuser %}
+    <small>                                                                               
+        <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' main.id %}">edit</a>                                                                           
+        <a type="button" class="text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ main.id }}"><i class="fas fa-trash-alt"></i></a>
+    </small>
+
+    <!-- DELETING MAIN bootstrap modal -->
+    <div class="modal fade" id="adminAboutUsRemove_{{ main.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="adminAboutUsRemoveLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="modal-title font-weight-bolder" id="adminAboutUsRemoveLabel">Are you sure you want to delete?</h5>
+                    <br><br>
+                    <p class="font-weight-bolder text-capitalize">"{{ main.title }}" about us section</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger text-uppercase" data-dismiss="modal">no</button>
+                    <a href="{% url 'remove_about_us' main.id %}" class="bin-icon btn btn-success text-uppercase">yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
