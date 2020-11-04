@@ -7,6 +7,19 @@ The website produced in this project provides Slurps with great ways of them ach
 * Firstly, the goal of attracting users to approach their website and stay to browse around will be achieved by the phenomenal UX and UI design created. The website is easy to understand and use upon approaching its landing page. That is, its landing homepage is simple, clear, clean and displays images of all offered drinks along with their prices. Thus being indicative to the user that they have landed on a drink shop website where they can simply scroll through to see the company’s options. All buttons used are labeled legibly and the icons used assists as obvious indicators on what they represent. 
 * Secondly, the goal of getting users to create accounts and make purchases will be easily attained because this project allows any user to make selections on the drink items they want and place them in their shopping cart. Users at this point do not need to have an account with Slurps. This prevents disruption from users new to the website. By allowing these users to add items to their cart without accounts, they are also not put off by having to fill in a form beforehand. Thus, making it more likely for users to want to shop with Slurps and be more willing to create accounts later to pay for these items at the end of their shop.
 * Lastly, by ensuring the previous two approaches in achieving the previously mentioned goals come to fruition, this website is likely to generate good experiences from the user being able to easily browse and make payments. This is what will make them want to return in the future in order to make new purchases thus, producing repeat business for Slurps.
+## User Stories
+* As a user of Slurps, I want to easily browse through the website, to see what drinks are offered so I can select which ones I wish to purchase.
+* As a user of Slurps, I want the ability to search for drinks via a search bar to speed up my shopping search.
+* As a user of Slurps, I want to rearrange the order of the drinks on display to show the cheapest drinks first and the most expensive drinks last so I can focus on cheaper drinks as I shop with a tight budget. 
+* As a user of Slurps, I want to see what drinks I have selected, their quantity and have the ability to add, reduce or delete these items from my order before paying.
+* As a user of Slurps, I want to see how much each drink costs, the delivery cost and how much my grand total is before paying.
+* As a user of Slurps, I want to make card payments to pay the cost of my drink selections and have them delivered to me at my address.
+* As a user of Slurps, I want to have my payment details saved to make the next time purchasing items from Slurps faster. 
+* As a user of Slurps, I want to get a receipt of my order so I can have a record documenting my purchase.
+* As a user of Slurps, I want to create an account with Slurps so I can be allowed to make purchases.
+* As a user of Slurps, I want to create an account with Slurps so I can view my order history in my profile.
+* As a user of Slurps, I want to create an account with Slurps so I can make changes to my personal details in my profile.
+* As a user of Slurps, I want to access my profile page so I can change my password if I desire. 
 
 
 

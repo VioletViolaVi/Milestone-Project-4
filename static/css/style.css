@@ -532,7 +532,7 @@ select:valid {
   margin: auto;
   overflow: auto;
   padding: 0.5em;
-  height: 22em;
+  height: 27em;
 }
 
 .order-history-border {
@@ -759,7 +759,7 @@ button[type="submit"]:focus {
   .update-form-border {
     width: 32em;
     padding: 1em;
-    height: 25em;
+    height: 28em;
   }
 }
 
@@ -808,7 +808,7 @@ button[type="submit"]:focus {
   .update-form-border {
     width: 20em;
     padding: 2em;
-    height: 26em;
+    height: 30em;
   }
 
   /******************************************* admin */
