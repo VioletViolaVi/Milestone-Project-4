@@ -70,6 +70,9 @@ This is an activity diagram showing how the Slurps website is intended to be use
 ![A wireframe of the checkout page on desktop screens.](/media/wireframes/30.checkout-desktop.PNG)
 ![A wireframe of the checkout delete modal on desktop screens.](/media/wireframes/31.checkoutDeleteModal-desktop.PNG)
 ![A wireframe of the payment page on desktop screens.](/media/wireframes/32.payment-desktop.PNG)
+## Wireframe and Final Project Differences
+
+
 # Credits
 ## Media
 The following images used for this website were taken from Unsplash:
