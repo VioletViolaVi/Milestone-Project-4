@@ -19,10 +19,18 @@ The website produced in this project provides Slurps with great ways of them ach
 * As a user of Slurps, I want to create an account with Slurps so I can be allowed to make purchases.
 * As a user of Slurps, I want to create an account with Slurps so I can view my order history in my profile.
 * As a user of Slurps, I want to create an account with Slurps so I can make changes to my personal details in my profile.
-* As a user of Slurps, I want to access my profile page so I can change my password if I desire. 
-
-
-
+* As a user of Slurps, I want to change my password if I forget it so I can still have access to my account.  
+## Designer Goals
+* As the designer of Slurps, I want to create a website displaying all the drinks on a single page, so the user can simply scroll through, without clicking on any additional links, to see every drink on offer.
+* As the designer of Slurps, I want to add a search bar in the navigation bar to allow users to type in entries when looking up particular drinks to help filter through the drinks and speed up their shopping process. 
+* As the designer of Slurps, I want to create a sort by feature, so the user can rearrange the order of drinks displayed in ascending or descending order, based on their price or alphabetical name.
+* As the designer of Slurps, I want to create a shopping cart page, so the users can see what items they have selected and make changes to them if they wish. These changes include: adding, reducing or deleting items in their shopping cart.
+* As the designer of Slurps, I want to include the drink and delivery costs on the homepage and include the grand total of the user’s shopping on the shopping cart page, so the users can be aware of the total amount of money they will be charged before making a payment.
+* As the designer of Slurps, I want to add a payment page involving the user entering their personal and card payment details, so the cost of their selected items can be covered and sent to the provided billing address. 
+* As the designer of Slurps, I want to provide the users with an option to save their entered personal details from the payment page, so they can make faster payments when they next come back to this same payment page.
+* As the designer of Slurps, I want to ensure users get a receipt sent to them after making a purchase, so they have confirmation that their card payment has been accepted.
+* As the designer of Slurps, I want to create a sign up page, so users can create accounts to make purchases, view their order history and make changes to their personal details in their profile.
+* As the designer of Slurps, I want to give users the ability to change their password in case they forget, so they still have access to their accounts.
 ## Activity Diagram
 This is an activity diagram showing how the Slurps website is intended to be used by the user.
 ![Slurps Activity Diagram](/media/activity-diagram/activity-diagram.jpg)
