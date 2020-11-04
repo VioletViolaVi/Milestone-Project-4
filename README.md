@@ -1,8 +1,12 @@
 # My Fourth Project: Slurps
 This project is about providing users with an ecommerce service which enables them to make purchases of juices and milkshakes from the Slurps company. The aim of the website is to inform users on the available drinks offered by Slurps for them to buy. Users are free to browse through the options and select drinks they wish to purchase; regardless of whether they have created an account with Slurps and are currently logged in. If the user wishes to proceed with purchasing their selected items, they are to sign up and be logged into their account before doing so. Once the user is logged in, they will be free to make purchases via card payments. Afterwards, users will receive a receipt and have their orders saved in their profile as part of their order history. Users are free to make further purchases if they choose to do so. As well as edit personal details that will be saved in their profile in addition, resulting from the payment process.
+# UX
+
+
+
 ## Activity Diagram
 This is an activity diagram showing how the Slurps website is intended to be used by the user.
-![Slurps Activity Diagram](/media/activity-diagram.jpg)
+![Slurps Activity Diagram](/media/activity-diagram/activity-diagram.jpg)
 ## Wireframes
 ### Small Screens
 ![A wireframe of the signup and login page on mobile screens.](/media/wireframes/1.signupLogin-mobile.PNG)
