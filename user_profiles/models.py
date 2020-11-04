@@ -27,8 +27,8 @@ class UserProfiles(models.Model):
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profiles(sender, instance, created, **kwargs):
-    # create or update user profile
+    # creates or updates user profiles
     if created:
         UserProfiles.objects.create(user=instance)
-    # existing users: just save the profile
+    # existing users: saves profiles
     instance.userprofiles.save()

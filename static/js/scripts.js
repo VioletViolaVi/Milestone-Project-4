@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    // smooth scroll to screen top using arrow
+    // scrolls to top of screen using arrow
     $(".back-to-top-link").click(function () {
         window.scrollTo({
             top: 0,
@@ -74,7 +74,8 @@ $(document).ready(function () {
          $("#loadingOverlay").fadeToggle(100);
 
         let saveInfo = Boolean($("#saveInfo").attr("checked"));
-        // from using csrf_token in the form
+
+        // from using csrf_token in form
         let csrfToken = $("input[name='csrfmiddlewaretoken']").val();
         let postData = {
             "csrfmiddlewaretoken": csrfToken,
