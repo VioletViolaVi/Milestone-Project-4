@@ -102,6 +102,76 @@ Tables used in the “__*Checkout*__'' page were omitted from this project. Inst
 ### Shipping Address Form Input
 Shipping Address Form Input
 The “__*Shipping Address*__'' form input was split into two inputs:  “__*Street Address 1**__'' and  “__*Street Address 2*__''. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
+# Technologies Used
+## [Python](https://www.python.org/) and [Django](https://www.djangoproject.com/): 
+- This project used Python with Django to produce the backend code that runs on the server, to create the Slurps website.
+- Django was used to do the following: 
+    - Produce forms
+    - Create the authentication & authorisation pages.
+    - Produce alert messages that appear at the top of the screen.
+    - Save user’s personal and payment details on the Slurps website. 
+    - Access its administration page to control, test and monitor the production of the Slurps website.
+    - Create models and reusable apps for the Slurps website. 
+## [Stripe](https://stripe.com/en-gb):
+- Stripe was used to create the card payment input in order to take card payments from the user.
+## OS 
+- This project used OS to provide functions for interacting with the operating system for the Slurps website.
+## [Heroku](https://www.heroku.com/): 
+- This project used Heroku to deploy and display the final finished version of the Slurps website.
+## [Amazon Web Services (AWS)](https://aws.amazon.com/):
+- This project used Amazon Web Services (AWS) to store the css styling and images used in this project.
+## Requirements.txt
+- This project used a requirements.txt file to allow Heroku to detect the Slurps website as a Python app.
+## Procfile
+- This project used a Procfile to inform Heroku on how to run the Slurps website.
+## HTML
+- This project used HTML to create the basic structure and layout of the Slurps website.
+## CSS
+- This project used CSS to add design to the basic structure and layout of the Slurps website.
+## JavaScript
+- This project used JavaScript to add functionality to the features of the Slurps website.
+## [jQuery](https://jquery.com/):
+- This project used jQuery to speed up the process of adding the JavaScript functionality to the Slurps website.
+## [Bootstrap](https://getbootstrap.com/): 
+- This project used Bootstrap to provide the code for the following:
+    - The responsive breakpoints 
+    - Mobile navigation bar
+    - Search bar
+    - All buttons 
+    - Grid system
+    - Tables 
+    - Inline styling:
+        - Margins
+        - Paddings
+        - Text colours
+        - Background colours
+        - Text transforms
+        - Text alignments
+        - Font weights 
+        - Border-radius
+        - Display properties
+        - Positions
+        - Screenreaders
+## [Font Awesome](https://fontawesome.com/): 
+- This project used Font Awesome to provide the icons used in the Slurps website. 
+## [Google Fonts](https://fonts.google.com/): 
+- This project used Google Fonts to provide the font style of the Slurps website.
+## [Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools): 
+- This project used Chrome Development Tools to see how responsive the Slurps website looked on different screen sizes and was also used to debug issues regarding editing CSS and JS code taken from external frameworks and libraries.
+## [W3C Markup Validation Service](https://validator.w3.org/): 
+- This project used W3C Markup Validation Service to check for errors, requiring correction, present in the HTML code of the Slurps website.
+## [CSS Validation Service](https://jigsaw.w3.org/css-validator/): 
+- This project used CSS Validation Service to check for errors, requiring correction, present in the CSS code of the Slurps website.
+## [Gitpod](https://www.gitpod.io/): 
+- This project used Gitpod as the editor for coding out the README file, HTML, CSS, JavaScript, jQuery and Python portions of the Slurps website. External libraries, frameworks, images and wireframes were also stored here. In addition, its terminal was used to conduct commands such as: “__*git status*__“, “__*git add .*__“, “__*git commit -m “...”*__“, “__*git push*__“,  etc to complete this project.
+## [GitHub](https://github.com/): 
+- This project used GitHub to store saved code of the Slurps website via the “__*git push*__“' command, as repositories.
+## [Balsamiq Wireframes](https://balsamiq.com/): 
+- This project used Balsamiq Wireframes to create mockups of what the Slurps website aimed to look like to the user, on completion.
+## Snipping Tool
+- This project used the Snipping Tool to edit the drink images and wireframes for the Slurps website.
+## [Jasmine Testing](https://jasmine.github.io/index.html):
+- The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Credits
 ## Content
 * The card payment input was taken from Stripe.
