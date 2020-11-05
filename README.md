@@ -104,7 +104,30 @@ Shipping Address Form Input
 The “__*Shipping Address*__'' form input was split into two inputs:  “__*Street Address 1**__'' and  “__*Street Address 2*__''. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
 # Credits
 ## Content
-
+* The card payment input was taken from Stripe.
+* The forms were taken from Django.
+* The authentication and authorisation pages were taken from Django.
+* The country field select input was taken from Django.
+* The fonts used in this project were taken from Font Awesome.
+* Code from Bootstrap was used to create the following:
+    * The responsive breakpoints 
+    * Mobile navigation bar
+    * Search bar
+    * All buttons 
+    * Grid system
+    * Tables 
+    * Inline styling:
+        * Margins
+        * Paddings
+        * Text colours
+        * Background colours
+        * Text transforms
+        * Text alignments
+        * Font weights 
+        * Border-radius
+        * Display properties
+        * Positions
+        * Screenreaders
 ## Media
 The following images used for this website were taken from Unsplash:
 * Photos by Alexander Mils:
