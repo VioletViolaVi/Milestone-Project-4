@@ -102,6 +102,7 @@ Tables used in the “__*Checkout*__'' page were omitted from this project. Inst
 ### Shipping Address Form Input
 Shipping Address Form Input
 The “__*Shipping Address*__'' form input was split into two inputs:  “__*Street Address 1**__'' and  “__*Street Address 2*__''. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
+
 # Credits
 ## Media
 The following images used for this website were taken from Unsplash:
