@@ -71,8 +71,37 @@ This is an activity diagram showing how the Slurps website is intended to be use
 ![A wireframe of the checkout delete modal on desktop screens.](/media/wireframes/31.checkoutDeleteModal-desktop.PNG)
 ![A wireframe of the payment page on desktop screens.](/media/wireframes/32.payment-desktop.PNG)
 ## Wireframe and Final Project Differences
-
-
+### Shopping Cart Button
+For desktop screen sizes, the word “__*CART*__” was omitted from being placed next to the shopping cart icon as it was deemed unnecessary. Users can tell, based on the universal shopping cart icon symbol, that clicking with it will lead them to their shopping cart. 
+### Signup Login Navigation Link
+The “__*Signup/Login*__” link in the navigation bar was split in two. One was made the “__*Sign Up*__” link, the other was made the “__*Log In*__” link. This was done to avoid confusion with the users so they knew the exact page they would be directed to when clicking on the links.
+### Signup & Login Page
+The signup and login features were produced on separate pages instead of being placed on the same page. This was because on smaller screen sizes, the two separate entities had to be placed on top of each other due to their size taking up the full width of the screen. This was problematic because the login feature, placed underneath the signup feature, could not be seen at first glance once the user had landed on the page. If the user already had an account and was looking to login, there would be initial confusion as the user would not be able to see where they were required to login, despite clicking on the login link. The same problem would present itself if the signup feature was placed at the bottom. If the user was looking to create an account in order to make a purchase, they too would be confused. As a result, this portion of the project was split into two pages.
+### Drink Add Buttons
+The “__*ADD TO CART*__” buttons on the homepage were changed to “__*ADD*__”. This was done to remove unnecessary text from the screen. Using “__*ADD*__” as the label on the buttons made the page look cleaner with a more simplistic look for the users. Changing the button labels also made the buttons smaller and thus more responsive across different screen sizes.
+### Drink Descriptions
+their right-hand side. Doing this allowed for more drink images to be displayed on a single row, when showcased on larger screen sizes. This enabled users to see more options sooner. Users being able to see more images of these drinks as soon as they land on the website, increases their likelihood to make purchases.   
+### About Us Navigation Link
+The “__*About Us*__” navigation link was changed to “__*Our Mission*__” because the about us section sounded more like a series of mission statements practiced by Slurps. It therefore, seemed more appropriate to use a navigation link name that was more reflective of the contents in this portion of the project.
+### About Us Title
+The “__*About Us*__” title was changed to “__*Mission Statement*__” as its first paragraph focussed on the mission of Slurps, instead of the history of the company. The title therefore became a more accurate reflection on what this part of the project was informing the users on.
+### About Us Customer Satisfaction Title
+The “__*Customer Satisfaction*__” title was changed to “__*Our Customers*__” to better match the style of the other two mission statements written alongside it. The tile was reduced in length making the page look cleaner, simpler and more responsive across different screen sizes.
+### Checkout History Button
+The “__*CHECKOUT HISTORY*__” button was changed into a “__*MY PROFILE*__” button because it was better for the link to take users to a part of the website where a variety of activities could be carried out instead of only viewing their order history. These other activities included saving and updating user personal details and changing their passwords, as well as viewing their order history. 
+### Checkout History Title
+The “__*Checkout History*__” title was changed into “__*My Profile*__” as its page ended up consisting of more information about the user, other than just their order history. This page contained: the user’s personal details, ability to change personal details, an access link to change their password and the user’s drink order history. Due to all these different features added to this page, its title required a name more reflective of its content thus, “__*My Profile*__”. 
+### Checkout History Confirmation Order
+The confirmation order of the user’s purchases were made to be redirected to a separate page on its own. This resulted in a more organised structure and flow in using the website.  In addition, the confirmation orders were also made to be sent to the profile page alongside where the user’s personal details and link to change their password were placed.
+### Buy Again Buttons
+The “__*BUY AGAIN*__'' buttons were removed from the project as the tables above them were moved to the “__*My Profile*__” page. The buttons were not moved to the “__*My Profile*__” page alongside the tables because the “__*My Profile*__” page was focused on showing the user’s information regarding their account. Having these buttons present would distract away from this purpose. Also, users could always easily head back to the homepage via the navigation bar’s logo link at the top, to make new purchases.  
+### Checkout Title
+The “__*Checkout*__'' title was changed to “__*Shopping Cart*__'' to be more reflective and accurate about the stage at which the user was in. The aim of this portion of the website was to display to users what they had chosen to put in their shopping cart icon and how much the grand total was going to be; before officially making the payment. Using “__*Checkout*__'' as a title was too generic for labelling this aim as other events occur at a checkout stage e.g. making payments. As no payments were to be made at this point, the title was changed to be more specific over what the user was doing at this stage of their order.
+### Checkout Tables
+Tables used in the “__*Checkout*__'' page were omitted from this project. Instead the shopping information, regarding the selected drink items, were written freely besides the drink image. This added to the clean and simple overall look of the page.
+### Shipping Address Form Input
+Shipping Address Form Input
+The “__*Shipping Address*__'' form input was split into two inputs:  “__*Street Address 1**__'' and  “__*Street Address 2*__''. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
 # Credits
 ## Media
 The following images used for this website were taken from Unsplash:
