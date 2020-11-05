@@ -615,6 +615,9 @@ input[type="text"]#id_default_postcode {
   text-transform: uppercase;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+.profile-countries:focus,
 input:focus,
 select:focus,
 button[type="submit"]:focus {
