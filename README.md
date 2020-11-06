@@ -196,13 +196,19 @@ This project was deployed to Heroku using the following steps:
 6. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*“os.environ.get(“HEROKU_HOSTNAME”)”*__”.
 7. Set an if condition for the existence of the “__*development*__” variable stating that if in development mode, the project’s code will use the configuration for the squlite database and use “__*ALLOWED HOSTS = [“localhost”]*__”. Otherwise, it is to use the database URL configuration for Heroku and use “__*ALLOWED HOSTS = [“os.environ.get(“HEROKU_HOSTNAME”)”]*__”.
 ### Gitpod Terminal 
-1. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
-2. Install “__*psycopg2*__”  by typing “__*pip 3 install psycopg2-binary*__” in the terminal in order to use postgres.
-3. Install “__*green unicorn*__”  by typing “__*pip 3 install gunicorn*__” in the terminal to replace the development server once the website is deployed to Heroku and act as the web server.
-4. Enter “__*pip3 install dj-database-url*__” in the terminal to install the “__*dj-database-url*__” package and parse the database url that Heroku creates and gets all the connection information out of it.
-5. Get the URL of the remote database by entering “__*heroku config*__” in the terminal. This also enables the ability to get, edit, set, and unset environment variables for the Heroku app.
-6. Run the command “__*heroku config:set DISABLE_COLLECTSTATIC=1*__” in the Gitpod terminal.
-7. In the terminal, run migrations by typing in “__*python3 manage.py migrate*__”.
+1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
+2. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
+3. Install “__*psycopg2*__”  by typing “__*pip 3 install psycopg2-binary*__” in the terminal in order to use postgres.
+4. Install “__*green unicorn*__”  by typing “__*pip 3 install gunicorn*__” in the terminal to replace the development server once the website is deployed to Heroku and act as the web server.
+5. Enter “__*pip3 install dj-database-url*__” in the terminal to install the “__*dj-database-url*__” package and parse the database url that Heroku creates and gets all the connection information out of it.
+6. Get the URL of the remote database by entering “__*heroku config*__” in the terminal. This also enables the ability to get, edit, set, and unset environment variables for the Heroku app.
+7. Run the command “__*heroku config:set DISABLE_COLLECTSTATIC=1*__” in the Gitpod terminal.
+8. In the terminal, run migrations by typing in “__*python3 manage.py migrate*__”.
+9. Import the drinks and about us data, using their fixtures, by typing the following in the Gitpod terminal:
+    * “__*python3 manage.py load data drinks*__”
+    * “__*python3 manage.py load data drink_types*__”
+    * “__*python3 manage.py load data about_us*__”
+    * “__*python3 manage.py load data about_us_sections*__”
 ### Additional Files
 1. Create a file called “__*.gitignore*__” and add “__**.squlite3*__” in it, to ignore all files with a squlite3 extension. Also add “__**__pycache__/*__” in the same file, to add all pycache directories which contain compiled Python code.
 2. Inform Heroku that this project is to be a web application with a web server and start “__*green unicorn*__” by creating a “__*Procfile *__” file. 
