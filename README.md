@@ -190,11 +190,12 @@ This project was deployed to Heroku using the following steps:
 ### Settings.py File
 1. In the “__*settings.py*__” file of the project, create a new variable called “__*DATABASES*__” and set its value as a dictionary with the key value name as “__*default*__”. Set the “__*default*__” value as “__*dj_database_url.parse(“os.environ.get(“DATABASE_URL”)”)*__”.
 2. Import “__*dj_database_url*__” at the top of the “__*settings.py*__” file so the key pair value in the “__*DATABASES*__” variable can be used.
-3. Set the value of the “__*SECRET_KEY*__” variable in the “__*settings.py*__” file to “__*SECRET_KEY = os.environ.get(“SECRET_KEY”, “”)*__”. This will prevent the Django server from starting if its environment variable is not set.
-4. Set “__*DEBUG=development*__” and hide the “__*SECRET_KEY*__” to avoid exposing internal source codes on the error page. 
-5. Add “__*development = os.environ.get("DEVELOPMENT", False)*__” to the “__*settings.py*__” file to also avoid exposing internal source codes on the error page.
-6. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*“os.environ.get(“HEROKU_HOSTNAME”)”*__”.
-7. Set an if condition for the existence of the “__*development*__” variable stating that if in development mode, the project’s code will use the configuration for the squlite database and use “__*ALLOWED HOSTS = [“localhost”]*__”. Otherwise, it is to use the database URL configuration for Heroku and use “__*ALLOWED HOSTS = [“os.environ.get(“HEROKU_HOSTNAME”)”]*__”.
+3. Create an if condition where if “__*“DATABASE_URL” in os.environ*__” is the case, the “__*DATABASE = {“default”:dj_database,parse(os.environ.get(“DATABASE”))}*__” condition will be produced. Otherwise, the default configuration of “__*DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3',}}*__” will be used.
+4. Set the value of the “__*SECRET_KEY*__” variable in the “__*settings.py*__” file to “__*SECRET_KEY = os.environ.get(“SECRET_KEY”, “”)*__”. This will prevent the Django server from starting if its environment variable is not set.
+5. Set “__*DEBUG=development*__” and hide the “__*SECRET_KEY*__” to avoid exposing internal source codes on the error page. 
+6. Add “__*development = os.environ.get("DEVELOPMENT", False)*__” to the “__*settings.py*__” file to also avoid exposing internal source codes on the error page.
+7. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*“os.environ.get(“HEROKU_HOSTNAME”)”*__”.
+8. Set an if condition for the existence of the “__*development*__” variable stating that if in development mode, the project’s code will use the configuration for the squlite database and use “__*ALLOWED HOSTS = [“localhost”]*__”. Otherwise, it is to use the database URL configuration for Heroku and use “__*ALLOWED HOSTS = [“os.environ.get(“HEROKU_HOSTNAME”)”]*__”.
 ### Gitpod Terminal 
 1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
 2. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
