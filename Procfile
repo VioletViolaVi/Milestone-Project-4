@@ -1,0 +1,1 @@
+web: gunicorn django_milestone-project-4-vivian.wsgi:application
