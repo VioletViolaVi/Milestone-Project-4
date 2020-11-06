@@ -1,1 +1,1 @@
-web: gunicorn django_milestone-project-4-vivian.wsgi:application
+web: gunicorn slurps.wsgi:application
