@@ -203,7 +203,7 @@ This project was deployed to Heroku using the following steps:
 4. Install “__*green unicorn*__”  by typing “__*pip 3 install gunicorn*__” in the terminal to replace the development server once the website is deployed to Heroku and act as the web server.
 5. Enter “__*pip3 install dj-database-url*__” in the terminal to install the “__*dj-database-url*__” package and parse the database url that Heroku creates and gets all the connection information out of it.
 6. Get the URL of the remote database by entering “__*heroku config*__” in the terminal. This also enables the ability to get, edit, set, and unset environment variables for the Heroku app.
-7. Run the command “__*heroku config:set DISABLE_COLLECTSTATIC=1*__” in the Gitpod terminal.
+7. Run the command “__*heroku config:set DISABLE_COLLECTSTATIC=1 --app vivian-slurps*__” in the Gitpod terminal.
 8. In the terminal, run migrations by typing in “__*python3 manage.py migrate*__”.
 9. Import the drinks and about us data, using their fixtures, by typing the following in the Gitpod terminal:
     * “__*python3 manage.py load data drinks*__”
