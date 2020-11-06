@@ -172,6 +172,18 @@ The “__*Shipping Address*__'' form input was split into two inputs:  “__*Str
 - This project used the Snipping Tool to edit the drink images and wireframes for the Slurps website.
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
+
+
+## Running the code locally
+In order to locally run the code, this project would have to be cloned from GitHub using the following steps:
+1. First enter the “__*list of repositories*__” section of GitHub.
+2. Then, under the repository name of the project, click on the “__*Clone or download*__” button.
+3. Next, when in the dropdown  “__*Clone with HTTPS*__” section, click the “__*clipboard*__” button next to the URL to copy the repository's clone URL.
+4. Afterwards, enter into the “__*local IDE*__” and open “__*Git Bash*__”.
+5. Then, change the current working directory into the location of where the cloned directory is to be made.
+6. Next, type in “__*git clone*__” and paste in the URL that was copied earlier from the “__*Clone with HTTPS*__” section i.e.: 
+    *   “__*git clone: https://github.com/VioletViolaVi/Milestone-Project-4.git*__”
+7. Lastly, tap the “__*enter*__” button on the keyboard to create the local clone.
 # Credits
 ## Content
 * The card payment input was taken from Stripe.
