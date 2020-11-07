@@ -183,6 +183,35 @@ This project was deployed to Heroku using the following steps:
 6. Click on the “__*Settings*__” tab in the Heroku website then click on “__*Reveal Config Vars*__” to confirm that Heroku has provided a “__*DATABASE_URL*__” to be connected to, from inside Django. This means the URL will be made available to the project’s app and can be connected to the Postgres database.
 7. Add another variable called “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku and then click “__*Add*__”. 
 8. Add another variable called “__*SECRET_KEY*__” and add a confidential key value for it as part of the config vars and then click “__*Add*__”. 
+### Amazon Web Services
+1. Create an Amazon Web Services account.
+2. In the “__*services*__” menu, enter in and select from the search bar “__*S3*__”.
+3. Create a new bucket to be used to store the project’s files and name it milestone-project-4-vivian. 
+4. Under the “__*Region*__” heading, select the option closest to the project’s location. 
+5. Uncheck the “__*Block all public access*__” option and check the box to acknowledge the bucket will be public in order to allow public access to the project’s static files, then click the “__*Create bucket*__” button.
+6. Click on the “__*Properties*__” tab and turn on static website hosting to give a new endpoint to be used to access it from the internet.
+7. Fill in default values in the index and error document inputs and then click the  “__*save*__” button.
+8. Click on the “__*Permissions*__” tab, then click on the “__*CORS configuration*__” button and paste in a cors configuration aimed to set up the required access between the project’s Heroku app and the “__*S3*__” bucket.
+9. Click on the “__*Bucket Policy*__” tab and select the “__*policy generator*__” link to create a security policy for this bucket.
+10. From the “__*Select Type of Policy*__” dropdown, select the “__*S3 Bucket Policy*__” option.
+11. Enable all principals using an asterix (“__***__”) and make the action “__*GetObject*__”.
+12. Copy the “__*ARN*__” back in the “__*Bucket Policy*__” tab and paste it in the “__*ARN*__” box in the “__*Amazon Resource Name (ARN)*__” option.
+13. Click on the “__*Add Statement*__” and the “__*Generate Policy*__” buttons at the end and then copy the policy that pops up, into the “__*Bucket Policy*__” editor.
+14. Add a “__*/**__” onto the end of the resource key and then click the “__*Save*__” button.
+15. Click on the “__*Access Control List*__” tab and set the list objects permission for everyone under the “__*Access to the objects*__” header, in the “__*Public Access*__” section and then click the “__*Save*__” button.
+16. In the “__*services*__” menu, open “__*IAM*__”, click “__*Groups*__” and then create and name a new group called “__*milestone-project-4-vivian*__”.
+17. Click the next two “__*Next Step*__” buttons and then the “__*Create Group*__” button.
+18. Click on the “__*Policies*__” link and then the “__*Create Policy*__” button. 
+19. Click on the “__*JSON*__” tab and select the “__*Import manage policy*__” link.
+20. Search for “__*S3*__” and then import the “__*S3*__” full access policy.
+21. Copy the bucket “__*ARN*__” from the “__*Bucket Policy*__” page in “__*S3*__” and then paste it, as a list, in square brackets as the value of the key name “__*Resource*__” with “__*/**__” attached at the end of it.
+22. Click the “__*Review policy*__” button and provide a name, description and then click the “__*Create policy*__” button.
+23. Click back to the “__*Groups*__” link to click on the project’s created group and then click on the “__*Attach Policy*__” button. 
+24. Search for and select the newly created policy in its search bar then click on the “__*Attach Policy*__” button.
+25. Click on the “__*Users*__” link, then the “__*Add user*__” button and then enter a username for the project
+26. Enable programmatic access before clicking the “__*Next Emissions*__”  button.
+27. Select the project’s user and then click the: “__*Next Tags*__”, “__*Next Review*__”and the “__*Create user*__” buttons.
+28. Download and save the “__.csv*__” file containing the user’s access key and secret access key to be used to authenticate them from the Django app.
 ### Outside Environment Variables
 1. Outside of the project’s workspace and in the Gitpod’s settings, set the “__*DEVELOPMENT*__” environment variable to “__*True*__”.
 2. Set the “__*SECRET_KEY*__” variable to a confidential key value. 
