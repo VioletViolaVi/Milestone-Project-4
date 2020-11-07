@@ -174,7 +174,7 @@ The “__*Shipping Address*__'' form input was split into two inputs:  “__*Str
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Deployment
 This project was deployed to Heroku using the following steps:
-### Amazon Web Services
+### Amazon Web Services (AWS)
 1. Create an Amazon Web Services account.
 2. In the “__*services*__” menu, enter in and select from the search bar “__*S3*__”.
 3. Create a new bucket to be used to store the project’s files and name it milestone-project-4-vivian. 
@@ -203,6 +203,8 @@ This project was deployed to Heroku using the following steps:
 26. Enable programmatic access before clicking the “__*Next Emissions*__”  button.
 27. Select the project’s user and then click the: “__*Next Tags*__”, “__*Next Review*__”and the “__*Create user*__” buttons.
 28. Download and save the “__.csv*__” file containing the user’s access key and secret access key to be used to authenticate them from the Django app.
+29. Add media files to “__*S3*__” by creating a new folder, named “__*media*__”, in the “__*Overview*__” tab of the AWS website and uploading the project’s images in this folder.
+30. Click the “__*Next*__” button and then under the “__*Manage Public Permissions*__” select the “__*Grant public read access to these objects*__” option. Afterwards, click the “__*Next*__” button through to the end, before clicking “__*Upload*__”.
 ### Heroku Website
 1. Create an account with the Heroku website then click on the “__*Deploy*__” tab and select “__*GitHub*__”, under the “__*Deployment method*__” heading, to connect github with Heroku.
 2. Search for the repository name of the current project in the search bar under the “__*Connect to GitHub*__” heading and then click on “__*connect*__” once found.
@@ -210,10 +212,15 @@ This project was deployed to Heroku using the following steps:
 4. Click on the “__*Resources*__” tab in the Heroku website and enter “__*postgres*__” in its search bar and select “__*Heroku Postgres*__”.
 5. Leave the “__*Heroku Postgres*__” on the “__*Hobby Dev - Free*__” setting and then click “__*Provision*__”.
 6. Click on the “__*Settings*__” tab in the Heroku website then click on “__*Reveal Config Vars*__” to confirm that Heroku has provided a “__*DATABASE_URL*__” to be connected to, from inside Django. This means the URL will be made available to the project’s app and can be connected to the Postgres database.
-7. Add another variable called “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku and then click “__*Add*__”. 
-8. Add another variable called “__*SECRET_KEY*__” and add a confidential key value for it as part of the config vars and then click “__*Add*__”. 
-9. Add the variables “__*AWS_ACCESS_KEY_ID*__” and “__*AWS_SECRET_ACCESS_KEY*__” with their values, which were downloaded from the “__*csv*__” file and add “__*USE_AWS*__”  and set its value to “__*True*__”, so the “__*settings.py*__” file knows to use the AWS configuration when deployed to Heroku.
-10. If present, remove the “__*DISABLE COLLECTSTATIC VARIABLE*__” and its value so Django can collect static files automatically and upload them to “__*S3*__”.
+7. Add the following variables to this section of the Heroku website before clicking the “__*Add*__” button:
+    * “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku 
+    * “__*SECRET_KEY*__” with the value of a confidential key.
+    * “__*AWS_ACCESS_KEY_ID*__” with its value downloaded from the “__*.csv*__” file
+    * “__*AWS_SECRET_ACCESS_KEY*__” with its value downloaded from the “__*.csv*__” file
+    * “__*USE_AWS*__” with its value set to “__*True*__”, so the “__*settings.py*__” file knows to use the AWS configuration when deployed to Heroku.
+    * “__*STRIPE_PUBLIC_KEY*__” with its value from the “__*Stripe*__” website.
+    * “__*STRIPE_SECRET_KEY*__” with its value from the “__*Stripe*__” website. 
+8. If present, remove the “__*DISABLE COLLECTSTATIC VARIABLE*__” and its value so Django can collect static files automatically and upload them to “__*S3*__”.
 ### Outside Environment Variables
 1. Outside of the project’s workspace and in the Gitpod’s settings, set the “__*DEVELOPMENT*__” environment variable to “__*True*__”.
 2. Set the “__*SECRET_KEY*__” variable to a confidential key value. 
@@ -231,11 +238,18 @@ is the case, the “__*DATABASE = {“default”:dj_database,parse(os.environ.ge
 9. Add “__*storages*__” to the “__*INSTALLED APPS*__” list in the settings.py file. 
 10. To connect “__*Django*__” to “__*S3*__”, create an if statement where if “__*USE_AWS*__ __*in os.environ:*__”,
 is fulfilled then the following are produced: 
+    * “__*AWS_S3_OBJECT_PARAMETERS = {“Expires”: “Thu, 31 Dec 2099 20:00:00 GMT”, “CacheControl”: “max-age=94608000”,}*__”
     * “__*AWS_STORAGE_BUCKET_NAME = milestone-project-4-vivian*__”
     * “__*AWS_S3_REGION_NAME = “us-east-1”*__”
     * “__*AWS_ACCESS_KEY_ID = os.environ.get(“AWS_ACCESS_KEY_ID”)*__”
     * “__*AWS_SECRET_ACCESS_KEY = os.environ.get(“AWS_SECRET_ACCESS_KEY”)*__”
     * “__*AWS_S3_CUSTOM_DOMAIN = f“{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com”*__”
+    * “__*STATICFILES_STORAGE = “custom_storages.StaticStorage”*__” 
+    * “__*STATICFILES_LOCATION = “static”*__” 
+    * “__*DEFAULT_FILE_STORAGE = “custom_storages.MediaStorage”*__” 
+    * “__*MEDIAFILES_LOCATION = “media”*__” 
+    * “__*STATIC_URL = f”https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/”*__” 
+    * “__*MEDIA_URL = f“https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/”*__” 
 ### Gitpod Terminal 
 1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
 2. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
