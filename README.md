@@ -220,6 +220,7 @@ This project was deployed to Heroku using the following steps:
     * “__*USE_AWS*__” with its value set to “__*True*__”, so the “__*settings.py*__” file knows to use the AWS configuration when deployed to Heroku.
     * “__*STRIPE_PUBLIC_KEY*__” with its value from the “__*Stripe*__” website.
     * “__*STRIPE_SECRET_KEY*__” with its value from the “__*Stripe*__” website. 
+    * “__*STRIPE_WH_SECRET*__” with its value from the “__*Stripe*__” website.
 8. If present, remove the “__*DISABLE COLLECTSTATIC VARIABLE*__” and its value so Django can collect static files automatically and upload them to “__*S3*__”.
 ### Outside Environment Variables
 1. Outside of the project’s workspace and in the Gitpod’s settings, set the “__*DEVELOPMENT*__” environment variable to “__*True*__”.
