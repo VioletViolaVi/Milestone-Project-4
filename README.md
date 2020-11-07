@@ -185,10 +185,10 @@ This project was deployed to Heroku using the following steps:
 8. Click on the “__*Permissions*__” tab, then click on the “__*CORS configuration*__” button and paste in a cors configuration aimed to set up the required access between the project’s Heroku app and the “__*S3*__” bucket.
 9. Click on the “__*Bucket Policy*__” tab and select the “__*policy generator*__” link to create a security policy for this bucket.
 10. From the “__*Select Type of Policy*__” dropdown, select the “__*S3 Bucket Policy*__” option.
-11. Enable all principals using an asterix (“__***__”) and make the action “__*GetObject*__”.
+11. Enable all principals using an asterix and make the action “__*GetObject*__”.
 12. Copy the “__*ARN*__” back in the “__*Bucket Policy*__” tab and paste it in the “__*ARN*__” box in the “__*Amazon Resource Name (ARN)*__” option.
 13. Click on the “__*Add Statement*__” and the “__*Generate Policy*__” buttons at the end and then copy the policy that pops up, into the “__*Bucket Policy*__” editor.
-14. Add a “__*/**__” onto the end of the resource key and then click the “__*Save*__” button.
+14. Add an asterix onto the end of the resource key and then click the “__*Save*__” button.
 15. Click on the “__*Access Control List*__” tab and set the list objects permission for everyone under the “__*Access to the objects*__” header, in the “__*Public Access*__” section and then click the “__*Save*__” button.
 16. In the “__*services*__” menu, open “__*IAM*__”, click “__*Groups*__” and then create and name a new group called “__*milestone-project-4-vivian*__”.
 17. Click the next two “__*Next Step*__” buttons and then the “__*Create Group*__” button.
@@ -206,12 +206,14 @@ This project was deployed to Heroku using the following steps:
 ### Heroku Website
 1. Create an account with the Heroku website then click on the “__*Deploy*__” tab and select “__*GitHub*__”, under the “__*Deployment method*__” heading, to connect github with Heroku.
 2. Search for the repository name of the current project in the search bar under the “__*Connect to GitHub*__” heading and then click on “__*connect*__” once found.
-3. Click on __*Enable Automatic Deploys *__” under the “__*Automatic deploys*__” heading, to automatically deploy the project’s code to Heroku whenever the project is pushed to the master branch on its GitHub repository.
+3. Click on __*Enable Automatic Deploys*__” under the “__*Automatic deploys*__” heading, to automatically deploy the project’s code to Heroku whenever the project is pushed to the master branch on its GitHub repository.
 4. Click on the “__*Resources*__” tab in the Heroku website and enter “__*postgres*__” in its search bar and select “__*Heroku Postgres*__”.
 5. Leave the “__*Heroku Postgres*__” on the “__*Hobby Dev - Free*__” setting and then click “__*Provision*__”.
 6. Click on the “__*Settings*__” tab in the Heroku website then click on “__*Reveal Config Vars*__” to confirm that Heroku has provided a “__*DATABASE_URL*__” to be connected to, from inside Django. This means the URL will be made available to the project’s app and can be connected to the Postgres database.
 7. Add another variable called “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku and then click “__*Add*__”. 
 8. Add another variable called “__*SECRET_KEY*__” and add a confidential key value for it as part of the config vars and then click “__*Add*__”. 
+9. Add the variables “__*AWS_ACCESS_KEY_ID*__” and “__*AWS_SECRET_ACCESS_KEY*__” with their values, which were downloaded from the “__*csv*__” file and add “__*USE_AWS*__”  and set its value to “__*True*__”, so the “__*settings.py*__” file knows to use the AWS configuration when deployed to Heroku.
+10. If present, remove the “__*DISABLE COLLECTSTATIC VARIABLE*__” and its value so Django can collect static files automatically and upload them to “__*S3*__”.
 ### Outside Environment Variables
 1. Outside of the project’s workspace and in the Gitpod’s settings, set the “__*DEVELOPMENT*__” environment variable to “__*True*__”.
 2. Set the “__*SECRET_KEY*__” variable to a confidential key value. 
@@ -219,18 +221,20 @@ This project was deployed to Heroku using the following steps:
 ### Settings.py File
 1. In the “__*settings.py*__” file of the project, create a new variable called “__*DATABASES*__” and set its value as a dictionary with the key value name as “__*default*__”. Set the “__*default*__” value as “__*dj_database_url.parse(“os.environ.get(“DATABASE_URL”)”)*__”.
 2. Import “__*dj_database_url*__” at the top of the “__*settings.py*__” file so the key pair value in the “__*DATABASES*__” variable can be used.
-3. Create an if condition where if “__*“DATABASE_URL” in os.environ*__” is the case, the “__*DATABASE = {“default”:dj_database,parse(os.environ.get(“DATABASE”))}*__” condition will be produced. Otherwise, the default configuration of “__*DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3',}}*__” will be used.
+3. Create an if condition where if “__*“DATABASE_URL” in os.environ*__”
+is the case, the “__*DATABASE = {“default”:dj_database,parse(os.environ.get(“DATABASE”))}*__” condition will be produced. Otherwise, the default configuration of “__*DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3',}}*__” will be used.
 4. Set the value of the “__*SECRET_KEY*__” variable in the “__*settings.py*__” file to “__*SECRET_KEY = os.environ.get(“SECRET_KEY”, “”)*__”. This will prevent the Django server from starting if its environment variable is not set.
 5. Set “__*DEBUG=“DEVELOPMENT” in os.environ*__” and hide the “__*SECRET_KEY*__” to avoid exposing internal source codes on the error page. 
 6. Add “__*development = os.environ.get("DEVELOPMENT", False)*__” to the “__*settings.py*__” file to also avoid exposing internal source codes on the error page.
-7. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*“os.environ.get(“HEROKU_HOSTNAME”)”*__”.
+7. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*os.environ.get(“HEROKU_HOSTNAME”)*__”.
 8. Set an if condition for the existence of the “__*development*__” variable stating that if in development mode, the project’s code will use the configuration for the squlite database and use “__*ALLOWED HOSTS = [“localhost”]*__”. Otherwise, it is to use the database URL configuration for Heroku and use “__*ALLOWED HOSTS = [“os.environ.get(“HEROKU_HOSTNAME”)”]*__”.
 9. Add “__*storages*__” to the “__*INSTALLED APPS*__” list in the settings.py file. 
-10. To connect “__*Django*__” to “__*S3*__”, create an if statement where if “__*“USE_AWS” in os.environ:*__”, is fulfilled then the following are produced: 
+10. To connect “__*Django*__” to “__*S3*__”, create an if statement where if “__*USE_AWS*__ __*in os.environ:*__”,
+is fulfilled then the following are produced: 
     * “__*AWS_STORAGE_BUCKET_NAME = milestone-project-4-vivian*__”
     * “__*AWS_S3_REGION_NAME = “us-east-1”*__”
     * “__*AWS_ACCESS_KEY_ID = os.environ.get(“AWS_ACCESS_KEY_ID”)*__”
-    * “__AWS_SECRET_ACCESS_KEY = os.environ.get(“AWS_SECRET_ACCESS_KEY”)*__”
+    * “__*AWS_SECRET_ACCESS_KEY = os.environ.get(“AWS_SECRET_ACCESS_KEY”)*__”
     * “__*AWS_S3_CUSTOM_DOMAIN = f“{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com”*__”
 ### Gitpod Terminal 
 1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
@@ -248,15 +252,18 @@ This project was deployed to Heroku using the following steps:
     * “__*python3 manage.py load data about_us_sections*__”
 10. In the terminal, install “__*boto3*__” and “__*django_storages*__” by entering “__*pip3 install boto3*__” and “__*pip3 install django_storages*__” respectively.
 ### Additional Files
-1. Create a file called “__*.gitignore*__” and add “__**.squlite3*__” in it, to ignore all files with a squlite3 extension. Also add “__**__pycache__/*__” in the same file, to add all pycache directories which contain compiled Python code.
-2. Inform Heroku that this project is to be a web application with a web server and start “__*green unicorn*__” by creating a “__*Procfile *__” file. 
-3. In the “__*Procfile *__” file, type in “__*web:gunicorn django_milestone-project-4-vivian.wsgi:application *__” to tell gunicorn to run using the project’s wsgi module to allow it to handle HTTP requests. 
+1. Create a file called “__*.gitignore*__”
+and add “__**.squlite3*__” in it, to ignore all files with a squlite3 extension. Also add “__*__pycache\__/*__”
+in the same file, to add all pycache directories which contain compiled Python code.
+2. Inform Heroku that this project is to be a web application with a web server and start “__*green unicorn*__” by creating a “__*Procfile*__” file. 
+3. In the “__*Procfile*__” file, type in “__*web:gunicorn django_milestone-project-4-vivian.wsgi:application*__” to tell gunicorn to run using the project’s wsgi module to allow it to handle HTTP requests. 
+4. Create a new file called “__*custom_storages.py*__”  to tell django “__*S3*__” is to be used in production to store static files and any uploaded images,  whenever collectstatic is run.
 ### Deploy
 1. Enter “__*pip 3 freeze --local > requirements.txt*__” in the Gitpod terminal to inform Heroku on what it needs to install for the website to work. It will inform Heroku about all the packages it requires to install using pip.
 2. Add all the files to the local git repository by entering in the Gitpod terminal “__*git add .*__” then enter “__*git status*__” to see that all the files have been added to the local repository.
-3. Commit the changes made to the files in this project by entering in the Gitpod terminal “__*git commit -m “Deploy to heroku” *__”.  
-4. Push these committed changes made to the files in this project, to the remote repository, by entering “__*git push origin master *__” in the Gitpod terminal. 
-5. Push the code to the Heroku repository, created by the Heroku app, by entering “__*git push heroku master *__” in the Gitpod terminal. This will detect the Python app and install Python as a result, as well as pip, sqlite3 and all the requirements in the “__*requirements.text *__” file. 
+3. Commit the changes made to the files in this project by entering in the Gitpod terminal “__*git commit -m “Deploy to heroku”*__”.  
+4. Push these committed changes made to the files in this project, to the remote repository, by entering “__*git push origin master*__” in the Gitpod terminal. 
+5. Push the code to the Heroku repository, created by the Heroku app, by entering “__*git push heroku master*__” in the Gitpod terminal. This will detect the Python app and install Python as a result, as well as pip, sqlite3 and all the requirements in the “__*requirements.text*__” file. 
 6. Back on the Heroku website, click on the “__*Activity*__” tab to see the project’s app being built as well as its log. Ensure “__*Build finished*__” can be seen at the bottom of its build log to confirm that the project was deployed successfully. 
 7. Finally, click on the “__*Deploy Branch*__” button, under the “__*Manual deploy*__” heading, within the “__*Deploy*__” tab to deploy the project.
 ## Running the code locally
