@@ -174,15 +174,6 @@ The “__*Shipping Address*__'' form input was split into two inputs:  “__*Str
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Deployment
 This project was deployed to Heroku using the following steps:
-### Heroku Website
-1. Create an account with the Heroku website then click on the “__*Deploy*__” tab and select “__*GitHub*__”, under the “__*Deployment method*__” heading, to connect github with Heroku.
-2. Search for the repository name of the current project in the search bar under the “__*Connect to GitHub*__” heading and then click on “__*connect*__” once found.
-3. Click on __*Enable Automatic Deploys *__” under the “__*Automatic deploys*__” heading, to automatically deploy the project’s code to Heroku whenever the project is pushed to the master branch on its GitHub repository.
-4. Click on the “__*Resources*__” tab in the Heroku website and enter “__*postgres*__” in its search bar and select “__*Heroku Postgres*__”.
-5. Leave the “__*Heroku Postgres*__” on the “__*Hobby Dev - Free*__” setting and then click “__*Provision*__”.
-6. Click on the “__*Settings*__” tab in the Heroku website then click on “__*Reveal Config Vars*__” to confirm that Heroku has provided a “__*DATABASE_URL*__” to be connected to, from inside Django. This means the URL will be made available to the project’s app and can be connected to the Postgres database.
-7. Add another variable called “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku and then click “__*Add*__”. 
-8. Add another variable called “__*SECRET_KEY*__” and add a confidential key value for it as part of the config vars and then click “__*Add*__”. 
 ### Amazon Web Services
 1. Create an Amazon Web Services account.
 2. In the “__*services*__” menu, enter in and select from the search bar “__*S3*__”.
@@ -212,6 +203,15 @@ This project was deployed to Heroku using the following steps:
 26. Enable programmatic access before clicking the “__*Next Emissions*__”  button.
 27. Select the project’s user and then click the: “__*Next Tags*__”, “__*Next Review*__”and the “__*Create user*__” buttons.
 28. Download and save the “__.csv*__” file containing the user’s access key and secret access key to be used to authenticate them from the Django app.
+### Heroku Website
+1. Create an account with the Heroku website then click on the “__*Deploy*__” tab and select “__*GitHub*__”, under the “__*Deployment method*__” heading, to connect github with Heroku.
+2. Search for the repository name of the current project in the search bar under the “__*Connect to GitHub*__” heading and then click on “__*connect*__” once found.
+3. Click on __*Enable Automatic Deploys *__” under the “__*Automatic deploys*__” heading, to automatically deploy the project’s code to Heroku whenever the project is pushed to the master branch on its GitHub repository.
+4. Click on the “__*Resources*__” tab in the Heroku website and enter “__*postgres*__” in its search bar and select “__*Heroku Postgres*__”.
+5. Leave the “__*Heroku Postgres*__” on the “__*Hobby Dev - Free*__” setting and then click “__*Provision*__”.
+6. Click on the “__*Settings*__” tab in the Heroku website then click on “__*Reveal Config Vars*__” to confirm that Heroku has provided a “__*DATABASE_URL*__” to be connected to, from inside Django. This means the URL will be made available to the project’s app and can be connected to the Postgres database.
+7. Add another variable called “__*HEROKU_HOSTNAME*__” with the value of the project app’s hostname on Heroku and then click “__*Add*__”. 
+8. Add another variable called “__*SECRET_KEY*__” and add a confidential key value for it as part of the config vars and then click “__*Add*__”. 
 ### Outside Environment Variables
 1. Outside of the project’s workspace and in the Gitpod’s settings, set the “__*DEVELOPMENT*__” environment variable to “__*True*__”.
 2. Set the “__*SECRET_KEY*__” variable to a confidential key value. 
@@ -226,6 +226,12 @@ This project was deployed to Heroku using the following steps:
 7. Locate the “__*ALLOWED HOSTS*__” variable and in its square brackets enter “__*“os.environ.get(“HEROKU_HOSTNAME”)”*__”.
 8. Set an if condition for the existence of the “__*development*__” variable stating that if in development mode, the project’s code will use the configuration for the squlite database and use “__*ALLOWED HOSTS = [“localhost”]*__”. Otherwise, it is to use the database URL configuration for Heroku and use “__*ALLOWED HOSTS = [“os.environ.get(“HEROKU_HOSTNAME”)”]*__”.
 9. Add “__*storages*__” to the “__*INSTALLED APPS*__” list in the settings.py file. 
+10. To connect “__*Django*__” to “__*S3*__”, create an if statement where if “__*“USE_AWS” in os.environ:*__”, is fulfilled then the following are produced: 
+    * “__*AWS_STORAGE_BUCKET_NAME = milestone-project-4-vivian*__”
+    * “__*AWS_S3_REGION_NAME = “us-east-1”*__”
+    * “__*AWS_ACCESS_KEY_ID = os.environ.get(“AWS_ACCESS_KEY_ID”)*__”
+    * “__AWS_SECRET_ACCESS_KEY = os.environ.get(“AWS_SECRET_ACCESS_KEY”)*__”
+    * “__*AWS_S3_CUSTOM_DOMAIN = f“{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com”*__”
 ### Gitpod Terminal 
 1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
 2. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
