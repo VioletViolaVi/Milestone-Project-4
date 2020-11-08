@@ -4,26 +4,27 @@
 {% block tab_title %}| Home{% endblock %}
 
 {% block home %}   
-    {% if request.user.is_superuser %}
-        <div class="django-admin-link text-left col-12">
-            <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
-        </div>
-    {% endif %} 
-
-    {% if messages %} 
-        {% for message in messages %}
-            <div class="font-weight-bolder text-danger col-12 text-center p-0">
-                <p class="home-message">{{ message }}</p>                           
+    <section id="homePageSection">
+        {% if request.user.is_superuser %}
+            <div class="django-admin-link text-left col-12">
+                <a class="text-body text-capitalize font-weight-bolder" href="{% url 'admin:index' %}"><u>go to django admin</u></a> 
             </div>
-        {% endfor %}
-    {% endif %}
+        {% endif %} 
 
-    {% include "includes/homepage-sections/sort-by.html" %} 
-    {% include "includes/homepage-sections/search-drinks.html" %} 
-    {% include "includes/homepage-sections/new-drinks.html" %}
-    {% include "includes/homepage-sections/juices.html" %}   
-    {% include "includes/homepage-sections/milkshakes.html" %}  
-    {% include "includes/homepage-sections/about-us.html" %}  
+        {% if messages %} 
+            {% for message in messages %}
+                <div class="font-weight-bolder text-danger col-12 text-center p-0">
+                    <p class="home-message">{{ message }}</p>                           
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% include "includes/homepage-sections/sort-by.html" %} 
+        {% include "includes/homepage-sections/search-drinks.html" %} 
+        {% include "includes/homepage-sections/new-drinks.html" %}
+        {% include "includes/homepage-sections/juices.html" %}   
+        {% include "includes/homepage-sections/milkshakes.html" %}
+    </section> 
 {% endblock %}
 
 {% block postloadjs %}

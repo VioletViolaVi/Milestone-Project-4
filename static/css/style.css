@@ -16,7 +16,7 @@ a:focus {
 }
 
 html {
-  scroll-padding-top: 12.5em;
+  scroll-padding-top: 13em;
   scroll-behavior: smooth;
 }
 
@@ -236,6 +236,10 @@ body {
   justify-content: center;
 }
 
+#homePageSection {
+  padding-bottom: 10em;
+}
+
 .dot-dot-dot {
   width: 10em;
   white-space: nowrap;
@@ -304,6 +308,11 @@ body {
 
 .new-drinks-title {
   margin-top: 1.1em;
+}
+
+/******************************************* about us page */
+#aboutUsSection {
+  padding-bottom: 10em;
 }
 
 /******************************************* shopping cart */
@@ -708,6 +717,11 @@ button[type="submit"]:focus {
 
 /* bootstrap media query */
 @media (min-width: 576px) {
+  /******************************************* universal */
+  html {
+    scroll-padding-top: 10.5em;
+  }
+
   /******************************************* headers */
   #search-bar {
     width: 100%;
@@ -831,6 +845,11 @@ button[type="submit"]:focus {
 
 /* bootstrap media query */
 @media (min-width: 992px) {
+  /******************************************* universal */
+  html {
+    scroll-padding-top: 9.5em;
+  }
+  
   /******************************************* header */
   .person-icon-bg,
   .shopping-cart-icon-bg {
