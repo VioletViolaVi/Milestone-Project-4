@@ -41,7 +41,7 @@
                                         <form method="POST" action="{% url 'edit_shopping_cart' shopping_cart.item_id %}" class="quantity-selection shopping-cart-edit-btn">
                                             {% csrf_token %}
                                             <label for="editDrinks"></label>
-                                            <button type="submit" class="edit-btn text-uppercase bg-secondary mb-5 font-weight-bolder">edit</button>
+                                            <button type="submit" class="edit-btn text-uppercase bg-info mb-5 font-weight-bolder">edit</button>
                                             <input value="{{ shopping_cart.drink_quantity }}" type="number" id="editDrinks" name="editDrinks" class="font-weight-bolder">
                                         </form>
                                         <i class="fas fa-trash-alt ml-1" data-target="#remove_{{ shopping_cart.item_id }}" data-toggle="modal"></i>                                                                       
@@ -64,8 +64,8 @@
                                             <p class="font-weight-bolder">"{{ shopping_cart.drink.drink_name }}"</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary btn-danger text-capitalize" data-dismiss="modal">no</button>
-                                            <button type="button" class="bin-icon btn btn-success text-capitalize" id="delete_{{ shopping_cart.item_id }}">yes</button>
+                                            <button type="button" class="btn btn-info btn-danger text-uppercase" data-dismiss="modal">no</button>
+                                            <button type="button" class="bin-icon btn btn-success text-uppercase" id="delete_{{ shopping_cart.item_id }}">yes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                 </ul>
                             </div> 
                             <div class="pay-btn-holder text-left col-4 col-sm-6">
-                                <a href="{% url 'payment' %}" class="pay-btn bg-secondary text-body text-uppercase font-weight-bolder">pay</a> 
+                                <a href="{% url 'payment' %}" class="pay-btn bg-info text-body text-uppercase font-weight-bolder">pay</a> 
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                 {% else %} 
                     <div class="col-12 mb-5 text-center">
                         <p>Your shopping cart is empty.</p>
-                        <a class="back-to-home-pg-btn text-uppercase bg-secondary text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
+                        <a class="back-to-home-pg-btn text-uppercase bg-info text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
                     </div>
                 {% endif %}
             </div>    

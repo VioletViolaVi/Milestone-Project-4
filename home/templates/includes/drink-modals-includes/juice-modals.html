@@ -2,7 +2,7 @@
     <div class="mt-1 mb-5">
         <small>
             <span>                                                
-                <a class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' juice.id %}">edit</a>                                               
+                <a class="edit-btn text-uppercase text-body mb-1 font-weight-bolder text-body mr-3" href="{% url 'edit_drink' juice.id %}">edit</a>                                               
             </span>
             <span>                                              
                 <i data-target="#adminRemove_{{ juice.id }}" data-toggle="modal" class="fas fa-trash-alt"></i>                                                                                                                                
@@ -23,7 +23,7 @@
                         <p class="font-weight-bolder text-capitalize">"{{ juice.drink_name }}"</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btn-danger text-uppercase" data-dismiss="modal">no</button>
+                        <button type="button" class="btn btn-danger text-uppercase" data-dismiss="modal">no</button>
                         <a href="{% url 'delete_drink' juice.id %}" class="bin-icon btn btn-success text-uppercase">yes</a>
                     </div>
                 </div>

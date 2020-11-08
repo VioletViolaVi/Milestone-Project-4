@@ -1,6 +1,6 @@
 {% if request.user.is_superuser %}
     <small>                                                                               
-        <a type="button" class="edit-btn text-uppercase bg-secondary mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' main.id %}">edit</a>                                                                           
+        <a type="button" class="edit-btn text-uppercase mb-1 font-weight-bolder text-body mr-3" href="{% url 'change_about_us' main.id %}">edit</a>                                                                           
         <a type="button" class="text-body" data-toggle="modal" data-target="#adminAboutUsRemove_{{ main.id }}"><i class="fas fa-trash-alt"></i></a>
     </small>
 

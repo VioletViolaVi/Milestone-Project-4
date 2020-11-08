@@ -1,12 +1,12 @@
-<div class="new-drinks-circle1 text-uppercase bg-secondary font-weight-bolder">new!</div>
+<div class="new-drinks-circle1 text-uppercase font-weight-bolder">new!</div>
 {% for juice in juices %}
     {% if new_drink.drink_name == juice.drink_name %}
-        <a href="#juiceSelection_{{ juice.id }}" class="buy-now-btn text-uppercase text-body bg-secondary font-weight-bolder">buy now</a>
+        <a href="#juiceSelection_{{ juice.id }}" class="buy-now-btn text-uppercase text-body font-weight-bolder">buy now</a>
     {% endif %} 
 {% endfor %} 
 
 {% for milkshake in milkshakes %}
     {% if new_drink.drink_name == milkshake.drink_name %}
-        <a href="#milkshakeSelection_{{ milkshake.id }}" class="buy-now-btn text-uppercase text-body bg-secondary font-weight-bolder">buy now</a>
+        <a href="#milkshakeSelection_{{ milkshake.id }}" class="buy-now-btn text-uppercase text-body font-weight-bolder">buy now</a>
     {% endif %} 
 {% endfor %}

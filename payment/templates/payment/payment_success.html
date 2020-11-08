@@ -29,7 +29,7 @@
                 <div class="col-12 col-sm-7 col-lg-8 text-capitalize">
                     <ul class=" mb-sm-0">
                         <li>
-                            <b class="font-weight-bolder text-secondary">order number:</b> 
+                            <b class="font-weight-bolder text-info">order number:</b> 
                             <small class="text-uppercase">{{ drink_order.drink_order_number }}</small>
                         </li>
                         <br>
@@ -38,15 +38,15 @@
                         </li>
                         {% for drink_item in drink_order.lineitems.all %}                            
                             <li>
-                                <b class="font-weight-bolder text-secondary">name:</b> 
+                                <b class="font-weight-bolder text-info">name:</b> 
                                 {{ drink_item.drink.drink_name }}
                             </li>
                             <li>
-                                <b class="font-weight-bolder text-secondary">quantity:</b> 
+                                <b class="font-weight-bolder text-info">quantity:</b> 
                                 {{ drink_item.drink_quantity }}
                             </li>
                             <li>
-                                <b class="font-weight-bolder text-secondary">price:</b> 
+                                <b class="font-weight-bolder text-info">price:</b> 
                                 £{{ drink_item.drink.price }}
                             </li>
                         {% endfor %}
@@ -58,33 +58,33 @@
                             <h5 class="font-weight-bolder">personal details</h5>
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">full name:</b> 
+                            <b class="font-weight-bolder text-info">full name:</b> 
                             {{ drink_order.full_name }}
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">street address{% if drink_order.street_address2 %} 1{% endif %}:</b> 
+                            <b class="font-weight-bolder text-info">street address{% if drink_order.street_address2 %} 1{% endif %}:</b> 
                             {{ drink_order.street_address1 }}
                         </li>
                         {% if drink_order.street_address2 %}
                             <li class="text-capitalize">
-                                <b class="font-weight-bolder text-secondary">street address 2:</b> 
+                                <b class="font-weight-bolder text-info">street address 2:</b> 
                                 {{ drink_order.street_address2 }}
                             </li>
                         {% endif %}
                         <li>
-                            <b class="font-weight-bolder text-secondary text-capitalize">postcode:</b> 
+                            <b class="font-weight-bolder text-info text-capitalize">postcode:</b> 
                             <span class="text-uppercase">{{ drink_order.postcode }}</span>
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">country:</b> 
+                            <b class="font-weight-bolder text-info">country:</b> 
                             <span class="text-uppercase">{{ drink_order.country }}</span>
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">phone number:</b> 
+                            <b class="font-weight-bolder text-info">phone number:</b> 
                             {{ drink_order.phone_number }}
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">email:</b> 
+                            <b class="font-weight-bolder text-info">email:</b> 
                             <span class="text-lowercase">{{ drink_order.email }}</span>
                         </li>
                         <br>
@@ -92,15 +92,15 @@
                             <h5 class="font-weight-bolder">costs</h5>
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">subtotal:</b> 
+                            <b class="font-weight-bolder text-info">subtotal:</b> 
                             £{{ drink_order.subtotal }}
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">delivery cost:</b> 
+                            <b class="font-weight-bolder text-info">delivery cost:</b> 
                             £{{ drink_order.delivery_cost }}
                         </li>
                         <li class="text-capitalize">
-                            <b class="font-weight-bolder text-secondary">grand total:</b> 
+                            <b class="font-weight-bolder text-info">grand total:</b> 
                             £{{ drink_order.grand_total }}
                         </li>
                         <br>
@@ -115,9 +115,9 @@
     
         <div class="col-12 text-center mt-3 text-uppercase">
             {% if taken_from_user_profiles %}
-                <a class="back-to-home-pg-btn text-body bg-secondary font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
+                <a class="back-to-home-pg-btn text-body bg-info font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
             {% else %}
-                <a class="back-to-home-pg-btn text-body bg-secondary font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+                <a class="back-to-home-pg-btn text-body bg-info font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
             {% endif %}
         </div>
 

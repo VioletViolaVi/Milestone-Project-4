@@ -26,30 +26,35 @@ html {
   position: fixed;
   right: 0.5em;
   z-index: 1;
-  background-color: darkgray;
+  background-color: white;
   border-radius: 50%;
 }
 
 .fas.fa-arrow-circle-up {
   border-radius: 2em;
   cursor: pointer;
-  border: solid 0.1em lightgray;
+  border: solid 0.1em lightblue;
 }
 
 .fas.fa-arrow-circle-up:hover,
 .fixed-arrow:hover {
-  background-color: lightgray;
-  border: solid 0.1em gray;
+  background-color: lightblue;
+  border: solid 0.1em lightblue;
 }
 
 /******************************************* headers */
 .navbar-toggler:focus,
 .navbar-toggler:active,
-.navbar-toggler-icon:focus,
-.fixed-top.navbar input[type="search"]:focus {
+.navbar-toggler-icon:focus {
+  border: lightblue solid 0.2em;
+}
+
+.fixed-top.navbar input[type="search"]:focus,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
   outline: none;
   box-shadow: none;
-  border: slategray solid 0.2em;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -68,7 +73,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .nav-link:hover,
 .history-and-trolley-bg,
 .delivery-highlight {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 
 .history-and-trolley-bg,
@@ -87,7 +92,17 @@ input[type="search"]::-ms-reveal {
 .fas.fa-shopping-cart:active,
 .trolley-counter-circle:active,
 .trolley-counter-circle:hover {
-  color: darkslategray;
+  color: #17a2b8;
+}
+
+.fixed-top.navbar input[type="search"]:focus {
+  border: #17a2b8 solid 0.2em;
+}
+
+.icon-nav-bg {
+  background-color: lightblue;
+  height: 6em;
+  margin-top: 3.4em;
 }
 
 .nav-link:hover {
@@ -99,11 +114,11 @@ input[type="search"]::-ms-reveal {
 }
 
 .fixed-top.navbar input[type="search"] {
-  border: lightgray solid 0.2em;
+  border: lightblue solid 0.2em;
 }
 
 .search-btn-bg {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 
 .fas.fa-search {
@@ -117,11 +132,6 @@ input[type="search"]::-ms-reveal {
 
 .navbar-collapse button.btn {
   width: 30%;
-}
-
-.history-and-trolley-bg {
-  height: 6em;
-  margin-top: 3.4em;
 }
 
 .shopping-cart-btn {
@@ -141,6 +151,7 @@ input[type="search"]::-ms-reveal {
 .trolley-counter-number {
   top: -0.3em;
   position: absolute;
+  right: 0.5em;
 }
 
 .fas.fa-user-alt {
@@ -190,6 +201,8 @@ body {
 
 .card {
   border-radius: 0px;
+  background-color: lightblue;
+  border: none;
 }
 
 .card-footer:last-child {
@@ -205,7 +218,7 @@ body {
 /******************************************* home page */
 .quantity-selection button:active,
 .quantity-selection button:focus {
-  background-color: lightslategray;
+  background-color: #17a2b8;
 }
 
 .quantity-selection input[type="number"],
@@ -231,9 +244,14 @@ body {
   position: absolute;
   left: 2.5em;
   top: -1em;
+  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.quantity-selection button {
+  background-color: lightblue;
 }
 
 #homePageSection {
@@ -256,17 +274,17 @@ body {
 }
 
 .sort-by-section button {
-  background-color: lightgray;
+  background-color: lightblue;
 }
 
 .sort-by-section button:focus {
   outline: none;
   box-shadow: none;
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 .sort-by-section a:hover {
-  background-color: gray;
+  background-color: lightblue;
 }
 
 .sort-by-section a:active {
@@ -282,16 +300,17 @@ body {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
+  background-color: lightblue;
 }
 
 .quantity-selection input[type="number"] {
   width: 3em;
-  border: gray solid 0.1em;
+  border: lightblue solid 0.2em;
   text-align: center;
 }
 
 .quantity-selection input[type="number"]:focus {
-  border: gray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 .quantity-selection button {
@@ -325,12 +344,12 @@ body {
 
 .fas.fa-trash-alt:hover,
 .fas.fa-trash-alt:active {
-  color: darkslategray;
+  color: #17a2b8;
 }
 
 .pay-btn:focus,
 .back-to-home-pg-btn:focus {
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 .shopping_cart_img {
@@ -362,7 +381,7 @@ body {
 .form-submit-btn:focus {
   outline: none;
   box-shadow: none;
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 select,
@@ -379,7 +398,7 @@ select option[value=""] {
   border-radius: 0.2em;
   outline: none;
   margin: -0.5em 0em 0em 0em;
-  border: gray solid 0.1em;
+  border: lightblue solid 0.1em;
   text-align: center;
   padding: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -394,13 +413,13 @@ select option[value=""] {
 
 .drink-order-box {
   height: 30vh;
-  border: solid darkgray 0.2em;
+  border: solid #17a2b8 0.2em;
   overflow: auto;
 }
 
 .payment-form-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
+  background-color: lightblue;
+  border: solid #17a2b8 0.2em;
   overflow: auto;
 }
 
@@ -418,7 +437,7 @@ select option[value=""] {
 
 .StripeElement--focus,
 .stripe-style-input:focus {
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
   outline: none;
 }
 
@@ -453,7 +472,7 @@ select option[value=""] {
 }
 
 .payment-summary {
-  border: lightgray 0.2em solid;
+  border: lightblue 0.2em solid;
   margin: auto;
   width: 95vw;
   padding: 10px;
@@ -469,8 +488,8 @@ select option[value=""] {
 .reset-password-border,
 .change-password-border,
 .add-email-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
+  background-color: lightblue;
+  border: solid #17a2b8 0.2em;
   width: 18em;
   margin: auto;
   overflow: auto;
@@ -544,8 +563,8 @@ select:valid {
 }
 
 .update-form-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
+  background-color: lightblue;
+  border: solid #17a2b8 0.2em;
   width: 18em;
   margin: auto;
   overflow: auto;
@@ -555,7 +574,11 @@ select:valid {
 
 .order-history-border {
   height: 15em;
-  border: solid darkgray 0.2em;
+  border: solid #17a2b8 0.2em;
+}
+
+.order-history-border thead {
+  background-color: lightblue;
 }
 
 /******************************************* admin */
@@ -579,8 +602,8 @@ select:valid {
 }
 
 .management-form-border {
-  background-color: lightgray;
-  border: solid darkgray 0.2em;
+  background-color: lightblue;
+  border: solid #17a2b8 0.2em;
   overflow: auto;
 }
 
@@ -589,20 +612,21 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 #adminBrowseImage {
-  color: lightgray;
+  color: lightblue;
 }
 
 .edit-btn {
   border-radius: 0.3em;
-  border: solid 0.1em #6c757d;
+  border: solid 0.1em lightblue;
   padding: 0.1em;
   box-shadow: 0.1em 0.1em;
+  background-color: lightblue;
 }
 
 .edit-btn:active {
   outline: none;
   box-shadow: none;
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 /******************************************* form fields */
@@ -638,10 +662,14 @@ input[type="email"]:focus,
 .profile-countries:focus,
 input:focus,
 select:focus,
-button[type="submit"]:focus {
+button[type="submit"]:focus,
+input[type="number"]:focus,
+select#id_drink_type:focus,
+textarea#id_paragraph:focus,
+select#id_section:focus {
   outline: none;
   box-shadow: none;
-  border: slategray solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 /******************************************* media queries ******************************************* */
@@ -725,6 +753,12 @@ button[type="submit"]:focus {
   /******************************************* headers */
   #search-bar {
     width: 100%;
+  }
+
+  .shopping-cart-price {
+    position: absolute;
+    right: -2em;
+    top: 1em;
   }
 
   /******************************************* home page */
@@ -849,7 +883,7 @@ button[type="submit"]:focus {
   html {
     scroll-padding-top: 9.5em;
   }
-  
+
   /******************************************* header */
   .person-icon-bg,
   .shopping-cart-icon-bg {
@@ -867,7 +901,7 @@ button[type="submit"]:focus {
 
   input[type="search"] {
     border-radius: 5px;
-    border: 0.2em lightgray solid;
+    border: 0.2em lightblue solid;
     height: 2.5em;
   }
 
@@ -888,27 +922,26 @@ button[type="submit"]:focus {
   .lg-search-bar.form-control:focus {
     outline: none;
     box-shadow: none;
-    border: lightslategray solid 0.3em;
+    border: #17a2b8 solid 0.3em;
   }
 
   .trolley-counter-circle {
     right: 0.5em;
-    background-color: lightgray;
+    background-color: lightblue;
   }
 
   .trolley-counter-number {
-    right: 0.8em;
+    right: 0.4em;
   }
 
   .shopping-cart-price {
-    position: absolute;
     right: -2em;
     top: 1em;
   }
 
   .desktop-links-nav {
     margin-top: 5.1em;
-    background-color: lightgray;
+    background-color: lightblue;
     height: 2.4em;
   }
 
@@ -1026,7 +1059,7 @@ button[type="submit"]:focus {
   }
 
   .trolley-counter-number {
-    right: 1.4em;
+    right: 1.1em;
   }
 
   .shopping-cart-price {

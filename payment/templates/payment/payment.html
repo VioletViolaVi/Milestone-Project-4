@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="text-center mb-3">
-                        <a class="back-to-home-pg-btn text-body bg-secondary mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
+                        <a class="back-to-home-pg-btn text-body bg-info mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
                     </div>
                 </div>
                 <br>        
@@ -72,7 +72,7 @@
                             <!-- displays stripe card errors -->
                             <div class="mt-3 text-danger" id="stripeCardErrors" role="alert"></div>
                             <label for="stripeFormSubmit"></label>
-                            <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder">complete order</button>
+                            <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder">complete order</button>
                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                         </fieldset>
                     </form> 

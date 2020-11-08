@@ -36,9 +36,9 @@
                                 {% endfor %}
 
                                 <div class="buttonHolder">
-                                      <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-                                      <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-                                      <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
                                 </div>
 
                             </fieldset>
@@ -54,7 +54,7 @@
                     <form method="post" action="{% url 'account_email' %}" class="add-email-border add_email py-3">
                         {% csrf_token %}
                         {{ form.as_ul }}
-                        <button class="form-submit-btn text-uppercase bg-secondary mt-2 font-weight-bolder " name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+                        <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder " name="action_add" type="submit">{% trans "Add E-mail" %}</button>
                     </form>
 
                 </div>  

@@ -15,8 +15,8 @@
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
-                            <a href="{% url 'home' %}" class="form-submit-btn mr-2 text-uppercase text-body bg-secondary font-weight-bolder mt-2" type="submit">cancel</a>
-                            <button class="form-submit-btn text-uppercase ml-2 bg-secondary font-weight-bolder mt-2" type="submit">add drink</button>
+                            <a href="{% url 'home' %}" class="form-submit-btn mr-2 text-uppercase text-body bg-info font-weight-bolder mt-2" type="submit">cancel</a>
+                            <button class="form-submit-btn text-uppercase ml-2 bg-info font-weight-bolder mt-2" type="submit">add drink</button>
                         </div>
                     </form>
                 </div>
