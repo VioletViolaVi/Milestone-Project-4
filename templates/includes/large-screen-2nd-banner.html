@@ -1,8 +1,10 @@
 <nav class="desktop-links-nav d-none fixed-top d-lg-block">
     <ul class="desktop-links">
-        <li>
-            <a class="text-body text-capitalize" href="{% url 'home' %}">home <span>|</span><span class="sr-only">(current)</span></a>
-        </li>
+        {% if not this_is_the_homepage %}
+            <li>
+                <a class="text-body text-capitalize" href="{% url 'home' %}">home <span>|</span><span class="sr-only">(current)</span></a>
+            </li>
+        {% endif %} 
         {% if this_is_the_homepage %}
             <li>
                 <a class="text-body text-capitalize" href="#juiceSection">juices <span>|</span></a>

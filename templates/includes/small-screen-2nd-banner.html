@@ -1,37 +1,32 @@
 <nav class="history-and-trolley-bg fixed-top mt-lg-0 d-lg-none font-weight-bolder">
-    <div class="container px-0">
-        <div class="row">
+    <div class="row mt-3">
 
-            <div class="col-7 ml-1 pr-0 mt-4">
-                <a href="{% url 'user_profiles' %}" class="text-body">
-                    <div class="profile-btn font-weight-bolder text-uppercase p-2 bg-secondary">my profile</div>
-                </a>
-            </div>
+        <div class="col-7 col-sm-5 pr-0 mt-1">
+            <a href="{% url 'user_profiles' %}" class="text-body">
+                <i class="fas fa-user-alt"></i>
+            </a>
+        </div>
 
-            <div class="col-4">
-                <a href="{% url 'shopping_cart' %}" class="text-body">   
-                    <div class="container text-right">
-                        <div class="row">
-                            <div class="col-sm pr-4 mt-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                <span class="trolley-counter counter-circle text-center bg-secondary">{{ drink_counter}}</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm">
-                                <span class="trolley-price font-weight-bold">                                  
-                                    {% if shopping_cart_items %}
-                                        £{{ subtotal|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                                </span> 
-                            </div>
+        <div class="col-4 col-sm-5">
+            <a href="{% url 'shopping_cart' %}" class="text-body">   
+                <div class="container text-right">
+                    <div class="row">
+                        <div class="col-sm pr-4">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="trolley-counter-circle bg-secondary"></span>
+                            <span class="trolley-counter-number text-center">{{ drink_counter}}</span>
                         </div>
                     </div>
-                </a>
-            </div>
-
+                    <span class="font-weight-bold">                                  
+                        {% if shopping_cart_items %}
+                            £{{ subtotal|floatformat:2 }}
+                        {% else %}
+                            £0.00
+                        {% endif %}
+                    </span> 
+                </div>
+            </a>
         </div>
+
     </div>
 </nav>
