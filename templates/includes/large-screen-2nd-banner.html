@@ -12,10 +12,10 @@
             <li>
                 <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes <span>|</span></a>
             </li>
-            <li>
-                <a class="text-body text-capitalize" href="#aboutUsSection">our mission <span>|</span></a>
-            </li>
         {% endif %} 
+        <li>
+            <a class="text-body text-capitalize" href="{% url 'about_us' %}">our mission <span>|</span></a>
+        </li>
         {% if request.user.is_superuser %}
             <li>
                 <a class="text-body text-capitalize" href="{% url 'add_drink' %}">add drink <span>|</span></a>

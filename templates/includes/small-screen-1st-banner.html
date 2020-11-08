@@ -18,10 +18,10 @@
                 <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="/#milkshakeSection">milkshakes</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="/#aboutUsSection">our mission</a>
-                </li>
             {% endif %}
+            <li class="nav-item">
+                <a class="nav-link text-body text-capitalize" href="{% url 'about_us' %}">our mission</a>
+            </li>
             {% if request.user.is_superuser %}
                 <li class="nav-item">
                     <a class="nav-link text-body text-capitalize" href="{% url 'add_drink' %}">add drink</a>

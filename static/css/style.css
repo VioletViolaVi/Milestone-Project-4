@@ -26,6 +26,8 @@ html {
   position: fixed;
   right: 0.5em;
   z-index: 1;
+  background-color: darkgray;
+  border-radius: 50%;
 }
 
 .fas.fa-arrow-circle-up {
@@ -34,7 +36,8 @@ html {
   border: solid 0.1em lightgray;
 }
 
-.fas.fa-arrow-circle-up:hover {
+.fas.fa-arrow-circle-up:hover,
+.fixed-arrow:hover {
   background-color: lightgray;
   border: solid 0.1em gray;
 }
@@ -182,7 +185,7 @@ body {
 }
 
 #aboutUsSection {
-  padding-bottom: 8em;
+  padding-bottom: 10em;
 }
 
 .card {
@@ -834,6 +837,11 @@ button[type="submit"]:focus {
     position: absolute;
   }
 
+  .fas.fa-shopping-cart {
+    font-size: 2.5em;
+    margin-top: 0em;
+  }
+
   .text-left .navbar-brand.text-body {
     font-size: 3em;
   }
@@ -995,11 +1003,11 @@ button[type="submit"]:focus {
   }
 
   .trolley-counter-circle {
-    right: 1.2em;
+    right: 1.3em;
   }
 
   .trolley-counter-number {
-    right: 1.3em;
+    right: 1.4em;
   }
 
   .shopping-cart-price {

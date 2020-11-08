@@ -9,12 +9,9 @@ from .forms import DrinkForm, AboutUsForm
 
 
 def home(request):
-
     new_drinks = Drink.objects.filter(drink_type=1)
     juices = Drink.objects.filter(drink_type=2)
     milkshakes = Drink.objects.filter(drink_type=3)
-    main_mission = About_us.objects.filter(section=1)
-    sub_mission = About_us.objects.filter(section=2)
 
     searched_drinks = Drink.objects.exclude(drink_type=1)
     drink_search = None
@@ -60,8 +57,6 @@ def home(request):
         "new_drinks": new_drinks,
         "juices": juices,
         "milkshakes": milkshakes,
-        "main_mission": main_mission,
-        "sub_mission": sub_mission,
         "drink_search_results": drink_search_results,
         "typed_in_search": drink_search,
         "drink_sorting": drink_sorting,
@@ -70,6 +65,17 @@ def home(request):
 
     # shows homepage
     return render(request, "home/index.html", context)
+
+
+def about_us(request):
+    main_mission = About_us.objects.filter(section=1)
+    sub_mission = About_us.objects.filter(section=2)
+
+    context = {
+        "main_mission": main_mission,
+        "sub_mission": sub_mission,
+    }
+    return render(request, "home/about_us.html", context)
 
 
 @login_required
