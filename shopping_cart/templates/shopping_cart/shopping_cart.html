@@ -14,21 +14,21 @@
                 {% if shopping_cart_items %}
                 
                     <div class="text-left col-12 mb-4">
-                        <a class="text-body text-capitalize font-weight-bolder" href="{% url 'home' %}"><u>keep shopping</u></a> 
+                        <a class="back-to-home-pg-btn text-uppercase text-body font-weight-bolder" href="{% url 'home' %}">keep shopping</a> 
                     </div>                      
                              
                     {% for shopping_cart in shopping_cart_items %} 
                         <div class="col-sm-6 col-lg-4 mb-5">
-                            <div class="container">
+                            <div class="trolley-padding-removal container">
                                 <div class="row">                                                          
-                                    <div class="col-6 col-md-5 col-lg-5 col-xl-4 px-0">  
+                                    <div class="col-6 col-md-5 col-lg-6 col-xl-5 px-0">  
                                         {% if shopping_cart.drink.image %}   
                                             <img class="mb-1 shopping_cart_img rounded" src="/media/{{ shopping_cart.drink.image }}">   
                                         {% else %}
                                             <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
                                         {% endif %}                                                      
                                     </div>
-                                    <div class="col-6 col-md-7 col-lg-7 col-xl-8 px-0">         
+                                    <div class="col-6 col-md-7 col-lg-6 col-xl-6 px-0">         
                                         <ul class="text-left">
                                             <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
                                             <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
@@ -64,8 +64,8 @@
                                             <p class="font-weight-bolder">"{{ shopping_cart.drink.drink_name }}"</p>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-danger text-uppercase" data-dismiss="modal">no</button>
-                                            <button type="button" class="bin-icon btn btn-success text-uppercase" id="delete_{{ shopping_cart.item_id }}">yes</button>
+                                            <button type="button" class="btn btn-danger text-uppercase font-weight-bolder" data-dismiss="modal">no</button>
+                                            <button type="button" class="bin-icon btn btn-success text-uppercase font-weight-bolder" id="delete_{{ shopping_cart.item_id }}">yes</button>
                                         </div>
                                     </div>
                                 </div>

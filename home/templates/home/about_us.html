@@ -8,10 +8,10 @@
         <div class="container"> 
             <div class="row">           
                 {% for main in main_mission %}
-                    <div class="col-12"> 
+                    <div class="col-12 mb-4"> 
                         <h1 class="text-capitalize mt-2">{{ main.title }}</h1>
                         <p class="mb-0">{{ main.paragraph }}</p>                 
-                        {% include "home/includes/about-us-modals/about-us-main-modals.html" %}                    
+                        {% include "includes/drink-modals/about-us-main-modals.html" %}                    
                     </div> 
                 {% endfor %}
                 {% for sub in sub_mission %}
@@ -25,7 +25,7 @@
                             <h2 class="text-capitalize">{{ sub.title }}</h2>
                             <p class="mb-0">{{ sub.paragraph }}</p>                                       
                         </div>                    
-                        {% include "home/includes/about-us-modals/about-us-sub-modals.html" %}                      
+                        {% include "includes/drink-modals/about-us-sub-modals.html" %}                      
                     </div>
                 {% endfor %}        
             </div>

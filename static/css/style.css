@@ -98,6 +98,12 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:focus {
+  color: #17a2b8;
+}
+
 input[type="search"]::-ms-clear,
 input[type="search"]::-ms-reveal {
   display: none;
@@ -105,7 +111,11 @@ input[type="search"]::-ms-reveal {
   height: 0;
 }
 
-.fixed-top.navbar.navbar-expand-lg.navbar-light {
+.navbar-brand {
+  color: #212529;
+}
+
+.fixed-top.navbar.navbar-expand-lg {
   z-index: 1070;
 }
 
@@ -845,7 +855,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 @media (min-width: 472px) {
-  /******************************************* home page */
+  /******************************************* title, search bar, profile & trolley header */
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 8em;
@@ -859,7 +869,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 @media (min-width: 526px) {
-  /******************************************* home page */
+  /******************************************* title, search bar, profile & trolley header */
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 9.5em;
@@ -879,12 +889,11 @@ input[type="file"]::-webkit-file-upload-button {
     scroll-padding-top: 10.5em;
   }
 
-  /******************************************* mobile navbar header */
+  /******************************************* title, search bar, profile & trolley header */
   #searchBar {
     width: 100%;
   }
 
-  /******************************************* profile & trolley header */
   .fas.fa-user-alt {
     left: 3.7em;
     top: 0em;
@@ -902,9 +911,13 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* shopping cart */
+  .trolley-padding-removal {
+    padding: 0em;
+  }
+
   .shopping_cart_img {
-    height: 12em;
-    width: 7em;
+    height: 14em;
+    width: 8em;
   }
 
   .shopping-cart-costs {
@@ -912,7 +925,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .pay-btn-holder {
-    padding: 0em 0em 0em 4em;
+    padding: 0.8em 0em 0em 4em;
   }
 
   /******************************************* make payment */
@@ -955,13 +968,7 @@ input[type="file"]::-webkit-file-upload-button {
 
 /* bootstrap media query */
 @media (min-width: 768px) {
-  /******************************************* footer */
-  .footer-contacts {
-    position: absolute;
-    bottom: 0;
-  }
-
-  /******************************************* home page */
+  /******************************************* title, search bar, profile & trolley header */
   .new-drinks-circle1 {
     left: 4em;
   }
@@ -969,10 +976,6 @@ input[type="file"]::-webkit-file-upload-button {
   /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 11em;
-  }
-
-  .pay-btn-holder {
-    padding: 0em 0em 0em 2em;
   }
 
   /******************************************* allauth pages */
@@ -1010,79 +1013,58 @@ input[type="file"]::-webkit-file-upload-button {
     scroll-padding-top: 9.5em;
   }
 
-  /******************************************* header */
-  .person-icon-bg,
-  .shopping-cart-icon-bg {
-    position: absolute;
-  }
-
-  .fas.fa-shopping-cart {
-    font-size: 2.5em;
-    margin-top: 0em;
-  }
-
-  .text-left .navbar-brand.text-body {
+  /******************************************* title, search bar, profile & trolley header */
+  .navbar-brand {
     font-size: 3em;
   }
 
-  input[type="search"] {
-    border-radius: 5px;
-    border: 0.2em lightblue solid;
-    height: 2.5em;
+  input[type="search"]#lgSearchBar {
+    width: 29em;
   }
 
-  .lg-search-bar-bg {
-    position: absolute;
-    top: 1.5em;
-    right: 15.5em;
+  .d-inline-block.form-inline {
+    margin-left: 2em;
   }
 
-  .person-icon-bg {
-    right: 9em;
+  .fas.fa-user-alt {
+    left: 19em;
+    top: 0.5em;
   }
 
-  .shopping-cart-icon-bg {
-    right: 4em;
-  }
-
-  .lg-search-bar.form-control:focus {
-    outline: none;
-    box-shadow: none;
-    border: #17a2b8 solid 0.3em;
+  .fas.fa-shopping-cart {
+    top: 0.5em;
+    right: 2.3em;
   }
 
   .trolley-counter-number {
-    top: 0.2em;
-    right: -2em;
-    background-color: lightblue;
-    border-radius: 50%;
-    height: 70%;
-    width: 70%;
-    cursor: pointer;
+    right: 1.5em;
+    top: 1.3em;
   }
 
   .shopping-cart-price {
-    right: -1.7em;
-    top: 2.3em;
+    right: 3em;
+    top: 3.6em;
   }
 
-  .desktop-links-nav {
+  /******************************************* desktop navbar header */
+  .desktop-nav {
     margin-top: 5.1em;
     background-color: lightblue;
-    height: 2.4em;
+    height: 4em;
   }
 
   .desktop-links li {
     display: inline;
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 
+  /******************************************* delivery header */
   .delivery-cost-bg {
-    top: -0.7em;
+    top: -0.5em;
   }
 
   .new-drinks-circle1 {
-    left: 1em;
+    left: 0em;
   }
 
   /******************************************* home page */
@@ -1091,12 +1073,11 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .sort-by-section {
-    top: 9.1em;
+    top: 9.5em;
   }
 
   .django-admin-link {
-    top: -0.6em;
-    margin-bottom: 0em;
+    margin: -0.9em 0em 0em;
   }
 
   /******************************************* shopping cart */
@@ -1105,7 +1086,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .pay-btn-holder {
-    padding: 0em 0em 0em 2em;
+    padding: 1em 0em 0em 2em;
   }
 
   /******************************************* processing payment */
@@ -1134,29 +1115,13 @@ input[type="file"]::-webkit-file-upload-button {
 
 /* bootstrap media query */
 @media (min-width: 1200px) {
-  /******************************************* header */
-  .slurps-title {
-    margin-left: 0.5em;
+  /******************************************* title, search bar, profile & trolley header */
+  .fas.fa-user-alt {
+    left: 24.5em;
   }
 
-  .lg-search-bar-bg {
-    right: 19.5em;
-  }
-
-  .person-icon-bg {
-    right: 11em;
-  }
-
-  .shopping-cart-icon-bg {
-    right: 5em;
-  }
-
-  .trolley-counter-number {
-    right: -2.3em;
-  }
-
-  .shopping-cart-price {
-    right: -1.7em;
+  input[type="search"]#lgSearchBar {
+    width: 42.5em;
   }
 
   /******************************************* shopping cart */
@@ -1165,7 +1130,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .pay-btn-holder {
-    padding: 0em 0em 0em 1em;
+    padding: 0.9em 0em 0em 1em;
   }
 
   /******************************************* make payment */
@@ -1200,5 +1165,16 @@ input[type="file"]::-webkit-file-upload-button {
   /******************************************* admin */
   .management-form-border {
     margin: 0em 15em;
+  }
+}
+
+@media (min-width: 1366px) {
+  /******************************************* title, search bar, profile & trolley header */
+  .fas.fa-user-alt {
+    left: 28em;
+  }
+
+  input[type="search"]#lgSearchBar {
+    width: 51.5em;
   }
 }
