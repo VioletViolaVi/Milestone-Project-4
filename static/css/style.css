@@ -42,53 +42,15 @@ html {
 }
 
 /******************************************* mobile navbar header */
-.navbar-toggler,
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
 .fixed-top.navbar input[type="search"]:focus,
 .fixed-top.navbar input[type="search"]:active,
+.fixed-top.navbar input[type="search"]:hover,
 .fixed-top.navbar button:focus,
 .fixed-top.navbar button:active,
-.fixed-top.navbar button.search-btn-bg,
-.fixed-top.navbar button.search-btn-bg:focus,
-.fixed-top.navbar button.search-btn-bg:active,
-.fixed-top.navbar button.search-btn-bg,
-.fixed-top.navbar button.search-btn-bg:focus,
-.fixed-top.navbar button.search-btn-bg:active,
-.fixed-top.navbar input[type="search"] {
-  box-shadow: 0.1em 0.1em;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus,
-.navbar-toggler-icon:active,
-.fixed-top.navbar input[type="search"]:focus,
-.fixed-top.navbar input[type="search"]:active,
-.fixed-top.navbar button:focus,
-.fixed-top.navbar button:active {
+.fixed-top.navbar button:hover {
   border: #17a2b8 solid 0.2em;
-}
-
-.fixed-top.navbar input[type="search"]:active,
-.fixed-top.navbar input[type="search"]:focus,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus,
-.navbar-toggler-icon:active {
+  box-shadow: 0.1em 0.1em;
   outline: none;
-  box-shadow: none;
-}
-
-.fixed-top.navbar button.search-btn-bg,
-.fixed-top.navbar button.search-btn-bg:focus,
-.fixed-top.navbar button.search-btn-bg:active,
-.fixed-top.navbar button.search-btn-bg,
-.fixed-top.navbar button.search-btn-bg:focus,
-.fixed-top.navbar button.search-btn-bg:active,
-.nav-link:hover {
-  background-color: lightblue;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -98,10 +60,17 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.navbar-brand:focus,
 .navbar-brand:hover,
-.navbar-brand:active,
-.navbar-brand:focus {
+.navbar-brand:active {
   color: #17a2b8;
+}
+
+.nav-link:focus,
+.nav-link:active,
+.nav-link:hover {
+  transition: 0.5s;
+  background-color: lightblue;
 }
 
 input[type="search"]::-ms-clear,
@@ -109,6 +78,15 @@ input[type="search"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
+}
+
+.fixed-top.navbar button {
+  background-color: lightblue;
+  box-shadow: 0.1em 0.1em;
+}
+
+.fixed-top.navbar button.navbar-toggler {
+  background-color: #f8f9fa;
 }
 
 .navbar-brand {
@@ -123,71 +101,69 @@ input[type="search"]::-ms-reveal {
   font-size: 1.2em;
 }
 
-.nav-link:hover {
-  transition: 0.5s;
-}
-
 .fas.fa-search {
   font-size: 1.5em;
 }
 
 .fixed-top.navbar input[type="search"] {
   border: lightblue solid 0.2em;
-  text-transform: capitalize;
+  box-shadow: 0.1em 0.1em;
 }
 
 /******************************************* profile & trolley header */
 .fas.fa-user-alt:focus,
 .fas.fa-user-alt:active,
+.fas.fa-user-alt:hover,
 .fas.fa-shopping-cart:focus,
-.fas.fa-shopping-cart:active {
+.fas.fa-shopping-cart:active,
+.fas.fa-shopping-cart:hover,
+.shopping-cart-price:focus,
+.shopping-cart-price:active,
+.shopping-cart-price:hover {
   color: #17a2b8;
 }
 
-.fas.fa-user-alt,
-.fas.fa-shopping-cart {
-  font-size: 2.5em;
-}
-
-.trolley-counter-number,
-.trolley-price {
-  font-size: 1.2em;
-}
-
-.fas.fa-user-alt,
-.fas.fa-shopping-cart {
-  position: absolute;
+.trolley-counter-number:focus,
+.trolley-counter-number:active,
+.trolley-counter-number:hover {
+  border: lightblue solid 0.2em;
 }
 
 .icon-nav-bg {
-  background-color: lightblue;
   height: 6em;
   margin-top: 3.4em;
+  background-color: lightblue;
 }
 
 .fas.fa-user-alt {
   top: -0.1em;
   left: 1.7em;
+  position: absolute;
+  font-size: 2.5em;
 }
 
 .fas.fa-shopping-cart {
   right: 1.7em;
+  position: absolute;
+  font-size: 2.5em;
 }
 
 .trolley-counter-number {
   top: 0.2em;
   position: absolute;
   right: 0.2em;
-  background-color: #17a2b8;
   border-radius: 50%;
   width: 60px;
   box-shadow: 0.1em 0.1em;
+  background-color: #f8f9fa;
+  font-size: 1.2em;
 }
 
 .shopping-cart-price {
   right: 2.2em;
+  font-size: 1.2em;
   position: absolute;
-  top: 2.4em;
+  top: 1.9em;
 }
 
 /******************************************* delivery header */
@@ -244,41 +220,51 @@ body {
 
 /******************************************* form fields */
 input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-select#id_section:focus,
-select#id_drink_type:focus,
-textarea#id_paragraph:focus,
-button[type="submit"]:focus,
-.profile-countries:focus,
 input[type="text"]:active,
+input[type="text"]:hover,
+input[type="email"]:focus,
 input[type="email"]:active,
+input[type="email"]:hover,
+input[type="number"]:focus,
 input[type="number"]:active,
-select#id_section:active,
-select#id_drink_type:active,
-textarea#id_paragraph:active,
+input[type="number"]:hover,
+button[type="submit"]:focus,
 button[type="submit"]:active,
-.profile-countries:active {
+button[type="submit"]:hover,
+textarea#id_paragraph:focus,
+textarea#id_paragraph:active,
+textarea#id_paragraph:hover,
+select#id_drink_type:focus,
+select#id_drink_type:active,
+select#id_drink_type:hover,
+select#id_section:focus,
+select#id_section:active,
+select#id_section:hover,
+select#id_country:focus,
+select#id_country:active,
+select#id_country:hover,
+select#id_default_country:focus,
+select#id_default_country:active,
+select#id_default_country:hover {
   outline: none;
   box-shadow: none;
   border: #17a2b8 solid 0.2em;
 }
 
+label[for="id_username"],
 label[for="id_email"],
 label[for="id_email2"],
-label[for="id_username"],
+label[for="id_password"],
+label[for="id_oldpassword"],
 label[for="id_password1"],
 label[for="id_password2"],
-label[for="id_login"],
-label[for="id_password"],
-label[for="id_oldpassword"] {
+label[for="id_login"] {
   display: none;
 }
 
 select,
 input[type="text"],
-input[type="text"]::placeholder,
-input[type="email"]::placeholder {
+input[type="text"]::placeholder {
   text-transform: capitalize;
 }
 
@@ -287,8 +273,19 @@ input[type="text"]#id_default_postcode {
   text-transform: uppercase;
 }
 
-input[type="email"] {
+input[type="email"],
+input[type="email"]::placeholder {
   text-transform: lowercase;
+}
+
+select,
+select option {
+  color: #212529;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #6c757d !important;
 }
 
 /******************************************* home page */
@@ -298,63 +295,20 @@ input[type="email"] {
 .sort-by-section button:focus,
 .sort-by-section button:active,
 .sort-by-section button:hover,
-.quantity-selection input[type="number"]:hover,
 .quantity-selection input[type="number"]:focus,
 .quantity-selection input[type="number"]:active,
-.quantity-selection button:active,
-.quantity-selection button:focus {
-  outline: none;
-}
-
-.sort-by-section button:focus,
-.sort-by-section button:active,
-.sort-by-section button:hover,
-.buy-now-btn:focus,
-.buy-now-btn:active,
-.buy-now-btn:hover,
 .quantity-selection input[type="number"]:hover,
-.quantity-selection input[type="number"]:focus,
-.quantity-selection input[type="number"]:active,
-.quantity-selection button:hover {
-  border: #17a2b8 solid 0.2em;
-}
-
-.sort-by-section button,
-.sort-by-section button:focus,
-.sort-by-section button:active,
-.buy-now-btn,
-.buy-now-btn:focus,
-.buy-now-btn:active {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-}
-
-.quantity-selection button:active,
 .quantity-selection button:focus,
-.quantity-selection input[type="number"],
-.quantity-selection button {
-  box-shadow: 0.1em 0.1em;
-}
-
 .quantity-selection button:active,
-.quantity-selection button:focus {
+.quantity-selection button:hover {
+  outline: none;
   border: #17a2b8 solid 0.2em;
 }
 
-.quantity-selection input[type="number"],
-.quantity-selection button {
-  border-radius: 0.2em;
-}
-
-.sort-by-section button,
-.buy-now-btn {
-  background-color: lightblue;
-}
-
+.sort-by-section a:focus,
 .sort-by-section a:active,
-.sort-by-section a:focus {
-  color: black;
+.sort-by-section a:hover {
+  background-color: lightblue;
 }
 
 .new-drinks-circle1,
@@ -372,13 +326,16 @@ input[type="email"] {
   box-shadow: 0.1em 0.1em;
 }
 
-#homePageSection {
-  padding-bottom: 10em;
+.sort-by-section button,
+.buy-now-btn {
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+  background-color: lightblue;
 }
 
-.drinks_img img {
-  width: 10em;
-  height: 15em;
+#homePageSection {
+  padding-bottom: 10em;
 }
 
 .sort-by-section {
@@ -388,8 +345,16 @@ input[type="email"] {
   z-index: 1;
 }
 
-.sort-by-section a:hover {
+.drinks_img img {
+  width: 10em;
+  height: 15em;
+}
+
+.quantity-selection button {
   background-color: lightblue;
+  padding: 0 0.5em;
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
 }
 
 .dot-dot-dot {
@@ -400,47 +365,30 @@ input[type="email"] {
   margin: auto;
 }
 
-.quantity-selection button {
-  background-color: lightblue;
-  padding: 0 0.5em;
-}
-
 .quantity-selection input[type="number"] {
   width: 3em;
   border: lightblue solid 0.2em;
   text-align: center;
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
 }
 
 /******************************************* drink search */
-.searched-drinks input[type="number"]:hover,
 .searched-drinks input[type="number"]:focus,
 .searched-drinks input[type="number"]:active,
-.searched-drinks button:active,
-.searched-drinks button:focus {
-  outline: none;
-}
-
 .searched-drinks input[type="number"]:hover,
-.searched-drinks input[type="number"]:focus,
-.searched-drinks input[type="number"]:active,
-.searched-drinks button:hover {
-  border: #17a2b8 solid 0.2em;
-}
-
-.searched-drinks button:active,
 .searched-drinks button:focus,
-.searched-drinks input[type="number"],
-.searched-drinks button {
+.searched-drinks button:active,
+.searched-drinks button:hover {
+  outline: none;
+  border: #17a2b8 solid 0.2em;
   box-shadow: 0.1em 0.1em;
 }
 
-.searched-drinks button:active,
-.searched-drinks button:focus {
-  border: #17a2b8 solid 0.2em;
-}
-
-.searched-drinks input[type="number"],
-.searched-drinks button {
+.searched-drinks input[type="number"] {
+  width: 3em;
+  border: lightblue solid 0.2em;
+  text-align: center;
   border-radius: 0.2em;
 }
 
@@ -448,12 +396,7 @@ input[type="email"] {
   background-color: lightblue;
   padding: 0.3em;
   border: lightblue;
-}
-
-.searched-drinks input[type="number"] {
-  width: 3em;
-  border: lightblue solid 0.2em;
-  text-align: center;
+  border-radius: 0.2em;
 }
 
 /******************************************* about us */
@@ -467,53 +410,26 @@ input[type="email"] {
 }
 
 /******************************************* shopping cart */
-.shopping-cart-edit-btn button:active,
-.shopping-cart-edit-btn button:focus,
-.shopping-cart-edit-btn button:hover,
-.shopping-cart-edit-btn input[type="number"]:active,
-.shopping-cart-edit-btn input[type="number"]:focus,
-.shopping-cart-edit-btn input[type="number"]:hover,
-.pay-btn:active,
+.shopping-cart-edit button:focus,
+.shopping-cart-edit button:active,
+.shopping-cart-edit button:hover,
+.shopping-cart-edit input[type="number"]:focus,
+.shopping-cart-edit input[type="number"]:active,
+.shopping-cart-edit input[type="number"]:hover,
 .pay-btn:focus,
+.pay-btn:active,
 .pay-btn:hover,
-.back-to-home-pg-btn:active,
 .back-to-home-pg-btn:focus,
+.back-to-home-pg-btn:active,
 .back-to-home-pg-btn:hover {
   border: #17a2b8 solid 0.2em;
-}
-
-.shopping-cart-edit-btn input[type="number"]:active,
-.shopping-cart-edit-btn input[type="number"]:focus,
-.shopping-cart-edit-btn input[type="number"]:hover,
-.shopping-cart-edit-btn button:active,
-.shopping-cart-edit-btn button:focus {
   outline: none;
-}
-
-.shopping-cart-edit-btn button:active,
-.shopping-cart-edit-btn button:focus,
-.shopping-cart-edit-btn input[type="number"],
-.shopping-cart-edit-btn button,
-.pay-btn,
-.back-to-home-pg-btn {
   box-shadow: 0.1em 0.1em;
 }
 
-.shopping-cart-edit-btn input[type="number"],
-.shopping-cart-edit-btn button,
-.pay-btn,
-.back-to-home-pg-btn {
-  border-radius: 0.2em;
-}
-
-.pay-btn,
-.back-to-home-pg-btn {
-  padding: 0.3em;
-  background-color: lightblue;
-}
-
-.fas.fa-trash-alt:hover,
-.fas.fa-trash-alt:active {
+.fas.fa-trash-alt:focus,
+.fas.fa-trash-alt:active,
+.fas.fa-trash-alt:hover {
   color: #17a2b8;
 }
 
@@ -522,16 +438,20 @@ input[type="email"] {
   width: 7em;
 }
 
-.shopping-cart-edit-btn {
+.shopping-cart-edit {
   display: inline;
 }
 
-.shopping-cart-edit-btn button {
+.shopping-cart-edit button {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
   border: lightblue;
   padding: 0 0.5em;
 }
 
-.shopping-cart-edit-btn input[type="number"] {
+.shopping-cart-edit input[type="number"] {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
   width: 3em;
   border: lightblue solid 0.2em;
   text-align: center;
@@ -543,81 +463,88 @@ input[type="email"] {
 }
 
 .pay-btn {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
   font-size: 1.7em;
 }
 
+.pay-btn-holder {
+  padding-top: 1em;
+}
+
 .back-to-home-pg-btn {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
   font-size: 1em;
 }
 
 /******************************************* make payment */
-.payment-form-border input:focus,
-.payment-form-border select:focus,
-.change-password-btn:focus,
-.form-submit-btn:focus {
-  outline: none;
-  box-shadow: none;
+.back-to-trolley:focus,
+.back-to-trolley:active,
+.back-to-trolley:hover,
+.payment-form-border button:focus,
+.payment-form-border button:active,
+.payment-form-border button:hover {
   border: #17a2b8 solid 0.2em;
-}
-
-select,
-select option {
-  color: #212529;
-}
-
-select:invalid,
-select option[value=""] {
-  color: #6c757d !important;
-}
-
-.form-submit-btn {
-  border-radius: 0.2em;
   outline: none;
-  margin: -0.5em 0em 0em 0em;
-  border: lightblue solid 0.1em;
-  text-align: center;
-  padding: 0.2em;
   box-shadow: 0.1em 0.1em;
-}
-
-.change-password-btn {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  font-size: 1em;
 }
 
 .drink-order-box {
   height: 30vh;
-  border: solid #17a2b8 0.2em;
+  border-top: solid lightblue 0.2em;
+  border-bottom: solid lightblue 0.2em;
   overflow: auto;
+  background-color: #f8f9fa;
+}
+
+.back-to-trolley {
+  background-color: lightblue;
+  padding: 0.3em;
+  border-radius: 0.2em;
+  font-size: 1.1em;
+  box-shadow: 0.1em 0.1em;
+  outline: none;
 }
 
 .payment-form-border {
-  background-color: lightblue;
-  border: solid #17a2b8 0.2em;
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
   overflow: auto;
 }
 
-.payment-form-border div {
+.payment-form-border button {
+  background-color: lightblue;
+  padding: 0.3em;
   border-radius: 0.2em;
+  font-size: 1.1em;
+  box-shadow: 0.1em 0.1em;
+  border: lightblue;
 }
 
 /******************************************* stripe */
+.StripeElement--focus,
+.StripeElement:focus,
+.StripeElement:active,
+.StripeElement:hover,
+.stripe-style-input:focus,
+.stripe-style-input:active,
+.stripe-style-input:hover {
+  border: #17a2b8 solid 0.2em;
+  outline: none;
+  box-shadow: 0.1em 0.1em;
+}
+
 .StripeElement,
 .stripe-style-input {
   height: 40px;
   padding: 10px 12px;
   background-color: white;
-}
-
-.StripeElement--focus,
-.stripe-style-input:focus {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-}
-
-.stripe-style-input {
+  border-radius: 0.2em;
   color: #212529;
 }
 
@@ -626,7 +553,7 @@ select option[value=""] {
 }
 
 .StripeElement--invalid {
-  border-color: red;
+  border-color: red !important;
 }
 
 /******************************************* processing payment */
@@ -647,15 +574,90 @@ select option[value=""] {
   height: 100%;
 }
 
+/******************************************* completed payment */
+.message {
+  font-size: 0.9em;
+}
+
 .payment-summary {
   border: lightblue 0.2em solid;
   margin: auto;
-  width: 95vw;
-  padding: 10px;
+  padding-top: 10px;
+  width: 100vw;
+  height: 70vh;
+  overflow: auto;
 }
 
-.message {
-  font-size: 0.9em;
+.back-to-profile-btn:focus,
+.back-to-profile-btn:active,
+.back-to-profile-btn:hover {
+  border: #17a2b8 solid 0.2em;
+  outline: none;
+  box-shadow: 0.1em 0.1em;
+}
+
+.back-to-profile-btn {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
+  font-size: 1em;
+}
+
+/******************************************* profiles */
+.update-form-border button:focus,
+.update-form-border button:active,
+.update-form-border button:hover,
+.change-password-btn:focus,
+.change-password-btn:active,
+.change-password-btn:hover {
+  border: #17a2b8 solid 0.2em;
+  outline: none;
+  box-shadow: 0.1em 0.1em;
+}
+
+.update-form-border button,
+.change-password-btn {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
+  font-size: 1em;
+  border: lightblue;
+}
+
+.update-form-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  width: 90vw;
+  margin: auto;
+  overflow: auto;
+  padding: 0.5em;
+  height: 24em;
+}
+
+.empty-history-border {
+  width: 90vw;
+  border-top: solid lightblue 0.2em;
+  border-bottom: solid lightblue 0.2em;
+  overflow: auto;
+  height: 6em;
+  background-color: #f8f9fa;
+  margin: auto;
+}
+
+.order-history-border{
+  width: 90vw;
+  border-top: solid lightblue 0.2em;
+  border-bottom: solid lightblue 0.2em;
+  overflow: auto;
+  height: 25em;
+  background-color: #f8f9fa;
+  margin: auto;
+}
+
+.order-history-border thead {
+  background-color: lightsteelblue;
 }
 
 /******************************************* allauth pages */
@@ -723,38 +725,6 @@ select {
 .errorlist {
   color: #dc3545;
   font-weight: 900;
-}
-
-/******************************************* profiles */
-.profile-countries,
-#id_default_country,
-#id_default_country option:not(first-child),
-select:valid {
-  color: #212529;
-}
-
-.profile-countries input::placeholder,
-#id_default_country option:first-child {
-  color: #6c757d;
-}
-
-.update-form-border {
-  background-color: lightblue;
-  border: solid #17a2b8 0.2em;
-  width: 18em;
-  margin: auto;
-  overflow: auto;
-  padding: 0.5em;
-  height: 27em;
-}
-
-.order-history-border {
-  height: 15em;
-  border: solid #17a2b8 0.2em;
-}
-
-.order-history-border thead {
-  background-color: lightblue;
 }
 
 /******************************************* admin */
@@ -901,7 +871,6 @@ input[type="file"]::-webkit-file-upload-button {
 
   .shopping-cart-price {
     right: 2.5em;
-    top: 2.5em;
   }
 
   /******************************************* home page */
@@ -929,13 +898,18 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* make payment */
-  .payment-form-border,
-  .drink-order-box {
-    height: 540px;
+  .payment-form-border {
+    height: 100vh;
   }
 
-  .payment-form-border {
-    margin: auto;
+  /******************************************* profiles */
+  .update-form-border,
+  .order-history-border {
+    width: 30em;
+  }
+   .update-form-border {
+    padding: 1em;
+    height: 25em;
   }
 
   /******************************************* allauth pages */
@@ -957,13 +931,6 @@ input[type="file"]::-webkit-file-upload-button {
   .add-email-border input {
     width: 21em;
   }
-
-  /******************************************* profiles */
-  .update-form-border {
-    width: 32em;
-    padding: 1em;
-    height: 28em;
-  }
 }
 
 /* bootstrap media query */
@@ -976,6 +943,18 @@ input[type="file"]::-webkit-file-upload-button {
   /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 11em;
+  }
+
+  /******************************************* make payment */
+  .drink-order-box {
+    height: 100vh;
+    border: solid lightblue 0.2em;
+  }
+
+  /******************************************* profiles */
+  .update-form-border,
+  .order-history-border {
+    width: 22em;
   }
 
   /******************************************* allauth pages */
@@ -993,13 +972,6 @@ input[type="file"]::-webkit-file-upload-button {
     width: 25em;
   }
 
-  /******************************************* profiles */
-  .update-form-border {
-    width: 20em;
-    padding: 2em;
-    height: 30em;
-  }
-
   /******************************************* admin */
   .management-form-border {
     margin: 0em 3em;
@@ -1014,6 +986,10 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* title, search bar, profile & trolley header */
+  .d-none.d-lg-block.fixed-top.navbar {
+    height: 150px;
+  }
+
   .navbar-brand {
     font-size: 3em;
   }
@@ -1039,11 +1015,12 @@ input[type="file"]::-webkit-file-upload-button {
   .trolley-counter-number {
     right: 1.5em;
     top: 1.3em;
+    background-color: lightblue;
   }
 
   .shopping-cart-price {
     right: 3em;
-    top: 3.6em;
+    top: 2.9em;
   }
 
   /******************************************* desktop navbar header */
@@ -1089,9 +1066,21 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 1em 0em 0em 2em;
   }
 
-  /******************************************* processing payment */
+  /******************************************* make payment */
+  .drink-order-box,
+  .payment-form-border {
+    height: 530px;
+  }
+
+  /******************************************* completed payment */
   .payment-summary {
-    width: 70vw;
+    width: 80vw;
+  }
+
+  /******************************************* profiles */
+  .update-form-border,
+  .order-history-border {
+    width: 29.5em;
   }
 
   /******************************************* allauth pages */
@@ -1133,15 +1122,16 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 0.9em 0em 0em 1em;
   }
 
-  /******************************************* make payment */
-  .payment-form-border,
-  .drink-order-box {
-    height: 530px;
+  /******************************************* completed payment */
+  .payment-summary {
+    width: 950px;
+    height: 420px;
   }
 
-  /******************************************* processing payment */
-  .payment-summary {
-    width: 55vw;
+  /******************************************* profiles */
+  .update-form-border,
+  .order-history-border {
+    width: 34.5em;
   }
 
   /******************************************* allauth pages */
@@ -1155,11 +1145,6 @@ input[type="file"]::-webkit-file-upload-button {
   .login-border input,
   .change-password-border input {
     width: 32em;
-  }
-
-  /******************************************* profiles */
-  .update-form-border {
-    width: 35em;
   }
 
   /******************************************* admin */

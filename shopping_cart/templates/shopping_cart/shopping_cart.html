@@ -30,15 +30,15 @@
                                     </div>
                                     <div class="col-6 col-md-7 col-lg-6 col-xl-6 px-0">         
                                         <ul class="text-left">
-                                            <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
-                                            <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
-                                            <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
-                                            <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
-                                            <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
+                                            <li><span class="font-weight-bolder text-info">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                                            <li><span class="font-weight-bolder text-info">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                                            <li><span class="font-weight-bolder text-info">price:</span> £{{ shopping_cart.drink.price }}</li>
+                                            <li><span class="font-weight-bolder text-info">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                                            <li><span class="font-weight-bolder text-info">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
                                         </ul>                    
                                     </div>
                                     <div class="col-12">                   
-                                        <form method="POST" action="{% url 'edit_shopping_cart' shopping_cart.item_id %}" class="quantity-selection shopping-cart-edit-btn">
+                                        <form method="POST" action="{% url 'edit_shopping_cart' shopping_cart.item_id %}" class="quantity-selection shopping-cart-edit">
                                             {% csrf_token %}
                                             <label for="editDrinks"></label>
                                             <button type="submit" class="text-uppercase mb-5 font-weight-bolder">edit</button>
@@ -77,9 +77,9 @@
                         <div class="row">     
                             <div class="shopping-cart-costs text-left col-8 col-sm-6"> 
                                 <ul class="font-weight-bolder">
-                                    <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
-                                    <li>delivery: <span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
-                                    <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                                    <li><span class="text-info">subtotal: </span><span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                                    <li><span class="text-info">delivery: </span><span class="font-weight-normal"><s>£{{ former_delivery_cost|floatformat:2 }}</s>  £{{ delivery|floatformat:2 }}</span></li>
+                                    <li><span class="text-info">grand total: </span><span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
                                 </ul>
                             </div> 
                             <div class="pay-btn-holder text-left col-4 col-sm-6">

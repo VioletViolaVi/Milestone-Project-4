@@ -8,17 +8,16 @@
         <h1 class="text-capitalize mt-3">my profile</h1> 
         <div class="container mt-3">
             <div class="row">
-
-                <div class="col-12 col-md-6 col-lg-5 col-xl-7">
+                <div class="col-12 col-md-6 px-0 mb-2">
                     <h2 class="text-capitalize">personal details</h2>
-                    <form id="updateProfileForm" class="update-form-border mb-5" method="POST" action="{% url 'user_profiles' %}">
+                    <form class="update-form-border" method="POST" action="{% url 'user_profiles' %}">
                         {% csrf_token %}
                         {{ form|crispy }}                    
-                        <button class="form-submit-btn text-uppercase bg-info mt-4 font-weight-bolder" type="submit">update information</button>
+                        <button class="text-uppercase font-weight-bolder" type="submit">update information</button>
                     </form>
                 </div>
                                                   
-                <div class="col-12 col-md-6 col-lg-7 col-xl-5 text-center px-1">
+                <div class="col-12 col-md-6 text-center px-0">
                     <h2 class="text-center text-capitalize">order history</h2>  
                     {% if drink_orders %} 
                         <div class="order-history-border table-responsive table-borderless">
@@ -56,20 +55,19 @@
                             </table>
                         </div>
                     {% else %}
-                        <div class="col-12 mb-5 text-center">
-                            <p>Your order history is empty.</p>
-                            <a class="back-to-home-pg-btn text-uppercase bg-info text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
+                        <div class="empty-history-border col-12 mb-5 mt-2 text-center">
+                            <p class="mt-2 mb-1">Your order history is empty.</p>
+                            <a class="back-to-home-pg-btn text-uppercase text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
                         </div>  
                     {%endif %}
-                    <div class="col-12 mt-5">
-                        <h2 class="text-center text-capitalize">password details</h2> 
-                        <div class="mt-3"> 
-                            <p>Click to change your password.</p>
-                            <a class="change-password-btn text-uppercase bg-info text-body font-weight-bolder" href="{% url 'account_change_password' %}">change my password</a>                                                           
-                        </div>
-                    </div>
-                </div>   
+                </div>  
+            </div>
 
+            <div class="row mt-2">
+                <div class="text-left col-12">
+                    <p class="mb-1">Click to change your password.</p>
+                    <a class="change-password-btn text-uppercase text-body font-weight-bolder" href="{% url 'account_change_password' %}">change my password</a>  
+                </div>
             </div>
         </div>
         

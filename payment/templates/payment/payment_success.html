@@ -115,9 +115,9 @@
     
         <div class="col-12 text-center mt-3 text-uppercase">
             {% if taken_from_user_profiles %}
-                <a class="back-to-home-pg-btn text-body bg-info font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
+                <a class="back-to-profile-btn text-body font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
             {% else %}
-                <a class="back-to-home-pg-btn text-body bg-info font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+                <a class="back-to-home-pg-btn text-body font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
             {% endif %}
         </div>
 

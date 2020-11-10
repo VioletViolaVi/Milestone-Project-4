@@ -11,21 +11,21 @@
         <div class="container">
             <div class="row">
 
-                <div class="drink-order-box col-12 col-sm-6 text-left px-0 mb-4">
+                <div class="drink-order-box col-12 col-md-6 text-left px-0 mb-4">
 
                     <p class="text-body text-center font-weight-bolder mb-1">Order Summary ({{ drink_counter }})</p>  
                     <div class="container">
                         <div class="row">     
                             <div class="shopping-cart-costs text-left pl-1"> 
                                 <ul class="font-weight-bolder text-capitalize mb-1">
-                                    <li>subtotal: <span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
-                                    <li>delivery: <span class="font-weight-normal">£{{ delivery|floatformat:2 }}</span></li>
-                                    <li>grand total: <span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                                    <li><span class="text-info">subtotal: </span><span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                                    <li><span class="text-info">delivery: </span><span class="font-weight-normal">£{{ delivery|floatformat:2 }}</span></li>
+                                    <li><span class="text-info">grand total: </span><span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
                                 </ul>
                             </div> 
                         </div>
                     </div>
-                    <hr class="p-0 mx-2 mb-2">
+                    <hr class="p-0 mx-2 mb-2 mt-0">
 
                     <div class="container">
                         <div class="row">
@@ -39,11 +39,11 @@
                                         {% endif %} 
                                     </div>
                                     <ul class="text-capitalize text-left">
-                                        <li><span class="font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
-                                        <li><span class="font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
-                                        <li><span class="font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
-                                        <li><span class="font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
-                                        <li><span class="font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
+                                        <li><span class="text-info font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                                        <li><span class="text-info font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                                        <li><span class="text-info font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
+                                        <li><span class="text-info font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                                        <li><span class="text-info font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
                                     </ul> 
                                 </div>                                                           
                             {% endfor %}                    
@@ -51,12 +51,12 @@
                     </div>
 
                     <div class="text-center mb-3">
-                        <a class="back-to-home-pg-btn text-body bg-info mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
+                        <a class="back-to-trolley text-body mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
                     </div>
                 </div>
                 <br>        
 
-                <div class="col-12 col-sm-6 col-lg-6">
+                <div class="col-12 col-md-6 col-lg-6">
                     <form class="payment-form-border p-2" action="{% url 'payment' %}" method="POST" id="paymentForm">
                         {% csrf_token %}
                         <fieldset>
@@ -72,7 +72,7 @@
                             <!-- displays stripe card errors -->
                             <div class="mt-3 text-danger" id="stripeCardErrors" role="alert"></div>
                             <label for="stripeFormSubmit"></label>
-                            <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder">complete order</button>
+                            <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="text-uppercase mt-2 font-weight-bolder">complete order</button>
                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                         </fieldset>
                     </form> 
