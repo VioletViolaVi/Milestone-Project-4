@@ -219,7 +219,7 @@ body {
 }
 
 /******************************************* form fields */
-/* input[type="text"]:focus,
+input[type="text"]:focus,
 input[type="text"]:active,
 input[type="text"]:hover,
 input[type="email"]:focus,
@@ -247,9 +247,9 @@ select#id_default_country:focus,
 select#id_default_country:active,
 select#id_default_country:hover {
   outline: none;
-  box-shadow: none;
+  box-shadow: 0.1em 0.1em;
   border: #17a2b8 solid 0.2em;
-} */
+}
 
 label[for="id_username"],
 label[for="id_email"],
@@ -310,6 +310,7 @@ select {
 .quantity-selection button:active,
 .quantity-selection button:hover {
   outline: none;
+  box-shadow: 0.1em 0.1em;
   border: #17a2b8 solid 0.2em;
 }
 
@@ -317,6 +318,7 @@ select {
 .sort-by-section a:active,
 .sort-by-section a:hover {
   background-color: lightblue;
+  border-radius: 0.2em;
 }
 
 .new-drinks-circle1,
@@ -583,6 +585,14 @@ select {
 }
 
 /******************************************* completed payment */
+.back-to-profile-btn:focus,
+.back-to-profile-btn:active,
+.back-to-profile-btn:hover {
+  border: #17a2b8 solid 0.2em;
+  outline: none;
+  box-shadow: 0.1em 0.1em;
+}
+
 .message {
   font-size: 0.9em;
 }
@@ -594,14 +604,6 @@ select {
   width: 100vw;
   height: 70vh;
   overflow: auto;
-}
-
-.back-to-profile-btn:focus,
-.back-to-profile-btn:active,
-.back-to-profile-btn:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
 }
 
 .back-to-profile-btn {
@@ -849,29 +851,77 @@ select {
 }
 
 /******************************************* admin */
-.edit-btn:active,
 .edit-btn:focus,
+.edit-btn:active,
 .edit-btn:hover,
-.edit-btn {
+.admim-form-border button:focus,
+.admim-form-border button:active,
+.admim-form-border button:hover,
+.admim-form-border a:focus,
+.admim-form-border a:active,
+.admim-form-border a:hover {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
   outline: none;
-}
-
-.edit-btn:active,
-.edit-btn:focus,
-.edit-btn:hover {
   border: #17a2b8 solid 0.2em;
 }
 
-.management-form-border a,
-.management-form-border button {
-  padding: 0.4em;
+.admim-form-border button,
+.admim-form-border button,
+.admim-form-border button,
+.admim-form-border a,
+.admim-form-border a,
+.admim-form-border a {
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+  outline: none;
+  background-color: lightblue;
+  border: solid lightblue 0.2em;
 }
 
-.edit-btn {
-  background-color: lightblue;
+.admim-form-border input[type="file"]:focus,
+.admim-form-border input[type="file"]:active,
+.admim-form-border input[type="file"]:hover,
+.modal button[type="button"]:focus,
+.modal button[type="button"]:active,
+.modal button[type="button"]:hover {
+  outline: none;
+}
+
+.modal button[type="button"] .fas.fa-times:focus,
+.modal button[type="button"] .fas.fa-times:active,
+.modal button[type="button"] .fas.fa-times:hover {
+  color: #17a2b8;
+}
+
+#appendAboutUs,
+#editAboutUs {
+  height: 49em;
+}
+
+#editDrink {
+  height: 41em;
+}
+
+.admim-form-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+  padding: 0.5em;
+  height: 35em;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+#adminBrowseImage {
+  color: lightsteelblue;
+  overflow: hidden;
 }
 
 .django-admin-link {
@@ -880,26 +930,16 @@ select {
   margin-bottom: 1.5em;
 }
 
-.management-form-border input#id_image:focus {
-  border: none;
+.edit-btn {
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+  outline: none;
+  background-color: lightblue;
 }
 
 .modal.fade {
   top: 5em;
-}
-
-.management-form-border {
-  background-color: lightblue;
-  border: solid #17a2b8 0.2em;
-  overflow: auto;
-}
-
-input[type="file"]::-webkit-file-upload-button {
-  cursor: pointer;
-}
-
-#adminBrowseImage {
-  color: lightblue;
 }
 
 /******************************************* media queries ******************************************* */
@@ -1028,6 +1068,7 @@ input[type="file"]::-webkit-file-upload-button {
   .order-history-border {
     width: 30em;
   }
+
   .update-form-border {
     padding: 1em;
     height: 25em;
@@ -1086,6 +1127,12 @@ input[type="file"]::-webkit-file-upload-button {
 
   .signup-border input {
     width: 28em;
+  }
+
+  /******************************************* admin */
+  #appendAboutUs,
+  #editAboutUs {
+    height: 46em;
   }
 }
 
@@ -1160,8 +1207,8 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* admin */
-  .management-form-border {
-    margin: 0em 3em;
+  .admim-form-border {
+    width: 90%;
   }
 }
 
@@ -1316,8 +1363,8 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* admin */
-  .management-form-border {
-    margin: 0em 10em;
+  .admim-form-border {
+    width: 70%;
   }
 }
 
@@ -1354,8 +1401,8 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* admin */
-  .management-form-border {
-    margin: 0em 15em;
+  .admim-form-border {
+    width: 60%;
   }
 }
 

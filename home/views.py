@@ -205,7 +205,7 @@ def change_about_us(request, about_us_id):
             form.save()
             messages.success(request,
                              "Mission statement section successfully updated!")
-            return redirect(reverse("home"))
+            return redirect(reverse("about_us"))
         else:
             messages.error(request, f'Failed to update the: "{about_us.title}" section. \
                  Please ensure the form is valid.')

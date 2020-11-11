@@ -11,12 +11,12 @@
             <div class="row">
 
                 <div class="col-12">   
-                    <form class="management-form-border text-left p-1" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">  
+                    <form class="admim-form-border text-left" method="POST" action="{% url 'add_drink' %}" enctype="multipart/form-data">  
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="text-center">
-                            <a href="{% url 'home' %}" class="form-submit-btn mr-2 text-uppercase text-body bg-info font-weight-bolder mt-2" type="submit">cancel</a>
-                            <button class="form-submit-btn text-uppercase ml-2 bg-info font-weight-bolder mt-2" type="submit">add drink</button>
+                            <a href="{% url 'home' %}" class="mr-2 text-uppercase text-body font-weight-bolder mt-2" type="submit">cancel</a>
+                            <button class="text-uppercase ml-2 font-weight-bolder mt-2" type="submit">add drink</button>
                         </div>
                     </form>
                 </div>
