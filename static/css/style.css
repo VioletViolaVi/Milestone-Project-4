@@ -219,7 +219,7 @@ body {
 }
 
 /******************************************* form fields */
-input[type="text"]:focus,
+/* input[type="text"]:focus,
 input[type="text"]:active,
 input[type="text"]:hover,
 input[type="email"]:focus,
@@ -249,7 +249,7 @@ select#id_default_country:hover {
   outline: none;
   box-shadow: none;
   border: #17a2b8 solid 0.2em;
-}
+} */
 
 label[for="id_username"],
 label[for="id_email"],
@@ -286,6 +286,14 @@ select option {
 select:invalid,
 select option[value=""] {
   color: #6c757d !important;
+}
+
+input[type="radio"] {
+  width: 1em;
+}
+
+select {
+  cursor: pointer;
 }
 
 /******************************************* home page */
@@ -646,7 +654,7 @@ select option[value=""] {
   margin: auto;
 }
 
-.order-history-border{
+.order-history-border {
   width: 90vw;
   border-top: solid lightblue 0.2em;
   border-bottom: solid lightblue 0.2em;
@@ -661,65 +669,178 @@ select option[value=""] {
 }
 
 /******************************************* allauth pages */
-.signup-border,
-.login-border,
-.reset-password-border,
-.change-password-border,
-.add-email-border {
+.log-out-border button:focus,
+.log-out-border button:active,
+.log-out-border button:hover,
+.confirm-email button:focus,
+.confirm-email button:active,
+.confirm-email button:hover,
+.verify-email-border button:focus,
+.verify-email-border button:active,
+.verify-email-border button:hover,
+.add-email-border button:focus,
+.add-email-border button:active,
+.add-email-border button:hover,
+.add-email-border input[type="email"]:focus,
+.add-email-border input[type="email"]:active,
+.add-email-border input[type="email"]:hover,
+.login-border button:focus,
+.login-border button:active,
+.login-border button:hover,
+.login-border input:focus,
+.login-border input:active,
+.login-border input:hover,
+.change-password-border input:focus,
+.change-password-border input:active,
+.change-password-border input:hover,
+.change-password-border button:focus,
+.change-password-border button:active,
+.change-password-border button:hover,
+.change-password2-border input:focus,
+.change-password2-border input:active,
+.change-password2-border input:hover,
+.change-password2-border input[type="submit"]:focus,
+.change-password2-border input[type="submit"]:active,
+.change-password2-border input[type="submit"]:hover,
+.reset-password-border input:focus,
+.reset-password-border input:active,
+.reset-password-border input:hover,
+.reset-password-border input[type="submit"]:focus,
+.reset-password-border input[type="submit"]:active,
+.reset-password-border input[type="submit"]:hover,
+.signup-border input:focus,
+.signup-border input:active,
+.signup-border input:hover,
+.signup-border button:focus,
+.signup-border button:active,
+.signup-border button:hover {
+  border: #17a2b8 solid 0.2em;
+  outline: none;
+  box-shadow: 0.1em 0.1em;
+}
+
+.signup-border button,
+.change-password-border button,
+.login-border button,
+.log-out-border button,
+.confirm-email button,
+.verify-email-border button,
+.add-email-border button {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
   background-color: lightblue;
-  border: solid #17a2b8 0.2em;
+  font-size: 1em;
+  border: lightblue;
+}
+
+.signup-border input,
+.reset-password-border input,
+.change-password2-border input,
+.change-password-border input,
+.login-border input {
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  width: 15em;
+  border: lightblue solid 0.2em;
+  margin: 1em 0em;
+}
+
+.verify-email-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 15em;
+  padding: 0.5em;
   width: 18em;
   margin: auto;
+}
+
+.add-email-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
   overflow: auto;
+  height: 8em;
+  padding: 0.5em;
+  width: 18em;
+  margin: auto;
 }
 
-.signup-border input,
-.login-border input,
-.change-password-border input,
-.add-email-border input[type="email"],
-.reset-password-border input[type="email"] {
-  margin: 1em;
-  height: 2.4em;
-  background-color: white;
+.add-email-border input[type="email"] {
+  box-shadow: 0.1em 0.1em;
   border-radius: 0.2em;
-  padding: 0em 0.2em;
-  border: none;
-}
-
-.signup-border input,
-.change-password-border input,
-.add-email-border input,
-.reset-password-border input[type="email"] {
   width: 15em;
-}
-
-.add-email-border input[type="radio"] {
-  width: 1em;
-}
-
-select {
-  cursor: pointer;
-}
-
-.change-password-border {
-  height: 300px;
-  margin-top: 1em;
-}
-
-.change-password-border input {
-  margin-top: 1em;
-}
-
-.signup-border {
-  height: 420px;
+  border: lightblue solid 0.2em;
 }
 
 .login-border {
-  height: 230px;
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 13em;
+  padding: 0.5em;
+  width: 17em;
+  margin: auto;
+}
+
+.change-password-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 17em;
+  padding: 0.5em;
+  width: 17em;
+  margin: auto;
+}
+
+.change-password2-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 14em;
+  padding: 0.5em;
+  width: 17em;
+  margin: auto;
+}
+
+.change-password2-border input[type="submit"] {
+  width: 12em;
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
+  font-size: 1em;
+  border: lightblue;
 }
 
 .reset-password-border {
-  height: 150px;
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 10em;
+  padding: 0.5em;
+  width: 17em;
+  margin: auto;
+}
+
+.reset-password-border input[type="submit"] {
+  width: 13em;
+  box-shadow: 0.1em 0.1em;
+  border-radius: 0.2em;
+  padding: 0.3em;
+  background-color: lightblue;
+  font-size: 1em;
+  border: lightblue;
+}
+
+.signup-border {
+  background-color: lightsteelblue;
+  border: solid lightblue 0.2em;
+  overflow: auto;
+  height: 25em;
+  padding: 0.5em;
+  width: 17em;
+  margin: auto;
 }
 
 .errorlist {
@@ -907,29 +1028,64 @@ input[type="file"]::-webkit-file-upload-button {
   .order-history-border {
     width: 30em;
   }
-   .update-form-border {
+  .update-form-border {
     padding: 1em;
     height: 25em;
   }
 
   /******************************************* allauth pages */
-  .signup-border,
-  .login-border,
-  .reset-password-border,
-  .change-password-border,
+  .verify-email-border {
+    height: 10em;
+    width: 28em;
+  }
+
   .add-email-border {
-    width: 24em;
+    width: 28em;
+  }
+
+  .add-email-border input[type="email"] {
+    width: 26em;
+  }
+
+  .login-border {
+    height: 13.5em;
+    width: 28em;
+  }
+
+  .login-border input {
+    width: 26em;
   }
 
   .change-password-border {
-    height: 310px;
-    margin-top: 2em;
+    width: 30em;
   }
 
-  .signup-border input,
-  .login-border input,
-  .add-email-border input {
-    width: 21em;
+  .change-password-border input {
+    width: 28em;
+  }
+
+  .change-password2-border {
+    width: 28em;
+  }
+
+  .change-password2-border input {
+    width: 26em;
+  }
+
+  .reset-password-border {
+    width: 30em;
+  }
+
+  .reset-password-border input {
+    width: 28em;
+  }
+
+  .signup-border {
+    width: 30em;
+  }
+
+  .signup-border input {
+    width: 28em;
   }
 }
 
@@ -958,18 +1114,49 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* allauth pages */
-  .signup-border,
-  .login-border {
-    width: 30em;
+  .verify-email-border {
+    height: 7.5em;
+    width: 36em;
   }
 
-  .signup-border input,
+  .login-border {
+    width: 36em;
+  }
+
   .login-border input {
-    width: 27em;
+    width: 34em;
   }
 
   .change-password-border {
-    width: 25em;
+    width: 38em;
+  }
+
+  .change-password-border input {
+    width: 36em;
+  }
+
+  .change-password2-border {
+    width: 36em;
+  }
+
+  .change-password2-border input {
+    width: 34em;
+  }
+
+  .reset-password-border {
+    width: 37em;
+  }
+
+  .reset-password-border input {
+    width: 35em;
+  }
+
+  .signup-border {
+    width: 40em;
+  }
+
+  .signup-border input {
+    width: 38em;
   }
 
   /******************************************* admin */
@@ -1084,16 +1271,48 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* allauth pages */
-  .signup-border {
-    height: 430px;
+  .verify-email-border {
+    width: 40em;
   }
 
-  .login-border {
-    height: 230px;
+  .add-email-border {
+    width: 40em;
+  }
+
+  .add-email-border input[type="email"] {
+    width: 38em;
+  }
+
+  .change-password-border {
+    width: 42em;
+  }
+
+  .change-password-border input {
+    width: 40em;
+  }
+
+  .change-password2-border {
+    width: 39em;
+  }
+
+  .change-password2-border input {
+    width: 37em;
   }
 
   .reset-password-border {
-    height: 150px;
+    width: 44em;
+  }
+
+  .reset-password-border input {
+    width: 42em;
+  }
+
+  .signup-border {
+    width: 47em;
+  }
+
+  .signup-border input {
+    width: 45em;
   }
 
   /******************************************* admin */
@@ -1132,19 +1351,6 @@ input[type="file"]::-webkit-file-upload-button {
   .update-form-border,
   .order-history-border {
     width: 34.5em;
-  }
-
-  /******************************************* allauth pages */
-  .signup-border,
-  .login-border,
-  .change-password-border {
-    width: 35em;
-  }
-
-  .signup-border input,
-  .login-border input,
-  .change-password-border input {
-    width: 32em;
   }
 
   /******************************************* admin */

@@ -9,13 +9,12 @@
     <section class="footer-pusher">
         <div class="container mt-3">
             <div class="row">
-                <div class="col-12">
                 
+                <div class="col-12 px-0">                   
                     <h1 class="mt-1">{% trans "E-mail Addresses" %}</h1>
-                    
                     {% if user.emailaddress_set.all %}
                         <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
-                        <form action="{% url 'account_email' %}" class="add-email-border email_list py-3" method="post">
+                        <form action="{% url 'account_email' %}" class="verify-email-border email_list" method="post">
                             {% csrf_token %}
                             <fieldset class="blockLabels">
                                 {% for emailaddress in user.emailaddress_set.all %}
@@ -34,11 +33,10 @@
                                         </label>
                                     </div>
                                 {% endfor %}
-
-                                <div class="buttonHolder">
-                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-                                      <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+                                <div>
+                                    <button class="text-uppercase mt-2 font-weight-bolder secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+                                    <button class="text-uppercase mt-2 font-weight-bolder secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+                                    <button class="text-uppercase mt-2 font-weight-bolder primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
                                 </div>
 
                             </fieldset>
@@ -49,15 +47,18 @@
                             {% trans "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc." %}
                         </p>
                     {% endif %}
-
+                </div>  
+                
+                <div class="col-12 px-0"> 
                     <h2 class="mt-4">{% trans "Add E-mail Address" %}</h2>
                     <form method="post" action="{% url 'account_email' %}" class="add-email-border add_email py-3">
                         {% csrf_token %}
                         {{ form.as_ul }}
-                        <button class="form-submit-btn text-uppercase bg-info mt-2 font-weight-bolder " name="action_add" type="submit">{% trans "Add E-mail" %}</button>
+                        <button class="text-uppercase mt-2 font-weight-bolder " name="action_add" type="submit">{% trans "Add E-mail" %}</button>
                     </form>
+                
+                </div> 
 
-                </div>  
             </div>        
         </div>   
     </section>
