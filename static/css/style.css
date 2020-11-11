@@ -41,6 +41,10 @@ html {
   border: solid 0.1em lightblue;
 }
 
+.modal-backdrop {
+  background: lightsteelblue;
+}
+
 /******************************************* mobile navbar header */
 .fixed-top.navbar input[type="search"]:focus,
 .fixed-top.navbar input[type="search"]:active,
@@ -292,7 +296,8 @@ input[type="radio"] {
   width: 1em;
 }
 
-select {
+select,
+input[type="checkbox"] {
   cursor: pointer;
 }
 
@@ -573,7 +578,7 @@ select {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(211, 211, 211, 0.63);
+  background: rgba(173, 216, 230, 0.479);
   z-index: 9999;
 }
 

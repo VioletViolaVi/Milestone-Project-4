@@ -105,7 +105,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 # Features
 ## Existing Features
 ### Navbars
-* Allows users to access different pages of the Slurps website by clicking on the provided links
+* Allows users to click on the Slurps logo in the top left corner and be redirected to the home page, where the users can add any of the displayed drinks to their shopping cart.
+* Allows users to access different pages of the Slurps website by clicking on the provided links.
+* Allows users to sign up, login and log out by clicking on the corresponding links in the navigation bars and being redirected to their respective pages.
 * Allows users to enter search requests in the search bar provided and help speed up the process of the users finding their desired item.
 * Provides location for the profile icon so the users can click on it to access their profile page.
 * Provides location for the shopping cart icon so the users can click on it to access the shopping cart page, to see what they purchased and how much it will cost.
@@ -125,9 +127,12 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Allows users to view the mission statements of the Slurps company as well as some images that reflect the mission statements being explained.
 ### User Profile Page
 * Contains a profile form for users to enter their personal details eg.: name, phone number, address, etc so the users can have these details automatically filled in the payment form; when making a payment.
-* Contains the “__*UPDATE INFORMATION*__” button which allows users to save entered changes to their profile form above, by clicking on this button after editing the form.
+* Contains the “__*UPDATE INFORMATION*__” button which allows users to save entered changes to their profile form above, by clicking on this button after editing the form. These details are also saved in the payment form at the same time, so the user can speed up their purchase.
 * Contains a table showing the users’ order history i.e. the drink orders made by the users in the past, allowing users to view what they have previously purchased. As well as the date of the purchase, how much they spent and a link to its confirmation receipt. If there’s no order history, the users are shown the message: “__*Your Order History Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders. 
 * Contains the “__*CHANGE MY PASSWORD*__” button to allow users to change their current password if desired, by clicking on the button and filling in the form that gets shown to the users.
+### Change Password Page
+* Contains a change password form where the users are to fill in their current password and then their new password twice in order to change their current password.
+* Contains a “__*CHANGE PASSWORD*__” button for the users to click on so they can send the completed change password form they filled in above.
 ### Shopping Cart Page
 * Contains the “__*KEEP SHOPPING*__” button to allow users to click on it and return back to the homepage and add other different drinks to the shopping cart page.
 * Contains the image of the drinks added to the shopping cart, from the homepage, as well as their descriptive details including their: name, size, price per item, quantity and total price per order. 
@@ -138,7 +143,46 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains a “__*PAY*__” button for the users to click, in order to be transferred to the payment page so they can pay for their items.
 * If there are no orders in the shopping cart, the users will be shown the message: “__*Your Shopping Cart Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders.
 ### Payment Page
-
+* Contains an order summary section where the subtotal, delivery and grand total costs of the full orders are shown, alongside the images of the selected drinks and their information i.e.: name, size, price, quantity and total.
+* Contains a “__*CHANGE ORDER*__” button for the users to click, in order to be transferred to the shopping cart page, allowing the users to make changes to their order before paying for them, in case they change their minds.
+* Contains a payment form for the users to enter their personal and bank card details in order to: pay for their selected drink items, have an email sent to them confirming their purchase and deliver their drinks to their provided address.
+* Contains a “__*COMPLETE ORDER*__” button for the users to click, in order to complete their payment so they can pay for their drinks and then be redirected to another page confirming their payment was successful. 
+* Contains a toggle button labelled “__*Save payment details to my profile*__” to enable users to select it so the details they entered in the payment form can be saved as default values in the same form. This omits the need to type them again thus, speeding up future purchases. The toggle button also allows users to save and store their entered details into the form on their profile page.
+* Contains an exclamation icon followed by the message “__*Your card will be charged £(insert grand total)*__” to inform users on the total amount of money to be deducted from their bank card.
+### Payment Confirmation Page
+* Contains a note to the users, at the top of the screen, that their payment has successfully been processed. This gives users confirmation and peace of mind knowing that they have completed their payment.
+* Contains a note for the users thanking them for their payment and an email address pop up link for the users to click on and create an email to send to Slurps if they have any questions. 
+* Contains the following information in the payment summary section for the users to read and have on record for access in the future, via their profile page:
+    * The order number of their payment.
+    * The list of orders made by the users with the following information: name of the drink, the drink’s quantity and its price.
+    * The personal details of the users including their: name, address, post code, country, phone number and email address.
+    * The costs spent by the users including the: subtotal, delivery and grand total costs.
+    * The date and time the payment was made.
+* Contains the “__*KEEP SHOPPING*__” button to allow users to click on it and return back to the homepage and add new drinks to the shopping cart.
+### Sign Up Page
+* Contains a “__*log in*__” link at the top of the page for users to click on and be redirected to the login page if they already have accounts and just wish to log in instead.
+* Contains a signup form that requires users to enter their: email address twice, username and password twice. This allows users to create accounts with Slurps by filling in this form with the requested details.
+* Contains a “__*SIGN UP*__” button to allow users to click on it and have an account be created for them, so they can create profiles for saving their personal details for payments and also view their order history. Users will be asked to verify their account by clicking on the link sent to the provided email. Then users will be able to click the “__*CONFIRM*__” button to confirm their account with Slurps.
+#### Sign Up Closed Page
+* Contains a message stating: “__*We are sorry, but the sign up is currently closed.*__” for the users to see and be informed that the account they are trying to sign up with is no longer available.
+### Login Page
+* Contains a “__*sign up*__” link at the top of the page for users to click on and be redirected to the sign up page if they don’t have accounts with Slurps and need to create one in order to log in.
+* Contains a login form that requires users to enter their username and password. This allows users to access their accounts by filling in these details and logging into their accounts with Slurps.
+* Contains a “__*LOG IN*__” button to allow users to click on it to log into the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged in.
+* Contains a link underneath the login form, labelled “__*Forgot Password? Click Me!*__” followed by a smile wink icon, for users to click on in case they forget their password and require resetting it in order to log into their account.
+### Reset Password Page
+* Contains the message “__*Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it.*__” to inform users that they are to type in their email address in the form below in order to be emailed a method to reset their password.
+* Contains a form which allows the users to reset their password, by entering their email address. Once the users have entered their email, they will be redirected to a page confirming that an email was sent to the provided email address. 
+* Contains a “__*RESET MY PASSWORD*__” button to allow users to click on it and send their email, they put in the above form, to Slurps so they can send the users a way to reset their password.
+* Contains the message “__*Please contact us if you have any trouble resetting your password.*__” to inform users they are to contact Slurps if they struggle or fail to reset their password using the provided reset password form.
+### Log Out Page
+* Contains a message asking “__*Are you sure you want to log out?*__” to allow the users to confirm their choice in logging out, without being automatically logged out by clicking on the  “__*LOG OUT*__”  link in the navigation bar. 
+* Contains a “__*LOG OUT*__” button to allow users to click on it, log out of the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged out.
+### Footer
+* Contains icons for the following social media platforms: YouTube, Twitter, Snapchat, Facebook and Instagram to allow users to click on any of them and be taken to Slurps’ respective social media accounts. 
+* Contains Slurps’ phone number to allow users to know the phone number of the company so they have the option to contact Slurps via phone.
+* Contains Slurps’ email address to allow users to know the email address of the company so they have the option to contact Slurps via email.
+* Contains Slurps’ street address to allow users to know the street address of the company so they have the option to contact Slurps via postal mail.
 
 
 
