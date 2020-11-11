@@ -698,12 +698,12 @@ select {
 .change-password-border button:focus,
 .change-password-border button:active,
 .change-password-border button:hover,
-.change-password2-border input:focus,
-.change-password2-border input:active,
-.change-password2-border input:hover,
-.change-password2-border input[type="submit"]:focus,
-.change-password2-border input[type="submit"]:active,
-.change-password2-border input[type="submit"]:hover,
+.reset-password2-border input:focus,
+.reset-password2-border input:active,
+.reset-password2-border input:hover,
+.reset-password2-border input[type="submit"]:focus,
+.reset-password2-border input[type="submit"]:active,
+.reset-password2-border input[type="submit"]:hover,
 .reset-password-border input:focus,
 .reset-password-border input:active,
 .reset-password-border input:hover,
@@ -738,7 +738,7 @@ select {
 
 .signup-border input,
 .reset-password-border input,
-.change-password2-border input,
+.reset-password2-border input,
 .change-password-border input,
 .login-border input {
   box-shadow: 0.1em 0.1em;
@@ -795,7 +795,7 @@ select {
   margin: auto;
 }
 
-.change-password2-border {
+.reset-password2-border {
   background-color: lightsteelblue;
   border: solid lightblue 0.2em;
   overflow: auto;
@@ -805,7 +805,7 @@ select {
   margin: auto;
 }
 
-.change-password2-border input[type="submit"] {
+.reset-password2-border input[type="submit"] {
   width: 12em;
   box-shadow: 0.1em 0.1em;
   border-radius: 0.2em;
@@ -1105,11 +1105,11 @@ input[type="file"]::-webkit-file-upload-button {
     width: 28em;
   }
 
-  .change-password2-border {
+  .reset-password2-border {
     width: 28em;
   }
 
-  .change-password2-border input {
+  .reset-password2-border input {
     width: 26em;
   }
 
@@ -1182,11 +1182,11 @@ input[type="file"]::-webkit-file-upload-button {
     width: 36em;
   }
 
-  .change-password2-border {
+  .reset-password2-border {
     width: 36em;
   }
 
-  .change-password2-border input {
+  .reset-password2-border input {
     width: 34em;
   }
 
@@ -1338,11 +1338,11 @@ input[type="file"]::-webkit-file-upload-button {
     width: 40em;
   }
 
-  .change-password2-border {
+  .reset-password2-border {
     width: 39em;
   }
 
-  .change-password2-border input {
+  .reset-password2-border input {
     width: 37em;
   }
 

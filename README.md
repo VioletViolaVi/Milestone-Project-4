@@ -94,14 +94,19 @@ The “__*Checkout History*__” title was changed into “__*My Profile*__” a
 ### Checkout History Confirmation Order
 The confirmation order of the user’s purchases were made to be redirected to a separate page on its own. This resulted in a more organised structure and flow in using the website.  In addition, the confirmation orders were also made to be sent to the profile page alongside where the user’s personal details and link to change their password were placed.
 ### Buy Again Buttons
-The “__*BUY AGAIN*__'' buttons were removed from the project as the tables above them were moved to the “__*My Profile*__” page. The buttons were not moved to the “__*My Profile*__” page alongside the tables because the “__*My Profile*__” page was focused on showing the user’s information regarding their account. Having these buttons present would distract away from this purpose. Also, users could always easily head back to the homepage via the navigation bar’s logo link at the top, to make new purchases.  
+The “__*BUY AGAIN*__” buttons were removed from the project as the tables above them were moved to the “__*My Profile*__” page. The buttons were not moved to the “__*My Profile*__” page alongside the tables because the “__*My Profile*__” page was focused on showing the user’s information regarding their account. Having these buttons present would distract away from this purpose. Also, users could always easily head back to the homepage via the navigation bar’s logo link at the top, to make new purchases.  
 ### Checkout Title
-The “__*Checkout*__'' title was changed to “__*Shopping Cart*__'' to be more reflective and accurate about the stage at which the user was in. The aim of this portion of the website was to display to users what they had chosen to put in their shopping cart icon and how much the grand total was going to be; before officially making the payment. Using “__*Checkout*__'' as a title was too generic for labelling this aim as other events occur at a checkout stage e.g. making payments. As no payments were to be made at this point, the title was changed to be more specific over what the user was doing at this stage of their order.
+The “__*Checkout*__” title was changed to “__*Shopping Cart*__” to be more reflective and accurate about the stage at which the user was in. The aim of this portion of the website was to display to users what they had chosen to put in their shopping cart icon and how much the grand total was going to be; before officially making the payment. Using “__*Checkout*__” as a title was too generic for labelling this aim as other events occur at a checkout stage e.g. making payments. As no payments were to be made at this point, the title was changed to be more specific over what the user was doing at this stage of their order.
 ### Checkout Tables
-Tables used in the “__*Checkout*__'' page were omitted from this project. Instead the shopping information, regarding the selected drink items, were written freely besides the drink image. This added to the clean and simple overall look of the page.
+Tables used in the “__*Checkout*__” page were omitted from this project. Instead the shopping information, regarding the selected drink items, were written freely besides the drink image. This added to the clean and simple overall look of the page.
 ### Shipping Address Form Input
 Shipping Address Form Input
-The “__*Shipping Address*__'' form input was split into two inputs:  “__*Street Address 1**__'' and  “__*Street Address 2*__''. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
+The “__*Shipping Address*__” form input was split into two inputs:  “__*Street Address 1**__” and  “__*Street Address 2*__”. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
+# Features
+## Existing Features
+###
+
+
 # Technologies Used
 ## [Python](https://www.python.org/) and [Django](https://www.djangoproject.com/): 
 - This project used Python with Django to produce the backend code that runs on the server, to create the Slurps website.
