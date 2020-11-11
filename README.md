@@ -104,7 +104,44 @@ Shipping Address Form Input
 The “__*Shipping Address*__” form input was split into two inputs:  “__*Street Address 1**__” and  “__*Street Address 2*__”. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
 # Features
 ## Existing Features
-###
+### Navbars
+* Allows users to access different pages of the Slurps website by clicking on the provided links
+* Allows users to enter search requests in the search bar provided and help speed up the process of the users finding their desired item.
+* Provides location for the profile icon so the users can click on it to access their profile page.
+* Provides location for the shopping cart icon so the users can click on it to access the shopping cart page, to see what they purchased and how much it will cost.
+* Displays the number of items placed in the shopping cart by the users, as well as the total cost of those items.
+* Displays reduced cost of the standard delivery charge presented by Slurps, for the users to know about the additional fees.
+### Messages
+* Allows users to see alerts, near the top of the screen, on what actions they have taken on the website. Such as, being told they have logged in, what items they put in their shopping cart, whether their payment has been a success, etc.
+### Home Page
+* Contains the “__*Sort By...*__” button which allows users to rearrange displayed drink items in alphabetical order, whether in reverse or chronologically. Also rearrange drinks in ascending and descending order based on their price.
+* Allows users to see all drinks offered by Slurps categorised based on being new, juice or a milkshake, by displaying their images and their information in these separate sections.
+* Allows users to see the drinks with a “__*NEW!*__” label placed on them so the users can indicate which drinks are new and which are not.
+* Allows users to see the drink description of each offered drink so they know what each item is called and how much they cost and per quantity.
+* Contains “__*BUY NOW*__” buttons underneath the new drinks for the users to click on and jump down to the respective drink item and speed up their search.
+* Contains quantity forms underneath the juice and milkshake drinks so the users can fill in how many drinks of each item they want to buy.
+* Contains “__*ADD*__” buttons next to the quantity forms so the users can click on them after entering the number of drinks they wish to buy.
+### Our Mission Page
+* Allows users to view the mission statements of the Slurps company as well as some images that reflect the mission statements being explained.
+### User Profile Page
+* Contains a profile form for users to enter their personal details eg.: name, phone number, address, etc so the users can have these details automatically filled in the payment form; when making a payment.
+* Contains the “__*UPDATE INFORMATION*__” button which allows users to save entered changes to their profile form above, by clicking on this button after editing the form.
+* Contains a table showing the users’ order history i.e. the drink orders made by the users in the past, allowing users to view what they have previously purchased. As well as the date of the purchase, how much they spent and a link to its confirmation receipt. If there’s no order history, the users are shown the message: “__*Your Order History Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders. 
+* Contains the “__*CHANGE MY PASSWORD*__” button to allow users to change their current password if desired, by clicking on the button and filling in the form that gets shown to the users.
+### Shopping Cart Page
+* Contains the “__*KEEP SHOPPING*__” button to allow users to click on it and return back to the homepage and add other different drinks to the shopping cart page.
+* Contains the image of the drinks added to the shopping cart, from the homepage, as well as their descriptive details including their: name, size, price per item, quantity and total price per order. 
+* Contains an “__*EDIT*__” button underneath each drink item in the shopping cart, for the users to change the number of drinks to the number they entered in the edit drink form next to it.
+* Contains an edit drink form, after the “__*EDIT*__” button, underneath each drink item for the users to fill in and change the number of drinks they originally entered on the homepage.
+* Contains a bin icon next to the edit drink form, underneath each drink item for the users to click on if they wish to delete the order form their shopping cart. A modal will appear to confirm the users’ decision, at which point, users will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+* Contains summary information informing the users on the subtotal, delivery and grand total costs of their order, allowing users to see how much money they will spend on their order.
+* Contains a “__*PAY*__” button for the users to click, in order to be transferred to the payment page so they can pay for their items.
+* If there are no orders in the shopping cart, the users will be shown the message: “__*Your Shopping Cart Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders.
+### Payment Page
+
+
+
+
 
 
 # Technologies Used
