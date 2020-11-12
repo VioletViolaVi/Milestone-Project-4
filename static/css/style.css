@@ -864,7 +864,10 @@ input[type="checkbox"] {
 .admim-form-border button:hover,
 .admim-form-border a:focus,
 .admim-form-border a:active,
-.admim-form-border a:hover {
+.admim-form-border a:hover,
+.django-admin-btn a:focus,
+.django-admin-btn a:active
+.django-admin-btn a:hover {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -872,11 +875,8 @@ input[type="checkbox"] {
   border: #17a2b8 solid 0.2em;
 }
 
+.django-admin-btn a,
 .admim-form-border button,
-.admim-form-border button,
-.admim-form-border button,
-.admim-form-border a,
-.admim-form-border a,
 .admim-form-border a {
   padding: 0.3em;
   border-radius: 0.2em;
@@ -929,10 +929,12 @@ input[type="file"]::-webkit-file-upload-button {
   overflow: hidden;
 }
 
-.django-admin-link {
-  top: 0.5em;
-  padding-left: 0.2em;
-  margin-bottom: 1.5em;
+.django-admin-btn a{
+  padding: 0.3em;
+  border-radius: 0.2em;
+  box-shadow: 0.1em 0.1em;
+  outline: none;
+  background-color: lightblue;  
 }
 
 .edit-btn {
@@ -1290,10 +1292,6 @@ input[type="file"]::-webkit-file-upload-button {
 
   .sort-by-section {
     top: 9.5em;
-  }
-
-  .django-admin-link {
-    margin: -0.9em 0em 0em;
   }
 
   /******************************************* shopping cart */

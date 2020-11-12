@@ -183,7 +183,11 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains Slurps’ phone number to allow users to know the phone number of the company so they have the option to contact Slurps via phone.
 * Contains Slurps’ email address to allow users to know the email address of the company so they have the option to contact Slurps via email.
 * Contains Slurps’ street address to allow users to know the street address of the company so they have the option to contact Slurps via postal mail.
-
+### Admin Home Page
+* Displays a button labelled “__*DJANGO ADMIN*__”  to allow the administrators access to Django’s administration page so they can conduct the CRUD functionality of adding, reviewing, editing and deleting drinks on the website; from there.
+* Displays the “__*EDIT*__” buttons, underneath the “__*BUT NOW*__” and  “__*ADD*__” buttons, that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the drink selected.
+* Displays a bin icon that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected drink item. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+### Admin Edit Drink Page
 
 
 
