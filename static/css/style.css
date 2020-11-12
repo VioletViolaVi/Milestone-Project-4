@@ -1360,6 +1360,11 @@ input[type="file"]::-webkit-file-upload-button {
     width: 42.5em;
   }
 
+  /******************************************* delivery header */
+  .new-drinks-circle1 {
+    left: 1em;
+  }
+
   /******************************************* shopping cart */
   .shopping-cart-costs {
     padding: 0em 0em 0em 24em;
