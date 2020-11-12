@@ -9,7 +9,7 @@
                        <i class="fas fa-search text-body font-weight-bolder"></i>
                     </button>                        
                 </div>
-                <input id="lgSearchBar" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
+                <input value="{% if typed_in_search %}{{ typed_in_search }}{% endif %}" id="lgSearchBar" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
             </div>                    
         </form>                    
     </div> 

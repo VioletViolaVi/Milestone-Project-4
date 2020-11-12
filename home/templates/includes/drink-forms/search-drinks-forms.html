@@ -1,6 +1,7 @@
-<form method="GET" class="searched-drinks">
+<form method="POST" action="{% url 'add_to_shopping_cart' drink_search_result.id %}" class="quantity-selection">
     {% csrf_token %}
-    <label for="drinkSelections"></label>
-    <input value="1" type="number" id="drinkSelections" name="drinkSelections" class="font-weight-bolder">
-    <button type="submit" class="text-uppercase mb-5 font-weight-bolder">add</button>
+    <label for="enteredSearchSelection"></label>
+    <input value="1" type="number" name="drinkSelections" min="1" max="100" data-drink_id="{{ drink_search_result.id }}" class="font-weight-bolder">
+    <button type="submit" class="text-uppercase mb-3 font-weight-bolder">add</button>
+    <input type="hidden" name="redirect_url" value="{{ request.path }}">
 </form>

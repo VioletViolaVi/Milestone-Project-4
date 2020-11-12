@@ -370,6 +370,7 @@ input[type="checkbox"] {
   padding: 0 0.5em;
   box-shadow: 0.1em 0.1em;
   border-radius: 0.2em;
+  border: lightblue;
 }
 
 .dot-dot-dot {
@@ -385,32 +386,6 @@ input[type="checkbox"] {
   border: lightblue solid 0.2em;
   text-align: center;
   box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-}
-
-/******************************************* drink search */
-.searched-drinks input[type="number"]:focus,
-.searched-drinks input[type="number"]:active,
-.searched-drinks input[type="number"]:hover,
-.searched-drinks button:focus,
-.searched-drinks button:active,
-.searched-drinks button:hover {
-  outline: none;
-  border: #17a2b8 solid 0.2em;
-  box-shadow: 0.1em 0.1em;
-}
-
-.searched-drinks input[type="number"] {
-  width: 3em;
-  border: lightblue solid 0.2em;
-  text-align: center;
-  border-radius: 0.2em;
-}
-
-.searched-drinks button {
-  background-color: lightblue;
-  padding: 0.3em;
-  border: lightblue;
   border-radius: 0.2em;
 }
 
@@ -870,8 +845,7 @@ input[type="checkbox"] {
 .admim-form-border a:active,
 .admim-form-border a:hover,
 .django-admin-btn a:focus,
-.django-admin-btn a:active
-.django-admin-btn a:hover {
+.django-admin-btn a:active .django-admin-btn a:hover {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -933,12 +907,12 @@ input[type="file"]::-webkit-file-upload-button {
   overflow: hidden;
 }
 
-.django-admin-btn a{
+.django-admin-btn a {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
   outline: none;
-  background-color: lightblue;  
+  background-color: lightblue;
 }
 
 .edit-btn {
