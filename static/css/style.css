@@ -292,13 +292,13 @@ select option[value=""] {
   color: #6c757d !important;
 }
 
-input[type="radio"] {
-  width: 1em;
-}
-
 select,
 input[type="checkbox"] {
   cursor: pointer;
+}
+
+input[type="radio"] {
+  width: 1em;
 }
 
 /******************************************* home page */
@@ -505,6 +505,7 @@ input[type="checkbox"] {
   background-color: lightsteelblue;
   border: solid lightblue 0.2em;
   overflow: auto;
+  height: 33em;
 }
 
 .payment-form-border button {
@@ -823,7 +824,6 @@ input[type="checkbox"] {
   border: lightblue;
 }
 
-
 .signup-border {
   background-color: lightsteelblue;
   border: solid lightblue 0.2em;
@@ -850,7 +850,8 @@ input[type="checkbox"] {
 .admim-form-border a:active,
 .admim-form-border a:hover,
 .django-admin-btn a:focus,
-.django-admin-btn a:active .django-admin-btn a:hover {
+.django-admin-btn a:active,
+.django-admin-btn a:hover {
   padding: 0.3em;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em;
@@ -1050,7 +1051,7 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* make payment */
   .payment-form-border {
-    height: 100vh;
+    height: 33.5em;
   }
 
   /******************************************* profiles */
@@ -1139,9 +1140,9 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   /******************************************* make payment */
-  .drink-order-box {
-    height: 100vh;
-    border: solid lightblue 0.2em;
+  .drink-order-box,
+  .payment-form-border {
+    height: 85vh;
   }
 
   /******************************************* profiles */
