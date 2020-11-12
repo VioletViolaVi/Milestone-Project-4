@@ -1006,11 +1006,6 @@ input[type="file"]::-webkit-file-upload-button {
 
 /* bootstrap media query */
 @media (min-width: 576px) {
-  /******************************************* universal */
-  html {
-    scroll-padding-top: 10.5em;
-  }
-
   /******************************************* title, search bar, profile & trolley header */
   #searchBar {
     width: 100%;
@@ -1205,11 +1200,6 @@ input[type="file"]::-webkit-file-upload-button {
 
 /* bootstrap media query */
 @media (min-width: 992px) {
-  /******************************************* universal */
-  html {
-    scroll-padding-top: 9.5em;
-  }
-
   /******************************************* title, search bar, profile & trolley header */
   .d-none.d-lg-block.fixed-top.navbar {
     height: 150px;

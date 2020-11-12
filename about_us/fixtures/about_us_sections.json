@@ -1,7 +1,7 @@
 [
   {
     "pk": 1,
-    "model": "home.about_us_section",
+    "model": "about_us.about_us_section",
     "fields": {
       "programmatic_name": "main_mission",
       "friendly_name": "Main Mission"
@@ -9,7 +9,7 @@
   },
   {
     "pk": 2,
-    "model": "home.about_us_section",
+    "model": "about_us.about_us_section",
     "fields": {
       "programmatic_name": "sub_mission",
       "friendly_name": "Sub Mission"
