@@ -70,7 +70,7 @@ This is an activity diagram showing how the Slurps website is intended to be use
 ![A wireframe of the checkout page on desktop screens.](/media/wireframes/30.checkout-desktop.PNG)
 ![A wireframe of the checkout delete modal on desktop screens.](/media/wireframes/31.checkoutDeleteModal-desktop.PNG)
 ![A wireframe of the payment page on desktop screens.](/media/wireframes/32.payment-desktop.PNG)
-## Wireframe and Final Project Differences
+## Wireframe & Final Project Differences
 ### Shopping Cart Button
 For desktop screen sizes, the word “__*CART*__” was omitted from being placed next to the shopping cart icon as it was deemed unnecessary. Users can tell, based on the universal shopping cart icon symbol, that clicking with it will lead them to their shopping cart. 
 ### Signup Login Navigation Link
@@ -88,7 +88,7 @@ The “__*About Us*__” title was changed to “__*Mission Statement*__” as i
 ### About Us Customer Satisfaction Title
 The “__*Customer Satisfaction*__” title was changed to “__*Our Customers*__” to better match the style of the other two mission statements written alongside it. The tile was reduced in length making the page look cleaner, simpler and more responsive across different screen sizes.
 ### Checkout History Button
-The “__*CHECKOUT HISTORY*__” button was changed into a person icon because it was better visually for the user to see a picture representing a function instead of more text. It made it easier and faster for the user to understand how to navigate through the website. Also, the link takes the user to a part of the website where a variety of activities could be carried out instead of only viewing their checkout history. These other activities included saving and updating user personal details and changing their passwords, as well as viewing their order history. So a more generic symbol better suited this.
+The “__*CHECKOUT HISTORY*__” button was changed into a person icon because it was better visually for the user to see a picture representing a function instead of more text. It made it easier and faster for the user to understand how to navigate through the website. Also, the link takes the user to a part of the website where a variety of activities could be carried out instead of only viewing their checkout history. These other activities included: adding emails, saving and updating user personal details and changing their passwords, as well as viewing their order history. So a more generic symbol better suited this.
 ### Checkout History Title
 The “__*Checkout History*__” title was changed into “__*My Profile*__” as its page ended up consisting of more information about the user, other than just their order history. This page contained: the user’s personal details, ability to change personal details, an access link to change their password and the user’s drink order history. Due to all these different features added to this page, its title required a name more reflective of its content thus, “__*My Profile*__”. 
 ### Checkout History Confirmation Order
@@ -130,9 +130,17 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains the “__*UPDATE INFORMATION*__” button which allows users to save entered changes to their profile form above, by clicking on this button after editing the form. These details are also saved in the payment form at the same time, so the user can speed up their purchase.
 * Contains a table showing the users’ order history i.e. the drink orders made by the users in the past, allowing users to view what they have previously purchased. As well as the date of the purchase, how much they spent and a link to its confirmation receipt. If there’s no order history, the users are shown the message: “__*Your Order History Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders. 
 * Contains the “__*CHANGE MY PASSWORD*__” button to allow users to change their current password if desired, by clicking on the button and filling in the form that gets shown to the users.
-### Change Password Page
+* Contains the “__*ADD EMAIL ADDRESS*__” button that when clicked on, allows users to add more email addresses to their account if they wish to do so. This also takes users to a page where they can choose: which email address they want as their primary address, which email(s) to have an email verification link sent to them and which email(s) they want to delete. 
+### Change & Set Password Page
 * Contains a change password form where the users are to fill in their current password and then their new password twice in order to change their current password.
 * Contains a “__*CHANGE PASSWORD*__” button for the users to click on so they can send the completed change password form they filled in above.
+### Email Address Page
+* Displays radio buttons with the users emails as the options to allow users to select the email they wish to: make the primary email, have an email verification re-sent to it or removed all together.
+* Displays a “__*MAKE PRIMARY*__” button for users to click on in order to make the selected email, from the radio button options above, the primary email.
+* Displays a “__*RESEND VERIFICATION*__” button for users to click on in order to resend an email verification to the selected email, from the radio button options above.
+* Displays a “__*REMOVE*__” button for users to click on in order to delete the selected email, from the users’ account.
+* Displays an add email form to allow users to add another email to their account by filling in the form with another email address.
+* Displays an “__*ADD E-MAIL*__” button for users to click on in order to add the email that was entered in the add email form above it.
 ### Shopping Cart Page
 * Contains the “__*KEEP SHOPPING*__” button to allow users to click on it and return back to the homepage and add other different drinks to the shopping cart page.
 * Contains the image of the drinks added to the shopping cart, from the homepage, as well as their descriptive details including their: name, size, price per item, quantity and total price per order. 
@@ -163,6 +171,14 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains a “__*log in*__” link at the top of the page for users to click on and be redirected to the login page if they already have accounts and just wish to log in instead.
 * Contains a signup form that requires users to enter their: email address twice, username and password twice. This allows users to create accounts with Slurps by filling in this form with the requested details.
 * Contains a “__*SIGN UP*__” button to allow users to click on it and have an account be created for them, so they can create profiles for saving their personal details for payments and also view their order history. Users will be asked to verify their account by clicking on the link sent to the provided email. Then users will be able to click the “__*CONFIRM*__” button to confirm their account with Slurps.
+### Verified Email Request Page
+* Displays a message for the users to read explaining that Slurps requires verification from the users to ensure they are who they say they are. The message also explains that users are to click on the link sent to their email address.
+### Verification Sent Page
+* Displays a message for the users to read explaining that Slurps has sent them an email to the provided users’ email address for them to use in verifying that the email they provided is a real one.
+### Email Confirmation Page
+* Displays a message informing the user to confirm their email address is correct in order to create an account with Slurps. 
+* Displays a “__*CONFIRM*__” button for the users to click on to allow them to send confirmation to Slurps that their email is correct.
+* If the email confirmation link is out of date or invalid, the page will display a message to the user informing them that the email confirmation link is out of date or invalid. 
 #### Sign Up Closed Page
 * Contains a message stating: “__*We are sorry, but the sign up is currently closed.*__” for the users to see and be informed that the account they are trying to sign up with is no longer available.
 ### Login Page
@@ -170,14 +186,21 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains a login form that requires users to enter their username and password. This allows users to access their accounts by filling in these details and logging into their accounts with Slurps.
 * Contains a “__*LOG IN*__” button to allow users to click on it to log into the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged in.
 * Contains a link underneath the login form, labelled “__*Forgot Password? Click Me!*__” followed by a smile wink icon, for users to click on in case they forget their password and require resetting it in order to log into their account.
-### Reset Password Page
+### Reset Password Sent Email Page
+* Contains a message for the users to read, explaining to them that they have been sent an email for resetting their password and should contact Slurps if they don’t get this email.
+* If the email reset password link is out of date or invalid, the page will display a message to the user informing them that the email reset password link is out of date or invalid. 
+### Reset Password Form Page
 * Contains the message “__*Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it.*__” to inform users that they are to type in their email address in the form below in order to be emailed a method to reset their password.
 * Contains a form which allows the users to reset their password, by entering their email address. Once the users have entered their email, they will be redirected to a page confirming that an email was sent to the provided email address. 
 * Contains a “__*RESET MY PASSWORD*__” button to allow users to click on it and send their email, they put in the above form, to Slurps so they can send the users a way to reset their password.
 * Contains the message “__*Please contact us if you have any trouble resetting your password.*__” to inform users they are to contact Slurps if they struggle or fail to reset their password using the provided reset password form.
+#### Reset Password Complete Page
+* Displays a message for the users to read and see that they were successful in resetting their password.
 ### Log Out Page
 * Contains a message asking “__*Are you sure you want to log out?*__” to allow the users to confirm their choice in logging out, without being automatically logged out by clicking on the  “__*LOG OUT*__”  link in the navigation bar. 
 * Contains a “__*LOG OUT*__” button to allow users to click on it, log out of the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged out.
+### Account Inactive Page
+- Displays a message informing the user that the account is no longer active and therefore would need a new account to be created.
 ### Footer
 * Contains icons for the following social media platforms: YouTube, Twitter, Snapchat, Facebook and Instagram to allow users to click on any of them and be taken to Slurps’ respective social media accounts. 
 * Contains Slurps’ phone number to allow users to know the phone number of the company so they have the option to contact Slurps via phone.
@@ -188,12 +211,29 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Displays the “__*EDIT*__” buttons, underneath the “__*BUT NOW*__” and  “__*ADD*__” buttons, that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the drink selected.
 * Displays a bin icon that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected drink item. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
 ### Admin Edit Drink Page
-
-
-
-
+* Displays a message, at the top of the screen, informing the administrators on which drink item they are editing.
+* Displays an edit drink form which allows administrators to make changes to the default values of the selected drink, to be edited. As a result, administrators are able to change the following details about any drink on the Slurps website: the drink image, its name, the price, the millilitres and the type of drink it is i.e.: a new drink, milkshake or juice.
+* Displays a “__*CANCEL*__” button underneath the edit drink form for the administrators to click on to cancel editing the drinks and return them back to the home page.
+* Displays an “__*UPDATE DRINK*__” button underneath the edit drink form for the administrators to click on to update the changes made to the drinks and return them back to the home page with these updated changes showing.
+### Admin Delete Drink Modal
+* Displays a bin icon, next to the “__*EDIT*__” button that administrators can click on to open up a modal containing a message asking them for confirmation on whether they wish to delete the drink they selected. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+### Admin Add Drink Page
+* Displays an add drink form which allows administrators to add new drinks to the list of drinks offered by Surps. Administrators are able to add the following details for these new drinks on the Slurps website: an image, name, price and its millilitres. Administrators also can add the drink to both the new drink section and either the milkshake or juice section.
+* Displays a “__*CANCEL*__” button underneath the add drink form for the administrators to click on to stop the new drink being added and return them back to the home page.
+* Displays an “__*ADD DRINK*__” button underneath the add drink form for the administrators to click on to add the new drinks to the Slurps website and then return them back to the homepage with these newly added drinks displayed.
+### Admin Edit Mission Statement Page
+* Displays a message, at the top of the screen, informing the administrators on which portion of the mission statement page they are editing.
+* Displays an edit mission statement form which allows administrators to make changes to the default values of the selected mission statement. Administrators are able to change the following details about the mission statements on the Slurps website: their image and its description, the statement’s title, paragraph and the section the mission statement is to be placed on the Slurps website.
+* Displays a “__*CANCEL*__” button underneath the edit mission statement form for the administrators to click on to stop editing the mission statement and return them back to the mission statement page.
+* Displays an “__*UPDATE MISSION STATEMENT*__” button underneath the edit mission statement form for the administrators to click on to update the changes made to the mission statement and return them back to the mission statement page with these updated changes showing.
+### Admin Delete Mission Statement Modal
+* Displays a bin icon, next to the “__*EDIT*__” button that administrators can click on to open up a modal containing a message asking them for confirmation on whether they wish to delete the mission statement selected. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+### Admin Add Mission Statement Page
+* Displays a mission statement form which allows administrators to add new mission statements to the Slurps website. Administrators are able to add the following details for the new mission statements added: an image, an image description, a title, a paragraph and the section the new mission statement is to be placed.
+* Displays a “__*CANCEL*__” button underneath the add mission statement form for the administrators to click on to stop adding the new mission statement and return them back to the mission statement page.
+* Displays an “__*ADD MISSION STATEMENT*__” button underneath the add mission statement form for the administrators to click on to add the new mission statement made and return them back to the mission statement page with the statements displaying.
 # Technologies Used
-## [Python](https://www.python.org/) and [Django](https://www.djangoproject.com/): 
+## [Python](https://www.python.org/) & [Django](https://www.djangoproject.com/): 
 - This project used Python with Django to produce the backend code that runs on the server, to create the Slurps website.
 - Django was used to do the following: 
     - Produce forms
@@ -262,6 +302,20 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - This project used the Snipping Tool to edit the drink images and wireframes for the Slurps website.
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
+# Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Deployment
 This project was deployed to Heroku using the following steps:
 ### Amazon Web Services (AWS)

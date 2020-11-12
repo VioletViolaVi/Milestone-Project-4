@@ -129,8 +129,8 @@ def edit_drink(request, drink_id):
                  Please ensure the form is valid.")
     else:
         form = DrinkForm(instance=drink)
-        messages.info(request, f"You are editing \
-             {drink.drink_name.capitalize()}.")
+        messages.info(
+            request, f'You are editing "{drink.drink_name.title()}".')
 
     template = "home/edit_drink.html"
     context = {
@@ -207,12 +207,12 @@ def change_about_us(request, about_us_id):
                              "Mission statement section successfully updated!")
             return redirect(reverse("about_us"))
         else:
-            messages.error(request, f'Failed to update the: "{about_us.title}" section. \
+            messages.error(request, f'Failed to update the: "{about_us.title.title()}" section. \
                  Please ensure the form is valid.')
     else:
         form = AboutUsForm(instance=about_us)
         messages.info(
-            request, f'You are editing the: "{about_us.title}" \
+            request, f'You are editing the: "{about_us.title.title()}" \
             section.')
 
     template = "home/edit_about_us.html"

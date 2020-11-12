@@ -625,14 +625,18 @@ input[type="checkbox"] {
 .update-form-border button:hover,
 .change-password-btn:focus,
 .change-password-btn:active,
-.change-password-btn:hover {
+.change-password-btn:hover,
+.add-email-btn:focus,
+.add-email-btn:active,
+.add-email-btn:hover {
   border: #17a2b8 solid 0.2em;
   outline: none;
   box-shadow: 0.1em 0.1em;
 }
 
 .update-form-border button,
-.change-password-btn {
+.change-password-btn,
+.add-email-btn {
   box-shadow: 0.1em 0.1em;
   border-radius: 0.2em;
   padding: 0.3em;
@@ -757,7 +761,7 @@ input[type="checkbox"] {
   background-color: lightsteelblue;
   border: solid lightblue 0.2em;
   overflow: auto;
-  height: 15em;
+  height: 16em;
   padding: 0.5em;
   width: 18em;
   margin: auto;
@@ -1083,7 +1087,7 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* allauth pages */
   .verify-email-border {
-    height: 10em;
+    height: 12em;
     width: 28em;
   }
 
@@ -1169,7 +1173,7 @@ input[type="file"]::-webkit-file-upload-button {
 
   /******************************************* allauth pages */
   .verify-email-border {
-    height: 7.5em;
+    height: 9.5em;
     width: 36em;
   }
 
