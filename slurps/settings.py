@@ -176,6 +176,8 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+COMPANY_EMAIL = "slurps@civoo.com"
+
 # stripe
 FORMER_DELIVERY_COST = 35
 DELIVERY_COST = 5
@@ -183,4 +185,3 @@ STRIPE_CURRENCY = "gbp"
 STRIPE_PUBLIC_KEY = os.getenv("STRIPE_PUBLIC_KEY", "")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.getenv("STRIPE_WH_SECRET", "")
-COMPANY_EMAIL = "slurps@civoo.com"

@@ -50,7 +50,7 @@ class StripeWH_Handler:
         pid = intent.id
         shopping_cart = intent.metadata.shopping_cart
 
-        saveInfo = intent.metadata.saveInfo
+        save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
@@ -61,12 +61,12 @@ class StripeWH_Handler:
             if value == "":
                 shipping_details.address[field] = None
 
-        # updates user profile info when saveInfo is checked
+        # updates user profile info when save_info is checked
         user_profiles = None
         username = intent.metadata.username
         if username != "AnonymousUser":
             user_profiles = UserProfiles.objects.get(user__username=username)
-            if saveInfo:
+            if save_info:
                 user_profiles.default_full_name = shipping_details.name
                 user_profiles.default_phone_number = shipping_details.phone
                 user_profiles.default_street_address1 = shipping_details.address.line1

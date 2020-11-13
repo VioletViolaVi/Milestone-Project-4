@@ -80,10 +80,10 @@
 
                 <div class="col-12 mt-2">
                     {% if user.is_authenticated %}
-		            	<label for="saveInfo"><small>Save payment details to my profile</small></label>
-                        <input type="checkbox" checked name="saveInfo" id="saveInfo">
+		            	<label for="id-save-info"><small>Save payment details to my profile</small></label>
+                        <input type="checkbox" checked name="save-info" id="id-save-info">
 		            {% else %}
-		            	<label for="#">
+		            	<label for="id-save-info">
                             <a class="text-info font-weight-bolder" href="{% url 'account_signup' %}">Create an account</a> or 
                             <a class="text-info font-weight-bolder" href="{% url 'account_login' %}">login</a> to save this information
                         </label>

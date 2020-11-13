@@ -73,14 +73,14 @@ $(document).ready(function () {
          $("#paymentForm").fadeToggle(100);
          $("#loadingOverlay").fadeToggle(100);
 
-        let saveInfo = Boolean($("#saveInfo").attr("checked"));
+        let saveInfo = Boolean($("#id-save-info").attr("checked"));
 
         // from using csrf_token in form
         let csrfToken = $("input[name='csrfmiddlewaretoken']").val();
         let postData = {
             "csrfmiddlewaretoken": csrfToken,
             "client_secret": clientSecret,
-            "saveInfo": saveInfo,
+            "save_info": saveInfo,
             };
 
         let url = "/payment/cache_payment_data/";

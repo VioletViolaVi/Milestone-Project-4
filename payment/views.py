@@ -24,7 +24,7 @@ def cache_payment_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             "shopping_cart": json.dumps(
                 request.session.get("shopping_cart", {})),
-            "saveInfo": request.POST.get("saveInfo"),
+            "save_info": request.POST.get("save_info"),
             "username": request.user,
         })
         return HttpResponse(status=200)
@@ -77,7 +77,7 @@ def payment(request):
                     drink_order.delete()
                     return redirect(reverse("shopping_cart"))
 
-            request.session["saveInfo"] = "saveInfo" in request.POST
+            request.session["save_info"] = "save-info" in request.POST
             return redirect(reverse("payment_success",
                                     args=[drink_order.drink_order_number]))
         else:
@@ -107,7 +107,7 @@ def payment(request):
             try:
                 user_profiles = UserProfiles.objects.get(user=request.user)
                 drink_order_form = DrinkOrderForm(initial={
-                    "full_name": user_profiles.user.get_full_name(),
+                    "full_name": user_profiles.default_full_name,
                     "email": user_profiles.user.email,
                     "phone_number": user_profiles.default_phone_number,
                     "street_address1": user_profiles.default_street_address1,
@@ -136,7 +136,7 @@ def payment(request):
 
 @login_required
 def payment_success(request, drink_order_number):
-    saveInfo = request.session.get("saveInfo")
+    save_info = request.session.get("save_info ")
     drink_order = get_object_or_404(DrinkOrder,
                                     drink_order_number=drink_order_number)
     if request.user.is_authenticated:
@@ -146,7 +146,7 @@ def payment_success(request, drink_order_number):
         drink_order.save()
 
         # Save user's info
-        if saveInfo:
+        if save_info:
             user_profiles_data = {
                 "default_full_name": drink_order.full_name,
                 "default_phone_number": drink_order.phone_number,

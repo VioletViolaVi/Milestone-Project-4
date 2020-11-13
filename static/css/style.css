@@ -282,6 +282,11 @@ input[type="email"]::placeholder {
   text-transform: lowercase;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
 select,
 select option {
   color: #212529;
@@ -602,9 +607,9 @@ input[type="radio"] {
 .change-password-btn:focus,
 .change-password-btn:active,
 .change-password-btn:hover,
-.add-email-btn:focus,
-.add-email-btn:active,
-.add-email-btn:hover {
+.change-email-btn:focus,
+.change-email-btn:active,
+.change-email-btn:hover {
   border: #17a2b8 solid 0.2em;
   outline: none;
   box-shadow: 0.1em 0.1em;
@@ -612,7 +617,7 @@ input[type="radio"] {
 
 .update-form-border button,
 .change-password-btn,
-.add-email-btn {
+.change-email-btn {
   box-shadow: 0.1em 0.1em;
   border-radius: 0.2em;
   padding: 0.3em;
@@ -628,7 +633,7 @@ input[type="radio"] {
   margin: auto;
   overflow: auto;
   padding: 0.5em;
-  height: 24em;
+  height: 25em;
 }
 
 .empty-history-border {
@@ -1053,11 +1058,11 @@ input[type="file"]::-webkit-file-upload-button {
   .update-form-border,
   .order-history-border {
     width: 30em;
+    height: 26em;
   }
 
   .update-form-border {
     padding: 1em;
-    height: 25em;
   }
 
   /******************************************* allauth pages */
