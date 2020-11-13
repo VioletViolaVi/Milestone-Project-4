@@ -242,6 +242,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Save user’s personal and payment details on the Slurps website. 
     - Access its administration page to control, test and monitor the production of the Slurps website.
     - Create models and reusable apps for the Slurps website. 
+    - Test the functionality of the project
 ## [Stripe](https://stripe.com/en-gb):
 - Stripe was used to create the card payment input in order to take card payments from the user.
 ## OS 
