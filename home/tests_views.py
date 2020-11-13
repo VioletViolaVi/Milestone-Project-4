@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 
-class TestHomeViews(TestCase):
+class TestViews(TestCase):
     def test_drink_search(self):
         drink_search = None
         self.assertIsNone(drink_search)
