@@ -1,14 +1,14 @@
 from django.test import TestCase
-from .models import Drink
+from .models import About_us
 from .widgets import CustomClearableFileInput
 
 
 class TestForms(TestCase):
-    def test_drink_form_modal(self):
-        model = Drink
-        self.assertIs(model, Drink)
+    def test_about_us_form_modal(self):
+        model = About_us
+        self.assertIs(model, About_us)
 
-    def test_drink_form_field(self):
+    def test_about_us_form_field(self):
         fields = "__all__"
         self.assertIs(fields, "__all__")
 
