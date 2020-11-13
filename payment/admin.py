@@ -29,7 +29,7 @@ class DrinkOrderAdmin(admin.ModelAdmin):
                     "full_name", "subtotal",
                     "delivery_cost", "grand_total",)
 
-    ordering = ('-date',)
+    ordering = ("-date",)
 
 
 admin.site.register(DrinkOrder, DrinkOrderAdmin)

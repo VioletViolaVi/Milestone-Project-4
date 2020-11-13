@@ -12,5 +12,4 @@ def update_on_save(sender, instance, created, **kwargs):
 
 @receiver(post_delete, sender=DrinkOrderLineItem)
 def update_on_delete(sender, instance, **kwargs):
-    print("delete signal received!")
     instance.drink_order.update_total()
