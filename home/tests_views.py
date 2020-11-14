@@ -86,3 +86,16 @@ class TestViews(TestCase):
     def test_delete_drink(self):
         self.assertTrue("Access Denied. \
                 Access restricted to administrators only.", str)
+
+    def test_go_to_drink_page(self):
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "home/index.html")
+
+    def test_go_to_add_drink_page(self):
+        response = self.client.get("/accounts/login/?next=/add/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_edit_drink_page(self):
+        response = self.client.get("/accounts/login/?next=/edit/1")
+        self.assertEqual(response.status_code, 200)
