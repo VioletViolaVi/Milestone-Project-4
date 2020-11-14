@@ -19,3 +19,12 @@ class TestViews(TestCase):
         self.assertTrue("payment/payment_success.html", str)
         self.assertTrue("drink_order", str)
         self.assertTrue("taken_from_user_profiles", str)
+
+    def test_go_to_user_profiles_page(self):
+        response = self.client.get("/accounts/login/?next=/user_profiles/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_drink_order_history_page(self):
+        response = self.client.get(
+            "/accounts/login/?next=/user_profiles/drink_order_history/")
+        self.assertEqual(response.status_code, 200)
