@@ -25,3 +25,16 @@ class TestViews(TestCase):
         self.assertEqual(status, 500)
         self.assertTrue(status, int)
         self.assertTrue(status, range(1, 501))
+
+    def test_go_to_shopping_cart_page(self):
+        response = self.client.get("/accounts/login/?next=/shopping_cart/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_add_shopping_cart_page(self):
+        response = self.client.get("/accounts/login/?next=/add/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_edit_shopping_cart_page(self):
+        response = self.client.get(
+            "/accounts/login/?next=/edit/")
+        self.assertEqual(response.status_code, 200)
