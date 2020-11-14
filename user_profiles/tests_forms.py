@@ -1,4 +1,5 @@
 from django.test import TestCase
+from .forms import UserProfilesForm
 
 
 class TestForms(TestCase):
@@ -31,3 +32,62 @@ class TestForms(TestCase):
         self.assertTrue("placeholder", str)
         self.assertTrue("class", str)
         self.assertTrue("profile-countries", str)
+
+    def test_user_profiles_form_full_name_is_not_required(self):
+        form = UserProfilesForm({"phone_number": "Test",
+                                 "street_address1": "Test",
+                                 "street_address2": "Test",
+                                 "postcode": "Test",
+                                 "country": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_profiles_form_phone_number_is_not_required(self):
+        form = UserProfilesForm({"full_name": "Test",
+                                 "street_address1": "Test",
+                                 "street_address2": "Test",
+                                 "postcode": "Test",
+                                 "country": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_profiles_form_street_address1_is_not_required(self):
+        form = UserProfilesForm({"full_name": "Test",
+                                 "phone_number": "Test",
+                                 "street_address2": "Test",
+                                 "postcode": "Test",
+                                 "country": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_profiles_form_street_address2_is_not_required(self):
+        form = UserProfilesForm({"full_name": "Test",
+                                 "phone_number": "Test",
+                                 "street_address1": "Test",
+                                 "postcode": "Test",
+                                 "country": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_profiles_form_postcode_is_not_required(self):
+        form = UserProfilesForm({"full_name": "Test",
+                                 "phone_number": "Test",
+                                 "street_address1": "Test",
+                                 "street_address2": "Test",
+                                 "country": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_profiles_form_country_is_not_required(self):
+        form = UserProfilesForm({"full_name": "Test",
+                                 "phone_number": "Test",
+                                 "street_address1": "Test",
+                                 "street_address2": "Test",
+                                 "postcode": "Test",
+                                 })
+        self.assertTrue(form.is_valid())
+
+    def test_user_is_excluded_form_metaclass(self):
+        form = UserProfilesForm()
+        exclude = ("user",)
+        self.assertEqual(form.Meta.exclude, exclude)
