@@ -19,7 +19,7 @@ class Drink(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     millilitres = models.IntegerField()
     drink_type = models.ForeignKey(
-        "Drink_type", null=True, blank=True, on_delete=models.SET_NULL)
+        "Drink_type", null=True, blank=False, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.drink_name
