@@ -50,3 +50,16 @@ class TestViews(TestCase):
                 Access restricted to administrators only.", str)
         self.assertTrue("about_us", str)
         self.assertTrue("Mission statement section deleted!", str)
+
+    def test_go_to_about_us_page(self):
+        response = self.client.get("/about_us/")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "about_us/about_us.html")
+
+    def test_go_to_append_about_us_page(self):
+        response = self.client.get("/accounts/login/?next=/about_us/append/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_change_about_us_page(self):
+        response = self.client.get("/accounts/login/?next=/about_us/change/1")
+        self.assertEqual(response.status_code, 200)
