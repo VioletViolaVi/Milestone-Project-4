@@ -75,3 +75,16 @@ class TestViews(TestCase):
         self.assertTrue("payment/payment_success.html", str)
         self.assertTrue("drink_order", str)
         self.assertTrue("this_is_successful_payment_page", str)
+
+    def test_go_to_payment_page(self):
+        response = self.client.get("/accounts/login/?next=/payment/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_payment_success_page(self):
+        response = self.client.get("/accounts/login/?next=/payment_success/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_go_to_cache_payment_data(self):
+        response = self.client.get(
+            "/accounts/login/?next=/cache_payment_data/")
+        self.assertEqual(response.status_code, 200)

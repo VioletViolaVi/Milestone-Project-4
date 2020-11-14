@@ -18,3 +18,7 @@ class TestWebhooks(TestCase):
         self.assertTrue("payment_intent.succeeded", str)
         self.assertTrue("payment_intent.payment_failed", str)
         self.assertTrue("type", str)
+
+    def test_go_to_webhook(self):
+        response = self.client.get("/accounts/login/?next=/wh/")
+        self.assertEqual(response.status_code, 200)
