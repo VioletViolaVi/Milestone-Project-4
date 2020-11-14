@@ -1,4 +1,5 @@
 asgiref==3.2.10
+coverage==5.3
 Django==3.1.2
 django-allauth==0.42.0
 django-countries==6.1.3
