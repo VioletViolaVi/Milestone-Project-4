@@ -12,7 +12,7 @@ from payment.models import DrinkOrder
 def user_profiles(request):
     # displays user profiles
     profile = get_object_or_404(UserProfiles, user=request.user)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = UserProfilesForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
