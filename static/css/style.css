@@ -522,6 +522,10 @@ input[type="radio"] {
   border: lightblue;
 }
 
+.hidden{
+    visibility: hidden;
+}
+
 /******************************************* stripe */
 .StripeElement--focus,
 .StripeElement:focus,

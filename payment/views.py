@@ -39,7 +39,7 @@ def payment(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-    if request.method == 'POST':
+    if request.method == "POST":
         shopping_cart = request.session.get("shopping_cart", {})
         form_data = {
             "full_name": request.POST["full_name"],
@@ -88,7 +88,7 @@ def payment(request):
         shopping_cart = request.session.get("shopping_cart", {})
         if not shopping_cart:
             messages.error(request, "There's nothing in your shopping cart.")
-            return redirect(reverse('home'))
+            return redirect(reverse("home"))
 
         current_shopping_cart = shopping_cart_contents(request)
         grand_total = current_shopping_cart["grand_total"]
