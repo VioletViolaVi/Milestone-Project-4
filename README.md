@@ -294,9 +294,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [CSS Validation Service](https://jigsaw.w3.org/css-validator/): 
 - This project used CSS Validation Service to check for errors, requiring correction, present in the CSS code of the Slurps website.
 ## [Gitpod](https://www.gitpod.io/): 
-- This project used Gitpod as the editor for coding out the README file, HTML, CSS, JavaScript, jQuery and Python portions of the Slurps website. External libraries, frameworks, images and wireframes were also stored here. In addition, its terminal was used to conduct commands such as: “__*git status*__“, “__*git add .*__“, “__*git commit -m “...”*__“, “__*git push*__“,  etc to complete this project.
+- This project used Gitpod as the editor for coding out the README file, HTML, CSS, JavaScript, jQuery and Python portions of the Slurps website. External libraries, frameworks, images and wireframes were also stored here. In addition, its terminal was used to conduct commands such as: “__*git status*__, “__*git add .*__”, “__*git commit -m “...”*__”, “__*git push*__”,  etc to complete this project.
 ## [GitHub](https://github.com/): 
-- This project used GitHub to store saved code of the Slurps website via the “__*git push*__“' command, as repositories.
+- This project used GitHub to store saved code of the Slurps website via the “__*git push*__” command, as repositories.
 ## [Balsamiq Wireframes](https://balsamiq.com/): 
 - This project used Balsamiq Wireframes to create mockups of what the Slurps website aimed to look like to the user, on completion.
 ## Snipping Tool
@@ -304,8 +304,13 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
-
-
+## Jasmine Testing
+- Jasmine testing was used to test the Javascript involved in this project. This testing was specifically used to ensure the numerical and string values in the Javascript portion of the project were functioning correctly and not producing any errors. It was also used to ensure the card payment input worked well and the correct css properties for the stripe element were being produced, in order to match the properties used in the rest of the payment form. This included ensuring the correct: font colour, text transformation, font family, font size, etc were used for the stripe element.
+- Directories of Jasmine test files:
+    * “__*jasmineTesting/scripts/slurps.js*__”
+    * “__*jasmineTesting/spec/slurpsSpec.js*__”
+    * “__*jasmineTesting/jasmineTesting.html*__”
+- These testing files are ran by opening up the “__*slurps.js*__” and “__*slurpsSpec.js*__” files and writing up tests in them. Next, in the “__*jasmineTesting.html*__” file, the Jasmine framework links as well as the script links to the  “__*slurps.js*__” and “__*slurpsSpec.js*__” files are to be written inside the “__*jasmineTesting.html*__” file. Then, the preview button from the “__*jasmineTesting.html*__” file is to be clicked on, to open it up and see which tests failed and which passed. 
 
 
 
