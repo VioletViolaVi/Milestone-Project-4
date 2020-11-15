@@ -311,7 +311,46 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     * “__*jasmineTesting/spec/slurpsSpec.js*__”
     * “__*jasmineTesting/jasmineTesting.html*__”
 - These testing files are ran by opening up the “__*slurps.js*__” and “__*slurpsSpec.js*__” files and writing up tests in them. Next, in the “__*jasmineTesting.html*__” file, the Jasmine framework links as well as the script links to the  “__*slurps.js*__” and “__*slurpsSpec.js*__” files are to be written inside the “__*jasmineTesting.html*__” file. Then, the preview button from the “__*jasmineTesting.html*__” file is to be clicked on, to open it up and see which tests failed and which passed. 
-
+## Python Unit testing
+- Directories of Python test files:
+    - About Us App 
+        * “__*about_us/tests_admin.py*__”
+        * “__*about_us/tests_apps.py*__”
+        * “__*about_us/tests_forms.py*__”
+        * “__*about_us/tests_models.py*__”
+        * “__*about_us/tests_urls.py*__”
+        * “__*about_us/tests_views.py*__”
+        * “__*about_us/tests_widgets.py*__”
+    - Home App 
+        * “__*home/tests_admin.py*__”
+        * “__*home/tests_apps.py*__”
+        * “__*home/tests_forms.py*__”
+        * “__*home/tests_models.py*__”
+        * “__*home/tests_urls.py*__”
+        * “__*home/tests_views.py*__”
+        * “__*home/tests_widgets.py*__”
+    - Payment App 
+        * “__*payment/tests_admin.py*__”
+        * “__*payment/tests_apps.py*__”
+        * “__*payment/tests_forms.py*__”
+        * “__*payment/tests_init.py*__”
+        * “__*payment/tests_models.py*__”
+        * “__*payment/tests_signals.py*__”
+        * “__*home/tests_urls.py*__”
+        * “__*home/tests_views.py*__”
+        * “__*home/tests_webhook_handler.py*__”
+        * “__*home/tests_webhooks.py*__”
+    - Shopping Cart App 
+        * “__*shopping_cart/tests_apps.py*__”
+        * “__*shopping_cart/contexts.py*__”
+        * “__*shopping_cart/tests_urls.py*__”
+        * “__*shopping_cart/tests_views.py*__”
+    - User Profiles App 
+        * “__*user_profiles/tests_apps.py*__”
+        * “__*user_profiles/tests_forms.py*__”
+        * “__*user_profiles/tests_models.py*__”
+        * “__*user_profiles/tests_urls.py*__”
+        * “__*user_profiles/tests_views.py*__”
 
 
 
