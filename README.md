@@ -304,14 +304,21 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
+## Tested UX Stories
+
+
+
+
 ## Jasmine Testing
 - Jasmine testing was used to test the Javascript involved in this project. This testing was specifically used to ensure the numerical and string values in the Javascript portion of the project were functioning correctly and not producing any errors. It was also used to ensure the card payment input worked well and the correct css properties for the stripe element were being produced, in order to match the properties used in the rest of the payment form. This included ensuring the correct: font colour, text transformation, font family, font size, etc were used for the stripe element.
+- These testing files are ran by opening up the “__*slurps.js*__” and “__*slurpsSpec.js*__” files and writing up tests in them. Next, in the “__*jasmineTesting.html*__” file, the Jasmine framework links as well as the script links to the  “__*slurps.js*__” and “__*slurpsSpec.js*__” files are to be written inside the “__*jasmineTesting.html*__” file. Then, the preview button from the “__*jasmineTesting.html*__” file is to be clicked on, to open it up and see which tests failed and which passed. 
 - Directories of Jasmine test files:
     * “__*jasmineTesting/scripts/slurps.js*__”
     * “__*jasmineTesting/spec/slurpsSpec.js*__”
     * “__*jasmineTesting/jasmineTesting.html*__”
-- These testing files are ran by opening up the “__*slurps.js*__” and “__*slurpsSpec.js*__” files and writing up tests in them. Next, in the “__*jasmineTesting.html*__” file, the Jasmine framework links as well as the script links to the  “__*slurps.js*__” and “__*slurpsSpec.js*__” files are to be written inside the “__*jasmineTesting.html*__” file. Then, the preview button from the “__*jasmineTesting.html*__” file is to be clicked on, to open it up and see which tests failed and which passed. 
 ## Python Unit testing
+- Python unit testing was carried out to test the python files of the project. Python files such as: “__*forms.py*__”, “__*models.py*__”, “__*views.py*__”, etc for each app, were created and tests were written in them to ensure the website's functionality worked. In addition, the data types present in the python files were tested to make sure they were the correct data type and didn’t produce errors when the website was in operation. The written tests in these python test files also ensured that the web pages of the website could render out their respective templates and produce a “__*200 HTTP status code*__” in the Gitpod terminal.
+- These testing files are ran by firstly creating “__*tests.py*__” files for each project’s app and then specifying the exact python file of the app the“__*tests.py*__” file will be testing. E.g.: “__*tests_apps.py*__” when testing the “__*apps.py*__” file, “__*tests_models.py*__” when testing the “__*models.py*__” file,  “__*tests_forms.py*__” when testing the “__*forms.py*__” file, and so on. Next, tests are written in these python test files; for testing the website. Then,  “__*python3 manage.py test*__” is entered in the Gitpod terminal and the results of the tests are printed in the terminal soon after. The terminal at this point is checked to see how many tests were conducted and that there is a line of dots present. This syntax of a line of dots means that all the tests have passed.
 - Directories of Python test files:
     - About Us App 
         * “__*about_us/tests_admin.py*__”
@@ -336,10 +343,10 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         * “__*payment/tests_init.py*__”
         * “__*payment/tests_models.py*__”
         * “__*payment/tests_signals.py*__”
-        * “__*home/tests_urls.py*__”
-        * “__*home/tests_views.py*__”
-        * “__*home/tests_webhook_handler.py*__”
-        * “__*home/tests_webhooks.py*__”
+        * “__*payment/tests_urls.py*__”
+        * “__*payment/tests_views.py*__”
+        * “__*payment/tests_webhook_handler.py*__”
+        * “__*payment/tests_webhooks.py*__”
     - Shopping Cart App 
         * “__*shopping_cart/tests_apps.py*__”
         * “__*shopping_cart/contexts.py*__”
@@ -351,16 +358,6 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         * “__*user_profiles/tests_models.py*__”
         * “__*user_profiles/tests_urls.py*__”
         * “__*user_profiles/tests_views.py*__”
-
-
-
-
-
-
-
-
-
-
 # Deployment
 This project was deployed to Heroku using the following steps:
 ### Amazon Web Services (AWS)
