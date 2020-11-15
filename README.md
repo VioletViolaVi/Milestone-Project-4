@@ -304,11 +304,117 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
-## Tested UX Stories
-
-
-
-
+## UX Stories Testing
+- Browsing Drink Options:
+    - Open the Slurps website to land on the homepage.
+    - Scroll through the page and view its contents.
+    - Ensure the drink images can be seen, are spread out and don’t overlap each other or their descriptions.
+    - Hover the cursor over the name of the drinks under the images to ensure the tooltip text of the drink’s full name appears.
+    - View the buttons for each drink and ensure its text is clear and legible. 
+    - Ensure all forms on the homepage are filled in with the default number of “__*1*__” so the users can know which drinks are on offer and where to enter the amount they wish to purchase. 
+    - Enter the number “__*5*__” in one of these drink forms and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
+-   Search Bar Functionality:
+    - Open the Slurps website to land on the homepage.
+    - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”.
+    - Press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
+    - Ensure that afterwards, the “__*berry*__” word entered in the search bar remains in the search bar after the search has gone through. 
+    - Ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
+    - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__”  message.
+    - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them.
+    - Enter the number “__*5*__” in one of these drink’s forms and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
+- Sort By Button Functionality:
+    - Open the Slurps website to land on the homepage.
+    - Click on the “__*Sort By...*__” dropdown button and ensure there is an option to sort the drinks based on their price in ascending and descending order; labelled “__*Price(Low-High)*__” and “__Price(High-Low)*__”.
+    - Click on the “__*Price(Low-High)*__” option in the “__*Sort By...*__” dropdown button.
+    - Ensure the page reloads and then view the costs of the first drink shown, in each of the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections to see if its price is the cheapest one in comparison to all the other prices in each section. 
+    - View the rest of the drinks and make sure their prices are displayed from lowest to highest.
+    - Enter the number “__*2*__” in the form of the first drink shown, ie. the cheapest, in the “__*Milkshakes*__” section and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
+- Shopping Cart CRUD Functionality:
+    - Open the Slurps website to land on the homepage.
+    - Enter the number “__*3*__” in the form of two different drinks and then press the “__*ADD*__” button for each, to make sure there are items in the shopping cart.
+    - View the drink counter next to the trolley icon and ensure the number displaying is  “__*6*__”.
+    - Click on the shopping trolley icon to go to the “__*Shopping Cart*__” page and see the drinks selected for purchase.
+    - In both of the drink forms, increase the total drinks selected by entering the number “__*10*__” in the forms and pressing the “__*EDIT*__” button. 
+    - Check that the number in both forms have been changed to “__*10*__” and the drink counter has been increased to “__*20*__” to prove that users can add to their cart.
+    - In both of the drink forms, decrease the total drinks selected by entering the number “__*2*__” in the forms and pressing the “__*EDIT*__” button. 
+    - Once the page reloads, check that the number in both forms have been changed to “__*2*__” and the drink counter has been decreased to “__*4*__” to prove that users can reduce the quantity of items already in their cart.
+    - Click on one of the bin icons, next to the drink quantity forms to see if a modal appears asking to confirm deleting the selected drink. 
+    - Click the “__*YES*__” button in the modal of the selected drink to delete the item. Afterwards, check that the deleted drink is no longer visible in the shopping cart. Also check the drink counter has changed to “__*2*__” to reflect the drink being deleted.
+- Shopping Cart Costs:
+    - Open the Slurps website to land on the homepage.
+    - Enter the number “__*5*__” in the form of two different drinks and then press the “__*ADD*__” button for each, to make sure there are items in the shopping cart.
+    - Click on the shopping trolley icon to go to the “__*Shopping Cart*__” page and see the drinks selected for purchase.
+    - View the “__*Total*__” in the drink’s description on the “__*Shopping Cart*__” page to see how much both drinks cost individually.
+    - Scroll to the bottom of the “__*Shopping Cart*__” page to see the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs.
+    - Ensure these costs are clear and easy to read.
+    - Use a calculator to check the “__*Subtotal*__” cost is the sum of both drinks in the shopping cart.
+    - Ensure the “__*Delivery*__” cost displays “__*£35.00 £5.00*__”.
+    - Use a calculator to check the “__*Grand Total*__” cost is the sum of the “__*Subtotal*__” and the “__*Delivery*__” cost.
+- Card Payments:
+    - Open the Slurps website to land on the homepage then log in.
+    - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
+    - Under the “__*Order Summary *__”, check the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs are correct. Also, check that the correct drink image and description are displaying.
+    - In the payment form besides it, complete a minimum of each required input field with personal details. This includes completing the address input fields that are required.
+    - For the last card payment input field, taken from Stripe, use Stripe’s test number by entering “__*4242 4242 4242 4242 04 / 24 242 42424*__” in its input. 
+    - Press the “__*COMPLETE ORDER*__” button once the whole form is filled in. Ensure the page is transferred to another page confirming the payment was successful.
+- Payment Receipt:
+    - Open the Slurps website to land on the homepage then log in.
+    - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
+    - Complete at least the required payment form field inputs and then click on the “__*COMPLETE ORDER*__” button and ensure the page is transferred to the “__*Successful Payment*__” page.
+    - On the “__*Successful Payment*__” page, view it and ensure the page displays information about: the name of the drink(s) that was/were ordered, the quantity, the price, the same personal details entered in the payment form previously, the costs of the order and the date and time the order was made.
+- Creating Accounts:
+    - Without being logged in, open the Slurps website to land on the homepage.
+    - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Sign Up*__” page.
+    - Complete the input fields on this page with a test email address ie: “__*test@tmail.com*__”, a test user name ie: “__*TEST*__” and a random password in the “__*Sign Up*__” form.
+    - Click on the “__*SIGN UP*__” button to send the entered details in the “__*Sign Up*__” form. 
+    - Check that the “__*Sign Up*__” page changes to the “__*Email Verification*__” page. Ensure, its verification message is clearly seen, legible and informs the user that they are to check their email account for a verification link, sent by Slurps, for them to verify their entered details and create an account. 
+    - Go to the Gitpod terminal and click on the link provided to verify the account details entered in the “__*Sign Up*__” form. Ensure clicking on this link leads to the “__*Confirm Email*__” page. 
+    - Check this page displays the email and username being verified ie: “__*test@tmail.com*__” and “__*TEST*__”.
+    - Check there is a “__*CONFIRM*__” button and click on it to confirm the username and email. Check the page transfers to the home page afterwards, with a message at the top informing the user they are now logged in.
+    - Add a drink item to the shopping cart, from the homepage then click on the trolley icon to go to the “__*Shopping Cart*__” page. 
+    - Click on the “__*PAY*__” button to ensure the payment page can be accessed now. Then make a payment via completing the form and clicking the “__*COMPLETE ORDER*__” button. 
+    - Ensure the “__*Successful Payment*__” page is displayed after, thus showing the user being allowed to make purchases once they create an account and are logged in with it.
+- Viewing Order History:
+    - Without being logged in, open the Slurps website to land on the homepage.
+    - Click on the person icon next to the trolley icon and ensure the page is redirected to the “__*Log In*__” page, instead of the “__*My Profile*__” page, as access to the “__*My Profile*__” page is to be restricted to only users with logged in accounts.
+    - Complete the login form field inputs on the “__*Log In*__” page and then click the “__*LOG IN*__” button. Ensure the page is now redirected to the “__*My Profile*__” page.
+    - Under the “__*Order History*__” section of the“__*My Profile*__” page, view the drink order that was just made. Ensure each of the “ __*Date*__”, “__*Drink Name*__”, “ __*Grand Total*__” and “ __*Drink Order Number*__” sections are correctly filled out.
+    - Check that the order history is being displayed in order with the oldest orders shown at the top and the newest at the bottom by making another purchase following these steps:
+        - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
+        - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
+        - Complete at least the required payment form field inputs and then click on the “__*COMPLETE ORDER*__” button and ensure the page is transferred to the “__*Successful Payment*__” page.
+        - Click on the person icon to go to back to the “__*My Profile*__” page.
+    - Under the “__*Order History*__” section, view the drink order that was just made. Ensure its information is displayed under the correct heading ie.: “__*Date*__”, “ __*Drink Name*__”, “ __*Grand Total*__” and “ __*Drink Order Number*__”. Also ensure this order is shown at the bottom of the list and it’s the newest order made and should be at the bottom.
+- Changing Personal Details:
+    - Without being logged in, open the Slurps website to land on the homepage.
+    - Click on the person icon next to the trolley icon and ensure the page is redirected to the “__*Log In*__” page, instead of the “__*My Profile*__” page, as access to the “__*My Profile*__” page is to be restricted to only users with logged in accounts.
+    - Complete the login form field inputs on the “__*Log In*__” page and then click the “__*LOG IN*__” button. Ensure the page is now redirected to the “__*My Profile*__” page.
+    - For the “__*Personal Details*__” form, enter “__*TEST2*__” for each of its form field inputs and select any different country from the “__*Country*__” field dropdown selection box.
+    - Press the “__*UPDATE INFORMATION*__” button then wait for the page to reload. On completion, check the form fields have all been changed to “__*TEST2*__” and that the different country selected is also now showing in the form.
+    - Click the “__*CHANGE MY EMAIL ADDRESS*__” button underneath the form and ensure it transfers the user to the “__*EMAIL ADDRESSES*__” page.
+    - Test being able to change the email address by doing the following:
+        - Enter a new email i.e.: “__*test2@t2mail.com*__”, into the “__*Add E-mail Address*__” form and press its “__*ADD E-MAIL*__” button.
+        - Check the new email appears in the “__*The following e-mail addresses are associated with your account*__” section of the page.
+        - Select its radio button and then click on the “__*RESEND VERIFICATION*__” button underneath so an email with a verification link can be sent to the user for them to click on the link and verify their new email.
+        - Ensure this verification email is sent by checking the Gitpod terminal for the verification email and its link to verify the new email.
+        - Click on the link provided in the Gitpod terminal and ensure the link takes the user to the “__*Confirm Email*__” page. 
+        - On the “__*Confirm Email*__” page, ensure the message shown displays information about the new email being verified and the user who requested it. 
+        - Click on the “__*CONFIRM*__” button and ensure that when taken back to the homepage, a message at the top of the page appears informing the user they have verified the new email.
+        - Return to the “__*My Profile*__” page to re-click on the “__*CHANGE MY EMAIL ADDRESS*__” button. Check that the new email has been verified by ensuring it has the word “__*Verified*__” written next to it.
+        - Afterwards, select the radio button of the new email that has just been verified and then click on the “__*MAKE PRIMARY*__” button to make this new email the account’s primary email thus, changing the email address of the user’s account. 
+        - Ensure the email address of the account has been changed to the newly verified one by seeing if there’s a message at the top of the screen stating the following:  “__*Primary e-mail address set.*__”.
+- Changing Forgotten Passwords:
+    - Open the Slurps website to land on the homepage then click on the “__*Log In*__” link in the navigation bar to be redirected to the “__*Log In*__” page.
+    - Click on the “__*Forgot Password? Click Me!*__” link and make sure the page is redirected to the “__*Reset Password*__” page.
+    - Upon arriving the “__*Reset Password*__” page, enter the email of the account that belongs to the forgotten password in the email form input field present. For example, enter “__*test2@t2mail.com*__” in the form input field; being the email of the forgotten password.
+    - Press the “__*RESET MY PASSWORD*__” button underneath the now completed email input field and ensure that redirects the user to another  “__*Reset Password*__” page stating: “__*We have sent you an e-mail. Please contact us if you do not receive it within a few minutes.*__”. At this point, users are to check their email accounts for an email sent providing them with a link to reset their password.
+    - Check if this email gets sent to users by going into the Gitpod terminal and seeing if the email was sent there. Then, click on the link provided in the terminal and ensure that takes the users to a different “__*Reset Password*__” page with a form for changing passwords provided.
+    - Complete this “__*Reset Password*__” form by entering a different password from the previously made one, in both reset password form inputs and then click on the “__*RESET PASSWORD*__” button underneath. 
+    - Upon completing this, check the page is redirected to the “__*Reset Password Success*__” page and the information displayed on it, informs the user that they have been successful in changing their password.
+    - Return to the “__*Log In*__” page and fill in the form input fields using the new password to ensure the users can access their accounts by doing so, at this point. Also ensure the users are taken to the homepage with the login confirmation message displaying at the top to inform them they have been successful in logging into their accounts, despite having forgotten their password.
 ## Jasmine Testing
 - Jasmine testing was used to test the Javascript involved in this project. This testing was specifically used to ensure the numerical and string values in the Javascript portion of the project were functioning correctly and not producing any errors. It was also used to ensure the card payment input worked well and the correct css properties for the stripe element were being produced, in order to match the properties used in the rest of the payment form. This included ensuring the correct: font colour, text transformation, font family, font size, etc were used for the stripe element.
 - These testing files are ran by opening up the “__*slurps.js*__” and “__*slurpsSpec.js*__” files and writing up tests in them. Next, in the “__*jasmineTesting.html*__” file, the Jasmine framework links as well as the script links to the  “__*slurps.js*__” and “__*slurpsSpec.js*__” files are to be written inside the “__*jasmineTesting.html*__” file. Then, the preview button from the “__*jasmineTesting.html*__” file is to be clicked on, to open it up and see which tests failed and which passed. 
