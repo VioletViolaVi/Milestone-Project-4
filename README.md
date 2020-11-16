@@ -431,25 +431,16 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Once on the page, check that the added drinks in the “__*Shopping Cart*__” page are the same drinks that were added from the home page and ensure that in their edit form input fields, the number “__*4*__” is present for each of them.
         - Repeat this same test for other drinks using different quantity numbers and always go to the “__*Shopping Cart*__” page to ensure the same drink item(s) and their quantity number, taken from the home page’s quantity form, appears in the “__*Shopping Cart*__” page.
 ## Our Mission Page 
+- Run the HTML and CSS code used to make the “__*Our Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Ensure the “__*Our Mission*__” page is responsive by using chrome development tools to open the “__*Our Mission*__” page in different screen sizes including: 320x571, 576x571, 768x571, 992x571 and 1200x571.
 - Main Title:
-    - Run the HTML and CSS code used to make the “__*Our Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-    - Ensure the “__*Our Mission*__” page is responsive by using chrome development tools to open the “__*Our Mission*__” page in different screen sizes including: 320x571, 576x571, 768x571, 992x571 and 1200x571.
     - Check the “__*Mission Statement*__” main title and its paragraph follow Bootstrap’s grid system with the title taking up the entire row at the top and its paragraph taking up the row underneath across all the different screen sizes. 
     - Make sure the text is clear and easy to read and doesn’t get cut off the screen regardless of the screen size.
 - Sub-Heading Title:
-    - 
-
-
-
-
-
-
-
-
-
-
-
-
+    - Check that the three“__*Our Customers*__”, “__*Ethical Sourcing*__” and “__*Our Employees*__” subheading titles and their paragraphs follow Bootstrap’s grid system by displaying one of these portions per row for screen sizes 320x571 and 576x571. Then ensure all three parts are displayed in the same row for screen sizes 768x571, 992x571 and 1200x571. 
+    - Make sure the text is clear, easy to read and doesn’t get cut off the screen regardless of the screen size, as its rows and columns change with the Bootstrap grid system to maintain responsiveness.
+## User Profiles Page
+- 
 
 
 
