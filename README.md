@@ -209,29 +209,29 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains Slurps’ phone number to allow users to know the phone number of the company so they have the option to contact Slurps via phone.
 * Contains Slurps’ email address to allow users to know the email address of the company so they have the option to contact Slurps via email.
 * Contains Slurps’ street address to allow users to know the street address of the company so they have the option to contact Slurps via postal mail.
-### Admin Home Page
+### Administration Home Page
 * Displays a button labelled “__*DJANGO ADMIN*__”  to allow the administrators access to Django’s administration page so they can conduct the CRUD functionality of adding, reviewing, editing and deleting drinks on the website; from there.
 * Displays the “__*EDIT*__” buttons, underneath the “__*BUT NOW*__” and  “__*ADD*__” buttons, that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the drink selected.
 * Displays a bin icon that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected drink item. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
-### Admin Edit Drink Page
+### Administration Edit Drink Page
 * Displays a message, at the top of the screen, informing the administrators on which drink item they are editing.
 * Displays an edit drink form which allows administrators to make changes to the default values of the selected drink, to be edited. As a result, administrators are able to change the following details about any drink on the Slurps website: the drink image, its name, the price, the millilitres and the type of drink it is i.e.: a new drink, milkshake or juice.
 * Displays a “__*CANCEL*__” button underneath the edit drink form for the administrators to click on to cancel editing the drinks and return them back to the home page.
 * Displays an “__*UPDATE DRINK*__” button underneath the edit drink form for the administrators to click on to update the changes made to the drinks and return them back to the home page with these updated changes showing.
-### Admin Delete Drink Modal
+### Administration Delete Drink Modal
 * Displays a bin icon, next to the “__*EDIT*__” button that administrators can click on to open up a modal containing a message asking them for confirmation on whether they wish to delete the drink they selected. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
-### Admin Add Drink Page
+### Administration Add Drink Page
 * Displays an add drink form which allows administrators to add new drinks to the list of drinks offered by Surps. Administrators are able to add the following details for these new drinks on the Slurps website: an image, name, price and its millilitres. Administrators also can add the drink to both the new drink section and either the milkshake or juice section.
 * Displays a “__*CANCEL*__” button underneath the add drink form for the administrators to click on to stop the new drink being added and return them back to the home page.
 * Displays an “__*ADD DRINK*__” button underneath the add drink form for the administrators to click on to add the new drinks to the Slurps website and then return them back to the homepage with these newly added drinks displayed.
-### Admin Edit Mission Statement Page
+### Administration Edit Mission Statement Page
 * Displays a message, at the top of the screen, informing the administrators on which portion of the mission statement page they are editing.
 * Displays an edit mission statement form which allows administrators to make changes to the default values of the selected mission statement. Administrators are able to change the following details about the mission statements on the Slurps website: their image and its description, the statement’s title, paragraph and the section the mission statement is to be placed on the Slurps website.
 * Displays a “__*CANCEL*__” button underneath the edit mission statement form for the administrators to click on to stop editing the mission statement and return them back to the mission statement page.
 * Displays an “__*UPDATE MISSION STATEMENT*__” button underneath the edit mission statement form for the administrators to click on to update the changes made to the mission statement and return them back to the mission statement page with these updated changes showing.
-### Admin Delete Mission Statement Modal
+### Administration Delete Mission Statement Modal
 * Displays a bin icon, next to the “__*EDIT*__” button that administrators can click on to open up a modal containing a message asking them for confirmation on whether they wish to delete the mission statement selected. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
-### Admin Add Mission Statement Page
+### Administration Add Mission Statement Page
 * Displays a mission statement form which allows administrators to add new mission statements to the Slurps website. Administrators are able to add the following details for the new mission statements added: an image, an image description, a title, a paragraph and the section the new mission statement is to be placed.
 * Displays a “__*CANCEL*__” button underneath the add mission statement form for the administrators to click on to stop adding the new mission statement and return them back to the mission statement page.
 * Displays an “__*ADD MISSION STATEMENT*__” button underneath the add mission statement form for the administrators to click on to add the new mission statement made and return them back to the mission statement page with the statements displaying.
@@ -307,7 +307,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
-## Navigation Bars Testing
+## Navigation Bars
 - Mobile & Tablet 
     - Navigation Bar:
         - Run the HTML and CSS code used to make this navigation bar, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
@@ -333,9 +333,11 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Run the HTML and CSS code used to make this banner, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps home page using: 320x571, 576x571 and 768x571 screen sizes.
         - Ensure its background colour is light blue and the width of this banner fills the width of the screen for each of these screen sizes.
-        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
+        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” 
+            colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
         - Check the shopping cart icon, drink counter and the price total can all be seen clearly and don’t overlap each other across each of these screen sizes.
-        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__” colour and redirects the website to the “__*Shopping Cart*__” page. 
+        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__”
+            colour and redirects the website to the “__*Shopping Cart*__” page. 
         - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is “__*#f8f9fa*__” and when clicked, its outline colour changes to “__*#17a2b8*__”.
         - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” 
             and make sure in the banner, the price total is also “__*£13.00*__”. 
@@ -366,11 +368,15 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
             - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
             - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
             - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
-        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
-        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__” colour and redirects the website to the “__*Shopping Cart*__” page. 
+        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” colour. 
+            Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
+        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__”
+            colour and redirects the website to the “__*Shopping Cart*__” page. 
         - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is light blue and when clicked, its outline colour changes to “__*#17a2b8*__”.
-        - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” and make sure in the banner, the price total is also “__*£13.00*__”. 
-        - Add two more of the same drink that cost “__*£13.00*__” and make sure the price total in the banner adds them up correctly, therefore displaying “__*£39.00*__” as a result.
+        - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__”
+            and make sure in the banner, the price total is also “__*£13.00*__”. 
+        - Add two more of the same drink that cost “__*£13.00*__” 
+            and make sure the price total in the banner adds them up correctly, therefore displaying “__*£39.00*__” as a result.
         - Reduce the number of drinks added to the shopping cart by one and ensure the price total subtracts the cost correctly and shows “__*£23.00*__” in its price total.
         - Also ensure the price total changes its text colour to “__*#17a2b8*__” when hovered over or clicked on.
     - Navigation Bar:
@@ -388,45 +394,50 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
             is legible and clearly organised, separate from the other banner and navigation bar above.
         - Check the “__*£35*__” 
             price is crossed out and the “__*£5*__” price is highlighted with a light blue background colour and a box shadow so it stands out the most, out of all the text on the banner. 
-## Home Page Testing 
-- Mobile, Tablet & Desktop
-    - Sort By Button:
-        - Run the HTML and CSS code used to make the “__*Sort By...*__” button, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-        - Using chrome development tools, open the Slurps homepage website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the “__*Sort By...*__” button stays at the top and far right side of the screen across all these screen sizes. 
-        - Ensure the background colour of the “__*Sort By...*__” button is light blue and when hovered over or clicked on, ensure its outline colour changes to “__*#17a2b8*__”.
-        - Click on the “__*Sort By...*__” button to make its link options drop down. When hovered over or clicked on, ensure the links’ background colour in this dropdown change to light blue. Also, when one of the options are clicked on, ensure the text colour changes to white.
-        - Click on the “__*Price(Low-High)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the cheapest drinks to the most expensive. 
-        - Click on the “__*Price(High-Low)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the most expensive drinks to the cheapest.
-        - Click on the “__*Name(A-Z)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in alphabetical order, based on their drink names.
-        - Click on the “__*Name(Z-A)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in reverse alphabetical order, based on their drink names.
-    - New Drinks Section:
-        - Run the HTML and CSS code used to make the “__*New Drinks*__” section, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-        - Using chrome development tools, check this section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in the “__*New Drinks*__” section uses BootStraps’ grid system in displaying 1-2 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
-        - Across these different screen sizes also check the drink images and their “__*NEW!*__” stickers don’t overlap the content of the other new drink items displayed.
-        - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
-        - Look to see if the “__*BUY NOW*__” buttons are arranged under the drink’s descriptions following the same grid system from Bootstrap.
-        - Hover over and click on the “__*BUY NOW*__” buttons to ensure their outline changes to the colour, “__*#17a2b8*__”.
-        - Click on the “__*BUY NOW*__” buttons and make sure that causes the home page to scroll down to the same drink in their respective drink type section.
-    - Search Results, Juices & Milkshakes Section:
-        - Run the HTML and CSS code used to make the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-        - Using chrome development tools, check these section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in these sections uses BootStraps’ grid system in displaying 1-3 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
-        - Across these different screen sizes check the drink images and their descriptions don’t overlap the content of the other drink items displayed besides them.
-        - Ensure any drink produced from the search results, that also exists within the “__*New Drinks*__” section, appears with a “__*NEW!*__” sticker on them. 
-        - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
-        - Test the quantity form underneath these drinks by conducting the following:
-            - Enter the number “__*4*__” in the quantity form for one drink from each section i.e.: “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__”. 
-            - Press the “__*ADD*__” button next to the form to see if the drink quantities are sent to the shopping cart.
-            - Scroll to the top of the screen and check the drink counter is “__*16*__” to make sure all these drinks were added and the form worked. Then click the shopping cart icon to go to the “__*Shopping Cart*__” page .
-            - Once on the page, check that the added drinks in the “__*Shopping Cart*__” page are the same drinks that were added from the home page and ensure that in their edit form input fields, the number “__*4*__” is present for each of them.
-            - Repeat this same test for other drinks using different quantity numbers and always go to the “__*Shopping Cart*__” page to ensure the same drink item(s) and their quantity number, taken from the home page’s quantity form, appears in the “__*Shopping Cart*__” page.
-    - Fixed Arrow:
-        - Run the HTML and CSS code, used to make the fixed arrow appear when scrolling down the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-        - Using chrome development tools, check the fixed arrow’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
-        - Scroll down the page using these different screen sizes and ensure the fixed arrow appears, before reaching the bottom and can be seen on the page clearly regardless of the content it overlaps; ensuring its z-index is correct.
-        - When the fixed arrow is hovered over, make sure the arrow changes its colour to light blue. 
-        - When the fixed arrow is clicked on, ensure the home page scrolls back to the top of the screen, where users first land, when opening up the Slurps website.
-
-
+## Fixed Arrow:
+- Run the HTML and CSS code, used to make the fixed arrow appear when scrolling down the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Using chrome development tools, check the fixed arrow’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Scroll down the page using these different screen sizes and ensure the fixed arrow appears, before reaching the bottom and can be seen on the page clearly regardless of the content it overlaps; ensuring its z-index is correct.
+- When the fixed arrow is hovered over, make sure the arrow changes its colour to light blue. 
+- When the fixed arrow is clicked on, ensure the home page scrolls back to the top of the screen, where users first land, when opening up the Slurps website.
+## Home Page 
+- Sort By Button:
+    - Run the HTML and CSS code used to make the “__*Sort By...*__” button, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+    - Using chrome development tools, open the Slurps homepage website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the “__*Sort By...*__” button stays at the top and far right side of the screen across all these screen sizes. 
+    - Ensure the background colour of the “__*Sort By...*__” button is light blue and when hovered over or clicked on, ensure its outline colour changes to “__*#17a2b8*__”.
+    - Click on the “__*Sort By...*__” button to make its link options drop down. When hovered over or clicked on, ensure the links’ background colour in this dropdown change to light blue. Also, when one of the options are clicked on, ensure the text colour changes to white.
+    - Click on the “__*Price(Low-High)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the cheapest drinks to the most expensive. 
+    - Click on the “__*Price(High-Low)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the most expensive drinks to the cheapest.
+    - Click on the “__*Name(A-Z)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in alphabetical order, based on their drink names.
+    - Click on the “__*Name(Z-A)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in reverse alphabetical order, based on their drink names.
+- New Drinks Section:
+    - Run the HTML and CSS code used to make the “__*New Drinks*__” section, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+    - Using chrome development tools, check this section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in the “__*New Drinks*__” section uses BootStraps’ grid system in displaying 1-2 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
+    - Across these different screen sizes also check the drink images and their “__*NEW!*__” stickers don’t overlap the content of the other new drink items displayed.
+    - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
+    - Look to see if the “__*BUY NOW*__” buttons are arranged under the drink’s descriptions following the same grid system from Bootstrap.
+    - Hover over and click on the “__*BUY NOW*__” buttons to ensure their outline changes to the colour, “__*#17a2b8*__”.
+    - Click on the “__*BUY NOW*__” buttons and make sure that causes the home page to scroll down to the same drink in their respective drink type section.
+- Search Results, Juices & Milkshakes Section:
+    - Run the HTML and CSS code used to make the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+    - Using chrome development tools, check these section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in these sections uses BootStraps’ grid system in displaying 1-3 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
+    - Across these different screen sizes check the drink images and their descriptions don’t overlap the content of the other drink items displayed besides them.
+    - Ensure any drink produced from the search results, that also exists within the “__*New Drinks*__” section, appears with a “__*NEW!*__” sticker on them. 
+    - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
+    - Test the quantity form underneath these drinks by conducting the following:
+        - Enter the number “__*4*__” in the quantity form for one drink from each section i.e.: “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__”. 
+        - Press the “__*ADD*__” button next to the form to see if the drink quantities are sent to the shopping cart. Also ensure a message appears at the top of the screen informing the users on the quantity and name of the drink(s) added.
+        - Scroll to the top of the screen and check the drink counter is “__*16*__” to make sure all these drinks were added and the form worked. Then click the shopping cart icon to go to the “__*Shopping Cart*__” page .
+        - Once on the page, check that the added drinks in the “__*Shopping Cart*__” page are the same drinks that were added from the home page and ensure that in their edit form input fields, the number “__*4*__” is present for each of them.
+        - Repeat this same test for other drinks using different quantity numbers and always go to the “__*Shopping Cart*__” page to ensure the same drink item(s) and their quantity number, taken from the home page’s quantity form, appears in the “__*Shopping Cart*__” page.
+## Our Mission Page 
+- Main Title:
+    - Run the HTML and CSS code used to make the “__*Our Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+    - Ensure the “__*Our Mission*__” page is responsive by using chrome development tools to open the “__*Our Mission*__” page in different screen sizes including: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+    - Check the “__*Mission Statement*__” main title and its paragraph follow Bootstrap’s grid system with the title taking up the entire row at the top and its paragraph taking up the row underneath across all the different screen sizes. 
+    - Make sure the text is clear and easy to read and doesn’t get cut off the screen regardless of the screen size.
+- Sub-Heading Title:
+    - 
 
 
 
@@ -497,13 +508,13 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Scroll to the bottom of the “__*Shopping Cart*__” page to see the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs.
     - Ensure these costs are clear and easy to read.
     - Use a calculator to check the “__*Subtotal*__” cost is the sum of both drinks in the shopping cart.
-    - Ensure the “__*Delivery*__” cost displays “__*£35.00 £5.00*__”.
+    - Ensure the “__*Delivery*__” cost displays “__*<del>£35*__ __*£5!*__”.
     - Use a calculator to check the “__*Grand Total*__” cost is the sum of the “__*Subtotal*__” and the “__*Delivery*__” cost.
 - Card Payments:
     - Open the Slurps website to land on the homepage then log in.
     - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
     - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
-    - Under the “__*Order Summary *__”, check the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs are correct. Also, check that the correct drink image and description are displaying.
+    - Under the “__*Order Summary*__”, check the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs are correct. Also, check that the correct drink image and description are displaying.
     - In the payment form besides it, complete a minimum of each required input field with personal details. This includes completing the address input fields that are required.
     - For the last card payment input field, taken from Stripe, use Stripe’s test number by entering “__*4242 4242 4242 4242 04 / 24 242 42424*__” in its input. 
     - Press the “__*COMPLETE ORDER*__” button once the whole form is filled in. Ensure the page is transferred to another page confirming the payment was successful.
@@ -573,46 +584,46 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     * “__*jasmineTesting/jasmineTesting.html*__”
 ## Python Unit testing
 - Python unit testing was carried out to test the python files of the project. Python files such as: “__*forms.py*__”, “__*models.py*__”, “__*views.py*__”, etc for each app, were created and tests were written in them to ensure the website's functionality worked. In addition, the data types present in the python files were tested to make sure they were the correct data type and didn’t produce errors when the website was in operation. The written tests in these python test files also ensured that the web pages of the website could render out their respective templates and produce a “__*200 HTTP status code*__” in the Gitpod terminal.
-- These testing files are ran by firstly creating “__*tests.py*__” files for each project’s app and then specifying the exact python file of the app the“__*tests.py*__” file will be testing. E.g.: “__*tests_apps.py*__” when testing the “__*apps.py*__” file, “__*tests_models.py*__” when testing the “__*models.py*__” file,  “__*tests_forms.py*__” when testing the “__*forms.py*__” file, and so on. Next, tests are written in these python test files; for testing the website. Then,  “__*python3 manage.py test*__” is entered in the Gitpod terminal and the results of the tests are printed in the terminal soon after. The terminal at this point is checked to see how many tests were conducted and that there is a line of dots present. This syntax of a line of dots means that all the tests have passed.
+- These testing files are ran by firstly creating “__*tests.py*__” files for each project’s app and then specifying the exact python file of the app the“__*tests.py*__” file will be testing. E.g.: “__*tests_apps.py*__” when testing the “__*apps.py*__” file, “__*tests_models.py*__” when testing the “__*models.py*__” file,  “__*tests_forms.py*__” when testing the “__*forms.py*__” file, and so on. Next, tests are written in these python test files; for testing the website. Then, “__*python3 manage.py test*__” is entered in the Gitpod terminal and the results of the tests are printed in the terminal soon after. The terminal at this point is checked to see how many tests were conducted and that there is a line of dots present. This syntax of a line of dots means that all the tests have passed.
 - Directories of Python test files:
     - About Us App 
-        * “__*about_us/tests_admin.py*__”
-        * “__*about_us/tests_apps.py*__”
-        * “__*about_us/tests_forms.py*__”
-        * “__*about_us/tests_models.py*__”
-        * “__*about_us/tests_urls.py*__”
-        * “__*about_us/tests_views.py*__”
-        * “__*about_us/tests_widgets.py*__”
+        * [**_tests_admin.py_**](about_us/tests_admin.py)
+        * [**_tests_apps.py_**](about_us/tests_apps.py)
+        * [**_tests_forms.py_**](about_us/tests_forms.py)
+        * [**_tests_models.py_**](about_us/tests_models.py)
+        * [**_tests_urls.py_**](about_us/tests_urls.py)
+        * [**_tests_views.py_**](about_us/tests_views.py)
+        * [**_tests_widgets.py_**](about_us/tests_widgets.py)
     - Home App 
-        * “__*home/tests_admin.py*__”
-        * “__*home/tests_apps.py*__”
-        * “__*home/tests_forms.py*__”
-        * “__*home/tests_models.py*__”
-        * “__*home/tests_urls.py*__”
-        * “__*home/tests_views.py*__”
-        * “__*home/tests_widgets.py*__”
+        * [**_tests_admin.py_**](home/tests_admin.py)
+        * [**_tests_apps.py_**](home/tests_apps.py)
+        * [**_tests_forms.py_**](home/tests_forms.py)
+        * [**_tests_models.py_**](home/tests_models.py)
+        * [**_tests_urls.py_**](home/tests_urls.py)
+        * [**_tests_views.py_**](home/tests_views.py)
+        * [**_tests_widgets.py_**](home/tests_widgets.py)
     - Payment App 
-        * “__*payment/tests_admin.py*__”
-        * “__*payment/tests_apps.py*__”
-        * “__*payment/tests_forms.py*__”
-        * “__*payment/tests_init.py*__”
-        * “__*payment/tests_models.py*__”
-        * “__*payment/tests_signals.py*__”
-        * “__*payment/tests_urls.py*__”
-        * “__*payment/tests_views.py*__”
-        * “__*payment/tests_webhook_handler.py*__”
-        * “__*payment/tests_webhooks.py*__”
+        * [**_tests_admin.py_**](payment/tests_admin.py)
+        * [**_tests_apps.py_**](payment/tests_apps.py)
+        * [**_tests_forms.py_**](payment/tests_forms.py)
+        * [**_tests_init.py_**](payment/tests_init.py)
+        * [**_tests_models.py_**](payment/tests_models.py)
+        * [**_tests_signals.py_**](payment/tests_signals.py)
+        * [**_tests_urls.py_**](payment/tests_urls.py)
+        * [**_tests_views.py_**](payment/tests_views.py)
+        * [**_tests_webhook_handler.py_**](payment/tests_webhook_handler.py)
+        * [**_tests_webhooks.py_**](payment/tests_webhooks.py)
     - Shopping Cart App 
-        * “__*shopping_cart/tests_apps.py*__”
-        * “__*shopping_cart/contexts.py*__”
-        * “__*shopping_cart/tests_urls.py*__”
-        * “__*shopping_cart/tests_views.py*__”
+        * [**_tests_apps.py_**](shopping_cart/tests_apps.py)
+        * [**_tests_contexts.py_**](shopping_cart/tests_contexts.py)
+        * [**_tests_urls.py_**](shopping_cart/tests_urls.py)
+        * [**_tests_views.py_**](shopping_cart/tests_views.py)
     - User Profiles App 
-        * “__*user_profiles/tests_apps.py*__”
-        * “__*user_profiles/tests_forms.py*__”
-        * “__*user_profiles/tests_models.py*__”
-        * “__*user_profiles/tests_urls.py*__”
-        * “__*user_profiles/tests_views.py*__”
+        * [**_tests_apps.py_**](user_profiles/tests_apps.py)
+        * [**_tests_forms.py_**](user_profiles/tests_forms.py)
+        * [**_tests_models.py_**](user_profiles/tests_models.py)
+        * [**_tests_urls.py_**](user_profiles/tests_urls.py)
+        * [**_tests_views.py_**](user_profiles/tests_views.py)
 # Deployment
 This project was deployed to Heroku using the following steps:
 ### Amazon Web Services (AWS)
@@ -690,13 +701,13 @@ is fulfilled then the following are produced:
     * “__*STATICFILES_LOCATION = “static”*__” 
     * “__*DEFAULT_FILE_STORAGE = “custom_storages.MediaStorage”*__” 
     * “__*MEDIAFILES_LOCATION = “media”*__” 
-    * “__*STATIC_URL = f”https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/”*__” 
+    * “__*STATIC_URL = f“https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/”*__” 
     * “__*MEDIA_URL = f“https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/”*__” 
 ### Gitpod Terminal 
 1. Create a superuser to login with, using “__*python3 manage.py createsuperuser*__” in the Gitpod terminal.
 2. Create a Heroku app and specify its region by entering “__*heroku apps: create milestone-project-4-vivian --region eu*__” in the Gitpod terminal, to set up a git repository.
-3. Install “__*psycopg2*__”  by typing “__*pip 3 install psycopg2-binary*__” in the terminal in order to use postgres.
-4. Install “__*green unicorn*__”  by typing “__*pip 3 install gunicorn*__” in the terminal to replace the development server once the website is deployed to Heroku and act as the web server.
+3. Install “__*psycopg2*__”  by typing “__*pip3 install psycopg2-binary*__” in the terminal in order to use postgres.
+4. Install “__*green unicorn*__”  by typing “__*pip3 install gunicorn*__” in the terminal to replace the development server once the website is deployed to Heroku and act as the web server.
 5. Enter “__*pip3 install dj-database-url*__” in the terminal to install the “__*dj-database-url*__” package and parse the database url that Heroku creates and gets all the connection information out of it.
 6. Get the URL of the remote database by entering “__*heroku config*__” in the terminal. This also enables the ability to get, edit, set, and unset environment variables for the Heroku app.
 7. Run the command “__*heroku config:set DISABLE_COLLECTSTATIC=1 --app milestone-project-4-vivian*__” in the Gitpod terminal.
@@ -715,7 +726,7 @@ in the same file, to add all pycache directories which contain compiled Python c
 3. In the “__*Procfile*__” file, type in “__*web:gunicorn django_milestone-project-4-vivian.wsgi:application*__” to tell gunicorn to run using the project’s wsgi module to allow it to handle HTTP requests. 
 4. Create a new file called “__*custom_storages.py*__”  to tell django “__*S3*__” is to be used in production to store static files and any uploaded images,  whenever collectstatic is run.
 ### Deploy
-1. Enter “__*pip 3 freeze --local > requirements.txt*__” in the Gitpod terminal to inform Heroku on what it needs to install for the website to work. It will inform Heroku about all the packages it requires to install using pip.
+1. Enter “__*pip3 freeze --local > requirements.txt*__” in the Gitpod terminal to inform Heroku on what it needs to install for the website to work. It will inform Heroku about all the packages it requires to install using pip.
 2. Add all the files to the local git repository by entering in the Gitpod terminal “__*git add .*__” then enter “__*git status*__” to see that all the files have been added to the local repository.
 3. Commit the changes made to the files in this project by entering in the Gitpod terminal “__*git commit -m “Deploy to heroku”*__”.  
 4. Push these committed changes made to the files in this project, to the remote repository, by entering “__*git push origin master*__” in the Gitpod terminal. 
