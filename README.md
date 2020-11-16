@@ -305,34 +305,63 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
 ## Navigation Bars Testing
-- Mobile & Tablet Navigation Bar:
-    - Using chrome development tools, open the Slurps homepage website using: 320x571, 576x571 and 768x571 screen sizes.
-    - Ensure the navigation bar colour is #f8f9fa and that it fits the full width of all three of these screen sizes and that the company logo and toggle button on opposite sides fit well and clearly on the navigation bar.
-    - Click on the toggle button and ensure its outline changes to the #17a2b8 colour to indicate that the button has been clicked. 
-    - Ensure that on all three of the 320x571, 576x571 and 768x571 screen sizes, the navigation bar’s dropdown background actually drops down and fills the length of the screen. 
-    - Ensure the website's links inside the dropdown navigation bar stay within its width; not overlapping outside it.
-    - Hover over and click on each link in this navigation bar and ensure the background colour for the links hovered over and clicked on changes to #17a2b8.
-    - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
-    - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
-    - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”. Then, press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
-    - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to #17a2b8 for both the search bar input field and its button.
-    - Once the search is done, ensure the “__*berry*__” word entered remains in the search bar even after the search has gone through and ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
-    - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__” message.
-    - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
-    - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
-    - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
-- Desktop Navigation Bar:
-    - Using chrome development tools, open the Slurps homepage website using both the 992x571 and 1200x571 screen sizes.
-    - Ensure the navigation bar’s background colour is light blue and that it fits the full width of both these screen sizes.
-    - Ensure the links in the navigation bar are clear to read and don’t overlap each other or exceed the length of the navigation bar. Also make sure the links are evenly spread out with a “__*|*__” separating them.
-    - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
-    - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
+- Mobile & Tablet 
+    - Navigation Bar:
+        - Using chrome development tools, open the Slurps homepage website using: 320x571, 576x571 and 768x571 screen sizes.
+        - Ensure the navigation bar colour is #f8f9fa and that it fits the full width of all three of these screen sizes and that the company logo and toggle button on opposite sides fit well and clearly on the navigation bar.
+        - Click on the “__*Slurps*__” logo and ensure this redirects the users to the home page of the Slurps website.
+        - Click on the toggle button and ensure its outline changes to the #17a2b8 colour to indicate that the button has been clicked. 
+        - Ensure that on all three of the 320x571, 576x571 and 768x571 screen sizes, the navigation bar’s dropdown background actually drops down and fills the length of the screen. 
+        - Ensure the website's links inside the dropdown navigation bar stay within its width; not overlapping outside it.
+        - Hover over and click on each link in this navigation bar and ensure the background colour for the links hovered over and clicked on changes to #17a2b8.
+        - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
+        - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
+        - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”. Then, press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
+        - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to #17a2b8 for both the search bar input field and its button.
+        - Once the search is done, ensure the “__*berry*__” word entered remains in the search bar even after the search has gone through and ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
+        - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__” message.
+        - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
+        - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
+        - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
+    - User Profile and Shopping Cart Banner:
+        - Using chrome development tools, open the Slurps home page website using: 320x571, 576x571 and 768x571 screen sizes.
+        - Ensure its background colour is light blue and the width of this banner fills the width of the screen for each of these screen sizes.
+        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the #17a2b8 colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
+        - Check the shopping cart icon, drink counter and the price total can all be seen clearly and don’t overlap each other across each of these screen sizes.
+        - Click the shopping cart icon and make sure it changes to the #17a2b8 colour and redirects the website to the “__*Shopping Cart*__” page. 
+        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is #f8f9fa and when clicked, its outline colour changes to #17a2b8.
+        - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” 
+            and make sure in the banner, the price total is also “__*£13.00*__”. 
+        - Add two more of the same drink that cost “__*£13.00*__” 
+            and make sure the price total in the banner adds them up correctly, therefore displaying “__*£39.00*__” as a result.
+        - Reduce the number of drinks added to the shopping cart by one and ensure the price total subtracts the cost correctly and shows “__*£23.00*__” in its price total.
+    - Delivery Banner:
+        - Using chrome development tools, open the Slurps home page website using: 320x571, 576x571 and 768x571 screen sizes.
+        - Check the length of the delivery banner doesn't exceed the width of any of these screen sizes, causing the text on the banner to overflow out of the banner's range.
+        - Ensure the text “__*Deliveries Only*__ __*<del>£35*__ __*£5!*__”
+            is legible and clearly organised, separate from the other banner and navigation bar above.
+        - Check the “__*£35*__” 
+            price is crossed out and the “__*£5*__” price is highlighted with a light blue background colour and a box shadow so it stands out the most, out of all the text on the banner. 
 
 
 
 
 
 
+
+
+
+
+
+
+
+- Desktop 
+    - Navigation Bar:
+        - Using chrome development tools, open the Slurps homepage website using both the 992x571 and 1200x571 screen sizes.
+        - Ensure the navigation bar’s background colour is light blue and that it fits the full width of both these screen sizes.
+        - Ensure the links in the navigation bar are clear to read and don’t overlap each other or exceed the length of the navigation bar. Also make sure the links are evenly spread out with a “__*|*__” separating them.
+        - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
+        - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.

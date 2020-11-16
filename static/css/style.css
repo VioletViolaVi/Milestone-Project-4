@@ -130,7 +130,7 @@ input[type="search"]::-ms-reveal {
 .trolley-counter-number:focus,
 .trolley-counter-number:active,
 .trolley-counter-number:hover {
-  border: lightblue solid 0.2em;
+  border: #17a2b8 solid 0.2em;
 }
 
 .icon-nav-bg {
