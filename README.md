@@ -37,7 +37,7 @@ This is an activity diagram showing how the Slurps website is intended to be use
 ## Wireframes
 ### Small Screens
 ![A wireframe of the signup and login page on mobile screens.](/media/wireframes/1.signupLogin-mobile.PNG)
-![A wireframe of the navbar on mobile screens.](/media/wireframes/2.navbar-mobile.PNG)
+![A wireframe of the navigation bar on mobile screens.](/media/wireframes/2.navbar-mobile.PNG)
 ![A wireframe of the new drinks section of the homepage on mobile screens.](/media/wireframes/3.newDrinks-mobile.PNG)
 ![A wireframe of the juice section of the homepage on mobile screens.](/media/wireframes/4.juices-mobile.PNG)
 ![A wireframe of the milkshake section of the homepage on mobile screens.](/media/wireframes/5.milkshakes-mobile.PNG)
@@ -49,7 +49,7 @@ This is an activity diagram showing how the Slurps website is intended to be use
 ![A wireframe of the payment page on mobile screens.](/media/wireframes/11.payment-mobile.PNG)
 ### Medium Screens
 ![A wireframe of the signup and login page on tablet screens.](/media/wireframes/12.signupLogin-tablet.PNG)
-![A wireframe of the navbar on tablet screens.](/media/wireframes/13.navbar-tablet.PNG)
+![A wireframe of the navigation bar on tablet screens.](/media/wireframes/13.navbar-tablet.PNG)
 ![A wireframe of the new drinks section of the homepage on tablet screens.](/media/wireframes/14.newDrinks-tablet.PNG)
 ![A wireframe of the juice section of the homepage on tablet screens.](/media/wireframes/15.juices-tablet.PNG)
 ![A wireframe of the milkshake section of the homepage on tablet screens.](/media/wireframes/16.milkshakes-tablet.PNG)
@@ -104,7 +104,7 @@ Shipping Address Form Input
 The “__*Shipping Address*__” form input was split into two inputs:  “__*Street Address 1**__” and  “__*Street Address 2*__”. This was done to ensure more specific information came from the user so the drinks could be delivered to the correct address. It was also done to accommodate longer street address names being split up for easier data handling.
 # Features
 ## Existing Features
-### Navbars
+### Navigation Bars
 * Allows users to click on the Slurps logo in the top left corner and be redirected to the home page, where the users can add any of the displayed drinks to their shopping cart.
 * Allows users to access different pages of the Slurps website by clicking on the provided links.
 * Allows users to sign up, login and log out by clicking on the corresponding links in the navigation bars and being redirected to their respective pages.
@@ -304,6 +304,35 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## [Jasmine Testing](https://jasmine.github.io/index.html):
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
+## Navigation Bars Testing
+- Mobile & Tablet Navigation Bar:
+    - Using chrome development tools, open the Slurps homepage website using: 320x571, 576x571 and 768x571 screen sizes.
+    - Ensure the navigation bar colour is #f8f9fa and that it fits the full width of all three of these screen sizes and that the company logo and toggle button on opposite sides fit well and clearly on the navigation bar.
+    - Click on the toggle button and ensure its outline changes to the #17a2b8 colour to indicate that the button has been clicked. 
+    - Ensure that on all three of the 320x571, 576x571 and 768x571 screen sizes, the navigation bar’s dropdown background actually drops down and fills the length of the screen. 
+    - Ensure the website's links inside the dropdown navigation bar stay within its width; not overlapping outside it.
+    - Hover over and click on each link in this navigation bar and ensure the background colour for the links hovered over and clicked on changes to #17a2b8.
+    - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
+    - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
+    - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”. Then, press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
+    - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to #17a2b8 for both the search bar input field and its button.
+    - Once the search is done, ensure the “__*berry*__” word entered remains in the search bar even after the search has gone through and ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
+    - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__” message.
+    - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
+    - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
+    - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
+- Desktop Navigation Bar:
+    - Using chrome development tools, open the Slurps homepage website using both the 992x571 and 1200x571 screen sizes.
+    - Ensure the navigation bar’s background colour is light blue and that it fits the full width of both these screen sizes.
+    - Ensure the links in the navigation bar are clear to read and don’t overlap each other or exceed the length of the navigation bar. Also make sure the links are evenly spread out with a “__*|*__” separating them.
+    - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
+    - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
+
+
+
+
+
+
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
@@ -319,7 +348,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
     - Ensure that afterwards, the “__*berry*__” word entered in the search bar remains in the search bar after the search has gone through. 
     - Ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
-    - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__”  message.
+    - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the “__*Search results for: "berry"*__” message.
     - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them.
     - Enter the number “__*5*__” in one of these drink’s forms and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
 - Sort By Button Functionality:
