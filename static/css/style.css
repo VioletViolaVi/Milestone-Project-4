@@ -358,6 +358,10 @@ input[type="radio"] {
   padding-bottom: 10em;
 }
 
+#newDrinksTitle {
+  margin-top: 1.1em;
+}
+
 .sort-by-section {
   position: fixed;
   top: 10.1em;
@@ -522,8 +526,8 @@ input[type="radio"] {
   border: lightblue;
 }
 
-.hidden{
-    visibility: hidden;
+.hidden {
+  visibility: hidden;
 }
 
 /******************************************* stripe */
@@ -1034,6 +1038,10 @@ input[type="file"]::-webkit-file-upload-button {
   .new-drinks-circle2 {
     left: 1em;
   }
+
+#newDrinksTitle {
+    margin-top: 0.5em;
+}
 
   /******************************************* shopping cart */
   .trolley-padding-removal {

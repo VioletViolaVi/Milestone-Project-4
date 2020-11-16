@@ -123,6 +123,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 * Contains “__*BUY NOW*__” buttons underneath the new drinks for the users to click on and jump down to the respective drink item and speed up their search.
 * Contains quantity forms underneath the juice and milkshake drinks so the users can fill in how many drinks of each item they want to buy.
 * Contains “__*ADD*__” buttons next to the quantity forms so the users can click on them after entering the number of drinks they wish to buy.
+* Displays the search results of the drink name entered in the search bar. The message “__*Search results for: “berry”*__” is shown for example when “__*berry*__” is entered in the search bar. If the drink item is new, the “__*NEW!*__” label is found on them.
+* The search results also display the drink images, descriptions and quantity form for entering the number of drinks wanted. As well as the “__*ADD*__” button to add these drinks to the shopping cart. 
+* If no drink results are found, by entering “__*fish*__” in the search bar for example, the message “__*No results found for: "fish"*__” is displayed under the “__*Search results for: "fish"*__” message.
 ### Our Mission Page
 * Allows users to view the mission statements of the Slurps company as well as some images that reflect the mission statements being explained.
 ### User Profile Page
@@ -309,17 +312,18 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Navigation Bar:
         - Run the HTML and CSS code used to make this navigation bar, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps homepage website using: 320x571, 576x571 and 768x571 screen sizes.
-        - Ensure the navigation bar colour is #f8f9fa and that it fits the full width of all three of these screen sizes and that the company logo and toggle button on opposite sides fit well and clearly on the navigation bar.
+        - Ensure the navigation bar colour is “__*#f8f9fa*__” and that it fits the full width of all three of these screen sizes and that the company logo and toggle button on opposite sides fit well and clearly on the navigation bar.
         - Click on the “__*Slurps*__” logo and ensure this redirects the users to the home page of the Slurps website.
-        - Click on the toggle button and ensure its outline changes to the #17a2b8 colour to indicate that the button has been clicked. 
+        - Hover over and click on the “__*Slurps*__” logo to ensure its text colour changes to “__*#17a2b8*__”.
+        - Click on the toggle button and ensure its outline changes to the “__*#17a2b8*__” colour to indicate that the button has been clicked. 
         - Ensure that on all three of the 320x571, 576x571 and 768x571 screen sizes, the navigation bar’s dropdown background actually drops down and fills the length of the screen. 
         - Ensure the website's links inside the dropdown navigation bar stay within its width; not overlapping outside it.
-        - Hover over and click on each link in this navigation bar and ensure the background colour for the links hovered over and clicked on changes to #17a2b8.
+        - Hover over and click on each link in this navigation bar and ensure the background colour for the links hovered over and clicked on changes to “__*#17a2b8*__”.
         - Click on the “__*Juices*__” and “__*Milkshakes*__” links and check they scroll down to the “__*Juices*__” and “__*Milkshakes*__” sections of the home page respectively.
         - Click on the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” links and check they redirect the users to the “__*Our Mission*__”,“__*Sign Up*__” and “__*Log In*__” pages of the website respectively.
         - Conduct the following to test the search bar:
             - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”. Then, press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
-            - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to #17a2b8 for both the search bar input field and its button.
+            - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to “__*#17a2b8*__” for both the search bar input field and its button.
             - Once the search is done, ensure the “__*berry*__” word entered remains in the search bar even after the search has gone through and ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
             - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__” message.
             - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
@@ -329,15 +333,16 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Run the HTML and CSS code used to make this banner, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps home page using: 320x571, 576x571 and 768x571 screen sizes.
         - Ensure its background colour is light blue and the width of this banner fills the width of the screen for each of these screen sizes.
-        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the #17a2b8 colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
+        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
         - Check the shopping cart icon, drink counter and the price total can all be seen clearly and don’t overlap each other across each of these screen sizes.
-        - Click the shopping cart icon and make sure it changes to the #17a2b8 colour and redirects the website to the “__*Shopping Cart*__” page. 
-        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is #f8f9fa and when clicked, its outline colour changes to #17a2b8.
+        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__” colour and redirects the website to the “__*Shopping Cart*__” page. 
+        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is “__*#f8f9fa*__” and when clicked, its outline colour changes to “__*#17a2b8*__”.
         - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” 
             and make sure in the banner, the price total is also “__*£13.00*__”. 
         - Add two more of the same drink that cost “__*£13.00*__” 
             and make sure the price total in the banner adds them up correctly, therefore displaying “__*£39.00*__” as a result.
         - Reduce the number of drinks added to the shopping cart by one and ensure the price total subtracts the cost correctly and shows “__*£23.00*__” in its price total.
+        - Also ensure the price total changes its text colour to “__*#17a2b8*__” when hovered over or clicked on.
     - Delivery Banner:
         - Run the HTML and CSS code used to make this banner, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps home page using: 320x571, 576x571 and 768x571 screen sizes.
@@ -352,20 +357,22 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Using chrome development tools, open the Slurps home page using: 992x571 and 1200x571 screen sizes.
         - Ensure the logo, search bar, person icon, shopping cart icon, drink counter and price total are all clearly presented in the banner, don't overlap each other or go outside the banner’s width across both these screen sizes.
         - Click on the “__*Slurps*__” logo and ensure this redirects the users to the home page of the Slurps website.
+        - Hover over and click on the “__*Slurps*__” logo to ensure its text colour changes to “__*#17a2b8*__”.
         - Conduct the following to test the search bar:
             - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”. Then, press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
-            - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to #17a2b8 for both the search bar input field and its button.
+            - Ensure the background colour of the button with the magnifying glass icon is light blue and when it’s clicked on, ensure the outline colour changes to “__*#17a2b8*__” for both the search bar input field and its button.
             - Once the search is done, ensure the “__*berry*__” word entered remains in the search bar even after the search has gone through and ensure the message “__*Search results for: "berry"*__” appears at the top of the screen.
             - As this website does have drink names with the word “__*berry*__” in them, ensure there are drink options that do appear underneath the  “__*Search results for: "berry"*__” message.
             - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
             - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
             - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
-        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the #17a2b8 colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
-        - Click the shopping cart icon and make sure it changes to the #17a2b8 colour and redirects the website to the “__*Shopping Cart*__” page. 
-        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is light blue and when clicked, its outline colour changes to #17a2b8.
+        - Check that the person icon is clearly positioned in the banner, across these different screen sizes, and when clicked changes to the “__*#17a2b8*__” colour. Also when clicked, ensure the website is redirected to the “__*My Profile*__” page, when users are logged in, or the “__*Log In*__” page when users are not logged in.
+        - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__” colour and redirects the website to the “__*Shopping Cart*__” page. 
+        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is light blue and when clicked, its outline colour changes to “__*#17a2b8*__”.
         - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” and make sure in the banner, the price total is also “__*£13.00*__”. 
         - Add two more of the same drink that cost “__*£13.00*__” and make sure the price total in the banner adds them up correctly, therefore displaying “__*£39.00*__” as a result.
         - Reduce the number of drinks added to the shopping cart by one and ensure the price total subtracts the cost correctly and shows “__*£23.00*__” in its price total.
+        - Also ensure the price total changes its text colour to “__*#17a2b8*__” when hovered over or clicked on.
     - Navigation Bar:
         - Run the HTML and CSS code used to make this navigation bar, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps homepage website using both the 992x571 and 1200x571 screen sizes.
@@ -382,9 +389,42 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Check the “__*£35*__” 
             price is crossed out and the “__*£5*__” price is highlighted with a light blue background colour and a box shadow so it stands out the most, out of all the text on the banner. 
 ## Home Page Testing 
-- Mobile & Tablet 
+- Mobile, Tablet & Desktop
     - Sort By Button:
-        - #
+        - Run the HTML and CSS code used to make the “__*Sort By...*__” button, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+        - Using chrome development tools, open the Slurps homepage website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the “__*Sort By...*__” button stays at the top and far right side of the screen across all these screen sizes. 
+        - Ensure the background colour of the “__*Sort By...*__” button is light blue and when hovered over or clicked on, ensure its outline colour changes to “__*#17a2b8*__”.
+        - Click on the “__*Sort By...*__” button to make its link options drop down. When hovered over or clicked on, ensure the links’ background colour in this dropdown change to light blue. Also, when one of the options are clicked on, ensure the text colour changes to white.
+        - Click on the “__*Price(Low-High)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the cheapest drinks to the most expensive. 
+        - Click on the “__*Price(High-Low)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in order of their price starting with the most expensive drinks to the cheapest.
+        - Click on the “__*Name(A-Z)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in alphabetical order, based on their drink names.
+        - Click on the “__*Name(Z-A)*__” link then look through the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page and check all the drinks in each section are displayed in reverse alphabetical order, based on their drink names.
+    - New Drinks Section:
+        - Run the HTML and CSS code used to make the “__*New Drinks*__” section, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+        - Using chrome development tools, check this section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in the “__*New Drinks*__” section uses BootStraps’ grid system in displaying 1-2 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
+        - Across these different screen sizes also check the drink images and their “__*NEW!*__” stickers don’t overlap the content of the other new drink items displayed.
+        - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
+        - Look to see if the “__*BUY NOW*__” buttons are arranged under the drink’s descriptions following the same grid system from Bootstrap.
+        - Hover over and click on the “__*BUY NOW*__” buttons to ensure their outline changes to the colour, “__*#17a2b8*__”.
+        - Click on the “__*BUY NOW*__” buttons and make sure that causes the home page to scroll down to the same drink in their respective drink type section.
+    - Search Results, Juices & Milkshakes Section:
+        - Run the HTML and CSS code used to make the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections of the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+        - Using chrome development tools, check these section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in these sections uses BootStraps’ grid system in displaying 1-3 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
+        - Across these different screen sizes check the drink images and their descriptions don’t overlap the content of the other drink items displayed besides them.
+        - Ensure any drink produced from the search results, that also exists within the “__*New Drinks*__” section, appears with a “__*NEW!*__” sticker on them. 
+        - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
+        - Test the quantity form underneath these drinks by conducting the following:
+            - Enter the number “__*4*__” in the quantity form for one drink from each section i.e.: “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__”. 
+            - Press the “__*ADD*__” button next to the form to see if the drink quantities are sent to the shopping cart.
+            - Scroll to the top of the screen and check the drink counter is “__*16*__” to make sure all these drinks were added and the form worked. Then click the shopping cart icon to go to the “__*Shopping Cart*__” page .
+            - Once on the page, check that the added drinks in the “__*Shopping Cart*__” page are the same drinks that were added from the home page and ensure that in their edit form input fields, the number “__*4*__” is present for each of them.
+            - Repeat this same test for other drinks using different quantity numbers and always go to the “__*Shopping Cart*__” page to ensure the same drink item(s) and their quantity number, taken from the home page’s quantity form, appears in the “__*Shopping Cart*__” page.
+    - Fixed Arrow:
+        - Run the HTML and CSS code, used to make the fixed arrow appear when scrolling down the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+        - Using chrome development tools, check the fixed arrow’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+        - Scroll down the page using these different screen sizes and ensure the fixed arrow appears, before reaching the bottom and can be seen on the page clearly regardless of the content it overlaps; ensuring its z-index is correct.
+        - When the fixed arrow is hovered over, make sure the arrow changes its colour to light blue. 
+        - When the fixed arrow is clicked on, ensure the home page scrolls back to the top of the screen, where users first land, when opening up the Slurps website.
 
 
 

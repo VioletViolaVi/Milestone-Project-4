@@ -1,3 +1,8 @@
+{% for new_drink in new_drinks %}
+    {% if drink_search_result.drink_name == new_drink.drink_name %}
+        <div class="new-drinks-circle2 text-capitalize font-weight-bolder">new!</div>
+    {% endif %} 
+{% endfor %}
 <div class="drinks_img">
     <img src="media/{{ drink_search_result.image }}" alt="{{ drink_search_result.drink_name }}" class="rounded">
 </div>
