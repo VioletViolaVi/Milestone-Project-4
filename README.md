@@ -414,6 +414,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Run the HTML and CSS code used to make the “__*New Drinks*__” section, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
     - Using chrome development tools, check this section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in the “__*New Drinks*__” section uses BootStraps’ grid system in displaying 1-2 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
     - Across these different screen sizes also check the drink images and their “__*NEW!*__” stickers don’t overlap the content of the other new drink items displayed.
+    - Test the “__*no-image.PNG*__” is seen when no drink image is available by negating the condition of the “__*for/endfor*__” statements wrapped around the code for the images. Upon doing so, ensure the crossed out camera image is seen clearly, in place of the drink image.
     - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
     - Look to see if the “__*BUY NOW*__” buttons are arranged under the drink’s descriptions following the same grid system from Bootstrap.
     - Hover over and click on the “__*BUY NOW*__” buttons to ensure their outline changes to the colour, “__*#17a2b8*__”.
@@ -423,7 +424,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Using chrome development tools, check these section’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. Check the content in these sections uses BootStraps’ grid system in displaying 1-3 drink items per row on smaller sizes (320x571, 576x571 and 768x571) and 4 drink items per row on larger screen sizes (992x571 and 1200x571). 
     - Across these different screen sizes check the drink images and their descriptions don’t overlap the content of the other drink items displayed besides them.
     - Ensure any drink produced from the search results, that also exists within the “__*New Drinks*__” section, appears with a “__*NEW!*__” sticker on them. 
+    - Test the “__*no-image.PNG*__” is seen when no drink image is available by negating the condition of the “__*for/endfor*__” statements wrapped around the code for the images. Upon doing so, ensure the crossed out camera image is seen clearly, in place of the drink image.
     - Hover over the shortened drink names that have ellipsis written at the end of them and ensure the full name of the drink can be seen as a tooltip when doing so. Also check the rest of the drink descriptions are clearly displayed, easy to read and understand. 
+    - Make sure that in all the drink quantity forms, underneath these drinks, the forms are prefilled with a default value of “__*1*__” written in each of these forms with an “__*ADD*__” button next to them.
     - Test the quantity form underneath these drinks by conducting the following:
         - Enter the number “__*4*__” in the quantity form for one drink from each section i.e.: “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__”. 
         - Press the “__*ADD*__” button next to the form to see if the drink quantities are sent to the shopping cart. Also ensure a message appears at the top of the screen informing the users on the quantity and name of the drink(s) added.
@@ -439,14 +442,30 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Sub-Heading Title:
     - Check that the three“__*Our Customers*__”, “__*Ethical Sourcing*__” and “__*Our Employees*__” subheading titles and their paragraphs follow Bootstrap’s grid system by displaying one of these portions per row for screen sizes 320x571 and 576x571. Then ensure all three parts are displayed in the same row for screen sizes 768x571, 992x571 and 1200x571. 
     - Make sure the text is clear, easy to read and doesn’t get cut off the screen regardless of the screen size, as its rows and columns change with the Bootstrap grid system to maintain responsiveness.
+    - Test the “__*no-image.PNG*__” is seen when no drink image is available by negating the condition of the “__*for/endfor*__” statements wrapped around the code for the images. Upon doing so, ensure the crossed out camera image is seen clearly, in place of the drink image.
 ### Shopping Cart
-- 
-
-
-
-
-
-
+- Run the HTML and CSS code used to make the “__*Shopping Cart*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Open the Slurps website and click on the shopping cart icon to be redirected to the “__*Shopping Cart*__” page. As no purchases have been made yet, make sure the message “__*Your Shopping Cart Is Empty.*__” is displayed with the “__*BACK TO HOME*__” button present.
+- Click on the “__*BACK TO HOME*__” button and ensure the button redirects back to the home page. Add the first two drink items from the “__*Milkshake*__” section to the shopping cart then click on the shopping cart icon again to go back to the “__*Shopping Cart*__” page.
+- Keep Shopping Button:
+    - Now that items have been sent to the “__*Shopping Cart*__” page, check for the presence of the “__*KEEP SHOPPING*__” button located above the image. 
+    - Click on this button to check it redirects back to the home page. Once this is verified, return back to the “__*Shopping Cart*__” page. 
+- Drink Image & Description:
+    - Underneath the “__*KEEP SHOPPING*__” button, look for the presence of the drink images and make sure their width and height do not make the images difficult to recognise. 
+    - Test the “__*no-image.PNG*__” is seen in place of the drink images, when no drink images are available by negating (adding a “__*not*__”) the condition of the “__*if/endif*__” Django templates wrapped around the code for these images. Upon doing so, ensure the crossed out camera image is seen clearly, instead of the drink images then remove this negation from the Django templates.
+    - Note the description of the drinks have floated to the right-hand side of the drink images and make sure the images and the descriptions do not overlap so the text can be easily seen and read by users.
+- Edit Button, Edit Form & Bin Icon:
+    - Hover over the “__*EDIT*__” buttons and the “__*EDIT*__” form field inputs and make sure an outline around each of them appears in the colour “__*#17a2b8*__”. Also hover over the bin icons and make sure the color also changes to “__*#17a2b8*__”.
+    - Check each “__*EDIT*__” form was filled in with the same number that was used on the home page then change the values to different numbers. 
+    - Press the “__*EDIT*__” buttons to test if the “__*EDIT*__” forms work and change the previous numerical values to the new ones. Also use the drink counter at the top of the webpage to check for the same number of drinks being displayed compared to the “__*Shopping Cart*__” page, further confirming the drink quantity number has been changed.
+    - Click on the bin icon for one of the drinks to make sure the delete modal opens up.
+    - Once the modal opens, ensure it asks users to confirm their decision to delete the selected item. Also make sure that the name of the drink displayed to be deleted is the same drink whose bin icon was clicked on.
+    - Click outside the modal to make sure it does not close.
+    - Click on the “__*NO*__” button to check this closes the modal. Afterwards, reopen the modal and click on the cross icon at the top to also check this closes the modal.
+    - Reopen the modal again then click the “__*YES*__” button to delete the drink item. 
+    - Make sure the drink gets deleted by looking back at the “__*Shopping Cart*__” page, once the modal closes. 
+    - Make sure only the drink selected to be deleted is the one gone. 
+    - Repeat the deleting process for the remaining drink item in the“__*Shopping Cart*__” page then ensure the page reverts back to how it first looked when there was nothing in it ie., with the message “__*Your Shopping Cart Is Empty.*__” and the “__*BACK TO HOME*__” button displayed.
 ## User Profiles Page
 - Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then go to the “__*Sign Up*__” page and complete the form using the email “__*test@test.com*__”, the username “__*Test*__” , a random password and then verify the email account from the Gitpod terminal, before clicking on the person icon to gain access to the “__*My Profile*__” page.
@@ -466,6 +485,19 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Change Email Address Testing:
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
+## Payment
+- 
+
+
+
+
+
+
+
+
+
+
+
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
@@ -475,7 +507,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - View the buttons for each drink and ensure its text is clear and legible. 
     - Ensure all forms on the homepage are filled in with the default number of “__*1*__” so the users can know which drinks are on offer and where to enter the amount they wish to purchase. 
     - Enter the number “__*5*__” in one of these drink forms and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
--   Search Bar Functionality:
+- Search Bar Functionality:
     - Open the Slurps website to land on the homepage.
     - Enter the cursor in the search bar at the top of the website and type in “__*berry*__”.
     - Press the button with the magnifying glass icon on it to enter the search “__*berry*__” into the website.
