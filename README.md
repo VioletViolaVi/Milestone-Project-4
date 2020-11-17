@@ -439,7 +439,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Sub-Heading Title:
     - Check that the three“__*Our Customers*__”, “__*Ethical Sourcing*__” and “__*Our Employees*__” subheading titles and their paragraphs follow Bootstrap’s grid system by displaying one of these portions per row for screen sizes 320x571 and 576x571. Then ensure all three parts are displayed in the same row for screen sizes 768x571, 992x571 and 1200x571. 
     - Make sure the text is clear, easy to read and doesn’t get cut off the screen regardless of the screen size, as its rows and columns change with the Bootstrap grid system to maintain responsiveness.
-## User Profiles Page
+### Shopping Cart
 - 
 
 
@@ -447,14 +447,25 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 
 
 
-
-
-
-
-
-
-
-
+## User Profiles Page
+- Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then go to the “__*Sign Up*__” page and complete the form using the email “__*test@test.com*__”, the username “__*Test*__” , a random password and then verify the email account from the Gitpod terminal, before clicking on the person icon to gain access to the “__*My Profile*__” page.
+- Personal Details Form Testing:
+    - Make sure that on first arrival of the “__*My Profile*__” page, its “__*Personal Details*__” form is empty. Click on the “__*UPDATE INFORMATION*__” button whilst the form is still empty to ensure input fields that have not been edited can still be submitted. This means the form correctly does not require users to fill in each input field and therefore users are free to decide which personal details they wish to save on their account. 
+    - To test the “__*Personal Details*__” form does accept typed in data, fill in the “__*Phone Number*__” input field with the numbers “__*0123456789*__”. Click on the “__*Country*__” field input, make sure a list of the world’s countries appears in the dropdown option then select any random country. For the rest of the inputs, type in the word “__*Test*__” before pressing the “__*UPDATE INFORMATION*__” button. 
+    - After the page reloads, check the form’s inputs remain filled in with the entered test details to ensure the form is able to update and save the users entered information.
+- Order History Testing:
+    - Before any purchases and drink orders are made, check in the “__*My Profile*__” page that the “__*Order History*__” section informs the users that their order history is empty and the “__*BACK TO HOME*__” button is present for them to click on it and be redirected to the home page.
+    - Click on the “__*BACK TO HOME*__” button to verify the button does redirect back to the home page. After checking it does, select the first drink from the “__*Juices*__” section and add a quantity of “__*1*__” to the shopping cart. Click on the shopping cart icon then click the “__*PAY*__” button to be redirected to the “__*Make Payment*__”  page. Once here, complete the “__*Make Payment*__” form and click the “__*COMPLETE ORDER*__” button to send through the payment. Once redirected to the confirmation page, click the person icon again and return to the “__*My Profile*__” page.
+    - Back on the “__*My Profile*__” page, under the “__*Order History*__” section ensure a table is displaying this time, with the following headings: “__*Date*__”, “__*Drink Name*__”, “__*Grand Total*__” and “__*Drink Order Number*__”. 
+    - Under the “__*Date*__” column, check the date and time match the date and time the order was made. For the “__*Drink Name*__” column, ensure the same name of the drink item bought and the same quantity of the drink selected is shown. Under the “__*Grand Total*__”, make sure the price is the same price that was shown as the “__*Grand Total*__” in the “__*Shopping Cart*__” and “__*Make Payment*__” page. As for the “__*Drink Order Number*__” column, ensure a random 32-length string of letters and numbers are present as a link. Click on the link and ensure doing so redirects users to the “__*Successful Payment*__” page.
+    - On the “__*Successful Payment*__” page, check that it thanks users for making the order and shows details of the payment made in the style of a receipt; detailing what was bought, how much it costs, the date it was purchased and the personal details of the users that made the purchase.
+- Change Password Button Testing:
+    - Underneath the “__*Personal Details*__” form, locate the “__*CHANGE MY PASSWORD*__” button.
+    - Click on it to ensure the website redirects to the “__*Change Password*__” page.
+- Change Email Address Testing:
+    - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
+    - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
