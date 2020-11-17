@@ -466,9 +466,27 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Make sure the drink gets deleted by looking back at the “__*Shopping Cart*__” page, once the modal closes. 
     - Make sure only the drink selected to be deleted is the one gone. 
     - Repeat the deleting process for the remaining drink item in the“__*Shopping Cart*__” page then ensure the page reverts back to how it first looked when there was nothing in it ie., with the message “__*Your Shopping Cart Is Empty.*__” and the “__*BACK TO HOME*__” button displayed.
+- Costs & Payment Button
+    - At the bottom of the page, ensure the subtitles: “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” are displaying. 
+    - Make sure the “__*Subtotal*__” amount being displayed is equal to the total cost of the drinks when added together by comparing the price from the home page and using a calculator to add the cost of the drinks.
+    - Make sure the “__*Delivery*__” cost displays the crossed out “__*<del>£35*__” and the reduced price of “__*£5*__” both next to this subtitle.
+    - Use a calculator to ensure the “__*Grand Total*__” cost shown is equal to the addition of the “__*Subtotal*__” and “__*Delivery*__” costs added together.
+    - Hover over the “__*PAY*__” button and make sure an outline appears on the button and that the colour of its outline is “__*#17a2b8*__”. 
+    - Click on the “__*PAY*__” button and ensure it redirects the website to the “__*Make Payment*__” page.
+## Payment
+- 
+
+
+
+
+
+
+
+
+
 ## User Profiles Page
 - Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-- Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then go to the “__*Sign Up*__” page and complete the form using the email “__*test@test.com*__”, the username “__*Test*__” , a random password and then verify the email account from the Gitpod terminal, before clicking on the person icon to gain access to the “__*My Profile*__” page.
+- Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then fill in the “__*Log In*__” form with the same username and password used for testing prior i.e.: username “__*Test*__” and the same random password used before. Click on the person icon again to gain access to the “__*My Profile*__” page.
 - Personal Details Form Testing:
     - Make sure that on first arrival of the “__*My Profile*__” page, its “__*Personal Details*__” form is empty. Click on the “__*UPDATE INFORMATION*__” button whilst the form is still empty to ensure input fields that have not been edited can still be submitted. This means the form correctly does not require users to fill in each input field and therefore users are free to decide which personal details they wish to save on their account. 
     - To test the “__*Personal Details*__” form does accept typed in data, fill in the “__*Phone Number*__” input field with the numbers “__*0123456789*__”. Click on the “__*Country*__” field input, make sure a list of the world’s countries appears in the dropdown option then select any random country. For the rest of the inputs, type in the word “__*Test*__” before pressing the “__*UPDATE INFORMATION*__” button. 
@@ -485,19 +503,6 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Change Email Address Testing:
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
-## Payment
-- 
-
-
-
-
-
-
-
-
-
-
-
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
