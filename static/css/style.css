@@ -268,18 +268,14 @@ label[for="id_login"] {
 
 select,
 input[type="text"],
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
   text-transform: capitalize;
 }
 
 input[type="text"]#id_postcode,
 input[type="text"]#id_default_postcode {
   text-transform: uppercase;
-}
-
-input[type="email"],
-input[type="email"]::placeholder {
-  text-transform: lowercase;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -300,6 +296,10 @@ select option[value=""] {
 select,
 input[type="checkbox"] {
   cursor: pointer;
+}
+
+input[type="email"]{
+  text-transform: lowercase;
 }
 
 input[type="radio"] {

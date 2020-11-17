@@ -454,6 +454,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Underneath the “__*KEEP SHOPPING*__” button, look for the presence of the drink images and make sure their width and height do not make the images difficult to recognise. 
     - Test the “__*no-image.PNG*__” is seen in place of the drink images, when no drink images are available by negating (adding a “__*not*__”) the condition of the “__*if/endif*__” Django templates wrapped around the code for these images. Upon doing so, ensure the crossed out camera image is seen clearly, instead of the drink images then remove this negation from the Django templates.
     - Note the description of the drinks have floated to the right-hand side of the drink images and make sure the images and the descriptions do not overlap so the text can be easily seen and read by users.
+    - Using chrome development tools, check the images and descriptions follow the grid system taken from Bootstrap. So when the website is being rendered on a 320x571 screen sized device, they are displayed with one drink item occupying one row at a time. When on 576x571 and 768x571 screen sized devices, two drink items are displayed per row and when on 992x571 and 1200x571 screen sizes, there’s room for three drink items to be displayed per row.
 - Edit Button, Edit Form & Bin Icon:
     - Hover over the “__*EDIT*__” buttons and the “__*EDIT*__” form field inputs and make sure an outline around each of them appears in the colour “__*#17a2b8*__”. Also hover over the bin icons and make sure the color also changes to “__*#17a2b8*__”.
     - Check each “__*EDIT*__” form was filled in with the same number that was used on the home page then change the values to different numbers. 
@@ -473,22 +474,44 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Use a calculator to ensure the “__*Grand Total*__” cost shown is equal to the addition of the “__*Subtotal*__” and “__*Delivery*__” costs added together.
     - Hover over the “__*PAY*__” button and make sure an outline appears on the button and that the colour of its outline is “__*#17a2b8*__”. 
     - Click on the “__*PAY*__” button and ensure it redirects the website to the “__*Make Payment*__” page.
-## Payment
-- 
-
-
-
-
-
-
-
-
-
+## Make Payment Page
+- Run the HTML and CSS code used to make the “__*Make Payment*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Open up the home page of the Slurps website and without being logged in, attempt to brute force the way into the “__*Make Payment*__” page by typing at the end in the web address bar “__*/payment*__”. 
+    Ensure access to the “__*Make Payment*__” page is prevented as only logged in users with items in their shopping cart can reach this page.
+- Revert back to the home page and then add any three drinks to the shopping cart. Click on the shopping cart icon then, in the “__*Shopping Cart*__” page, click on the “__*PAY*__” button. Make sure the website reverts to the “__*Log In*__” page as the “__*Make Payment*__” page is restricted to only logged in users. 
+- Once on the “__*Log In*__” page, click on the “__*Sign Up*__” link on top of the form to be redirected to the “__*Sign Up*__” page. Then sign up using the email “__*test@test.com*__”, the username “__*Test*__” and any random password.
+- Verify the email and its account from the Gitpod terminal then ensure the website gets redirected to the “__*Make Payment*__” page now that there is a logged in user.
+- On the “__*Make Payment*__” page make sure the “__*Order Summary*__” section and the payment form are separate from each other and do not overlap. Also check to see both sections are easy to read and understand for users that come across the page for the first time.
+- Order Summary:
+    - Look at the “__*Order Summary*__” section and ensure the users can see the total number of items sent to the shopping cart in the “__*Order Summary*__” heading.
+    - Underneath, ensure the cost subtitles: “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” are displaying and the correct costs for all drinks selected are showing besides them.
+    - Underneath, ensure the drink images and their descriptions can be clearly seen and don’t overlap each other. Ensure the drinks’:  “__*Name*__”, “__*Size*__”, “__*Price*__”, “__*Quantity*__” and  “__*Total*__”, subtitles are present and filled in with the correct data.      
+    - Using chrome development tools, check the images and descriptions follow the grid system taken from Bootstrap. So when the website is being rendered on a 320x571, 576x571, 768x571, 992x571 or 1200x571 screen sized device, the drinks and their descriptions are displayed two at a time per row.
+    - Ensure there’s a “__*CHANGE ORDER*__” button at the bottom and when hovered, it gets a “__*#17a2b8*__” coloured outline around it.
+    - When the “__*CHANGE ORDER*__” button is clicked, the page should redirect the user back to the “__*Shopping Cart*__” page so they can be free to change their order.
+    - Click on the “__*CHANGE ORDER*__” button to go back to the “__*Shopping Cart*__” page and then change the quantity order of each drink to different values. Then, return to the “__*Make Payment*__” page by clicking on the “__*PAY*__” button and then check that the “__*Order Summary*__” section displays the changed: drink quantity number, “__*Subtotal*__”, “__*Delivery*__” costs and the quantity numbers present in each drinks’ descriptions to reflect the new number of items selected.
+- Payment Form:
+    - Ensure the email input field is filled when first landing on the “__*Make Payment*__” page to check that the sign up data is saved when users make accounts. 
+    - Ensure the placeholders for the remaining empty input fields are visible and inform the users that all but one are required to be completed, using the asterisk sign at the end of them to indicate this.  
+    - For the “__*Street Address 2*__” input field that is not required, ensure it does not have an asterisk sign at the end of it so it can inform the users that this field is not necessary to complete.
+    - Hover over each input field to ensure an outline of the colour “__*#17a2b8*__” is shown.
+    - Fill in the “__*Phone Number**__” 
+        input field with the numbers “__*0123456789*__”. Click on the “__*Country**__” field input and make sure a list of the world’s countries appears as a dropdown then select any random country. For the rest of the inputs, type in the word “__*Test*__”.
+    - For the “__*Email*__” input field, ensure the text typed in only appears in lowercase by attempting to type in capital letters and making sure the text remains lowercase.
+    - For the “__*Postal Code*__” input field, ensure the text typed in only appears in uppercase by attempting to type in lowercase letters and making sure the text remains uppercase.
+    - For the “__*Full Name*__”,  “__*Street Address 1*__” and  “__*Street Address 2*__” input fields, ensure the text typed in is capitalised per word by typing in all capital letters with spaces and then again but this time all in lowercase letters with spaces and making sure the text remains capitalised per individual word.
+    - In the card payment input field, taken from Stripe, try entering in an invalid card number in the input filled and ensure the form throws an error message telling the users that the card number used is invaild. Then use Stripe’s test number by entering “__*4242 4242 4242 4242 04 / 24 242 42424*__” in its input. 
+    - Hover over the “__*COMPLETE ORDER*__” button to ensure it gets a “__*#17a2b8*__” coloured outline around it.
+    - Press the “__*COMPLETE ORDER*__” button once the whole form is filled in. Ensure the page is transferred to the “__*Successful Payment*__” page with a confirmation that the payment was successful. 
+- At the bottom of the “__*Make Payment*__” page, ensure there is a message informing users how much money will be charged on their card and that the text is written in red so it is clearly visible to users.
+- After testing the act of making purchases and being redirected to the “__*Successful Payment*__” page, log out via the “__*Log Out*__” link in the navigation bar and remove the current user from session.
 ## User Profiles Page
 - Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then fill in the “__*Log In*__” form with the same username and password used for testing prior i.e.: username “__*Test*__” and the same random password used before. Click on the person icon again to gain access to the “__*My Profile*__” page.
 - Personal Details Form Testing:
     - Make sure that on first arrival of the “__*My Profile*__” page, its “__*Personal Details*__” form is empty. Click on the “__*UPDATE INFORMATION*__” button whilst the form is still empty to ensure input fields that have not been edited can still be submitted. This means the form correctly does not require users to fill in each input field and therefore users are free to decide which personal details they wish to save on their account. 
+    - For the “__*Postal Code*__” input field, ensure the text typed in only appears in uppercase by attempting to type in lowercase letters and making sure the text remains uppercase. Then clear the field.
+    - For the “__*Full Name*__”, “__*Street Address 1*__” and “__*Street Address 2*__” input fields, ensure the text typed in is capitalised per word by typing in all capital letters with spaces and then again but this time all in lowercase letters with spaces and making sure the text remains capitalised per individual word. Then clear the field.
     - To test the “__*Personal Details*__” form does accept typed in data, fill in the “__*Phone Number*__” input field with the numbers “__*0123456789*__”. Click on the “__*Country*__” field input, make sure a list of the world’s countries appears in the dropdown option then select any random country. For the rest of the inputs, type in the word “__*Test*__” before pressing the “__*UPDATE INFORMATION*__” button. 
     - After the page reloads, check the form’s inputs remain filled in with the entered test details to ensure the form is able to update and save the users entered information.
 - Order History Testing:
