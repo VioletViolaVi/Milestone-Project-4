@@ -686,7 +686,34 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Click on each social media icon and ensure they open up a separate tab and display the homepage of the respective social media site.  
 - Using chrome development tools, check the page’s responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensure the content of the footer remains clearly visible across all these screen sizes. 
 ## Administration Home Page
+- Run the HTML and CSS code used to make the administration features of the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
+- Django Administration Button:
+    - Check the top left corner of the home page and make sure the “__*DJANGO ADMIN*__”  button is present.
+    - Hover over the button and ensure an outline colored “__*#17a2b8*__” appears around it.
+    - Click on the “__*DJANGO ADMIN*__”  button to check that it leads to the home page of the Django administration.
+- Edit Button:
+    - Check every drink in the “__*Search results*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” section has an “__*EDIT*__” button underneath their drink item.
+    - Hover over each “__*EDIT*__” button to ensure their outline changes colour to “__*#17a2b8*__”.
+    - Click on the “__*EDIT*__” buttons and ensure they all redirect the website to the “__*Edit Drink*__” page of the drink item selected for editing. 
+- Delete Button:
+    - Check every drink in the “__*Search results*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” section has a bin icon underneath their drink item.
+    - Hover over each bin icon to ensure its text colour changes to “__*#17a2b8*__”.
+    - Click on the bin icons one by one and ensure a confirmation modal opens; asking users to confirm whether or not they wish to delete the selected drink. 
+    - Make sure the name of the drink displayed to be deleted is the same drink that had their bin icon clicked on.
+    - Click outside the modal to make sure it does not close.
+    - Click on the “__*NO*__” button to check this closes the modal. Afterwards, reopen the modal and click on the cross icon at the top to also check this closes the modal.
+    - Reopen the modal again then click the “__*YES*__” button to delete the drink item. 
+    - Ensure only the selected drink is deleted by looking back at the administration home page, once the modal closes and checking the drink is no longer present.
+- Log out as the “__*Admin*__” user and attempt to brute the way to the Django administration’s login page by typing at the end in the web address bar “__*/admin*__”. 
+- Log in using a different username and password and ensure it is not possible to gain access to the Django administration page with such.
+## Administration Edit Drink Page 
 - 
+
+
+
+
+
 
 
 
