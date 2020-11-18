@@ -504,7 +504,12 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Hover over the “__*COMPLETE ORDER*__” button to ensure it gets a “__*#17a2b8*__” coloured outline around it.
     - Press the “__*COMPLETE ORDER*__” button once the whole form is filled in. Ensure the page is transferred to the “__*Successful Payment*__” page with a confirmation that the payment was successful. 
 - At the bottom of the “__*Make Payment*__” page, ensure there is a message informing users how much money will be charged on their card and that the text is written in red so it is clearly visible to users.
-- After testing the act of making purchases and being redirected to the “__*Successful Payment*__” page, log out via the “__*Log Out*__” link in the navigation bar and remove the current user from session.
+## Payment Confirmation Page
+- Run the HTML and CSS code used to make the “__*Make Payment*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Open the Slurps home page website and click on an “__*ADD*__” button to add any one drink to the shopping cart. Click on the shopping cart icon and then click the “__*PAY*__” button to be redirected to the “__*Make Payment*__” page; if logged in. If not logged in, then the website should redirect the users to the “__*Log In*__” page were they can log in their details and then be taken to the “__*Make Payment*__” page. Complete its form then click the “__*COMPLETE ORDER*__” button to be redirected to the “__*Successful Payment*__” page to be tested.
+- Ensure the “__*Successful Payment*__” page is responsive by using chrome development tools to open the page in different screen sizes including: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Make sure the Bootstrap grid system is in effect by checking that when the screen size is 320x571, the contents on the page i.e. the drink order receipt is displayed within a single column. Then for screen sizes which are 576x571 and more, the order receipt and its sections are displayed in two columns. That is, the “__*Order Number*__” and “__*Orders*__” sections are placed in one column and the “__*Personal Details*__”, “__*Costs*__” and “__*Date*__” sections are placed in another.
+- At the bottom of the page, check for a “__*KEEP SHOPPING*__” button. Then hover over it to ensure the outline changes colour to “__*#17a2b8*__”. Click on the button to see if it redirects back to the home page for users to make new orders. 
 ## User Profiles Page
 - Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Without being logged in, attempt to access the “__*My Profile*__” page by clicking on the person icon and make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. Then fill in the “__*Log In*__” form with the same username and password used for testing prior i.e.: username “__*Test*__” and the same random password used before. Click on the person icon again to gain access to the “__*My Profile*__” page.
@@ -526,6 +531,18 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Change Email Address Testing:
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
+## Change & Set Password Page
+- 
+
+
+
+
+
+
+
+
+
+
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
