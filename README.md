@@ -667,8 +667,19 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - To test the “__*Log Out*__” button and see if it logs users out, click the button and ensure it redirects the website to the home page with a message at the top of the screen informing the users that they have just logged out.
 - Using chrome development tools again, click on the “__*Application*__” tab. Then click on “__*Cookies*__” and ensure the session user has been removed to prove that the “__*Log Out*__” button has stopped the user from being in session within the browser and therefore is working.  
 ## Account Inactive Page
+- Run the HTML and CSS code used to make the “__*Account Inactive*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and create a superuser account in the “__*Sign Up*__” page with the username “__*Admin*__”, email “__*admin@admin.com*__” and a random password. 
+- Confirm the account via the Gitpod terminal then click on the “__*DJANGO ADMIN*__” button to be redirected to Django’s administration page.
+- Click on “__*Users*__” under the “__*AUTHENTICATION AND AUTHORIZATION*__” category and search for the username “__*Test*__”.
+- Delete this username from the Django’s administration page, log out and then return to the home page.
+- Click on the “__*Log In*__” link and attempt to log in using the recently deleted “__*Test*__” username and password. 
+- Ensure the website redirects to the “__*Account Inactive*__” page to inform the users that the account they are attempting to log in with is no longer active.
+- Using chrome development tools, check the page’s responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensure the content of the page remains clearly visible across all these screen sizes. 
+- Back Home Button:
+    - Hover over the “__*BACK TO HOME*__” button and ensure the “__*#17a2b8*__” outline appears around the button as a result.
+    - Click on the “__*BACK TO HOME*__'' button and ensure it redirects the website back to the home page.
+## Footer
 - 
-
 
 
 
