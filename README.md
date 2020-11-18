@@ -548,6 +548,30 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Fill in one of the inputs and click on the button again. Then fill in two of the input fields and click the button again.
     - Ensure the form does not submit whilst the whole form is incomplete as all fields are required to be completed. 
 ## Email Address Page
+- Run the HTML and CSS code used to make the “__*E-mail Addresses*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Click on the “__*Log In*__” link to be redirected to the “__*Log In*__” page, then log into the account. Afterwards, the website will redirect to the home page.
+- On the home page, click on the person icon to be redirected to the “__*My Profile*__” page. 
+- At the bottom of this page, click the “__*CHANGE MY EMAIL ADDRESS*__” button to be redirected to the “__*E-mail Addresses*__” page.
+- Email Address Buttons:
+    - View the radio button and endure its value is the user account’s email. Then make sure the radio button is already checked.  
+    - Underneath it, there should be three buttons: “__*MAKE PRIMARY*__”, “__*RESEND VERIFICATION*__” and “__*REMOVE*__”. 
+    - Hover over each of these buttons and ensure a “__*#17a2b8*__” coloured outline appears for each of them.
+    - Test making the checked email address the primary one by clicking the “__*MAKE PRIMARY*__” button. Ensure the page reloads and that there’s a message at the top of the screen informing the users that the primary email address has been set.
+    - Test resending verification for verifying the email address by clicking the “__*RESEND VERIFICATION*__” button. Ensure the page reloads and that there’s a message at the top of the screen informing the users that a confirmation email has been sent to the selected email next to the radio button.
+    - Test removing email addresses by clicking on the “__*REMOVE*__” button to remove the current selected email. Make sure this reloads the page and produces a message at the top informing the users that they cannot delete primary emails. 
+    - Add another email to the account by entering a different email in the “__*E-mail Address*__” input field below. Then retest deleting an email by selecting the newly created email and clicking the “__*REMOVE*__” button after. 
+    - Ensure a message is shown at the top of the screen informing users that they have successfully removed the email address they selected.
+- Add Email Address:
+    - Hover over the “__*E-mail Address*__” input field to see its outline change to the “__*#17a2b8*__” colour.
+    - Check its placeholder contains the text “__*E-mail Address*__” inside it to inform the users on what is to be written inside.
+    - Ensure the text typed in only appears in lowercase by attempting to type in capital letters and making sure the text remains lowercase.
+    - Enter a different email address to the email already displayed next to the radio button above in the “__*E-mail Address*__” input field.
+    - Hover over the “__*ADD E-MAIL*__” button to see its outline change to the “__*#17a2b8*__” colour.
+    - Click on the “__*ADD E-MAIL*__” button to make sure the email address can be sent in order to be added to the account.
+    - Check the Gitpod terminal and click on the link provided to open up the “__*Confirm E-mail Address*__” page which provides users with instructions on how to confirm the new email address they just added.
+    - Click on the “__*CONFIRM*__” button to be redirected to the home page then click the person icon and the “__*CHANGE MY EMAIL ADDRESS*__” button to be redirected back to the “__*E-mail Addresses*__” page.
+    - Check the new email has been added to show users adding emails to their accounts works.
+## Sign Up Page
 - 
 
 
