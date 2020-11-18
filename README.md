@@ -624,8 +624,50 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
 - Read through the page’s contents and ensure it shows the users that signing up is not available.
 ## Reset Password Sent Email Page
+- Run the HTML and CSS code used to make the “__*Password Reset*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and then click on the “__*Log In*__” navigation link then click the “__*Forgot Password? Click Me!*__” link to redirect to the “__*Password Reset*__” page.
+- Input Field:
+    - Hover over the “__*E-Mail Address*__” input field and ensure its outline colour changes to “__*#17a2b8*__”.
+    - View the placeholder text of the “__*E-Mail Address*__” input field and ensure it reads “__*E-Mail Address*__” inside it.
+    - Ensure the text typed in only appears in lowercase by attempting to type in capital letters and making sure the text remains lowercase.
+- Reset Button:
+    - Hover over the “__*RESET MY PASSWORD*__” button to see its outline change to the “__*#17a2b8*__” colour.
+    - Click on the button with an empty form first to test that the form does not submit thus making the input required to be completed first before submission.
+    - Complete the input field then click on the “__*RESET MY PASSWORD*__” button again to test if the form works. 
+    - Ensure the page is redirected to another “__*Password Reset*__” page, informing users that they have been sent an email to the email address provided, regarding resetting their password.
+    - Go to the Gitpod terminal and click on the sent link to ensure that when users click on the link sent to their email accounts, they get redirected to the “__*Reset Password*__” page; where they can reset their password.
+## Reset Password Form
+- Run the HTML and CSS code used to make the “__*Reset Password*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and click on the “__*Log In*__” navigation link then click the “__*Forgot Password? Click Me!*__” link to redirect to the “__*Password Reset*__” page.
+- Enter an email in the form and click the “__*RESET MY PASSWORD*__” button to be sent a password reset link. Once the link has been received click on it to be taken to the “__*Reset Password*__” page.
+- Using chrome development tools, check the “__*Reset Password*__” page’s responsiveness by opening the page with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Ensure the page’s contents can be clearly seen at each of the different screen sizes.
+- Input fields:
+    - View the placeholder text of both input fields and ensure it reads “__*New Password*__” and “__*New Password (again)*__” inside them.
+    - Hover over the “__*New Password*__” and “__*New Password (again)*__” input fields and ensure their outline colour changes to “__*#17a2b8*__”.
+    - Ensure the password inputs appear as black dots as text is typed in them to show the password inputs are working in concealing the users passwords.
+- Reset Password Button:
+    - Hover over the “__*RESET PASSWORD*__” button to see its outline change to the “__*#17a2b8*__” colour.
+    - Click on the button with an empty form first to test that the form does not submit thus making the input required to be completed first before submission.
+    - Complete the input field then click on the “__*RESET PASSWORD*__” button again to test if the form works.
+    - When the “__*RESET PASSWORD*__” button is clicked on, ensure the website redirects itself to the “__*Reset Password Success*__” page with a message informing the user they have been successful in resetting their password. 
+## Reset Password Complete Page
+- Run the HTML and CSS code used to make the “__*Reset Password Success*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and click on the “__*Log In*__” navigation link then click the “__*Forgot Password? Click Me!*__” link to redirect to the “__*Password Reset*__” page.
+- Enter an email in the form and click the “__*RESET MY PASSWORD*__” button to be sent a password reset link. Once the link has been received click on it to be taken to the “__*Reset Password*__” page.
+- Complete the form on this page and click the form’s button to be taken to the “__*Reset Password Success*__” page.
+- Using chrome development tools, check the “__*Reset Password Success*__” page’s responsiveness by opening the page with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571. 
+- Ensure the page’s contents can be clearly seen at each of the different screen sizes.
+## Log Out Page
+- Run the HTML and CSS code used to make the “__*Log Out*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and then click on the “__*Log In*__” link in the navigation bar to enter the “__*Log In*__” page. Complete the “__*Log In*__” form then once redirected to the home page, click the “__*Log Out*__” link in the navigation bar.     
+- After clicking the “__*Log Out*__” link, ensure users are taken to a “__*Log Out*__” confirmation page that asks the user if they want to log out and displays a “__*LOG OUT*__” button.
+- Using chrome development tools, check the page’s responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensure the content of the page remains clearly visible across all these screen sizes. 
+- Hover over the button to see its outline change to the “__*#17a2b8*__” colour.
+- To test the “__*Log Out*__” button and see if it logs users out, click the button and ensure it redirects the website to the home page with a message at the top of the screen informing the users that they have just logged out.
+- Using chrome development tools again, click on the “__*Application*__” tab. Then click on “__*Cookies*__” and ensure the session user has been removed to prove that the “__*Log Out*__” button has stopped the user from being in session within the browser and therefore is working.  
+## Account Inactive Page
 - 
-
 
 
 
