@@ -171,7 +171,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     * The date and time the payment was made.
 * Contains the “__*KEEP SHOPPING*__” button to allow users to click on it and return back to the homepage and add new drinks to the shopping cart.
 ### Sign Up Page
-* Contains a “__*log in*__” link at the top of the page for users to click on and be redirected to the login page if they already have accounts and just wish to log in instead.
+* Contains a “__*login*__” link at the top of the page for users to click on and be redirected to the login page if they already have accounts and just wish to log in instead.
 * Contains a signup form that requires users to enter their: email address twice, username and password twice. This allows users to create accounts with Slurps by filling in this form with the requested details.
 * Contains a “__*SIGN UP*__” button to allow users to click on it and have an account be created for them, so they can create profiles for saving their personal details for payments and also view their order history. Users will be asked to verify their account by clicking on the link sent to the provided email. Then users will be able to click the “__*CONFIRM*__” button to confirm their account with Slurps.
 ### Verified Email Request Page
@@ -187,7 +187,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ### Login Page
 * Contains a “__*sign up*__” link at the top of the page for users to click on and be redirected to the sign up page if they don’t have accounts with Slurps and need to create one in order to log in.
 * Contains a login form that requires users to enter their username and password. This allows users to access their accounts by filling in these details and logging into their accounts with Slurps.
-* Contains a “__*LOG IN*__” button to allow users to click on it to log into the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged in.
+* Contains a “__*LOGIN*__” button to allow users to click on it to log into the Slurps website and be redirected to the home page, with a confirmation message at the top informing them they have just logged in.
 * Contains a link underneath the login form, labelled “__*Forgot Password? Click Me!*__” followed by a smile wink icon, for users to click on in case they forget their password and require resetting it in order to log into their account.
 ### Reset Password Sent Email Page
 * Contains a message for the users to read, explaining to them that they have been sent an email for resetting their password and should contact Slurps if they don’t get this email.
@@ -550,17 +550,21 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Go to the Gitpod terminal and click on the link provided.
     - Ensure this link sends the users to the “__*Confirm Email*__” page where users are to click the “__*CONFIRM*__” button and be redirected to the home page with a message at the top informing the users that they have been successful in confirming their email and logging into the Slurps website.
 ## Login Page
-- 
-
-
-
-
-
-
-
-
-
-
+- Run the HTML and CSS code used to make the “__*Log In*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and then click on the “__*Log In*__” link in the navigation bar to enter the “__*Log In*__” page.
+- Above the “__*Log In*__” form, click on the “__*sign up*__” link to check the link redirects users to the “__*Sign Up*__” page. Return back to the “__*Log In*__” page by clicking on the “__*login*__” link above the “__*Sign Up*__” form. 
+- Below the “__*Log In*__” form, click on the “__*Forgot Password? Click Me!*__” link to check the link redirects users to the “__*Password Reset*__” page. Return back to the “__*Log In*__” page by clicking on the “__*login*__” link in the navigation bar.
+- Input Field:
+    - View the placeholder text and ensure they are filled in with the text “__*Username*__” and “__*Password*__”. 
+    - Ensure the “__*Username*__” input capitalises the first letter of every word typed in by typing in multiple different words using lowercase only and checking that each word typed in still begins with a capital letter.
+    - Ensure the password input shows black dots as text is typed in them to show the password input works in concealing the users passwords.
+    - Hover over the input fields and ensure their outline colour changes to “__*#17a2b8*__”.
+    - Enter in the same “__*Test*__” username used when signing up with Slurps and the same password used when this account was made.
+- Login Button:
+    - Hover over the “__*LOGIN*__” button and ensure its outline changes colour to “__*#17a2b8*__”.
+    - Click on the button with an empty form first to test that the form does not submit and the inputs are required to be completed first before submission.
+    - Complete the input fields then click on the “__*LOGIN*__” button again to test if the form works. 
+    - Ensure the page is redirected to the home page with a message at the top of the screen informing the users that they have been successful in logging into their account. 
 ## Change & Set Password Page
 - Run the HTML and CSS code used to make the “__*Change Password*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Click on the “__*Log In*__” link to be redirected to the “__*Log In*__” page, then log into the account. Afterwards, the website will redirect to the home page.
@@ -619,6 +623,14 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Run the HTML and CSS code used to make the “__*Sign Up Closed*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
 - Read through the page’s contents and ensure it shows the users that signing up is not available.
+## Reset Password Sent Email Page
+- 
+
+
+
+
+
+
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
