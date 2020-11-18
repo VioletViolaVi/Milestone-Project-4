@@ -679,6 +679,13 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Hover over the “__*BACK TO HOME*__” button and ensure the “__*#17a2b8*__” outline appears around the button as a result.
     - Click on the “__*BACK TO HOME*__'' button and ensure it redirects the website back to the home page.
 ## Footer
+- Run the HTML and CSS code used to make the footer, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Check every page of the Slurps website and make sure the footer is present in all of them.
+- View the footer and make sure the social media icons and contact details can be easily seen and read by users.
+- Hover over the social icons and ensure their text colour changes to “__*#17a2b8*__”.
+- Click on each social media icon and ensure they open up a separate tab and display the homepage of the respective social media site.  
+- Using chrome development tools, check the page’s responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensure the content of the footer remains clearly visible across all these screen sizes. 
+## Administration Home Page
 - 
 
 

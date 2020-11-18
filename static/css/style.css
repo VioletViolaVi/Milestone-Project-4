@@ -190,6 +190,15 @@ input[type="search"]::-ms-reveal {
 .fab.fa-facebook-square,
 .fab.fa-instagram {
   cursor: pointer;
+  color: #212529;
+}
+
+.fab.fa-youtube:hover,
+.fab.fa-twitter-square:hover,
+.fab.fa-snapchat-square:hover,
+.fab.fa-facebook-square:hover,
+.fab.fa-instagram:hover{
+    color: #17a2b8;
 }
 
 html,
@@ -1405,13 +1414,26 @@ input[type="file"]::-webkit-file-upload-button {
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1300px) {
   /******************************************* title, search bar, profile & trolley header */
   .fas.fa-user-alt {
-    left: 28em;
+    left: 26.5em;
   }
 
   input[type="search"]#lgSearchBar {
-    width: 51.5em;
+    width: 47.5em;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
