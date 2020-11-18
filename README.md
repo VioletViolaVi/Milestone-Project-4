@@ -531,6 +531,36 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Change Email Address Testing:
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
+## Sign Up Page
+- Run the HTML and CSS code used to make the “__*Sign Up*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and from the home page, click on the “__*Sign Up*__” navigation link and make sure it redirects users to the “__*Sign Up*__” page. On this page check it contains a “__*log in*__” link above the form. 
+- Click on the “__*log in*__” link to ensure the website redirects to the “__*Log In*__” page. 
+- Input Fields:
+    - Return to the “__*Sign Up*__” page and hover over the form input fields to make sure their outline colour changes to “__*#17a2b8*__”.
+    - Check the placeholder text all clearly read the following: “__*E-Mail Address*__”, “__*E-Mail Address Confirmation*__”, “__*Username*__”,“__*Password*__” and “__*Password (again)*__”.
+    - Fill in each input field using “__*test@test.com*__” in the email fields, “__*Test*__” in the username field and a random password in the password input fields. 
+    - Ensure the email input fields only accept lowercase letters by typing in capital letters and checking they still come through as lowercase.
+    - Ensure the “__*Username*__” field input capitalises the first letter of every word typed in by typing in multiple different words using lowercase only and checking that each word typed in still begins with a capital letter.
+    - Ensure the password inputs appear as black dots as text is typed in them to show the password inputs are working in concealing the users passwords.
+- Submit Button:
+    - Hover over the “__*SIGN UP*__” button and ensure its outline changes colour to “__*#17a2b8*__”.
+    - Click on the button with an empty form first to test all the form inputs are required to be completed before submission.
+    - Complete the input fields then click on the “__*SIGN UP*__” button again to test if the form does get sent. 
+    - Ensure the website redirects to the “__*E-mail Verification*__” page instructing the users to click on the link sent to their provided email address. 
+    - Go to the Gitpod terminal and click on the link provided.
+    - Ensure this link sends the users to the “__*Confirm Email*__” page where users are to click the “__*CONFIRM*__” button and be redirected to the home page with a message at the top informing the users that they have been successful in confirming their email and logging into the Slurps website.
+## Login Page
+- 
+
+
+
+
+
+
+
+
+
+
 ## Change & Set Password Page
 - Run the HTML and CSS code used to make the “__*Change Password*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Click on the “__*Log In*__” link to be redirected to the “__*Log In*__” page, then log into the account. Afterwards, the website will redirect to the home page.
@@ -571,17 +601,24 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Check the Gitpod terminal and click on the link provided to open up the “__*Confirm E-mail Address*__” page which provides users with instructions on how to confirm the new email address they just added.
     - Click on the “__*CONFIRM*__” button to be redirected to the home page then click the person icon and the “__*CHANGE MY EMAIL ADDRESS*__” button to be redirected back to the “__*E-mail Addresses*__” page.
     - Check the new email has been added to show users adding emails to their accounts works.
-## Sign Up Page
-- 
-
-
-
-
-
-
-
-
-
+## Verified Email Request Page
+- Run the HTML and CSS code used to make the “__*Verified Email Request*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Read through the page’s contents and ensure it explains that the Slurps company requires verification from users for the sake of confirming they are who they say they are by clicking on the provided link sent to their emails. 
+## Verification Sent
+- Run the HTML and CSS code used to make the “__*Verification Sent*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Read through the page’s contents and ensure it explains to the users that an email with a verification link has been sent to their email address and in order to confirm their account with Slurps the users are to click on the sent link. 
+## Email Confirmation Page
+- Run the HTML and CSS code used to make the “__*Confirm Email*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Read through the page’s contents and ensure it shows the users the email and username being confirmed for the account that was newly created.
+- Hover over the “__*CONFIRM*__” button and ensure a change in its outline colour shows as “__*#17a2b8*__”.
+- Click the “__*CONFIRM*__” button to be redirected to the home page and have messages, informing the user they have successfully confirmed their email address and logged in as their username, shown at the top of the screen.  
+## Sign Up Closed Page
+- Run the HTML and CSS code used to make the “__*Sign Up Closed*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Check the page is responsive across different screen sizes and can still be easily read by using chrome development tools to change the size of the screen and view the page on the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
+- Read through the page’s contents and ensure it shows the users that signing up is not available.
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
