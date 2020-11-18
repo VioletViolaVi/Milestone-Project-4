@@ -532,8 +532,23 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
 ## Change & Set Password Page
+- Run the HTML and CSS code used to make the “__*Change Password*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Click on the “__*Log In*__” link to be redirected to the “__*Log In*__” page, then log into the account. Afterwards, the website will redirect to the home page.
+- On the home page, click on the person icon to be redirected to the “__*My Profile*__” page. 
+- At the bottom of this page, click the “__*CHANGE MY PASSWORD*__” button to be redirected to the “__*Change Password*__” page.
+    - Input Fields:
+        - View the input fields in the form and ensure their placeholder text: “__*Current Password*__”, “__*New Password*__” and “__*New Password (again)*__” can be seen clearly.
+        - In the “__*Current Password*__” input field, enter the same password used to log in. 
+        - In the “__*New Password*__” and “__*New Password (again)*__” input fields, enter a random password and make it the same for both.
+        - When typing passwords in these inputs ensure they cannot be seen and they are disguised as black circles.
+    - Form Button:
+        - Hover over the “__*CHANGE PASSWORD*__” button and ensure an outline appears and its colour is “__*#17a2b8*__”.
+        - Click on the “__*CHANGE PASSWORD*__” button and make sure the website reloads then shows the message: “__*Password successfully changed.*__” above the form to prove the form works. Also ensure the input fields revert back to being empty, only displaying their placeholder text.
+    - Click on the “__*CHANGE PASSWORD*__” button again but with all the input fields remaining empty. 
+    - Fill in one of the inputs and click on the button again. Then fill in two of the input fields and click the button again.
+    - Ensure the form does not submit whilst the whole form is incomplete as all fields are required to be completed. 
+## Email Address Page
 - 
-
 
 
 
