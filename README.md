@@ -211,8 +211,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Contains Slurps’ street address to allow users to know the street address of the company so they have the option to contact Slurps via postal mail.
 ### Administration Home Page
 - Displays a button labelled “__*DJANGO ADMIN*__”  to allow the administrators access to Django’s administration page so they can conduct the CRUD functionality of adding, reviewing, editing and deleting drinks on the website; from there.
-- Displays the “__*EDIT*__” buttons, underneath the “__*BUT NOW*__” and  “__*ADD*__” buttons, that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the drink selected.
-- Displays a bin icon that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected drink item. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+- Displays the “__*EDIT*__” buttons, underneath the “__*BUY NOW*__” and  “__*ADD*__” buttons, that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the drink selected.
+- Displays bin icons that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected drink item. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
 ### Administration Edit Drink Page
 - Displays a message, at the top of the screen, informing the administrators on which drink item they are editing.
 - Displays an edit drink form which allows administrators to make changes to the default values of the selected drink, to be edited. As a result, administrators are able to change the following details about any drink on the Slurps website: the drink image, its name, the price, the millilitres and the type of drink it is i.e.: a new drink, milkshake or juice.
@@ -224,17 +224,20 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Displays an add drink form which allows administrators to add new drinks to the list of drinks offered by Surps. Administrators are able to add the following details for these new drinks on the Slurps website: an image, name, price and its millilitres. Administrators also can add the drink to both the new drink section and either the milkshake or juice section.
 - Displays a “__*CANCEL*__” button underneath the add drink form for the administrators to click on to stop the new drink being added and return them back to the home page.
 - Displays an “__*ADD DRINK*__” button underneath the add drink form for the administrators to click on to add the new drinks to the Slurps website and then return them back to the homepage with these newly added drinks displayed.
-### Administration Edit Mission Statement Page
-- Displays a message, at the top of the screen, informing the administrators on which portion of the mission statement page they are editing.
+### Admin Our Mission Page
+- Displays the “__*EDIT*__” buttons, underneath the mission statements that allow administrators to click on and be redirected to the editing page of the website where they can make changes to the mission selected.
+- Displays a bin icon underneath the mission statements that when clicked, opens up a modal for the administrators to confirm that they wish to delete the selected mission. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
+### Administration Edit Mission Page
+- Displays a message, at the top of the screen, informing the administrators on which portion of the mission page they are editing.
 - Displays an edit mission statement form which allows administrators to make changes to the default values of the selected mission statement. Administrators are able to change the following details about the mission statements on the Slurps website: their image and its description, the statement’s title, paragraph and the section the mission statement is to be placed on the Slurps website.
-- Displays a “__*CANCEL*__” button underneath the edit mission statement form for the administrators to click on to stop editing the mission statement and return them back to the mission statement page.
-- Displays an “__*UPDATE MISSION STATEMENT*__” button underneath the edit mission statement form for the administrators to click on to update the changes made to the mission statement and return them back to the mission statement page with these updated changes showing.
+- Displays a “__*CANCEL*__” button underneath the edit mission statement form for the administrators to click on to stop editing the mission statement and return them back to the mission page.
+- Displays an “__*UPDATE MISSION*__” button underneath the edit mission statement form for the administrators to click on to update the changes made to the mission statement and return them back to the mission page with these updated changes showing.
 ### Administration Delete Mission Statement Modal
 - Displays a bin icon, next to the “__*EDIT*__” button that administrators can click on to open up a modal containing a message asking them for confirmation on whether they wish to delete the mission statement selected. The administrators will be requested to click “__*YES*__” or “__*NO*__” depending on their choice.
-### Administration Add Mission Statement Page
+### Administration Add Mission Page
 - Displays a mission statement form which allows administrators to add new mission statements to the Slurps website. Administrators are able to add the following details for the new mission statements added: an image, an image description, a title, a paragraph and the section the new mission statement is to be placed.
-- Displays a “__*CANCEL*__” button underneath the add mission statement form for the administrators to click on to stop adding the new mission statement and return them back to the mission statement page.
-- Displays an “__*ADD MISSION STATEMENT*__” button underneath the add mission statement form for the administrators to click on to add the new mission statement made and return them back to the mission statement page with the statements displaying.
+- Displays a “__*CANCEL*__” button underneath the add mission statement form for the administrators to click on to stop adding the new mission statement and return them back to the mission page.
+- Displays an “__*ADD MISSION*__” button underneath the add mission statement form for the administrators to click on to add the new mission statement made and return them back to the mission page with the statements displayed.
 # Technologies Used
 ## [Python](https://www.python.org/) & [Django](https://www.djangoproject.com/): 
 - This project used Python with Django to produce the backend code that runs on the server, to create the Slurps website.
