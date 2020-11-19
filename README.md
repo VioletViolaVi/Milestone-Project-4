@@ -341,7 +341,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Check the shopping cart icon, drink counter and the price total can all be seen clearly and don’t overlap each other across each of these screen sizes.
         - Click the shopping cart icon and make sure it changes to the “__*#17a2b8*__”
             colour and redirects the website to the “__*Shopping Cart*__” page. 
-        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is “__*#f8f9fa*__” and when clicked, its outline colour changes to “__*#17a2b8*__”.
+        - Add an item to the shopping cart, from the home page and check that the same number of items added to the shopping cart is shown in the drink counter. For example, if seven items are added to the shopping cart, ensure the counter displays the number “__*7*__”.  If these items are reduced by two, ensure the drink counter displays “__*5*__”. Also ensure the background colour of the drink counter is “__*#f8f9fa*__”
+            and when clicked, its outline colour changes to “__*#17a2b8*__”.
         - Add an item to the shopping cart, from the home page and check that the price of the item is shown as the same price in the price total located in this banner. For instance, add a drink that costs “__*£13.00*__” 
             and make sure in the banner, the price total is also “__*£13.00*__”. 
         - Add two more of the same drink that cost “__*£13.00*__” 
@@ -459,7 +460,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Note the description of the drinks have floated to the right-hand side of the drink images and make sure the images and the descriptions do not overlap so the text can be easily seen and read by users.
     - Using chrome development tools, check the images and descriptions follow the grid system taken from Bootstrap. So when the website is being rendered on a 320x571 screen sized device, they are displayed with one drink item occupying one row at a time. When on 576x571 and 768x571 screen sized devices, two drink items are displayed per row and when on 992x571 and 1200x571 screen sizes, there’s room for three drink items to be displayed per row.
 - Edit Button, Edit Form & Bin Icon:
-    - Hover over the “__*EDIT*__” buttons and the “__*EDIT*__” form field inputs and make sure an outline around each of them appears in the colour “__*#17a2b8*__”. Also hover over the bin icons and make sure the color also changes to “__*#17a2b8*__”.
+    - Hover over the “__*EDIT*__” buttons and the “__*EDIT*__” form field inputs and make sure an outline around each of them appears in the colour “__*#17a2b8*__”.
+        Also hover over the bin icons and make sure the color also changes to “__*#17a2b8*__”.
     - Check each “__*EDIT*__” form was filled in with the same number that was used on the home page then change the values to different numbers. 
     - Press the “__*EDIT*__” buttons to test if the “__*EDIT*__” forms work and change the previous numerical values to the new ones. Also use the drink counter at the top of the webpage to check for the same number of drinks being displayed compared to the “__*Shopping Cart*__” page, further confirming the drink quantity number has been changed.
     - Click on the bin icon for one of the drinks to make sure the delete modal opens up.
@@ -473,7 +475,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Costs & Payment Button
     - At the bottom of the page, ensure the subtitles: “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” are displaying. 
     - Make sure the “__*Subtotal*__” amount being displayed is equal to the total cost of the drinks when added together by comparing the price from the home page and using a calculator to add the cost of the drinks.
-    - Make sure the “__*Delivery*__” cost displays the crossed out “__*<del>£35*__” and the reduced price of “__*£5*__” both next to this subtitle.
+    - Make sure the “__*Delivery*__” cost displays the crossed out “__*<del>£35*__”
+        and the reduced price of “__*£5*__” both next to this subtitle.
     - Use a calculator to ensure the “__*Grand Total*__” cost shown is equal to the addition of the “__*Subtotal*__” and “__*Delivery*__” costs added together.
     - Hover over the “__*PAY*__” button and make sure an outline appears on the button and that the colour of its outline is “__*#17a2b8*__”. 
     - Click on the “__*PAY*__” button and ensure it redirects the website to the “__*Make Payment*__” page.
@@ -548,7 +551,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Submit Button:
     - Hover over the “__*SIGN UP*__” button and ensure its outline changes colour to “__*#17a2b8*__”.
     - Click on the button with an empty form first to test all the form inputs are required to be completed before submission.
-    - Complete the input fields then click on the “__*SIGN UP*__” button again to test if the form does get sent. 
+    - Complete the input fields incorrectly by typing different emails and passwords then send the form and ensure the form does not submit. Instead, an error should appear; informing the user that they have completed the form wrong.
+    - Complete the input fields correctly then click on the “__*SIGN UP*__” button again to test if the form does get sent. 
     - Ensure the website redirects to the “__*E-mail Verification*__” page instructing the users to click on the link sent to their provided email address. 
     - Go to the Gitpod terminal and click on the link provided.
     - Ensure this link sends the users to the “__*Confirm Email*__” page where users are to click the “__*CONFIRM*__” button and be redirected to the home page with a message at the top informing the users that they have been successful in confirming their email and logging into the Slurps website.
@@ -566,6 +570,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Login Button:
     - Hover over the “__*LOGIN*__” button and ensure its outline changes colour to “__*#17a2b8*__”.
     - Click on the button with an empty form first to test that the form does not submit and the inputs are required to be completed first before submission.
+    - Complete the input fields with a username and password that does not exist with Slurps and ensure an error informing the users that the entered details are invalid appears. 
     - Complete the input fields then click on the “__*LOGIN*__” button again to test if the form works. 
     - Ensure the page is redirected to the home page with a message at the top of the screen informing the users that they have been successful in logging into their account. 
 ## Change & Set Password Page
