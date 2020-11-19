@@ -31,11 +31,11 @@ def append_about_us(request):
         if form.is_valid():
             form.save()
             messages.success(
-                request, "Mission statement section successfully added!")
+                request, "Mission successfully added!")
             return redirect(reverse("append_about_us"))
         else:
             messages.error(request,
-                           "Failed to add mission statement section. Please \
+                           "Failed to add mission. Please \
                                 ensure the form is valid.")
     else:
         form = AboutUsForm()
@@ -64,16 +64,16 @@ def change_about_us(request, about_us_id):
         if form.is_valid():
             form.save()
             messages.success(request,
-                             "Mission statement section successfully updated!")
+                             "Mission successfully updated!")
             return redirect(reverse("about_us"))
         else:
-            messages.error(request, f'Failed to update the: "{about_us.title.title()}" section. \
+            messages.error(request, f'Failed to update the mission: "{about_us.title.title()}". \
                  Please ensure the form is valid.')
     else:
         form = AboutUsForm(instance=about_us)
         messages.info(
-            request, f'You are editing the: "{about_us.title.title()}" \
-            section.')
+            request, f'You are editing the mission:\
+                 "{about_us.title.title()}".')
 
     template = "about_us/edit_about_us.html"
     context = {
@@ -95,6 +95,6 @@ def remove_about_us(request, about_us_id):
 
     about_us = get_object_or_404(About_us, pk=about_us_id)
     about_us.delete()
-    messages.success(request, "Mission statement section deleted!")
+    messages.success(request, "Mission deleted!")
 
     return redirect(reverse("about_us"))

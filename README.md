@@ -712,6 +712,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 ## Administration Edit Drink Page 
 - Run the HTML and CSS code used to make the “__*Edit Drink*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - At the top of the page ensure a message appears and states which drink is being edited by the administrator. 
+- Using chrome development tools, check the page is responsive by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensuring all its contents remain clearly visible across all these screen sizes. 
 - Edit Drink Form:
     - Ensure the form contains the following fields with asterisks: “__*Image*__”, “__*Drink name*__”, “__*Price*__”, “__*Millilitres*__” and “__*Drink type*__”.
     - Ensure all parts of the form are filled in with their default values being the description details and images of the drinks selected for editing.
@@ -728,7 +729,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Hover over the “__*UPDATE DRINK*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
     - Change the values of the form then click the “__*UPDATE DRINK*__” button to see if the page redirects the admin users back to the home page and displays a message that the drink has been successfully edited. Then check the drink on the home page to see if it has been edited with the same changes.  
     - To ensure all the form fields are required, return to the “__*Edit Drink*__” page and empty the values of the form. Then click the “__*UPDATE DRINK*__” button to elicit the error message informing the admin users that all parts of the form are required to be completed before submission.
-- Log out from the “__*Admin*__” account and attempt to brute the way to the Django administration’s “__*Edit Drink*__” page by typing at the end of the web address bar, a url such as “__*/edit/3*__”. 
+- Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Edit Drink*__” page by typing at the end of the web address bar, a url such as “__*/edit/3*__”. 
 - Ensure it is not possible to gain access to the administration’s “__*Edit Drink*__” pages and that non-admin users who attempt this, get redirected to the home page with a message informing them they are not allowed access to the page.
 ## Administration Add Drink Page
 - Run the HTML and CSS code used to make the “__*Add Drink*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
@@ -754,7 +755,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Go to the home page and check the drink has been added with the same details that were added on the “__*Add Drink*__” page.
 - Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Add Drink*__” page by typing at the end of the web address bar, the url “__*/add*__”.
 - Ensure it is not possible to gain access to the administration’s “__*Add Drink*__” pages and that non-admin users who attempt this, get redirected to the home page with a message informing them they are not allowed access to the page.
-## Administration Mission Statement Page
+## Administration Our Mission Page
 - Run the HTML and CSS code used to make the “__*Mission Statement*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
 - Click on the “__*Our Mission*__” link from the navigation bar and ensure the website redirects to the “__*Mission Statement*__” page.
@@ -773,13 +774,31 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Reopen the modal again then click the “__*YES*__” button to delete the mission section. 
     - Ensure only the selected mission is deleted by looking back at the “__*Mission Statement*__” page, once the modal closes and checking the mission is no longer present.
 - Log out as the “__*Admin*__” user and attempt to brute the way to the delete modal to attempt deleting a mission whilst not being logged in as “__*Admin*__”. 
-- Type at the end of the web address bar “__*/remove/1*__” in an attempt to delete the first mission. Ensure it is prevented and an error message appears stating that only “__*Admin*__” users are allowed to conduct this activity. Ensure users are redirected back to the “__*Mission Statement*__” page.
+- Type at the end of the web address bar “__*/remove/1*__” 
+    in an attempt to delete the first mission. Ensure it is prevented and an error message appears stating that only “__*Admin*__” users are allowed to conduct this activity. Ensure users are redirected back to the “__*Mission Statement*__” page.
 - Log in using a different username and password and ensure it is not possible to view the “__*EDIT*__” buttons and bin icons on the “__*Mission Statement*__” page.
-## Administration Edit Mission Statement Page
-- 
-
-
-
+## Administration Edit Our Mission Page
+- Run the HTML and CSS code used to make the “__*Edit Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- At the top of the page ensure a message appears and states which mission is being edited by the administrator. 
+- Using chrome development tools, check the page is responsive by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensuring all its contents remain clearly visible across all these screen sizes. 
+- Edit Mission Form:
+    - Ensure the form contains the following fields with asterisks: “__*Image*__”, “__*Image description*__”, “__*Title*__”, “__*Paragraph*__” and “__*Section*__”.
+    - Ensure all parts of the form are filled in with their default values being the mission description details and images selected for editing.
+    - Click on the “__*Choose file*__” button and ensure an extension opens up and allows the admin users to change the current image. 
+    - Select an image from the opened up extension and ensure a message under the “__*Image*__” section of the form appears; informing the admin users the name of the image they selected.
+    - Ensure the “__*Image description*__” and “__*Title*__” inputs capitalise words typed in these fields by typing additional words using lowercase and making sure every word starts with a capital letter. 
+    - Ensure the “__*Paragraph*__” input has enough room for more words, in comparison to the other fields, to be typed in by pasting a copied version of the current paragraph, into the same field.
+    - Check the “__*Section*__” field of the form provides dropdown options for admin users to choose from the following: “__*Sub Mission*__” and “__*Main Mission*__”.
+- Cancel Button:
+    - Hover over the “__*CANCEL*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Click on the button to check the page redirects back to the admin “__*Our Mission*__” page and check the missions are left unedited.
+- Update Mission Button:
+    - Hover over the “__*UPDATE MISSION*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Change the values of the form then click the “__*UPDATE MISSION*__” button to see if the page redirects the admin users back to the “__*Our Mission*__” page and displays a message that the mission has been successfully edited. Then check the mission on the “__*Our Mission*__” page to see if it has been edited with the same changes.  
+    - To ensure all the form fields are required, return to the “__*Edit Mission*__” page and empty the values of the form. Then click the “__*UPDATE MISSION*__” button to elicit the error message informing the admin users that all parts of the form are required to be completed before submission.
+- Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Our Mission*__” page by typing at the end of the web address bar, a url such as “__*/change/1*__”. 
+- Ensure it is not possible to gain access to the administration’s “__*Edit Mission*__” pages and that non-admin users who attempt this, get redirected to the “__*Our Mission*__” page with a message informing them they are not allowed access to the page.
+## Administration Add Mission Page
 
 
 
@@ -1116,6 +1135,7 @@ The following images used for this website were taken from Unsplash:
 - Photo by Ricki Yanuar: https://unsplash.com/photos/MOY2HiJxgyA 
 - Photo by Deepak: https://unsplash.com/photos/y29pTn3eZVE 
 - Photo by Eiliv-Sonas Aceron: https://unsplash.com/photos/NWTPcPE1nJI
+- Photo by Kaizen Nguyễn: https://unsplash.com/photos/jcLcWL8D7AQ 
 - Photo by Febrian Zakaria: https://unsplash.com/photos/hLC5b3FbEmA
 - Photo by Emiel Molenaar: https://unsplash.com/photos/j8DsBudk96c
 - Photo by Walter Otto: https://unsplash.com/photos/qJ249_JzEL0 
