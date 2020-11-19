@@ -704,8 +704,10 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Click outside the modal to make sure it does not close.
     - Click on the “__*NO*__” button to check this closes the modal. Afterwards, reopen the modal and click on the cross icon at the top to also check this closes the modal.
     - Reopen the modal again then click the “__*YES*__” button to delete the drink item. 
-    - Ensure only the selected drink is deleted by looking back at the administration home page, once the modal closes and checking the drink is no longer present.
+    - Ensure only the selected drink is deleted by looking back at the “__*Admin*__” home page, once the modal closes and checking the drink is no longer present.
 - Log out as the “__*Admin*__” user and attempt to brute the way to the Django administration’s login page by typing at the end in the web address bar “__*/admin*__”. 
+    Also type “__*/delete/1*__” 
+    to check the delete modal cannot be accessed whilst not being an “__*Admin*__” user. 
 - Log in using a different username and password and ensure it is not possible to gain access to the Django administration page with such.
 ## Administration Edit Drink Page 
 - Run the HTML and CSS code used to make the “__*Edit Drink*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
@@ -753,7 +755,31 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Add Drink*__” page by typing at the end of the web address bar, the url “__*/add*__”.
 - Ensure it is not possible to gain access to the administration’s “__*Add Drink*__” pages and that non-admin users who attempt this, get redirected to the home page with a message informing them they are not allowed access to the page.
 ## Administration Mission Statement Page
+- Run the HTML and CSS code used to make the “__*Mission Statement*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
+- Click on the “__*Our Mission*__” link from the navigation bar and ensure the website redirects to the “__*Mission Statement*__” page.
+- Using chrome development tools, check the page is responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensuring all its contents remain clearly visible across all these screen sizes. 
+- Edit Button:
+    - Check the “__*Mission Statement*__”, “__*Our Customers*__”, “__*Ethical Sourcing*__” and “__*Our Employees*__” sections all have an “__*EDIT*__” button underneath them.
+    - Hover over each “__*EDIT*__” button to ensure their outline changes colour to “__*#17a2b8*__”.
+    - Click on the “__*EDIT*__” buttons and ensure they all redirect the website to the “__*Edit Mission*__” page of the mission selected for editing. 
+- Delete Button:
+    - Check the “__*Mission Statement*__”, “__*Our Customers*__”, “__*Ethical Sourcing*__” and “__*Our Employees*__” sections all have a bin icon underneath them.
+    - Hover over each bin icon to ensure its text colour changes to “__*#17a2b8*__”.
+    - Click on the bin icons one by one and ensure a confirmation modal opens; asking users to confirm whether or not they wish to delete the selected mission. 
+    - Make sure the name of the mission section displayed to be deleted is the same mission that had their bin icon clicked on.
+    - Click outside the modal to make sure it does not close.
+    - Click on the “__*NO*__” button to check this closes the modal. Afterwards, reopen the modal and click on the cross icon at the top to also check this closes the modal.
+    - Reopen the modal again then click the “__*YES*__” button to delete the mission section. 
+    - Ensure only the selected mission is deleted by looking back at the “__*Mission Statement*__” page, once the modal closes and checking the mission is no longer present.
+- Log out as the “__*Admin*__” user and attempt to brute the way to the delete modal to attempt deleting a mission whilst not being logged in as “__*Admin*__”. 
+- Type at the end of the web address bar “__*/remove/1*__” in an attempt to delete the first mission. Ensure it is prevented and an error message appears stating that only “__*Admin*__” users are allowed to conduct this activity. Ensure users are redirected back to the “__*Mission Statement*__” page.
+- Log in using a different username and password and ensure it is not possible to view the “__*EDIT*__” buttons and bin icons on the “__*Mission Statement*__” page.
+## Administration Edit Mission Statement Page
 - 
+
+
+
 
 
 
