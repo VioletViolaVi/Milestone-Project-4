@@ -708,8 +708,28 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Log out as the “__*Admin*__” user and attempt to brute the way to the Django administration’s login page by typing at the end in the web address bar “__*/admin*__”. 
 - Log in using a different username and password and ensure it is not possible to gain access to the Django administration page with such.
 ## Administration Edit Drink Page 
+- Run the HTML and CSS code used to make the “__*Edit Drink*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- At the top of the page ensure a message appears and states which drink is being edited by the administrator. 
+- Edit Drink Form:
+    - Ensure the form contains the following fields with asterisks: “__*Image*__”, “__*Drink name*__”, “__*Price*__”, “__*Millilitres*__” and “__*Drink type*__”.
+    - Ensure all parts of the form are filled in with their default values being the description details and images of the drinks selected for editing.
+    - Click on the “__*Choose file*__” button and ensure an extension opens up and allows the admin users to change the current image. 
+    - Select an image from the opened up extension and ensure a message under the “__*Image*__” section of the form appears; informing the admin users the name of the image they selected.
+    - Ensure the “__*Drink name*__” input capitalises words typed in the field by typing additional words in the field using lowercase. Ensure all these words still start with a capital letter each.
+    - Check the “__*Price*__” and “__*Millilitres*__” fields accept only numbers in them by typing in letters and ensuring they do not show in the field.
+    - Check the “__*Price*__” field does not accept a number with more than ten digits by typing in a twelve digit number and ensuring an error message appears instructing the admin users not to use a number with more than ten digits.
+    - Check the “__*Drink type*__” part of the form provides dropdown options for admin users to choose from the following: “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__”.
+- Cancel Button:
+    - Hover over the “__*CANCEL*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Click on the button to check the page redirects back to the admin home page and check the drink is left unedited.
+- Update Drink Button:
+    - Hover over the “__*UPDATE DRINK*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Change the values of the form then click the “__*UPDATE DRINK*__'' button to see if the page redirects the admin users back to the home page and displays a message that the drink has been successfully edited. Then check the drink on the home page to see if it has been edited with the same changes.  
+    - To ensure all the form fields are required, return to the “__*Edit Drink*__” page and empty the values of the form. Then click the “__*UPDATE DRINK*__'' button to elicit the error message informing the admin users that all parts of the form are required to be completed before submission.
+- Log out from the “__*Admin*__” account and attempt to brute the way to the Django administration’s “__*Edit Drink*__” page by typing at the end of the web address bar, a url such as “__*/edit/3*__”. 
+- Ensure it is not possible to gain access to the administration’s “__*Edit Drink*__” pages and that non-admin users who attempt this, get redirected to the home page with a message informing them they are not allowed access to the page.
+## Administration Add Drink Page
 - 
-
 
 
 
