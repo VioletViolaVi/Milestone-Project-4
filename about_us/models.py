@@ -17,8 +17,8 @@ class About_us(models.Model):
     class Meta:
         verbose_name_plural = "About us"
 
-    image = models.ImageField(null=True, blank=True)
-    image_description = models.CharField(max_length=255, null=True, blank=True)
+    image = models.ImageField(default="")
+    image_description = models.CharField(max_length=255, default="")
     title = models.CharField(max_length=255)
     paragraph = models.TextField()
     section = models.ForeignKey(

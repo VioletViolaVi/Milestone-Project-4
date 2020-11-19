@@ -4,5 +4,5 @@
     {% endif %} 
 {% endfor %}
 <div class="drinks_img">
-    <img src="media/{{ drink_search_result.image }}" alt="{{ drink_search_result.drink_name }}" class="rounded">
+    <img src="media/{{ drink_search_result.image }}" alt="{{ drink_search_result.drink_name|capfirst }} photo." class="rounded">
 </div>

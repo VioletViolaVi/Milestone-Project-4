@@ -9,7 +9,7 @@ class AboutUsForm(forms.ModelForm):
         model = About_us
         fields = "__all__"
 
-    image = forms.ImageField(widget=CustomClearableFileInput, required=False)
+    image = forms.ImageField(widget=CustomClearableFileInput, required=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

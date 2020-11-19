@@ -915,7 +915,7 @@ input[type="radio"] {
 
 #appendAboutUs,
 #editAboutUs {
-  height: 49em;
+  height: 53.5em;
 }
 
 #editDrink {
@@ -1147,11 +1147,6 @@ input[type="file"]::-webkit-file-upload-button {
     width: 28em;
   }
 
-  /******************************************* admin */
-  #appendAboutUs,
-  #editAboutUs {
-    height: 46em;
-  }
 }
 
 /* bootstrap media query */
