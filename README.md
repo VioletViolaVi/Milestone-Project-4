@@ -711,6 +711,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Log in using a different username and password and ensure it is not possible to gain access to the Django administration page with such.
 ## Administration Edit Drink Page 
 - Run the HTML and CSS code used to make the “__*Edit Drink*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
+- Click on the “__*EDIT*__” button and ensure the website redirects to the “__*Edit Drink*__” page in order to view the “__*Edit Drink*__” form.
 - At the top of the page ensure a message appears and states which drink is being edited by the administrator. 
 - Using chrome development tools, check the page is responsive by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensuring all its contents remain clearly visible across all these screen sizes. 
 - Edit Drink Form:
@@ -779,7 +781,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Log in using a different username and password and ensure it is not possible to view the “__*EDIT*__” buttons and bin icons on the “__*Mission Statement*__” page.
 ## Administration Edit Our Mission Page
 - Run the HTML and CSS code used to make the “__*Edit Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
-- At the top of the page ensure a message appears and states which mission is being edited by the administrator. 
+- Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
+- Click on the “__*Our Mission*__” link from the navigation bar and ensure the website redirects to the “__*Our Mission*__” page.
+- Then click on the “__*EDIT*__” button and ensure the website redirects to the “__*Edit Mission*__” page in order to view the “__*Edit Mission*__” form.- At the top of the page ensure a message appears and states which mission is being edited by the administrator. 
 - Using chrome development tools, check the page is responsive by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensuring all its contents remain clearly visible across all these screen sizes. 
 - Edit Mission Form:
     - Ensure the form contains the following fields with asterisks: “__*Image*__”, “__*Image description*__”, “__*Title*__”, “__*Paragraph*__” and “__*Section*__”.
