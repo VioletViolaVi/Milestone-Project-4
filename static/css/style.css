@@ -197,8 +197,8 @@ input[type="search"]::-ms-reveal {
 .fab.fa-twitter-square:hover,
 .fab.fa-snapchat-square:hover,
 .fab.fa-facebook-square:hover,
-.fab.fa-instagram:hover{
-    color: #17a2b8;
+.fab.fa-instagram:hover {
+  color: #17a2b8;
 }
 
 html,
@@ -307,7 +307,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-input[type="email"]{
+input[type="email"] {
   text-transform: lowercase;
 }
 
@@ -412,7 +412,13 @@ input[type="radio"] {
   padding-bottom: 10em;
 }
 
-.about_us_img img {
+.about_us_img1 img {
+  width: 18em;
+  height: 9em;
+  border-radius: 50%;
+}
+
+.about_us_img2 img {
   width: 10em;
   height: 10em;
 }
@@ -1048,9 +1054,9 @@ input[type="file"]::-webkit-file-upload-button {
     left: 1em;
   }
 
-#newDrinksTitle {
+  #newDrinksTitle {
     margin-top: 0.5em;
-}
+  }
 
   /******************************************* shopping cart */
   .trolley-padding-removal {
@@ -1423,17 +1429,4 @@ input[type="file"]::-webkit-file-upload-button {
   input[type="search"]#lgSearchBar {
     width: 47.5em;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

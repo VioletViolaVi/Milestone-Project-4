@@ -3,10 +3,10 @@
     "pk": 1,
     "model": "about_us.about_us",
     "fields": {
-      "image": "",
+      "image": "about-row.PNG",
       "title": "Mission Statement",
       "paragraph": "Our mission is to provide our customers with high quality delicious drinks at very affordable prices. We believe in working effectively with our partners in achieving this and are proud of the contributions Slurps have made in empowering our workers along the way.",
-      "image_description": "",
+      "image_description": "Image of a row of drinks.",
       "section": 1
     }
   },
