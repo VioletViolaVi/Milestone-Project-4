@@ -799,11 +799,28 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Our Mission*__” page by typing at the end of the web address bar, a url such as “__*/change/1*__”. 
 - Ensure it is not possible to gain access to the administration’s “__*Edit Mission*__” pages and that non-admin users who attempt this, get redirected to the “__*Our Mission*__” page with a message informing them they are not allowed access to the page.
 ## Administration Add Mission Page
-
-
-
-
-
+- Run the HTML and CSS code used to make the “__*Edit Mission*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
+- Enter the Slurps website and log in using the superuser username “__*Admin*__” and its password and ensure the “__*Admin*__” user is redirected to the home page with a message stating the “__*Admin*__” user is the one logged in.
+- Click on the “__*Add Mission*__” link from the navigation bar and ensure the website redirects to the “__*Add Mission*__” page and view the “__*Add Mission*__” form.
+- Using chrome development tools, check the “__*Add Mission*__” form’s responsiveness by changing the page’s screen size to: 320x571, 576x571, 768x571, 992x571 and 1200x571 and ensure the form remains clearly visible across all these screen sizes. 
+- Add Mission Form:
+    - Ensure the form contains the following fields with asterisks: “__*Image*__”, “__*Image description*__”, “__*Title*__”, “__*Paragraph*__” and “__*Section*__”.
+    - Ensure only the “__*Section*__” part of the form is filled in with a default value from one of the dropdown options and the other remaining fields are empty.
+    - Click on the “__*Choose file*__” button and ensure an extension opens up and allows the admin users to select an image to be added for the mission. 
+    - Select an image from the opened up extension and ensure a message under the “__*Image*__” section of the form appears; informing the admin users the name of the image they selected.
+    - Ensure the “__*Image description*__” and “__*Title*__” inputs capitalise words typed in these fields by typing additional words using lowercase and making sure every word starts with a capital letter. 
+    - Ensure the “__*Paragraph*__” input has enough room for more words, in comparison to the other fields, to be typed in by typing in 200 characters and ensuring all of it fits in the field.
+    - Check the “__*Section*__” field of the form provides dropdown options for admin users to choose from either “__*Sub Mission*__” or “__*Main Mission*__”.
+- Cancel Button:
+    - Hover over the “__*CANCEL*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Click on the button to check the page redirects back to the admin “__*Our Mission*__” page and check that there are no new missions present to ensure the “__*CANCEL*__” button works at ceasing the act of adding new missions.
+- Add Mission Button:
+    - Hover over the “__*ADD MISSION*__” button to ensure its outline colour changes to “__*#17a2b8*__”.
+    - Complete the form then click the “__*ADD MISSION*__” button to see if the page redirects the admin users back to the “__*Our Mission*__” page and displays a message that the mission has been successfully added. 
+    - Check the added mission to see if it can be seen on the “__*Our Mission*__” page to confirm it has been added to this page.  
+    - To ensure all the form fields are required, return to the “__*Add Mission*__” page and empty the values of the form. Then click the “__*ADD MISSION*__” button to elicit the error message informing the admin users that all parts of the form are required to be completed before submission.
+- Log out from the “__*Admin*__” account and attempt to brute the way to the “__*Add Mission*__” page by typing at the end of the web address bar, the url “__*/append*__”.
+- Ensure it is not possible to gain access to the administration’s “__*Add Mission*__” pages and that non-admin users who attempt this, get redirected to the “__*Our Mission*__” page with a message informing them they are not allowed access to the page.
 ## UX Stories Testing
 - Browsing Drink Options:
     - Open the Slurps website to land on the homepage.
