@@ -74,7 +74,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .nav-link:active,
 .nav-link:hover {
   transition: 0.5s;
-  background-color: lightblue;
+  background-color: #17a3b877;
 }
 
 input[type="search"]::-ms-clear,
@@ -1002,7 +1002,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 @media (min-width: 472px) {
-  /******************************************* title, search bar, profile & trolley header */
+  /******************************************* home page */
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 8em;
@@ -1016,7 +1016,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 @media (min-width: 526px) {
-  /******************************************* title, search bar, profile & trolley header */
+  /******************************************* home page */
   .new-drinks-circle1,
   .new-drinks-circle2 {
     left: 9.5em;
@@ -1158,7 +1158,7 @@ input[type="file"]::-webkit-file-upload-button {
 
 /* bootstrap media query */
 @media (min-width: 768px) {
-  /******************************************* title, search bar, profile & trolley header */
+  /******************************************* home page */
   .new-drinks-circle1 {
     left: 4em;
   }
@@ -1289,16 +1289,22 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 1.7em;
   }
 
-  /******************************************* delivery header */
-  .delivery-cost-bg {
-    top: -0.5em;
+  .desktop-nav .desktop-links a:hover {
+    background-color: #17a3b877;
+    box-shadow: 0.1em 0.1em;
+    padding: 0em 0.1em;
   }
 
+  /******************************************* delivery header */
+  .delivery-cost-bg {
+    top: -0.4em;
+  }
+
+  /******************************************* home page */
   .new-drinks-circle1 {
     left: 0em;
   }
 
-  /******************************************* home page */
   .home-message {
     margin-top: 1.5em;
   }
@@ -1406,7 +1412,7 @@ input[type="file"]::-webkit-file-upload-button {
     width: 42.5em;
   }
 
-  /******************************************* delivery header */
+  /******************************************* home page */
   .new-drinks-circle1 {
     left: 1em;
   }

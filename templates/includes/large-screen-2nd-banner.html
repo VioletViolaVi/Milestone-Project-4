@@ -2,34 +2,34 @@
     <ul class="desktop-links">
         {% if not this_is_the_homepage %}
             <li>
-                <a class="text-body text-capitalize" href="{% url 'home' %}">home <span>|</span><span class="sr-only">(current)</span></a>
+                <a class="text-body text-capitalize" href="{% url 'home' %}">home<span class="sr-only">(current)</span></a> <span>|</span>
             </li>
         {% endif %} 
         {% if this_is_the_homepage %}
             <li>
-                <a class="text-body text-capitalize" href="#juiceSection">juices <span>|</span></a>
+                <a class="text-body text-capitalize" href="#juiceSection">juices</a> <span>|</span>
             </li>
             <li>
-                <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes <span>|</span></a>
+                <a class="text-body text-capitalize" href="#milkshakeSection">milkshakes</a> <span>|</span>
             </li>
         {% endif %} 
         <li>
-            <a class="text-body text-capitalize" href="{% url 'about_us' %}">our mission <span>|</span></a>
+            <a class="text-body text-capitalize" href="{% url 'about_us' %}">our mission</a> <span>|</span>
         </li>
         {% if request.user.is_superuser %}
             <li>
-                <a class="text-body text-capitalize" href="{% url 'add_drink' %}">add drink <span>|</span></a>
+                <a class="text-body text-capitalize" href="{% url 'add_drink' %}">add drink</a> <span>|</span>
             </li>
             <li>
-                <a class="text-body text-capitalize" href="{% url 'append_about_us' %}">add mission <span>|</span></a>
+                <a class="text-body text-capitalize" href="{% url 'append_about_us' %}">add mission</a> <span>|</span>
             </li>
         {% endif %}        
         {% if not request.user.is_authenticated %}            
             <li>
-                <a class="text-body text-capitalize" href="{% url 'account_signup' %}">sign up <span>|</span></a>
+                <a class="text-body text-capitalize" href="{% url 'account_signup' %}">sign up</a> <span>|</span>
             </li>
             <li>
-                <a class="text-body text-capitalize" href="{% url 'account_login' %}">log in <span></span></a>
+                <a class="text-body text-capitalize" href="{% url 'account_login' %}">log in</a> <span></span>
             </li>
         {% else %}
             <li>
