@@ -39,7 +39,7 @@
     "pk": 4,
     "model": "about_us.about_us",
     "fields": {
-      "image": "about-cups.PNG",
+      "image": "about-maker.PNG",
       "title": "Our Employees",
       "paragraph": "All our employees work under safe and fair conditions as attested by the Health and Safety Executive in the United Kingdom. We highly value our workers as the experienced and skilled professionals that they are.",
       "image_description": "Image of someone's hands making drinks.",

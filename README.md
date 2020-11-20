@@ -1178,8 +1178,8 @@ The following images used for this website were taken from Unsplash:
 - Photo by Eiliv-Sonas Aceron: https://unsplash.com/photos/NWTPcPE1nJI
 - Photo by Kaizen Nguyễn: https://unsplash.com/photos/jcLcWL8D7AQ 
 - Photo by Febrian Zakaria: https://unsplash.com/photos/hLC5b3FbEmA
-- Photo by Emiel Molenaar: https://unsplash.com/photos/j8DsBudk96c
-- Photo by Frank Zhang: https://unsplash.com/photos/uJjeWXc7lMM
+- Photo by Eva Fan: https://unsplash.com/photos/SxIRJsdHtGo
+- Photo by Farhad Ibrahimzade: https://unsplash.com/photos/DEovggNHhe0 
 ## Acknowledgements
 I received inspiration for this project from the following websites:
 - JUST EAT: https://www.just-eat.co.uk/restaurants-greggs-kirkstallroadburley/menu#showItem 
