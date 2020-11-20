@@ -9,11 +9,11 @@
             <div class="row">           
                 {% for main in main_mission %}
                     <div class="col-12 mb-4"> 
-                        <div class="about_us_img1 mt-2">
+                        <div class="about_us_img1 mt-3">
                             {% if main.image %}
                                 <img src="/media/{{ main.image }}" alt="{{ main.image_description }}"> 
                             {% else %}  
-                                <img class="mb-1 rounded" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
+                                <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
                             {% endif %}  
                             <h1 class="text-capitalize">{{ main.title }}</h1>
                             <p class="mb-0">{{ main.paragraph }}</p>  
@@ -25,9 +25,9 @@
                     <div class="col-12 col-md-4 mb-3">
                         <div class="about_us_img2">
                             {% if sub.image %}
-                                <img src="/media/{{ sub.image }}" class="rounded" alt="{{ sub.image_description }}"> 
+                                <img src="/media/{{ sub.image }}" alt="{{ sub.image_description }}"> 
                             {% else %}  
-                                <img class="mb-1 rounded" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
+                                <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
                             {% endif %}   
                             <h2 class="text-capitalize">{{ sub.title }}</h2>
                             <p class="mb-0">{{ sub.paragraph }}</p>                                       

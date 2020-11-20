@@ -105,7 +105,7 @@ def payment(request):
             try:
                 user_profiles = UserProfiles.objects.get(user=request.user)
                 drink_order_form = DrinkOrderForm(initial={
-                    "full_name": user_profiles.user.username,
+                    "full_name": user_profiles.user,
                     "email": user_profiles.user.email,
                     "phone_number": user_profiles.default_phone_number,
                     "street_address1": user_profiles.default_street_address1,
@@ -145,7 +145,6 @@ def payment_success(request, drink_order_number):
         # Save user's info
         if save_info:
             user_profiles_data = {
-                "default_full_name": drink_order.full_name,
                 "default_phone_number": drink_order.phone_number,
                 "default_street_address1": drink_order.street_address1,
                 "default_street_address2": drink_order.street_address2,

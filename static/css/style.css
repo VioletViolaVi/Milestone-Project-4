@@ -413,14 +413,15 @@ input[type="radio"] {
 }
 
 .about_us_img1 img {
-  width: 18em;
-  height: 9em;
-  border-radius: 15%;
+  width: 17em;
+  height: 6em;
+  border-radius: 50%;
 }
 
 .about_us_img2 img {
   width: 10em;
-  height: 10em;
+  height: 8em;
+  border-radius: 50%;
 }
 
 /******************************************* shopping cart */
@@ -1054,6 +1055,17 @@ input[type="file"]::-webkit-file-upload-button {
     margin-top: 0.5em;
   }
 
+  /******************************************* about us */
+  .about_us_img1 img {
+    width: 26em;
+    height: 7em;
+  }
+
+  .about_us_img2 img {
+    width: 14em;
+    height: 9em;
+  }
+
   /******************************************* shopping cart */
   .trolley-padding-removal {
     padding: 0em;
@@ -1142,7 +1154,6 @@ input[type="file"]::-webkit-file-upload-button {
   .signup-border input {
     width: 28em;
   }
-
 }
 
 /* bootstrap media query */
@@ -1150,6 +1161,11 @@ input[type="file"]::-webkit-file-upload-button {
   /******************************************* title, search bar, profile & trolley header */
   .new-drinks-circle1 {
     left: 4em;
+  }
+
+  /******************************************* about us */
+  .about_us_img2 img {
+    width: 10em;
   }
 
   /******************************************* shopping cart */
@@ -1289,6 +1305,17 @@ input[type="file"]::-webkit-file-upload-button {
 
   .sort-by-section {
     top: 9.5em;
+  }
+
+  /******************************************* about us */
+  .about_us_img1 img {
+    width: 30em;
+    height: 8em;
+  }
+
+  .about_us_img2 img {
+    width: 15em;
+    height: 10em;
   }
 
   /******************************************* shopping cart */
