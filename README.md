@@ -882,15 +882,22 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Card Payments:
     - Open the Slurps website to land on the homepage then log in.
     - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
-    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button. Assuming the user is logged in, ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page. If the user is not logged in, log in first then conduct this step.
     - Under the “__*Order Summary*__”, check the “__*Subtotal*__”, “__*Delivery*__” and “__*Grand Total*__” costs are correct. Also, check that the correct drink image and description are displaying.
     - In the payment form besides it, complete a minimum of each required input field with personal details. This includes completing the address input fields that are required.
     - For the last card payment input field, taken from Stripe, use Stripe’s test number by entering “__*4242 4242 4242 4242 04 / 24 242 42424*__” in its input. 
     - Press the “__*COMPLETE ORDER*__” button once the whole form is filled in. Ensure the page is transferred to another page confirming the payment was successful.
+- Saving Payment Details:
+    - Open the Slurps website to land on the homepage then log in.
+    - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button. Assuming the user is logged in, ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page. If the user is not logged in, log in first then conduct this step.
+    - Complete at least the required payment form fields and then click on the “__*COMPLETE ORDER*__” button and ensure the page is transferred to the “__*Successful Payment*__” page.
+    - Return to the homepage of the website and click the “__*ADD*__” button for a different drink. Then repeat the previous steps to get to the “__*Make Payment*__” page.
+    - On the “__*Make Payment*__” page the second time around, ensure the form’s inputs are already filled in with the personal details entered by the user previously. 
 - Payment Receipt:
     - Open the Slurps website to land on the homepage then log in.
     - Click on the “__*ADD*__” button for one drink item so it goes in the shopping cart.
-    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button and ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page.
+    - Click on the trolley icon to go to the “__*Shopping Cart*__” page. Scroll down to the bottom to click on the “__*PAY*__” button. Assuming the user is logged in, ensure clicking this transfers the “__*Shopping Cart*__” page to the “__*Make Payment*__” page. If the user is not logged in, log in first then conduct this step.
     - Complete at least the required payment form field inputs and then click on the “__*COMPLETE ORDER*__” button and ensure the page is transferred to the “__*Successful Payment*__” page.
     - On the “__*Successful Payment*__” page, view it and ensure the page displays information about: the name of the drink(s) that was/were ordered, the quantity, the price, the same personal details entered in the payment form previously, the costs of the order and the date and time the order was made.
 - Creating Accounts:

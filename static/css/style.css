@@ -541,10 +541,6 @@ input[type="radio"] {
   border: lightblue;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 /******************************************* stripe */
 .StripeElement--focus,
 .StripeElement:focus,
@@ -1418,10 +1414,10 @@ input[type="file"]::-webkit-file-upload-button {
 @media (min-width: 1300px) {
   /******************************************* title, search bar, profile & trolley header */
   .fas.fa-user-alt {
-    left: 26.5em;
+    left: 28em;
   }
 
   input[type="search"]#lgSearchBar {
-    width: 47.5em;
+    width: 50.5em;
   }
 }
