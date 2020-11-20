@@ -34,7 +34,6 @@ def cache_payment_data(request):
         return HttpResponse(content=e, status=400)
 
 
-@login_required
 def payment(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
@@ -107,7 +106,7 @@ def payment(request):
             try:
                 user_profiles = UserProfiles.objects.get(user=request.user)
                 drink_order_form = DrinkOrderForm(initial={
-                    "full_name": user_profiles.default_full_name,
+                    "full_name": user_profiles.user,
                     "email": user_profiles.user.email,
                     "phone_number": user_profiles.default_phone_number,
                     "street_address1": user_profiles.default_street_address1,
@@ -134,7 +133,6 @@ def payment(request):
     return render(request, template, context)
 
 
-@login_required
 def payment_success(request, drink_order_number):
     save_info = request.session.get("save_info ")
     drink_order = get_object_or_404(DrinkOrder,
