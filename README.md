@@ -128,8 +128,8 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - If no drink results are found, by entering “__*fish*__” in the search bar for example, the message “__*No results found for: "fish"*__” is displayed under the “__*Search results for: "fish"*__” message.
 ### Our Mission Page
 - Allows users to view the mission statements of the Slurps company as well as some images that reflect the mission statements being explained.
-### User Profile Page
-- Contains a profile form for users to enter their personal details eg.: name, phone number, address, etc so the users can have these details automatically filled in the payment form; when making a payment.
+### User Profiles Page
+- Contains a profile form for users to enter their personal details eg.: phone number, address, etc so the users can have these details automatically filled in the payment form; when making a payment.
 - Contains the “__*UPDATE INFORMATION*__” button which allows users to save entered changes to their profile form above, by clicking on this button after editing the form. These details are also saved in the payment form at the same time, so the user can speed up their purchase.
 - Contains a table showing the users’ order history i.e. the drink orders made by the users in the past, allowing users to view what they have previously purchased. As well as the date of the purchase, how much they spent and a link to its confirmation receipt. If there’s no order history, the users are shown the message: “__*Your Order History Is Empty.*__” with a “__*BACK TO HOME*__” button for them to click and be redirected to the homepage where they can place orders. 
 - Contains the “__*CHANGE MY PASSWORD*__” button to allow users to change their current password if desired, by clicking on the button and filling in the form that gets shown to the users.
@@ -333,7 +333,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
             - Go through the appeared search options and check that all the drink names contain the word “__*berry*__” in them. Then go through the remaining drinks on the homepage that were not featured as part of the search results and ensure they do not have the “__*berry*__” word in them.
             - As this website has no drink names with the word “__*fish*__” in them, enter “__*fish*__” in the search bar and ensure there are no drink options that appear underneath the “__*Search results for: "fish"*__” message. Instead make sure the message “__*No results found for: "fish"*__” is shown.
             - Also check that searching based on the drink names is the only way for users to get drink results provided from the search bar. Do this by entering in the search bar “__*1x800ml*__”, a non drink name but present across the homepage as part of some of the drink’s descriptions, and make sure no drink options display and the message “__*No results found for: "1x800ml"*__” appears.
-    - User Profile and Shopping Cart Banner:
+    - User Profiles and Shopping Cart Banner:
         - Run the HTML and CSS code used to make this banner, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps home page using: 320x571, 576x571 and 768x571 screen sizes.
         - Ensure its background colour is light blue and the width of this banner fills the width of the screen for each of these screen sizes.
@@ -359,7 +359,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Check the “__*£35*__” 
             price is crossed out and the “__*£5*__” price is highlighted with a light blue background colour and a box shadow so it stands out the most, out of all the text on the banner. 
 - Desktop 
-    - Logo, Search Bar, User Profile and Shopping Cart Banner:
+    - Logo, Search Bar, User Profiles and Shopping Cart Banner:
         - Run the HTML and CSS code used to make this banner, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
         - Using chrome development tools, open the Slurps home page using: 992x571 and 1200x571 screen sizes.
         - Ensure the logo, search bar, person icon, shopping cart icon, drink counter and price total are all clearly presented in the banner, don't overlap each other or go outside the banner’s width across both these screen sizes.
@@ -524,22 +524,22 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. 
 - Click on the “__*sign up*__” link at the top of the “__*Log In*__” page’s form to be taken to the “__*Sign Up*__” page and complete the form using “__Test*__” for the username, “__test@test.com*__” for the email and a random password for the password fields. 
 - Afterwards, click the “__*SIGN UP*__” button and ensure the website redirects back to the “__*My Profile*__” page.
-- Personal Details Form Testing:
+- Personal Details Form:
     - Make sure that on first arrival of the “__*My Profile*__” page, its “__*Personal Details*__” form is empty. Click on the “__*UPDATE INFORMATION*__” button whilst the form is still empty to ensure input fields that have not been edited can still be submitted. This means the form correctly does not require users to fill in each input field and therefore users are free to decide which personal details they wish to save on their account. 
     - For the “__*Postal Code*__” input field, ensure the text typed in only appears in uppercase by attempting to type in lowercase letters and making sure the text remains uppercase. Then clear the field.
-    - For the “__*Full Name*__”, “__*Street Address 1*__” and “__*Street Address 2*__” input fields, ensure the text typed in is capitalised per word by typing in all capital letters with spaces and then again but this time all in lowercase letters with spaces and making sure the text remains capitalised per individual word. Then clear the field.
+    - For the “__*Street Address 1*__” and “__*Street Address 2*__” input fields, ensure the text typed in is capitalised per word by typing in all capital letters with spaces and then again but this time all in lowercase letters with spaces and making sure the text remains capitalised per individual word. Then clear the field.
     - To test the “__*Personal Details*__” form does accept typed in data, fill in the “__*Phone Number*__” input field with the numbers “__*0123456789*__”. Click on the “__*Country*__” field input, make sure a list of the world’s countries appears in the dropdown option then select any random country. For the rest of the inputs, type in the word “__*Test*__” before pressing the “__*UPDATE INFORMATION*__” button. 
     - After the page reloads, check the form’s inputs remain filled in with the entered test details to ensure the form is able to update and save the users entered information.
-- Order History Testing:
+- Order History:
     - Before any purchases and drink orders are made, check in the “__*My Profile*__” page that the “__*Order History*__” section informs the users that their order history is empty and the “__*BACK TO HOME*__” button is present for them to click on it and be redirected to the home page.
     - Click on the “__*BACK TO HOME*__” button to verify the button does redirect back to the home page. After checking it does, select the first drink from the “__*Juices*__” section and add a quantity of “__*1*__” to the shopping cart. Click on the shopping cart icon then click the “__*PAY*__” button to be redirected to the “__*Make Payment*__”  page. Once here, complete the “__*Make Payment*__” form and click the “__*COMPLETE ORDER*__” button to send through the payment. Once redirected to the confirmation page, click the person icon again and return to the “__*My Profile*__” page.
     - Back on the “__*My Profile*__” page, under the “__*Order History*__” section ensure a table is displaying this time, with the following headings: “__*Date*__”, “__*Drink Name*__”, “__*Grand Total*__” and “__*Drink Order Number*__”. 
     - Under the “__*Date*__” column, check the date and time match the date and time the order was made. For the “__*Drink Name*__” column, ensure the same name of the drink item bought and the same quantity of the drink selected is shown. Under the “__*Grand Total*__”, make sure the price is the same price that was shown as the “__*Grand Total*__” in the “__*Shopping Cart*__” and “__*Make Payment*__” page. As for the “__*Drink Order Number*__” column, ensure a random 32-length string of letters and numbers are present as a link. Click on the link and ensure doing so redirects users to the “__*Successful Payment*__” page.
     - On the “__*Successful Payment*__” page, check that it thanks users for making the order and shows details of the payment made in the style of a receipt; detailing what was bought, how much it costs, the date it was purchased and the personal details of the users that made the purchase.
-- Change Password Button Testing:
+- Change Password Button:
     - Underneath the “__*Personal Details*__” form, locate the “__*CHANGE MY PASSWORD*__” button.
     - Click on it to ensure the website redirects to the “__*Change Password*__” page.
-- Change Email Address Testing:
+- Change Email Address:
     - Underneath the “__*CHANGE MY PASSWORD*__” button, locate the “__*CHANGE MY EMAIL ADDRESS*__” button.
     - Click on it to ensure the website redirects to the “__*E-mail Addresses*__” page.
 ## Sign Up Page

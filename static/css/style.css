@@ -652,7 +652,7 @@ input[type="radio"] {
   margin: auto;
   overflow: auto;
   padding: 0.5em;
-  height: 25em;
+  height: 21em;
 }
 
 .empty-history-border {
@@ -670,7 +670,7 @@ input[type="radio"] {
   border-top: solid lightblue 0.2em;
   border-bottom: solid lightblue 0.2em;
   overflow: auto;
-  height: 25em;
+  height: 21em;
   background-color: #f8f9fa;
   margin: auto;
 }
@@ -1081,7 +1081,7 @@ input[type="file"]::-webkit-file-upload-button {
   .update-form-border,
   .order-history-border {
     width: 30em;
-    height: 26em;
+    height: 21.5em;
   }
 
   .update-form-border {
