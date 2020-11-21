@@ -181,6 +181,7 @@ input[type="search"]::-ms-reveal {
 .delivery-cost-bg {
 	margin-top: 5.5em;
 	font-size: 1.5em;
+    cursor: default;
 }
 
 .delivery-highlight {
@@ -190,6 +191,12 @@ input[type="search"]::-ms-reveal {
 	box-shadow: 0.1em 0.1em;
 }
 
+.delivery-highlight:hover {
+	background-color: #17a2b8;
+	padding: 0em 0.3em 0 0.2em;
+	border-radius: 15%;
+	box-shadow: 0.1em 0.1em;
+}
 
 /******************************************* footer */
 
@@ -222,6 +229,7 @@ body {
 
 .footer-pusher {
 	padding-bottom: 10em;
+    cursor: default;    
 }
 
 .card {
@@ -234,6 +242,7 @@ body {
 	width: 100%;
 	bottom: 0;
 	position: absolute;
+    cursor: default;
 }
 
 .card-footer:last-child {
@@ -378,6 +387,7 @@ input[type="radio"] {
 
 #homePageSection {
 	padding-bottom: 10em;
+    cursor: default;
 }
 
 #newDrinksTitle {
@@ -425,6 +435,7 @@ input[type="radio"] {
 
 #aboutUsSection {
 	padding-bottom: 10em;
+    cursor: default;    
 }
 
 .about_us_img1 img {
@@ -463,6 +474,10 @@ input[type="radio"] {
 .fas.fa-trash-alt:active,
 .fas.fa-trash-alt:hover {
 	color: #17a2b8;
+}
+
+#shoppingCartSection{
+    cursor: default;
 }
 
 .shopping_cart_img {
@@ -941,13 +956,16 @@ input[type="radio"] {
 	color: #17a2b8;
 }
 
-#appendAboutUs,
 #editAboutUs {
 	height: 54.5em;
 }
 
 #editDrink {
 	height: 41em;
+}
+
+#appendAboutUs {
+    height: 48.5em;
 }
 
 .admim-form-border {
@@ -1111,7 +1129,7 @@ input[type="file"]::-webkit-file-upload-button {
 	.update-form-border,
 	.order-history-border {
 		width: 30em;
-		height: 21.5em;
+		height: 22.5em;
 	}
 	.update-form-border {
 		padding: 1em;

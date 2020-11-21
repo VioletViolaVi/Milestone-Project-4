@@ -69,10 +69,14 @@ class StripeWH_Handler:
             if save_info:
                 user_profiles.default_full_name = shipping_details.name
                 user_profiles.default_phone_number = shipping_details.phone
-                user_profiles.default_street_address1 = shipping_details.address.line1
-                user_profiles.default_street_address2 = shipping_details.address.line2
-                user_profiles.default_postcode = shipping_details.address.postal_code
-                user_profiles.default_country = shipping_details.address.country
+                user_profiles.default_street_address1 = \
+                    shipping_details.address.line1
+                user_profiles.default_street_address2 = \
+                    shipping_details.address.line2
+                user_profiles.default_postcode = \
+                    shipping_details.address.postal_code
+                user_profiles.default_country = \
+                    shipping_details.address.country
                 user_profiles.save()
 
         drink_order_exists = False

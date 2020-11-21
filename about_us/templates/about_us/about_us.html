@@ -8,7 +8,7 @@
                     {% if main.image %}
                     <img src="/media/{{ main.image }}" alt="{{ main.image_description }}" />
                     {% else %}
-                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available" />
+                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available." />
                     {% endif %}
                     <h1 class="text-capitalize">{{ main.title }}</h1>
                     <p class="mb-0">{{ main.paragraph }}</p>
@@ -21,7 +21,7 @@
                     {% if sub.image %}
                     <img src="/media/{{ sub.image }}" alt="{{ sub.image_description }}" />
                     {% else %}
-                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available" />
+                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available." />
                     {% endif %}
                     <h2 class="text-capitalize">{{ sub.title }}</h2>
                     <p class="mb-0">{{ sub.paragraph }}</p>

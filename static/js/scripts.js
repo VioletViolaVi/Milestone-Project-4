@@ -137,7 +137,7 @@ $(document).ready(function () {
 		}).fail(function () {
 			// errors will be in django messages when reloaded
 			location.reload();
-		})
+		});
 	});
 
 

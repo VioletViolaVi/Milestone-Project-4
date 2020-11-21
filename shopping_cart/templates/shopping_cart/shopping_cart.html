@@ -3,7 +3,7 @@
 {% load shopping_cart_tools %}
 {% block tab_title %}| Shopping Cart{% endblock %}
 {% block shopping_cart %}
-<section class="text-capitalize">
+<section id="shoppingCartSection" class="text-capitalize">
    <h2 class="mt-3 mb-4">shopping cart</h2>
    <div class="footer-pusher container">
       <div class="row">
@@ -19,7 +19,7 @@
                      {% if shopping_cart.drink.image %}   
                      <img class="mb-1 shopping_cart_img rounded" src="/media/{{ shopping_cart.drink.image }}">   
                      {% else %}
-                     <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
+                     <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available.">  
                      {% endif %}                                                      
                   </div>
                   <div class="col-6 col-md-7 col-lg-6 col-xl-6 px-0">
