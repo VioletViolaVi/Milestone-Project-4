@@ -240,7 +240,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Displays a “__*CANCEL*__” button underneath the add mission statement form for the administrators to click on to stop adding the new mission statement and return them back to the mission page.
 - Displays an “__*ADD MISSION*__” button underneath the add mission statement form for the administrators to click on to add the new mission statement made and return them back to the mission page with the statements displayed.
 # Technologies Used
-## [Python](https://www.python.org/) & [Django](https://www.djangoproject.com/): 
+## [Python](https://www.python.org/) & [Django](https://www.djangoproject.com/)
 - This project used Python with Django to produce the backend code that runs on the server, to create the Slurps website.
 - Django was used to do the following: 
     - Produce forms
@@ -250,13 +250,13 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Access its administration page to control, test and monitor the production of the Slurps website.
     - Create models and reusable apps for the Slurps website. 
     - Test the functionality of the project
-## [Stripe](https://stripe.com/en-gb):
+## [Stripe](https://stripe.com/en-gb)
 - Stripe was used to create the card payment input in order to take card payments from the user.
 ## OS 
 - This project used OS to provide functions for interacting with the operating system for the Slurps website.
-## [Heroku](https://www.heroku.com/): 
+## [Heroku](https://www.heroku.com/)
 - This project used Heroku to deploy and display the final finished version of the Slurps website.
-## [Amazon Web Services (AWS)](https://aws.amazon.com/):
+## [Amazon Web Services (AWS)](https://aws.amazon.com/)
 - This project used Amazon Web Services (AWS) to store the css styling and images used in this project.
 ## Requirements.txt
 - This project used a requirements.txt file to allow Heroku to detect the Slurps website as a Python app.
@@ -268,9 +268,9 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - This project used CSS to add design to the basic structure and layout of the Slurps website.
 ## JavaScript
 - This project used JavaScript to add functionality to the features of the Slurps website.
-## [jQuery](https://jquery.com/):
+## [jQuery](https://jquery.com/)
 - This project used jQuery to speed up the process of adding the JavaScript functionality to the Slurps website.
-## [Bootstrap](https://getbootstrap.com/): 
+## [Bootstrap](https://getbootstrap.com/)
 - This project used Bootstrap to provide the code for the following:
     - The responsive breakpoints 
     - Mobile navigation bar
@@ -290,25 +290,25 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
         - Display properties
         - Positions
         - Screenreaders
-## [Font Awesome](https://fontawesome.com/): 
+## [Font Awesome](https://fontawesome.com/)
 - This project used Font Awesome to provide the icons used in the Slurps website. 
-## [Google Fonts](https://fonts.google.com/): 
+## [Google Fonts](https://fonts.google.com/)
 - This project used Google Fonts to provide the font style of the Slurps website.
-## [Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools): 
+## [Chrome Development Tools](https://developers.google.com/web/tools/chrome-devtools)
 - This project used Chrome Development Tools to see how responsive the Slurps website looked on different screen sizes and was also used to debug issues regarding editing CSS and JS code taken from external frameworks and libraries.
-## [W3C Markup Validation Service](https://validator.w3.org/): 
+## [W3C Markup Validation Service](https://validator.w3.org/)
 - This project used W3C Markup Validation Service to check for errors, requiring correction, present in the HTML code of the Slurps website.
-## [CSS Validation Service](https://jigsaw.w3.org/css-validator/): 
+## [CSS Validation Service](https://jigsaw.w3.org/css-validator/) 
 - This project used CSS Validation Service to check for errors, requiring correction, present in the CSS code of the Slurps website.
-## [Gitpod](https://www.gitpod.io/): 
+## [Gitpod](https://www.gitpod.io/) 
 - This project used Gitpod as the editor for coding out the README file, HTML, CSS, JavaScript, jQuery and Python portions of the Slurps website. External libraries, frameworks, images and wireframes were also stored here. In addition, its terminal was used to conduct commands such as: “__*git status*__, “__*git add .*__”, “__*git commit -m “...”*__”, “__*git push*__”,  etc to complete this project.
-## [GitHub](https://github.com/): 
+## [GitHub](https://github.com/)
 - This project used GitHub to store saved code of the Slurps website via the “__*git push*__” command, as repositories.
-## [Balsamiq Wireframes](https://balsamiq.com/): 
+## [Balsamiq Wireframes](https://balsamiq.com/)
 - This project used Balsamiq Wireframes to create mockups of what the Slurps website aimed to look like to the user, on completion.
 ## Snipping Tool
 - This project used the Snipping Tool to edit the drink images and wireframes for the Slurps website.
-## [Jasmine Testing](https://jasmine.github.io/index.html):
+## [Jasmine Testing](https://jasmine.github.io/index.html)
 - The project used Jasmine Testing to test the functionality of the JavaScript/jQuery used in the Slurps website.
 # Testing
 ## Navigation Bars
@@ -399,7 +399,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
             is legible and clearly organised, separate from the other banner and navigation bar above.
         - Check the “__*£35*__” 
             price is crossed out and the “__*£5*__” price is highlighted with a light blue background colour and a box shadow so it stands out the most, out of all the text on the banner. 
-## Fixed Arrow:
+## Fixed Arrow
 - Run the HTML and CSS code, used to make the fixed arrow appear when scrolling down the home page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Using chrome development tools, check the fixed arrow’s responsiveness by opening the Slurps home page website with the following screen sizes: 320x571, 576x571, 768x571, 992x571 and 1200x571.
 - Scroll down the page using these different screen sizes and ensure the fixed arrow appears, before reaching the bottom and can be seen on the page clearly regardless of the content it overlaps; ensuring its z-index is correct.
