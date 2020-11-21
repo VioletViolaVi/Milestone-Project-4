@@ -1,38 +1,33 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block tab_title %}| Log In{% endblock %}
-
 {% block content %}
-    <section class="footer-pusher">
-        <div class="container mt-3">
-            <div class="row">
-
-                <div class="col-12 mt-2">
-                    <h1 class="text-capitalize">{% trans "log in" %}</h1>
-                    <p class="">{% blocktrans %}Don't have an account?<a href="{{ signup_url }}" class="font-weight-bolder"> sign up</a>{% endblocktrans %}</p>               
-                    <form class="login-border login" method="POST" action="{% url 'account_login' %}">
-                        {% csrf_token %}
-                        {{ form.as_ul }}
-                        {% if redirect_field_value %}
-                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                        {% endif %}            
-                        <button class="text-uppercase mt-2 font-weight-bolder primaryAction" type="submit">{% trans "login" %}</button>
-                    </form>                                          
-                </div>
-
-                <div class="col-12">
-                    <a class="button secondaryAction font-weight-bolder" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}
-                        <div>
-                            {% trans "Click Me!" %} <i class="far fa-smile-wink"></i>
-                        </div>
-                    </a>
-                </div>
-        
-            </div>        
-        </div>   
-    </section>
+<section class="footer-pusher">
+   <div class="container mt-3">
+      <div class="row">
+         <div class="col-12 mt-2">
+            <h1 class="text-capitalize">{% trans "log in" %}</h1>
+            <p class="">{% blocktrans %}Don't have an account?<a href="{{ signup_url }}" class="font-weight-bolder"> sign up</a>{% endblocktrans %}</p>
+            <form class="login-border login" method="POST" action="{% url 'account_login' %}">
+               {% csrf_token %}
+               {{ form.as_ul }}
+               {% if redirect_field_value %}
+               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+               {% endif %}            
+               <button class="text-uppercase mt-2 font-weight-bolder primaryAction" type="submit">{% trans "login" %}</button>
+            </form>
+         </div>
+         <div class="col-12">
+            <a class="button secondaryAction font-weight-bolder" href="{% url 'account_reset_password' %}">
+               {% trans "Forgot Password?" %}
+               <div>
+                  {% trans "Click Me!" %} <i class="far fa-smile-wink"></i>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</section>
 {% endblock %}

@@ -1,38 +1,26 @@
-{% extends "base.html" %}
-{% load static %}
+{% extends "base.html" %} {% load static %} {% block tab_title %}| Edit Mission {% endblock %} {% block edit_about_us %}
+<section class="footer-pusher">
+    <h2 class="text-capitalize mt-3">edit mission</h2>
 
-{% block tab_title %}| Edit Mission {% endblock %}
-
-{% block edit_about_us %}
-    <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">edit mission</h2>      
-        
-        <div class="container">        
-            <div class="row">
-
-                <div class="col-12">     
-                    <form id="editAboutUs" class="admim-form-border text-left p-1" method="POST" action="{% url 'change_about_us' about_us.id %}" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <div class="text-center">
-                            <a href="{% url 'about_us' %}" class="mr-2 text-uppercase text-body font-weight-bolder mt-2" type="submit">cancel</a>
-                            <button class="text-uppercase ml-2 font-weight-bolder mt-2" type="submit">update mission</button>
-                        </div>
-                    </form>
-                </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form id="editAboutUs" class="admim-form-border text-left p-1" method="POST" action="{% url 'change_about_us' about_us.id %}" enctype="multipart/form-data">
+                    {% csrf_token %} {{ form|crispy }}
+                    <div class="text-center">
+                        <a href="{% url 'about_us' %}" class="mr-2 text-uppercase text-body font-weight-bolder mt-2" type="submit">cancel</a>
+                        <button class="text-uppercase ml-2 font-weight-bolder mt-2" type="submit">update mission</button>
+                    </div>
+                </form>
             </div>
         </div>
-
-    </section>
-{% endblock %}
-
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $("#adminBrowseImage").change(function() {
-            let file = $("#adminBrowseImage")[0].files[0];
-            $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
-        });
-    </script>
+    </div>
+</section>
+{% endblock %} {% block postloadjs %} {{ block.super }}
+<script type="text/javascript">
+    $("#adminBrowseImage").change(function () {
+        let file = $("#adminBrowseImage")[0].files[0];
+        $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
+    });
+</script>
 {% endblock %}

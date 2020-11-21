@@ -1,32 +1,27 @@
 {% extends "account/base.html" %}
-
 {% load i18n %}
 {% load account socialaccount %}
-
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 {% block tab_title %}| Sign Up{% endblock %}
-
 {% block content %}
-    <section class="footer-pusher">
-        <div class="container mt-3">
-            <div class="row">
-
-                <div class="col-12">
-                    <h1 class="text-capitalize mt-1">{% trans "sign up" %}</h1>
-                    <p class="">{% blocktrans %}Already have an account?<a href="{{ login_url }}" class="font-weight-bolder"> login</a> {% endblocktrans %}</p>                   
-                    <form class="signup-border text-center" method="post" action="{% url 'account_signup' %}">
-                        {% csrf_token %}
-                        {{ form.as_ul }}
-                        {% if redirect_field_value %}
-                            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                        {% endif %}
-                        <div class="text-center">
-                            <button type="submit" class="text-uppercase mt-2 font-weight-bolder">{% trans "sign up" %}</button>
-                        </div>
-                    </form>                                        
-                </div>
-            
-            </div>
-        </div>            
-    </section>
+<section class="footer-pusher">
+   <div class="container mt-3">
+      <div class="row">
+         <div class="col-12">
+            <h1 class="text-capitalize mt-1">{% trans "sign up" %}</h1>
+            <p class="">{% blocktrans %}Already have an account?<a href="{{ login_url }}" class="font-weight-bolder"> login</a> {% endblocktrans %}</p>
+            <form class="signup-border text-center" method="post" action="{% url 'account_signup' %}">
+               {% csrf_token %}
+               {{ form.as_ul }}
+               {% if redirect_field_value %}
+               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+               {% endif %}
+               <div class="text-center">
+                  <button type="submit" class="text-uppercase mt-2 font-weight-bolder">{% trans "sign up" %}</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
 {% endblock %}

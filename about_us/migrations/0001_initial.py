@@ -15,20 +15,34 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='About_us_section',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('programmatic_name', models.CharField(max_length=255)),
-                ('friendly_name', models.CharField(blank=True, max_length=255, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True,
+                    max_length=255,
+                    null=True)),
             ],
         ),
         migrations.CreateModel(
             name='About_us',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(blank=True, null=True, upload_to='')),
-                ('image_description', models.CharField(blank=True, max_length=255, null=True)),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
+                ('image', models.ImageField(
+                    blank=True, null=True,
+                    upload_to='')),
+                ('image_description', models.CharField(
+                    blank=True,
+                    max_length=255,
+                    null=True)),
                 ('title', models.CharField(max_length=255)),
                 ('paragraph', models.TextField()),
-                ('section', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='about_us.about_us_section')),
+                ('section', models.ForeignKey(
+                    null=True, on_delete=django.db.models.deletion.SET_NULL,
+                    to='about_us.about_us_section')),
             ],
             options={
                 'verbose_name_plural': 'About us',

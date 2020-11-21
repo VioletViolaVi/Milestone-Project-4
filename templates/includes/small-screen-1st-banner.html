@@ -1,61 +1,60 @@
 <!-- bootstrap navbar -->
 <nav class="bg-light d-lg-none fixed-top navbar navbar-expand-lg font-weight-bolder">
-    <a class="navbar-brand font-weight-bolder text-capitalize" href="{% url 'home' %}">slurps</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fa-1x fas fa-bars text-body"></i></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-        <ul class="navbar-nav">
-            {% if not this_is_the_homepage %}
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'home' %}">home<span class="sr-only">(current)</span></a>
-                </li>
-            {% endif %}
-            {% if this_is_the_homepage %}
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="/#juiceSection">juices</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="/#milkshakeSection">milkshakes</a>
-                </li>
-            {% endif %}
-            <li class="nav-item">
-                <a class="nav-link text-body text-capitalize" href="{% url 'about_us' %}">our mission</a>
-            </li>
-            {% if request.user.is_superuser %}
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'add_drink' %}">add drink</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'append_about_us' %}">add mission</a>
-                </li>
-            {% endif %}
-            {% if not request.user.is_authenticated %}            
-                <li class="nav-item">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'account_signup' %}">sign up</a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'account_login' %}">log in</a>
-                </li>
-            {% else %}
-                <li class="nav-item mb-2">
-                    <a class="nav-link text-body text-capitalize" href="{% url 'account_logout' %}">log out</a>
-                </li>
-            {% endif %}
-            <li class="nav-item">
-                <form method="GET" action="{% url 'home' %}" class="form-inline">
-                    {% csrf_token %}
-                    <div id="searchBar" class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <button class="input-group-text" id="basic-addon1" type="submit">
-                               <i class="fas fa-search text-body font-weight-bolder"></i>
-                            </button>
-                        </div>
-                        <input value="{% if typed_in_search %}{{ typed_in_search }}{% endif %}" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
-                    </div>                    
-                </form>
-            </li>
-        </ul>
-
-    </div>
+   <a class="navbar-brand font-weight-bolder text-capitalize" href="{% url 'home' %}">slurps</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+   <span><i class="fa-1x fas fa-bars text-body"></i></span>
+   </button>
+   <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+      <ul class="navbar-nav">
+         {% if not this_is_the_homepage %}
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="{% url 'home' %}">home<span class="sr-only">(current)</span></a>
+         </li>
+         {% endif %}
+         {% if this_is_the_homepage %}
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="/#juiceSection">juices</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="/#milkshakeSection">milkshakes</a>
+         </li>
+         {% endif %}
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="{% url 'about_us' %}">our mission</a>
+         </li>
+         {% if request.user.is_superuser %}
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="{% url 'add_drink' %}">add drink</a>
+         </li>
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="{% url 'append_about_us' %}">add mission</a>
+         </li>
+         {% endif %}
+         {% if not request.user.is_authenticated %}            
+         <li class="nav-item">
+            <a class="nav-link text-body text-capitalize" href="{% url 'account_signup' %}">sign up</a>
+         </li>
+         <li class="nav-item mb-2">
+            <a class="nav-link text-body text-capitalize" href="{% url 'account_login' %}">log in</a>
+         </li>
+         {% else %}
+         <li class="nav-item mb-2">
+            <a class="nav-link text-body text-capitalize" href="{% url 'account_logout' %}">log out</a>
+         </li>
+         {% endif %}
+         <li class="nav-item">
+            <form method="GET" action="{% url 'home' %}" class="form-inline">
+               {% csrf_token %}
+               <div id="searchBar" class="input-group mb-3">
+                  <div class="input-group-prepend">
+                     <button class="input-group-text" id="basic-addon1" type="submit">
+                     <i class="fas fa-search text-body font-weight-bolder"></i>
+                     </button>
+                  </div>
+                  <input value="{% if typed_in_search %}{{ typed_in_search }}{% endif %}" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
+               </div>
+            </form>
+         </li>
+      </ul>
+   </div>
 </nav>

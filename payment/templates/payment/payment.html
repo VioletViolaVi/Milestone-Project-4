@@ -1,119 +1,105 @@
 {% extends "base.html" %}
 {% load static %}
 {% load shopping_cart_tools %}
-
 {% block tab_title %}| Payment{% endblock %}
-
 {% block payment %}
-    <section class="footer-pusher">
-        <h2 class="text-capitalize mt-3">make payment</h2>
-        <p>Please enter your payment details to complete your order.</p>
-        <div class="container">
-            <div class="row">
-
-                <div class="drink-order-box col-12 col-md-6 text-left px-0 mb-4">
-
-                    <p class="text-body text-center font-weight-bolder mb-1">Order Summary ({{ drink_counter }})</p>  
-                    <div class="container">
-                        <div class="row">     
-                            <div class="shopping-cart-costs text-left pl-1"> 
-                                <ul class="font-weight-bolder text-capitalize mb-1">
-                                    <li><span class="text-info">subtotal: </span><span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
-                                    <li><span class="text-info">delivery: </span><span class="font-weight-normal">£{{ delivery|floatformat:2 }}</span></li>
-                                    <li><span class="text-info">grand total: </span><span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
-                                </ul>
-                            </div> 
-                        </div>
-                    </div>
-                    <hr class="p-0 mx-2 mb-2 mt-0">
-
-                    <div class="container">
-                        <div class="row">
-                            {% for shopping_cart in shopping_cart_items %} 
-                                <div class="col-6 text-center">     
-                                    <div class="shopping_cart_img"> 
-                                        {% if shopping_cart.drink.image %}  
-                                            <img class="mb-1 shopping_cart_img rounded" src="/media/{{ shopping_cart.drink.image }}" alt="{{ shopping_cart.drink.drink_name}}">                                                        
-                                        {% else %}
-                                            <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
-                                        {% endif %} 
-                                    </div>
-                                    <ul class="text-capitalize text-left">
-                                        <li><span class="text-info font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
-                                        <li><span class="text-info font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
-                                        <li><span class="text-info font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
-                                        <li><span class="text-info font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
-                                        <li><span class="text-info font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
-                                    </ul> 
-                                </div>                                                           
-                            {% endfor %}                    
-                        </div>
-                    </div>
-
-                    <div class="text-center mb-3">
-                        <a class="back-to-trolley text-body mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
-                    </div>
-                </div>
-                <br>        
-
-                <div class="col-12 col-md-6 col-lg-6">
-                    <form class="payment-form-border p-2" action="{% url 'payment' %}" method="POST" id="paymentForm">
-                        {% csrf_token %}
-                        <fieldset>
-                            {{ drink_order_form.full_name | as_crispy_field }}
-                            {{ drink_order_form.email | as_crispy_field }}
-                            {{ drink_order_form.phone_number | as_crispy_field }}
-                            {{ drink_order_form.street_address1 | as_crispy_field }}
-                            {{ drink_order_form.street_address2 | as_crispy_field }}
-                            {{ drink_order_form.postcode | as_crispy_field }}
-                            {{ drink_order_form.country | as_crispy_field }}
-                            <!-- for stripe card element -->
-                            <div class="mt-3" id="stripeCard"></div>
-                            <!-- displays stripe card errors -->
-                            <div class="mt-3 text-danger" id="stripeCardErrors" role="alert"></div>
-                            <label for="stripeFormSubmit"></label>
-                            <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="text-uppercase mt-2 font-weight-bolder">complete order</button>
-                            <input type="hidden" value="{{ client_secret }}" name="client_secret">
-                        </fieldset>
-                    </form> 
-                </div>
-
-                <div class="col-12 mt-2">
-                    <p class="small text-danger my-0">
-		        		<span class="icon">
-		        			<i class="fas fa-exclamation-circle"></i>
-		        		</span>
-		        		<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
-		        	</p>  
-                    
-                    {% if user.is_authenticated %}
-		            	<label for="id-save-info"><small>Save payment details to my profile</small></label>
-                        <input type="checkbox" checked name="save-info" id="id-save-info">
-		            {% else %}
-		            	<label for="id-save-info">
-                            <a class="text-info font-weight-bolder" href="{% url 'account_signup' %}">Create an account</a> or 
-                            <a class="text-info font-weight-bolder" href="{% url 'account_login' %}">login</a> to save this information
-                        </label>
-		            {% endif %}     
-                    
-                </div>    
-                
+<section class="footer-pusher">
+   <h2 class="text-capitalize mt-3">make payment</h2>
+   <p>Please enter your payment details to complete your order.</p>
+   <div class="container">
+      <div class="row">
+         <div class="drink-order-box col-12 col-md-6 text-left px-0 mb-4">
+            <p class="text-body text-center font-weight-bolder mb-1">Order Summary ({{ drink_counter }})</p>
+            <div class="container">
+               <div class="row">
+                  <div class="shopping-cart-costs text-left pl-1">
+                     <ul class="font-weight-bolder text-capitalize mb-1">
+                        <li><span class="text-info">subtotal: </span><span class="font-weight-normal">£{{ subtotal|floatformat:2 }}</span> </li>
+                        <li><span class="text-info">delivery: </span><span class="font-weight-normal">£{{ delivery|floatformat:2 }}</span></li>
+                        <li><span class="text-info">grand total: </span><span class="font-weight-normal">£{{ grand_total|floatformat:2 }}</span></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-        </div>
-
-        <div id="loadingOverlay">
-            <h1 class="text-body spinner">
-                <span class="icon">
-                    <i class="fas fa-spinner fa-pulse fa-4x"></i>
-                </span>
-            </h1>
-        </div>
-
-    </section>
+            <hr class="p-0 mx-2 mb-2 mt-0">
+            <div class="container">
+               <div class="row">
+                  {% for shopping_cart in shopping_cart_items %} 
+                  <div class="col-6 text-center">
+                     <div class="shopping_cart_img"> 
+                        {% if shopping_cart.drink.image %}  
+                        <img class="mb-1 shopping_cart_img rounded" src="/media/{{ shopping_cart.drink.image }}" alt="{{ shopping_cart.drink.drink_name}}">                                                        
+                        {% else %}
+                        <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.png" alt="no image available">  
+                        {% endif %} 
+                     </div>
+                     <ul class="text-capitalize text-left">
+                        <li><span class="text-info font-weight-bolder">name:</span> {{ shopping_cart.drink.drink_name }}</li>
+                        <li><span class="text-info font-weight-bolder">size:</span> 1x{{ shopping_cart.drink.millilitres }}ml</li>
+                        <li><span class="text-info font-weight-bolder">price:</span> £{{ shopping_cart.drink.price }}</li>
+                        <li><span class="text-info font-weight-bolder">quantity:</span> {{ shopping_cart.drink_quantity }}</li>
+                        <li><span class="text-info font-weight-bolder">total:</span> £{{ shopping_cart.drink.price | calc_subtotal:shopping_cart.drink_quantity }}</li>
+                     </ul>
+                  </div>
+                  {% endfor %}                    
+               </div>
+            </div>
+            <div class="text-center mb-3">
+               <a class="back-to-trolley text-body mr-2 font-weight-bolder text-uppercase" href="{% url 'shopping_cart' %}">change order</a>
+            </div>
+         </div>
+         <br>        
+         <div class="col-12 col-md-6 col-lg-6">
+            <form class="payment-form-border p-2" action="{% url 'payment' %}" method="POST" id="paymentForm">
+               {% csrf_token %}
+               <fieldset>
+                  {{ drink_order_form.full_name | as_crispy_field }}
+                  {{ drink_order_form.email | as_crispy_field }}
+                  {{ drink_order_form.phone_number | as_crispy_field }}
+                  {{ drink_order_form.street_address1 | as_crispy_field }}
+                  {{ drink_order_form.street_address2 | as_crispy_field }}
+                  {{ drink_order_form.postcode | as_crispy_field }}
+                  {{ drink_order_form.country | as_crispy_field }}
+                  <!-- for stripe card element -->
+                  <div class="mt-3" id="stripeCard"></div>
+                  <!-- displays stripe card errors -->
+                  <div class="mt-3 text-danger" id="stripeCardErrors" role="alert"></div>
+                  <label for="stripeFormSubmit"></label>
+                  <button type="submit" id="stripeFormSubmit" name="stripeFormSubmit" class="text-uppercase mt-2 font-weight-bolder">complete order</button>
+                  <input type="hidden" value="{{ client_secret }}" name="client_secret">
+               </fieldset>
+            </form>
+         </div>
+         <div class="col-12 mt-2">
+            <p class="small text-danger my-0">
+               <span class="icon">
+               <i class="fas fa-exclamation-circle"></i>
+               </span>
+               <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+            </p>
+            {% if user.is_authenticated %}
+            <label for="id-save-info"><small>Save payment details to my profile</small></label>
+            <input type="checkbox" checked name="save-info" id="id-save-info">
+            {% else %}
+            <label for="id-save-info">
+            <a class="text-info font-weight-bolder" href="{% url 'account_signup' %}">Create an account</a> or 
+            <a class="text-info font-weight-bolder" href="{% url 'account_login' %}">login</a> to save this information
+            </label>
+            {% endif %}     
+         </div>
+      </div>
+   </div>
+   <div id="loadingOverlay">
+      <h1 class="text-body spinner">
+         <span class="icon">
+         <i class="fas fa-spinner fa-pulse fa-4x"></i>
+         </span>
+      </h1>
+   </div>
+</section>
 {% endblock %}
-
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
 {% endblock %}

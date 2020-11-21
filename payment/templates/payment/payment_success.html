@@ -1,125 +1,119 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block tab_title %}| Successful Payment{% endblock %}
-
 {% block payment_success %}
-    <section class="footer-pusher text-body text-left">
-        <h1 class="mt-3 text-center">Thanks for your order!</h1>
-
-        <div>      
-            {% if messages %} 
-                {% for message in messages %}
-                    <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
-                        <p class="message">{{ message }}</p>                           
-                    </div>
-                {% endfor %}
-            {% endif %}          
-            <p class="text-center">We appreciate your business! If you have any questions, please email                            
-                <a href="mailto:slurps@civoo.com">
-                    <span class="font-weight-bolder">
-                        slurps@civoo.com
-                    </span>
-                </a>.
-            </p>            
-        </div>        
-        
-        <div class="payment-summary container mt-3">
-            <div class="row">
-                <div class="col-12 col-sm-7 col-lg-8 text-capitalize">
-                    <ul class=" mb-sm-0">
-                        <li>
-                            <b class="font-weight-bolder text-info">order number:</b> 
-                            <small class="text-uppercase">{{ drink_order.drink_order_number }}</small>
-                        </li>
-                        <br>
-                        <li>
-                            <h5 class="font-weight-bolder">orders</h5>
-                        </li>
-                        {% for drink_item in drink_order.lineitems.all %}                            
-                            <li>
-                                <b class="font-weight-bolder text-info">name:</b> 
-                                {{ drink_item.drink.drink_name }}
-                            </li>
-                            <li>
-                                <b class="font-weight-bolder text-info">quantity:</b> 
-                                {{ drink_item.drink_quantity }}
-                            </li>
-                            <li>
-                                <b class="font-weight-bolder text-info">price:</b> 
-                                £{{ drink_item.drink.price }}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-12 col-sm-5 col-lg-4">
-                    <ul class=" mb-0">
-                        <li class="text-capitalize">
-                            <h5 class="font-weight-bolder">personal details</h5>
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">full name:</b> 
-                            {{ drink_order.full_name }}
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">street address{% if drink_order.street_address2 %} 1{% endif %}:</b> 
-                            {{ drink_order.street_address1 }}
-                        </li>
-                        {% if drink_order.street_address2 %}
-                            <li class="text-capitalize">
-                                <b class="font-weight-bolder text-info">street address 2:</b> 
-                                {{ drink_order.street_address2 }}
-                            </li>
-                        {% endif %}
-                        <li>
-                            <b class="font-weight-bolder text-info text-capitalize">postcode:</b> 
-                            <span class="text-uppercase">{{ drink_order.postcode }}</span>
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">country:</b> 
-                            <span class="text-uppercase">{{ drink_order.country }}</span>
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">phone number:</b> 
-                            {{ drink_order.phone_number }}
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">email:</b> 
-                            <span class="text-lowercase">{{ drink_order.email }}</span>
-                        </li>
-                        <br>
-                        <li class="text-capitalize">
-                            <h5 class="font-weight-bolder">costs</h5>
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">subtotal:</b> 
-                            £{{ drink_order.subtotal }}
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">delivery:</b> 
-                            £{{ drink_order.delivery_cost }}
-                        </li>
-                        <li class="text-capitalize">
-                            <b class="font-weight-bolder text-info">grand total:</b> 
-                            £{{ drink_order.grand_total }}
-                        </li>
-                        <br>
-                        <li>
-                            <b class="font-weight-bolder text-capitalize">date:</b> 
-                            {{ drink_order.date }}
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    
-        <div class="col-12 text-center mt-3 text-uppercase">
-            {% if taken_from_user_profiles %}
-                <a class="back-to-profile-btn text-body font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
-            {% else %}
-                <a class="back-to-home-pg-btn text-body font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
-            {% endif %}
-        </div>
-
-    </section>
+<section class="footer-pusher text-body text-left">
+   <h1 class="mt-3 text-center">Thanks for your order!</h1>
+   <div>
+      {% if messages %} 
+      {% for message in messages %}
+      <div class="font-weight-bolder text-danger col-12 mt-3 text-center p-0">
+         <p class="message">{{ message }}</p>
+      </div>
+      {% endfor %}
+      {% endif %}          
+      <p class="text-center">We appreciate your business! If you have any questions, please email                            
+         <a href="mailto:slurps@civoo.com">
+         <span class="font-weight-bolder">
+         slurps@civoo.com
+         </span>
+         </a>.
+      </p>
+   </div>
+   <div class="payment-summary container mt-3">
+      <div class="row">
+         <div class="col-12 col-sm-7 col-lg-8 text-capitalize">
+            <ul class=" mb-sm-0">
+               <li>
+                  <b class="font-weight-bolder text-info">order number:</b> 
+                  <small class="text-uppercase">{{ drink_order.drink_order_number }}</small>
+               </li>
+               <br>
+               <li>
+                  <h5 class="font-weight-bolder">orders</h5>
+               </li>
+               {% for drink_item in drink_order.lineitems.all %}                            
+               <li>
+                  <b class="font-weight-bolder text-info">name:</b> 
+                  {{ drink_item.drink.drink_name }}
+               </li>
+               <li>
+                  <b class="font-weight-bolder text-info">quantity:</b> 
+                  {{ drink_item.drink_quantity }}
+               </li>
+               <li>
+                  <b class="font-weight-bolder text-info">price:</b> 
+                  £{{ drink_item.drink.price }}
+               </li>
+               {% endfor %}
+            </ul>
+         </div>
+         <div class="col-12 col-sm-5 col-lg-4">
+            <ul class=" mb-0">
+               <li class="text-capitalize">
+                  <h5 class="font-weight-bolder">personal details</h5>
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">full name:</b> 
+                  {{ drink_order.full_name }}
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">street address{% if drink_order.street_address2 %} 1{% endif %}:</b> 
+                  {{ drink_order.street_address1 }}
+               </li>
+               {% if drink_order.street_address2 %}
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">street address 2:</b> 
+                  {{ drink_order.street_address2 }}
+               </li>
+               {% endif %}
+               <li>
+                  <b class="font-weight-bolder text-info text-capitalize">postcode:</b> 
+                  <span class="text-uppercase">{{ drink_order.postcode }}</span>
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">country:</b> 
+                  <span class="text-uppercase">{{ drink_order.country }}</span>
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">phone number:</b> 
+                  {{ drink_order.phone_number }}
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">email:</b> 
+                  <span class="text-lowercase">{{ drink_order.email }}</span>
+               </li>
+               <br>
+               <li class="text-capitalize">
+                  <h5 class="font-weight-bolder">costs</h5>
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">subtotal:</b> 
+                  £{{ drink_order.subtotal }}
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">delivery:</b> 
+                  £{{ drink_order.delivery_cost }}
+               </li>
+               <li class="text-capitalize">
+                  <b class="font-weight-bolder text-info">grand total:</b> 
+                  £{{ drink_order.grand_total }}
+               </li>
+               <br>
+               <li>
+                  <b class="font-weight-bolder text-capitalize">date:</b> 
+                  {{ drink_order.date }}
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 text-center mt-3 text-uppercase">
+      {% if taken_from_user_profiles %}
+      <a class="back-to-profile-btn text-body font-weight-bolder" href="{% url 'user_profiles' %}">back to profile</a>
+      {% else %}
+      <a class="back-to-home-pg-btn text-body font-weight-bolder" href="{% url 'home' %}">keep shopping</a>
+      {% endif %}
+   </div>
+</section>
 {% endblock %}

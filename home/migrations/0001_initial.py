@@ -15,20 +15,29 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Drink_type',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('programmatic_name', models.CharField(max_length=300)),
-                ('friendly_name', models.CharField(blank=True, max_length=300, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True, max_length=300, null=True)),
             ],
         ),
         migrations.CreateModel(
             name='Drink',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('image', models.ImageField(upload_to='')),
                 ('drink_name', models.CharField(max_length=300)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('price', models.DecimalField(
+                    decimal_places=2, max_digits=10)),
                 ('millilitres', models.IntegerField()),
-                ('drink_type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='home.drink_type')),
+                ('drink_type', models.ForeignKey(
+                    blank=True, null=True,
+                    on_delete=django.db.models.deletion.SET_NULL,
+                    to='home.drink_type')),
             ],
         ),
     ]

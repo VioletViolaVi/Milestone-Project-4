@@ -15,7 +15,7 @@ function scrollBehaviour(behaviourScroll) {
 }
 
 function windowsScrollTop(windowsTopScroll) {
-    let windowsScrollTop = 500;
+	let windowsScrollTop = 500;
 	if (windowsTopScroll > 300) {
 		return windowsTopScroll;
 	} else {

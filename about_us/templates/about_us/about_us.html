@@ -1,41 +1,35 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block tab_title %}| Our Mission {% endblock %}
-
-{% block about_us %}
-    <section id="aboutUsSection">
-        <div class="container"> 
-            <div class="row">           
-                {% for main in main_mission %}
-                    <div class="col-12 mb-4"> 
-                        <div class="about_us_img1 mt-3">
-                            {% if main.image %}
-                                <img src="/media/{{ main.image }}" alt="{{ main.image_description }}"> 
-                            {% else %}  
-                                <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
-                            {% endif %}  
-                            <h1 class="text-capitalize">{{ main.title }}</h1>
-                            <p class="mb-0">{{ main.paragraph }}</p>  
-                        </div>                
-                        {% include "includes/about_us_modals/about_us_main_modals.html" %}                    
-                    </div> 
-                {% endfor %}
-                {% for sub in sub_mission %}
-                    <div class="col-12 col-md-4 mb-3">
-                        <div class="about_us_img2">
-                            {% if sub.image %}
-                                <img src="/media/{{ sub.image }}" alt="{{ sub.image_description }}"> 
-                            {% else %}  
-                                <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available">  
-                            {% endif %}   
-                            <h2 class="text-capitalize">{{ sub.title }}</h2>
-                            <p class="mb-0">{{ sub.paragraph }}</p>                                       
-                        </div>                    
-                        {% include "includes/about_us_modals/about_us_sub_modals.html" %}                      
-                    </div>
-                {% endfor %}        
+{% extends "base.html" %} {% load static %} {% block tab_title %}| Our Mission {% endblock %} {% block about_us %}
+<section id="aboutUsSection">
+    <div class="container">
+        <div class="row">
+            {% for main in main_mission %}
+            <div class="col-12 mb-4">
+                <div class="about_us_img1 mt-3">
+                    {% if main.image %}
+                    <img src="/media/{{ main.image }}" alt="{{ main.image_description }}" />
+                    {% else %}
+                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available" />
+                    {% endif %}
+                    <h1 class="text-capitalize">{{ main.title }}</h1>
+                    <p class="mb-0">{{ main.paragraph }}</p>
+                </div>
+                {% include "includes/about_us_modals/about_us_main_modals.html" %}
             </div>
+            {% endfor %} {% for sub in sub_mission %}
+            <div class="col-12 col-md-4 mb-3">
+                <div class="about_us_img2">
+                    {% if sub.image %}
+                    <img src="/media/{{ sub.image }}" alt="{{ sub.image_description }}" />
+                    {% else %}
+                    <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="no image available" />
+                    {% endif %}
+                    <h2 class="text-capitalize">{{ sub.title }}</h2>
+                    <p class="mb-0">{{ sub.paragraph }}</p>
+                </div>
+                {% include "includes/about_us_modals/about_us_sub_modals.html" %}
+            </div>
+            {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 {% endblock %}

@@ -1,103 +1,94 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block tab_title %}| My Profile{% endblock %}
-
 {% block payment %}
-    <section class="footer-pusher">
-        <h1 class="text-capitalize mt-3">my profile</h1> 
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-12 col-md-6 px-0 mb-2">
-                    <h2 class="text-capitalize">personal details</h2>
-                    <form class="update-form-border" method="POST" action="{% url 'user_profiles' %}">
-                        {% csrf_token %}
-                        {{ form|crispy }}                    
-                        <button class="text-uppercase font-weight-bolder" type="submit">update information</button>
-                    </form>
-                </div>
-                                                  
-                <div class="col-12 col-md-6 text-center px-0">
-                    <h2 class="text-center text-capitalize">order history</h2>  
-                    {% if drink_orders %} 
-                        <div class="order-history-border table-responsive table-borderless">
-                            <table class="table-sm table-hover">
-                                <thead>
-                                    <tr class=" text-capitalize">
-                                        <th><strong>date</strong></th>
-                                        <th><strong>drink name</strong></th>
-                                        <th><strong>grand total</strong></th>
-                                        <th><strong>drink order number</strong></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-left">
-                                    {% for drink_order in drink_orders %}
-                                        <tr>
-                                            <td>{{ drink_order.date }}</td>
-                                            <td>
-                                                <ul class="list-unstyled">
-                                                    {% for drink_item in drink_order.lineitems.all %}
-                                                        <li class="small text-capitalize">
-                                                            {{ drink_item.drink }} x{{ drink_item.drink_quantity }}
-                                                        </li>
-                                                    {% endfor %}
-                                                </ul>
-                                            </td>
-                                            <td>£{{ drink_order.grand_total }}</td>
-                                            <td>
-                                                <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">
-                                                    {{ drink_order.drink_order_number|truncatechars:6 }}
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                </tbody>
-                            </table>
-                        </div>
-                    {% else %}
-                        <div class="empty-history-border col-12 mb-5 mt-2 text-center">
-                            <p class="mt-2 mb-1 text-capitalize">Your order history is empty.</p>
-                            <a class="back-to-home-pg-btn text-uppercase text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
-                        </div>  
-                    {%endif %}
-                </div>  
+<section class="footer-pusher">
+   <h1 class="text-capitalize mt-3">my profile</h1>
+   <div class="container mt-3">
+      <div class="row">
+         <div class="col-12 col-md-6 px-0 mb-2">
+            <h2 class="text-capitalize">personal details</h2>
+            <form class="update-form-border" method="POST" action="{% url 'user_profiles' %}">
+               {% csrf_token %}
+               {{ form|crispy }}                    
+               <button class="text-uppercase font-weight-bolder" type="submit">update information</button>
+            </form>
+         </div>
+         <div class="col-12 col-md-6 text-center px-0">
+            <h2 class="text-center text-capitalize">order history</h2>
+            {% if drink_orders %} 
+            <div class="order-history-border table-responsive table-borderless">
+               <table class="table-sm table-hover">
+                  <thead>
+                     <tr class=" text-capitalize">
+                        <th><strong>date</strong></th>
+                        <th><strong>drink name</strong></th>
+                        <th><strong>grand total</strong></th>
+                        <th><strong>drink order number</strong></th>
+                     </tr>
+                  </thead>
+                  <tbody class="text-left">
+                     {% for drink_order in drink_orders %}
+                     <tr>
+                        <td>{{ drink_order.date }}</td>
+                        <td>
+                           <ul class="list-unstyled">
+                              {% for drink_item in drink_order.lineitems.all %}
+                              <li class="small text-capitalize">
+                                 {{ drink_item.drink }} x{{ drink_item.drink_quantity }}
+                              </li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                        <td>£{{ drink_order.grand_total }}</td>
+                        <td>
+                           <a href="{% url 'drink_order_history' drink_order.drink_order_number %}" title="{{ drink_order.drink_order_number }}">
+                           {{ drink_order.drink_order_number|truncatechars:6 }}
+                           </a>
+                        </td>
+                     </tr>
+                     {% endfor %}
+                  </tbody>
+               </table>
             </div>
-
-            <div class="row mt-2">
-                <div class="text-left col-12">
-                    <p class="mb-1">Click to change your password.</p>
-                    <a class="change-password-btn text-uppercase text-body font-weight-bolder" href="{% url 'account_change_password' %}">change my password</a>  
-                </div>
+            {% else %}
+            <div class="empty-history-border col-12 mb-5 mt-2 text-center">
+               <p class="mt-2 mb-1 text-capitalize">Your order history is empty.</p>
+               <a class="back-to-home-pg-btn text-uppercase text-body font-weight-bolder" href="{% url 'home' %}">back to home</a>
             </div>
-
-            <div class="row mt-2">
-                <div class="text-left col-12">
-                    <p class="mb-1">Click to change your email address.</p>
-                    <a class="change-email-btn text-uppercase text-body font-weight-bolder" href="{% url 'account_email' %}">change my email address</a>  
-                </div>
-            </div>
-        </div>
-        
-    </section>
+            {%endif %}
+         </div>
+      </div>
+      <div class="row mt-2">
+         <div class="text-left col-12">
+            <p class="mb-1">Click to change your password.</p>
+            <a class="change-password-btn text-uppercase text-body font-weight-bolder" href="{% url 'account_change_password' %}">change my password</a>  
+         </div>
+      </div>
+      <div class="row mt-2">
+         <div class="text-left col-12">
+            <p class="mb-1">Click to change your email address.</p>
+            <a class="change-email-btn text-uppercase text-body font-weight-bolder" href="{% url 'account_email' %}">change my email address</a>  
+         </div>
+      </div>
+   </div>
+</section>
 {% endblock %}
-
-
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        //  controls chaning text color of country field
-        let selectedCountry = $("#id_default_country").val();
-        if (!selectedCountry){
-            $("#id_default_country").css("color", "#6c757d");
-        };
-        $("#id_default_country").change(function() {
-            selectedCountry = $(this).val()
-            if(!selectedCountry){
-                $(this).css("color", "#6c757d");
-            }else{
-                $(this).css("color", "#212529");
-            }
-        }); 
-    </script>
+{{ block.super }}
+<script type="text/javascript">
+   //  controls chaning text color of country field
+   let selectedCountry = $("#id_default_country").val();
+   if (!selectedCountry){
+       $("#id_default_country").css("color", "#6c757d");
+   };
+   $("#id_default_country").change(function() {
+       selectedCountry = $(this).val()
+       if(!selectedCountry){
+           $(this).css("color", "#6c757d");
+       }else{
+           $(this).css("color", "#212529");
+       }
+   }); 
+</script>
 {% endblock %}
-

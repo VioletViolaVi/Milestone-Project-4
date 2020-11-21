@@ -19,6 +19,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='about_us',
             name='section',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='home.about_us_section'),
+            field=models.ForeignKey(
+                null=True, on_delete=django.db.models.deletion.SET_NULL,
+                to='home.about_us_section'),
         ),
     ]

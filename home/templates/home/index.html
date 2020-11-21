@@ -1,38 +1,33 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block tab_title %}| Home{% endblock %}
-
 {% block home %}   
-    <section id="homePageSection">
-        {% if request.user.is_superuser %}
-            <div class="django-admin-btn mt-3 pl-1 text-left col-12">
-                <a class="text-body font-weight-bolder text-uppercase" href="{% url 'admin:index' %}">django admin</a> 
-            </div>
-        {% endif %} 
-
-        {% if messages %} 
-            {% for message in messages %}
-                <div class="mt-5 font-weight-bolder text-danger col-12 text-center p-0">
-                    <p>{{ message }}</p>                           
-                </div>
-            {% endfor %}
-        {% endif %}
-
-        {% include "includes/homepage-sections/sort-by.html" %} 
-        {% include "includes/homepage-sections/search-drinks.html" %} 
-        {% include "includes/homepage-sections/new-drinks.html" %}
-        {% include "includes/homepage-sections/juices.html" %}   
-        {% include "includes/homepage-sections/milkshakes.html" %}
-    </section> 
+<section id="homePageSection">
+   {% if request.user.is_superuser %}
+   <div class="django-admin-btn mt-3 pl-1 text-left col-12">
+      <a class="text-body font-weight-bolder text-uppercase" href="{% url 'admin:index' %}">django admin</a> 
+   </div>
+   {% endif %} 
+   {% if messages %} 
+   {% for message in messages %}
+   <div class="mt-5 font-weight-bolder text-danger col-12 text-center p-0">
+      <p>{{ message }}</p>
+   </div>
+   {% endfor %}
+   {% endif %}
+   {% include "includes/homepage-sections/sort-by.html" %} 
+   {% include "includes/homepage-sections/search-drinks.html" %} 
+   {% include "includes/homepage-sections/new-drinks.html" %}
+   {% include "includes/homepage-sections/juices.html" %}   
+   {% include "includes/homepage-sections/milkshakes.html" %}
+</section>
 {% endblock %}
-
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-        $("#adminBrowseImage").change(function() {
-            let file = $("#adminBrowseImage")[0].files[0];
-            $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
-        });
-    </script>
+{{ block.super }}
+<script type="text/javascript">
+   $("#adminBrowseImage").change(function() {
+       let file = $("#adminBrowseImage")[0].files[0];
+       $("#adminBrowseImagePara").text(`Selected image: ${file.name}`);
+   });
+</script>
 {% endblock %}

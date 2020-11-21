@@ -1,120 +1,125 @@
 /******************************************* universal */
+
 a,
 a:hover,
 a:active,
 a:focus,
 a:visited {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .fas.fa-arrow-circle-up:hover,
 .fixed-arrow:hover {
-  background-color: lightblue;
+	background-color: lightblue;
 }
 
 * {
-  font-family: "Montserrat", sans-serif;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-  list-style: none;
+	font-family: "Montserrat", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	list-style: none;
 }
 
 html {
-  scroll-padding-top: 13em;
-  scroll-behavior: smooth;
+	scroll-padding-top: 13em;
+	scroll-behavior: smooth;
 }
 
 .fixed-arrow {
-  display: none;
-  bottom: 1em;
-  position: fixed;
-  right: 0.5em;
-  z-index: 1;
-  background-color: white;
-  border-radius: 50%;
+	display: none;
+	bottom: 1em;
+	position: fixed;
+	right: 0.5em;
+	z-index: 1;
+	background-color: white;
+	border-radius: 50%;
 }
 
 .fas.fa-arrow-circle-up {
-  border-radius: 2em;
-  cursor: pointer;
-  border: solid 0.1em lightblue;
+	border-radius: 2em;
+	cursor: pointer;
+	border: solid 0.1em lightblue;
 }
 
 .modal-backdrop {
-  background: lightsteelblue;
+	background: lightsteelblue;
 }
 
+
 /******************************************* mobile navbar header */
+
 .fixed-top.navbar input[type="search"]:focus,
 .fixed-top.navbar input[type="search"]:active,
 .fixed-top.navbar input[type="search"]:hover,
 .fixed-top.navbar button:focus,
 .fixed-top.navbar button:active,
 .fixed-top.navbar button:hover {
-  border: #17a2b8 solid 0.2em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
+	border: #17a2b8 solid 0.2em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
 }
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  display: none;
+	display: none;
 }
 
 .navbar-brand:focus,
 .navbar-brand:hover,
 .navbar-brand:active {
-  color: #17a2b8;
+	color: #17a2b8;
 }
 
 .nav-link:focus,
 .nav-link:active,
 .nav-link:hover {
-  transition: 0.5s;
-  background-color: #17a3b877;
+	transition: 0.5s;
+	background-color: #17a3b877;
 }
 
 input[type="search"]::-ms-clear,
 input[type="search"]::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+	display: none;
+	width: 0;
+	height: 0;
 }
 
 .fixed-top.navbar button {
-  background-color: lightblue;
-  box-shadow: 0.1em 0.1em;
+	background-color: lightblue;
+	box-shadow: 0.1em 0.1em;
 }
 
 .fixed-top.navbar button.navbar-toggler {
-  background-color: #f8f9fa;
+	background-color: #f8f9fa;
 }
 
 .navbar-brand {
-  color: #212529;
+	color: #212529;
 }
 
 .fixed-top.navbar.navbar-expand-lg {
-  z-index: 1070;
+	z-index: 1070;
 }
 
 .nav-link {
-  font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .fas.fa-search {
-  font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 .fixed-top.navbar input[type="search"] {
-  border: lightblue solid 0.2em;
-  box-shadow: 0.1em 0.1em;
+	border: lightblue solid 0.2em;
+	box-shadow: 0.1em 0.1em;
 }
 
+
 /******************************************* profile & trolley header */
+
 .fas.fa-user-alt:focus,
 .fas.fa-user-alt:active,
 .fas.fa-user-alt:hover,
@@ -124,73 +129,77 @@ input[type="search"]::-ms-reveal {
 .shopping-cart-price:focus,
 .shopping-cart-price:active,
 .shopping-cart-price:hover {
-  color: #17a2b8;
+	color: #17a2b8;
 }
 
 .trolley-counter-number:focus,
 .trolley-counter-number:active,
 .trolley-counter-number:hover {
-  border: #17a2b8 solid 0.2em;
+	border: #17a2b8 solid 0.2em;
 }
 
 .icon-nav-bg {
-  height: 6em;
-  margin-top: 3.4em;
-  background-color: lightblue;
+	height: 6em;
+	margin-top: 3.4em;
+	background-color: lightblue;
 }
 
 .fas.fa-user-alt {
-  top: -0.1em;
-  left: 1.7em;
-  position: absolute;
-  font-size: 2.5em;
+	top: -0.1em;
+	left: 1.7em;
+	position: absolute;
+	font-size: 2.5em;
 }
 
 .fas.fa-shopping-cart {
-  right: 1.7em;
-  position: absolute;
-  font-size: 2.5em;
+	right: 1.7em;
+	position: absolute;
+	font-size: 2.5em;
 }
 
 .trolley-counter-number {
-  top: 0.2em;
-  position: absolute;
-  right: 0.2em;
-  border-radius: 50%;
-  width: 60px;
-  box-shadow: 0.1em 0.1em;
-  background-color: #f8f9fa;
-  font-size: 1.2em;
+	top: 0.2em;
+	position: absolute;
+	right: 0.2em;
+	border-radius: 50%;
+	width: 60px;
+	box-shadow: 0.1em 0.1em;
+	background-color: #f8f9fa;
+	font-size: 1.2em;
 }
 
 .shopping-cart-price {
-  right: 2.2em;
-  font-size: 1.2em;
-  position: absolute;
-  top: 1.9em;
+	right: 2.2em;
+	font-size: 1.2em;
+	position: absolute;
+	top: 1.9em;
 }
 
+
 /******************************************* delivery header */
+
 .delivery-cost-bg {
-  margin-top: 5.5em;
-  font-size: 1.5em;
+	margin-top: 5.5em;
+	font-size: 1.5em;
 }
 
 .delivery-highlight {
-  background-color: lightblue;
-  padding: 0em 0.3em 0 0.2em;
-  border-radius: 15%;
-  box-shadow: 0.1em 0.1em;
+	background-color: lightblue;
+	padding: 0em 0.3em 0 0.2em;
+	border-radius: 15%;
+	box-shadow: 0.1em 0.1em;
 }
 
+
 /******************************************* footer */
+
 .fab.fa-youtube,
 .fab.fa-twitter-square,
 .fab.fa-snapchat-square,
 .fab.fa-facebook-square,
 .fab.fa-instagram {
-  cursor: pointer;
-  color: #212529;
+	cursor: pointer;
+	color: #212529;
 }
 
 .fab.fa-youtube:hover,
@@ -198,40 +207,42 @@ input[type="search"]::-ms-reveal {
 .fab.fa-snapchat-square:hover,
 .fab.fa-facebook-square:hover,
 .fab.fa-instagram:hover {
-  color: #17a2b8;
+	color: #17a2b8;
 }
 
 html,
 body {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 body {
-  position: relative;
-  padding-top: 4em;
+	position: relative;
+	padding-top: 4em;
 }
 
 .footer-pusher {
-  padding-bottom: 10em;
+	padding-bottom: 10em;
 }
 
 .card {
-  border-radius: 0px;
-  background-color: lightblue;
-  border: none;
+	border-radius: 0px;
+	background-color: lightblue;
+	border: none;
 }
 
 .footer-contacts {
-  width: 100%;
-  bottom: 0;
-  position: absolute;
+	width: 100%;
+	bottom: 0;
+	position: absolute;
 }
 
 .card-footer:last-child {
-  border-radius: 0;
+	border-radius: 0;
 }
 
+
 /******************************************* form fields */
+
 input[type="text"]:focus,
 input[type="text"]:active,
 input[type="text"]:hover,
@@ -259,9 +270,9 @@ select#id_country:hover,
 select#id_default_country:focus,
 select#id_default_country:active,
 select#id_default_country:hover {
-  outline: none;
-  box-shadow: 0.1em 0.1em;
-  border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
 }
 
 label[for="id_username"],
@@ -272,50 +283,52 @@ label[for="id_oldpassword"],
 label[for="id_password1"],
 label[for="id_password2"],
 label[for="id_login"] {
-  display: none;
+	display: none;
 }
 
 select,
 input[type="text"],
 input[type="text"]::placeholder,
 input[type="email"]::placeholder {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 input[type="text"]#id_postcode,
 input[type="text"]#id_default_postcode {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  opacity: 1;
+	opacity: 1;
 }
 
 select,
 select option {
-  color: #212529;
+	color: #212529;
 }
 
 select:invalid,
 select option[value=""] {
-  color: #6c757d !important;
+	color: #6c757d !important;
 }
 
 select,
 input[type="checkbox"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 input[type="email"] {
-  text-transform: lowercase;
+	text-transform: lowercase;
 }
 
 input[type="radio"] {
-  width: 1em;
+	width: 1em;
 }
 
+
 /******************************************* home page */
+
 .buy-now-btn:focus,
 .buy-now-btn:active,
 .buy-now-btn:hover,
@@ -328,103 +341,107 @@ input[type="radio"] {
 .quantity-selection button:focus,
 .quantity-selection button:active,
 .quantity-selection button:hover {
-  outline: none;
-  box-shadow: 0.1em 0.1em;
-  border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
 }
 
 .sort-by-section a:focus,
 .sort-by-section a:active,
 .sort-by-section a:hover {
-  background-color: lightblue;
-  border-radius: 0.2em;
+	background-color: lightblue;
+	border-radius: 0.2em;
 }
 
 .new-drinks-circle1,
 .new-drinks-circle2 {
-  height: 3em;
-  width: 3.2em;
-  border-radius: 50%;
-  position: absolute;
-  left: 2.5em;
-  top: -1em;
-  background-color: lightblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0.1em 0.1em;
+	height: 3em;
+	width: 3.2em;
+	border-radius: 50%;
+	position: absolute;
+	left: 2.5em;
+	top: -1em;
+	background-color: lightblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0.1em 0.1em;
 }
 
 .sort-by-section button,
 .buy-now-btn {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  background-color: lightblue;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	background-color: lightblue;
 }
 
 #homePageSection {
-  padding-bottom: 10em;
+	padding-bottom: 10em;
 }
 
 #newDrinksTitle {
-  margin-top: 1.1em;
+	margin-top: 1.1em;
 }
 
 .sort-by-section {
-  position: fixed;
-  top: 10.1em;
-  right: 0.2em;
-  z-index: 1;
+	position: fixed;
+	top: 10.1em;
+	right: 0.2em;
+	z-index: 1;
 }
 
 .drinks_img img {
-  width: 10em;
-  height: 15em;
+	width: 10em;
+	height: 15em;
 }
 
 .quantity-selection button {
-  background-color: lightblue;
-  padding: 0 0.5em;
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  border: lightblue;
+	background-color: lightblue;
+	padding: 0 0.5em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	border: lightblue;
 }
 
 .dot-dot-dot {
-  width: 10em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: auto;
+	width: 10em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: auto;
 }
 
 .quantity-selection input[type="number"] {
-  width: 3em;
-  border: lightblue solid 0.2em;
-  text-align: center;
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
+	width: 3em;
+	border: lightblue solid 0.2em;
+	text-align: center;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
 }
 
+
 /******************************************* about us */
+
 #aboutUsSection {
-  padding-bottom: 10em;
+	padding-bottom: 10em;
 }
 
 .about_us_img1 img {
-  width: 17em;
-  height: 6em;
-  border-radius: 50%;
+	width: 17em;
+	height: 6em;
+	border-radius: 50%;
 }
 
 .about_us_img2 img {
-  width: 10em;
-  height: 8em;
-  border-radius: 50%;
+	width: 10em;
+	height: 8em;
+	border-radius: 50%;
 }
 
+
 /******************************************* shopping cart */
+
 .shopping-cart-edit button:focus,
 .shopping-cart-edit button:active,
 .shopping-cart-edit button:hover,
@@ -437,112 +454,116 @@ input[type="radio"] {
 .back-to-home-pg-btn:focus,
 .back-to-home-pg-btn:active,
 .back-to-home-pg-btn:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .fas.fa-trash-alt:focus,
 .fas.fa-trash-alt:active,
 .fas.fa-trash-alt:hover {
-  color: #17a2b8;
+	color: #17a2b8;
 }
 
 .shopping_cart_img {
-  height: 12em;
-  width: 7em;
+	height: 12em;
+	width: 7em;
 }
 
 .shopping-cart-edit {
-  display: inline;
+	display: inline;
 }
 
 .shopping-cart-edit button {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  border: lightblue;
-  padding: 0 0.5em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	border: lightblue;
+	padding: 0 0.5em;
 }
 
 .shopping-cart-edit input[type="number"] {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  width: 3em;
-  border: lightblue solid 0.2em;
-  text-align: center;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	width: 3em;
+	border: lightblue solid 0.2em;
+	text-align: center;
 }
 
 .fas.fa-trash-alt {
-  font-size: 1.5em;
-  cursor: pointer;
+	font-size: 1.5em;
+	cursor: pointer;
 }
 
 .pay-btn {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1.7em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1.7em;
 }
 
 .pay-btn-holder {
-  padding-top: 1em;
+	padding-top: 1em;
 }
 
 .back-to-home-pg-btn {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
 }
 
+
 /******************************************* make payment */
+
 .back-to-trolley:focus,
 .back-to-trolley:active,
 .back-to-trolley:hover,
 .payment-form-border button:focus,
 .payment-form-border button:active,
 .payment-form-border button:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .drink-order-box {
-  height: 30vh;
-  border-top: solid lightblue 0.2em;
-  border-bottom: solid lightblue 0.2em;
-  overflow: auto;
-  background-color: #f8f9fa;
+	height: 30vh;
+	border-top: solid lightblue 0.2em;
+	border-bottom: solid lightblue 0.2em;
+	overflow: auto;
+	background-color: #f8f9fa;
 }
 
 .back-to-trolley {
-  background-color: lightblue;
-  padding: 0.3em;
-  border-radius: 0.2em;
-  font-size: 1.1em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
+	background-color: lightblue;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	font-size: 1.1em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
 }
 
 .payment-form-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 33em;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 33em;
 }
 
 .payment-form-border button {
-  background-color: lightblue;
-  padding: 0.3em;
-  border-radius: 0.2em;
-  font-size: 1.1em;
-  box-shadow: 0.1em 0.1em;
-  border: lightblue;
+	background-color: lightblue;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	font-size: 1.1em;
+	box-shadow: 0.1em 0.1em;
+	border: lightblue;
 }
 
+
 /******************************************* stripe */
+
 .StripeElement--focus,
 .StripeElement:focus,
 .StripeElement:active,
@@ -550,77 +571,83 @@ input[type="radio"] {
 .stripe-style-input:focus,
 .stripe-style-input:active,
 .stripe-style-input:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .StripeElement,
 .stripe-style-input {
-  height: 40px;
-  padding: 10px 12px;
-  background-color: white;
-  border-radius: 0.2em;
-  color: #212529;
+	height: 40px;
+	padding: 10px 12px;
+	background-color: white;
+	border-radius: 0.2em;
+	color: #212529;
 }
 
 .stripe-style-input::placeholder {
-  color: #6c757d !important;
+	color: #6c757d !important;
 }
 
 .StripeElement--invalid {
-  border-color: red !important;
+	border-color: red !important;
 }
 
+
 /******************************************* processing payment */
+
 #loadingOverlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(173, 216, 230, 0.479);
-  z-index: 9999;
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(173, 216, 230, 0.479);
+	z-index: 9999;
 }
 
 .spinner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
+
 /******************************************* completed payment */
+
 .back-to-profile-btn:focus,
 .back-to-profile-btn:active,
 .back-to-profile-btn:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .message {
-  font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 .payment-summary {
-  border: lightblue 0.2em solid;
-  margin: auto;
-  padding-top: 10px;
-  width: 100vw;
-  height: 70vh;
-  overflow: auto;
+	border: lightblue 0.2em solid;
+	margin: auto;
+	padding-top: 10px;
+	width: 100vw;
+	height: 70vh;
+	overflow: auto;
 }
 
 .back-to-profile-btn {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
 }
 
+
 /******************************************* profiles */
+
 .update-form-border button:focus,
 .update-form-border button:active,
 .update-form-border button:hover,
@@ -630,57 +657,59 @@ input[type="radio"] {
 .change-email-btn:focus,
 .change-email-btn:active,
 .change-email-btn:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .update-form-border button,
 .change-password-btn,
 .change-email-btn {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
-  border: lightblue;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
+	border: lightblue;
 }
 
 .update-form-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  width: 90vw;
-  margin: auto;
-  overflow: auto;
-  padding: 0.5em;
-  height: 21em;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	width: 90vw;
+	margin: auto;
+	overflow: auto;
+	padding: 0.5em;
+	height: 21em;
 }
 
 .empty-history-border {
-  width: 90vw;
-  border-top: solid lightblue 0.2em;
-  border-bottom: solid lightblue 0.2em;
-  overflow: auto;
-  height: 6em;
-  background-color: #f8f9fa;
-  margin: auto;
+	width: 90vw;
+	border-top: solid lightblue 0.2em;
+	border-bottom: solid lightblue 0.2em;
+	overflow: auto;
+	height: 6em;
+	background-color: #f8f9fa;
+	margin: auto;
 }
 
 .order-history-border {
-  width: 90vw;
-  border-top: solid lightblue 0.2em;
-  border-bottom: solid lightblue 0.2em;
-  overflow: auto;
-  height: 21em;
-  background-color: #f8f9fa;
-  margin: auto;
+	width: 90vw;
+	border-top: solid lightblue 0.2em;
+	border-bottom: solid lightblue 0.2em;
+	overflow: auto;
+	height: 21em;
+	background-color: #f8f9fa;
+	margin: auto;
 }
 
 .order-history-border thead {
-  background-color: lightsteelblue;
+	background-color: lightsteelblue;
 }
 
+
 /******************************************* allauth pages */
+
 .log-out-border button:focus,
 .log-out-border button:active,
 .log-out-border button:hover,
@@ -726,9 +755,9 @@ input[type="radio"] {
 .signup-border button:focus,
 .signup-border button:active,
 .signup-border button:hover {
-  border: #17a2b8 solid 0.2em;
-  outline: none;
-  box-shadow: 0.1em 0.1em;
+	border: #17a2b8 solid 0.2em;
+	outline: none;
+	box-shadow: 0.1em 0.1em;
 }
 
 .signup-border button,
@@ -738,12 +767,12 @@ input[type="radio"] {
 .confirm-email button,
 .verify-email-border button,
 .add-email-border button {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
-  border: lightblue;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
+	border: lightblue;
 }
 
 .signup-border input,
@@ -751,120 +780,122 @@ input[type="radio"] {
 .reset-password2-border input,
 .change-password-border input,
 .login-border input {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  width: 15em;
-  border: lightblue solid 0.2em;
-  margin: 1em 0em;
-  height: 2.3em;
-  padding-left: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	width: 15em;
+	border: lightblue solid 0.2em;
+	margin: 1em 0em;
+	height: 2.3em;
+	padding-left: 0.2em;
 }
 
 .verify-email-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 16em;
-  padding: 0.5em;
-  width: 18em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 16em;
+	padding: 0.5em;
+	width: 18em;
+	margin: auto;
 }
 
 .add-email-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 8em;
-  padding: 0.5em;
-  width: 18em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 8em;
+	padding: 0.5em;
+	width: 18em;
+	margin: auto;
 }
 
 .add-email-border input[type="email"] {
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  width: 15em;
-  border: lightblue solid 0.2em;
-  height: 2.3em;
-  padding-left: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	width: 15em;
+	border: lightblue solid 0.2em;
+	height: 2.3em;
+	padding-left: 0.2em;
 }
 
 .login-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 13em;
-  padding: 0.5em;
-  width: 17em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 13em;
+	padding: 0.5em;
+	width: 17em;
+	margin: auto;
 }
 
 .change-password-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 18em;
-  padding: 0.5em;
-  width: 17em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 18em;
+	padding: 0.5em;
+	width: 17em;
+	margin: auto;
 }
 
 .reset-password-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 10em;
-  padding: 0.5em;
-  width: 17em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 10em;
+	padding: 0.5em;
+	width: 17em;
+	margin: auto;
 }
 
 .reset-password-border input[type="submit"] {
-  width: 13em;
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
-  border: lightblue;
+	width: 13em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
+	border: lightblue;
 }
 
 .reset-password2-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 14em;
-  padding: 0.5em;
-  width: 17em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 14em;
+	padding: 0.5em;
+	width: 17em;
+	margin: auto;
 }
 
 .reset-password2-border input[type="submit"] {
-  width: 12em;
-  box-shadow: 0.1em 0.1em;
-  border-radius: 0.2em;
-  padding: 0.3em;
-  background-color: lightblue;
-  font-size: 1em;
-  border: lightblue;
+	width: 12em;
+	box-shadow: 0.1em 0.1em;
+	border-radius: 0.2em;
+	padding: 0.3em;
+	background-color: lightblue;
+	font-size: 1em;
+	border: lightblue;
 }
 
 .signup-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  overflow: auto;
-  height: 26.5em;
-  padding: 0.5em;
-  width: 17em;
-  margin: auto;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	overflow: auto;
+	height: 26.5em;
+	padding: 0.5em;
+	width: 17em;
+	margin: auto;
 }
 
 .errorlist {
-  color: #dc3545;
-  font-weight: 900;
+	color: #dc3545;
+	font-weight: 900;
 }
 
+
 /******************************************* admin */
+
 .edit-btn:focus,
 .edit-btn:active,
 .edit-btn:hover,
@@ -877,22 +908,22 @@ input[type="radio"] {
 .django-admin-btn a:focus,
 .django-admin-btn a:active,
 .django-admin-btn a:hover {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
-  border: #17a2b8 solid 0.2em;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
+	border: #17a2b8 solid 0.2em;
 }
 
 .django-admin-btn a,
 .admim-form-border button,
 .admim-form-border a {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
-  background-color: lightblue;
-  border: solid lightblue 0.2em;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
+	background-color: lightblue;
+	border: solid lightblue 0.2em;
 }
 
 .admim-form-border input[type="file"]:focus,
@@ -901,556 +932,478 @@ input[type="radio"] {
 .modal button[type="button"]:focus,
 .modal button[type="button"]:active,
 .modal button[type="button"]:hover {
-  outline: none;
+	outline: none;
 }
 
 .modal button[type="button"] .fas.fa-times:focus,
 .modal button[type="button"] .fas.fa-times:active,
 .modal button[type="button"] .fas.fa-times:hover {
-  color: #17a2b8;
+	color: #17a2b8;
 }
 
 #appendAboutUs,
 #editAboutUs {
-  height: 54.5em;
+	height: 54.5em;
 }
 
 #editDrink {
-  height: 41em;
+	height: 41em;
 }
 
 .admim-form-border {
-  background-color: lightsteelblue;
-  border: solid lightblue 0.2em;
-  width: 100%;
-  margin: auto;
-  overflow: auto;
-  padding: 0.5em;
-  height: 35em;
+	background-color: lightsteelblue;
+	border: solid lightblue 0.2em;
+	width: 100%;
+	margin: auto;
+	overflow: auto;
+	padding: 0.5em;
+	height: 35em;
 }
 
 input[type="file"]::-webkit-file-upload-button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #adminBrowseImage {
-  color: lightsteelblue;
-  overflow: hidden;
+	color: lightsteelblue;
+	overflow: hidden;
 }
 
 .django-admin-btn a {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
-  background-color: lightblue;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
+	background-color: lightblue;
 }
 
 .edit-btn {
-  padding: 0.3em;
-  border-radius: 0.2em;
-  box-shadow: 0.1em 0.1em;
-  outline: none;
-  background-color: lightblue;
+	padding: 0.3em;
+	border-radius: 0.2em;
+	box-shadow: 0.1em 0.1em;
+	outline: none;
+	background-color: lightblue;
 }
 
 .modal.fade {
-  top: 5em;
+	top: 5em;
 }
 
-/******************************************* media queries ******************************************* */
-@media (min-width: 356px) {
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 4em;
-  }
 
-  /******************************************* shopping cart */
-  .shopping_cart_img {
-    height: 13em;
-    width: 9em;
-  }
+/******************************************* media queries ******************************************* */
+
+@media (min-width: 356px) {
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 4em;
+	}
+	/******************************************* shopping cart */
+	.shopping_cart_img {
+		height: 13em;
+		width: 9em;
+	}
 }
 
 @media (min-width: 400px) {
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 5.5em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping_cart_img {
-    height: 14em;
-    width: 10em;
-  }
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 5.5em;
+	}
+	/******************************************* shopping cart */
+	.shopping_cart_img {
+		height: 14em;
+		width: 10em;
+	}
 }
 
 @media (min-width: 442px) {
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 7em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping_cart_img {
-    height: 15em;
-    width: 11em;
-  }
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 7em;
+	}
+	/******************************************* shopping cart */
+	.shopping_cart_img {
+		height: 15em;
+		width: 11em;
+	}
 }
 
 @media (min-width: 472px) {
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 8em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping_cart_img {
-    height: 16em;
-    width: 12em;
-  }
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 8em;
+	}
+	/******************************************* shopping cart */
+	.shopping_cart_img {
+		height: 16em;
+		width: 12em;
+	}
 }
 
 @media (min-width: 526px) {
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 9.5em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping_cart_img {
-    height: 17em;
-    width: 13em;
-  }
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 9.5em;
+	}
+	/******************************************* shopping cart */
+	.shopping_cart_img {
+		height: 17em;
+		width: 13em;
+	}
 }
 
+
 /* bootstrap media query */
+
 @media (min-width: 576px) {
-  /******************************************* title, search bar, profile & trolley header */
-  #searchBar {
-    width: 100%;
-  }
-
-  .fas.fa-user-alt {
-    left: 3.7em;
-    top: 0em;
-  }
-
-  .shopping-cart-price {
-    right: 2.5em;
-  }
-
-  /******************************************* home page */
-  .new-drinks-circle1,
-  .new-drinks-circle2 {
-    left: 1em;
-  }
-
-  #newDrinksTitle {
-    margin-top: 0.5em;
-  }
-
-  /******************************************* about us */
-  .about_us_img1 img {
-    width: 26em;
-    height: 7em;
-  }
-
-  .about_us_img2 img {
-    width: 14em;
-    height: 9em;
-  }
-
-  /******************************************* shopping cart */
-  .trolley-padding-removal {
-    padding: 0em;
-  }
-
-  .shopping_cart_img {
-    height: 14em;
-    width: 8em;
-  }
-
-  .shopping-cart-costs {
-    padding: 0em 0em 0em 6em;
-  }
-
-  .pay-btn-holder {
-    padding: 0.8em 0em 0em 4em;
-  }
-
-  /******************************************* make payment */
-  .payment-form-border {
-    height: 33.5em;
-  }
-
-  /******************************************* profiles */
-  .update-form-border,
-  .order-history-border {
-    width: 30em;
-    height: 21.5em;
-  }
-
-  .update-form-border {
-    padding: 1em;
-  }
-
-  /******************************************* allauth pages */
-  .verify-email-border {
-    height: 12em;
-    width: 28em;
-  }
-
-  .add-email-border {
-    width: 28em;
-  }
-
-  .add-email-border input[type="email"] {
-    width: 26em;
-  }
-
-  .login-border {
-    height: 13.5em;
-    width: 28em;
-  }
-
-  .login-border input {
-    width: 26em;
-  }
-
-  .change-password-border {
-    width: 30em;
-  }
-
-  .change-password-border input {
-    width: 28em;
-  }
-
-  .reset-password2-border {
-    width: 28em;
-  }
-
-  .reset-password2-border input {
-    width: 26em;
-  }
-
-  .reset-password-border {
-    width: 30em;
-  }
-
-  .reset-password-border input {
-    width: 28em;
-  }
-
-  .signup-border {
-    width: 30em;
-  }
-
-  .signup-border input {
-    width: 28em;
-  }
+	/******************************************* title, search bar, profile & trolley header */
+	#searchBar {
+		width: 100%;
+	}
+	.fas.fa-user-alt {
+		left: 3.7em;
+		top: 0em;
+	}
+	.shopping-cart-price {
+		right: 2.5em;
+	}
+	/******************************************* home page */
+	.new-drinks-circle1,
+	.new-drinks-circle2 {
+		left: 1em;
+	}
+	#newDrinksTitle {
+		margin-top: 0.5em;
+	}
+	/******************************************* about us */
+	.about_us_img1 img {
+		width: 26em;
+		height: 7em;
+	}
+	.about_us_img2 img {
+		width: 14em;
+		height: 9em;
+	}
+	/******************************************* shopping cart */
+	.trolley-padding-removal {
+		padding: 0em;
+	}
+	.shopping_cart_img {
+		height: 14em;
+		width: 8em;
+	}
+	.shopping-cart-costs {
+		padding: 0em 0em 0em 6em;
+	}
+	.pay-btn-holder {
+		padding: 0.8em 0em 0em 4em;
+	}
+	/******************************************* make payment */
+	.payment-form-border {
+		height: 33.5em;
+	}
+	/******************************************* profiles */
+	.update-form-border,
+	.order-history-border {
+		width: 30em;
+		height: 21.5em;
+	}
+	.update-form-border {
+		padding: 1em;
+	}
+	/******************************************* allauth pages */
+	.verify-email-border {
+		height: 12em;
+		width: 28em;
+	}
+	.add-email-border {
+		width: 28em;
+	}
+	.add-email-border input[type="email"] {
+		width: 26em;
+	}
+	.login-border {
+		height: 13.5em;
+		width: 28em;
+	}
+	.login-border input {
+		width: 26em;
+	}
+	.change-password-border {
+		width: 30em;
+	}
+	.change-password-border input {
+		width: 28em;
+	}
+	.reset-password2-border {
+		width: 28em;
+	}
+	.reset-password2-border input {
+		width: 26em;
+	}
+	.reset-password-border {
+		width: 30em;
+	}
+	.reset-password-border input {
+		width: 28em;
+	}
+	.signup-border {
+		width: 30em;
+	}
+	.signup-border input {
+		width: 28em;
+	}
 }
 
+
 /* bootstrap media query */
+
 @media (min-width: 768px) {
-  /******************************************* home page */
-  .new-drinks-circle1 {
-    left: 4em;
-  }
-
-  /******************************************* about us */
-  .about_us_img2 img {
-    width: 10em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping-cart-costs {
-    padding: 0em 0em 0em 11em;
-  }
-
-  /******************************************* make payment */
-  .drink-order-box,
-  .payment-form-border {
-    height: 85vh;
-  }
-
-  /******************************************* profiles */
-  .update-form-border,
-  .order-history-border {
-    width: 22em;
-  }
-
-  /******************************************* allauth pages */
-  .verify-email-border {
-    height: 9.5em;
-    width: 36em;
-  }
-
-  .login-border {
-    width: 36em;
-  }
-
-  .login-border input {
-    width: 34em;
-  }
-
-  .change-password-border {
-    width: 38em;
-  }
-
-  .change-password-border input {
-    width: 36em;
-  }
-
-  .reset-password2-border {
-    width: 36em;
-  }
-
-  .reset-password2-border input {
-    width: 34em;
-  }
-
-  .reset-password-border {
-    width: 37em;
-  }
-
-  .reset-password-border input {
-    width: 35em;
-  }
-
-  .signup-border {
-    width: 40em;
-  }
-
-  .signup-border input {
-    width: 38em;
-  }
-
-  /******************************************* admin */
-  .admim-form-border {
-    width: 90%;
-  }
+	/******************************************* home page */
+	.new-drinks-circle1 {
+		left: 4em;
+	}
+	/******************************************* about us */
+	.about_us_img2 img {
+		width: 10em;
+	}
+	/******************************************* shopping cart */
+	.shopping-cart-costs {
+		padding: 0em 0em 0em 11em;
+	}
+	/******************************************* make payment */
+	.drink-order-box,
+	.payment-form-border {
+		height: 85vh;
+	}
+	/******************************************* profiles */
+	.update-form-border,
+	.order-history-border {
+		width: 22em;
+	}
+	/******************************************* allauth pages */
+	.verify-email-border {
+		height: 9.5em;
+		width: 36em;
+	}
+	.login-border {
+		width: 36em;
+	}
+	.login-border input {
+		width: 34em;
+	}
+	.change-password-border {
+		width: 38em;
+	}
+	.change-password-border input {
+		width: 36em;
+	}
+	.reset-password2-border {
+		width: 36em;
+	}
+	.reset-password2-border input {
+		width: 34em;
+	}
+	.reset-password-border {
+		width: 37em;
+	}
+	.reset-password-border input {
+		width: 35em;
+	}
+	.signup-border {
+		width: 40em;
+	}
+	.signup-border input {
+		width: 38em;
+	}
+	/******************************************* admin */
+	.admim-form-border {
+		width: 90%;
+	}
 }
 
+
 /* bootstrap media query */
+
 @media (min-width: 992px) {
-  /******************************************* title, search bar, profile & trolley header */
-  .d-none.d-lg-block.fixed-top.navbar {
-    height: 150px;
-  }
-
-  .navbar-brand {
-    font-size: 3em;
-  }
-
-  input[type="search"]#lgSearchBar {
-    width: 29em;
-  }
-
-  .d-inline-block.form-inline {
-    margin-left: 2em;
-  }
-
-  .fas.fa-user-alt {
-    left: 19em;
-    top: 0.5em;
-  }
-
-  .fas.fa-shopping-cart {
-    top: 0.5em;
-    right: 2.3em;
-  }
-
-  .trolley-counter-number {
-    right: 1.5em;
-    top: 1.3em;
-    background-color: lightblue;
-  }
-
-  .shopping-cart-price {
-    right: 3em;
-    top: 2.9em;
-  }
-
-  /******************************************* desktop navbar header */
-  .desktop-nav {
-    margin-top: 5.1em;
-    background-color: lightblue;
-    height: 4em;
-  }
-
-  .desktop-links li {
-    display: inline;
-    font-size: 1.7em;
-  }
-
-  .desktop-nav .desktop-links a:hover {
-    background-color: #17a3b877;
-    box-shadow: 0.1em 0.1em;
-    padding: 0em 0.1em;
-  }
-
-  /******************************************* delivery header */
-  .delivery-cost-bg {
-    top: -0.4em;
-  }
-
-  /******************************************* home page */
-  .new-drinks-circle1 {
-    left: 0em;
-  }
-
-  .home-message {
-    margin-top: 1.5em;
-  }
-
-  .sort-by-section {
-    top: 9.5em;
-  }
-
-  /******************************************* about us */
-  .about_us_img1 img {
-    width: 30em;
-    height: 8em;
-  }
-
-  .about_us_img2 img {
-    width: 15em;
-    height: 10em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping-cart-costs {
-    padding: 0em 0em 0em 19em;
-  }
-
-  .pay-btn-holder {
-    padding: 1em 0em 0em 2em;
-  }
-
-  /******************************************* make payment */
-  .drink-order-box,
-  .payment-form-border {
-    height: 530px;
-  }
-
-  /******************************************* completed payment */
-  .payment-summary {
-    width: 80vw;
-  }
-
-  /******************************************* profiles */
-  .update-form-border,
-  .order-history-border {
-    width: 29.5em;
-  }
-
-  /******************************************* allauth pages */
-  .verify-email-border {
-    width: 40em;
-  }
-
-  .add-email-border {
-    width: 40em;
-  }
-
-  .add-email-border input[type="email"] {
-    width: 38em;
-  }
-
-  .change-password-border {
-    width: 42em;
-  }
-
-  .change-password-border input {
-    width: 40em;
-  }
-
-  .reset-password2-border {
-    width: 39em;
-  }
-
-  .reset-password2-border input {
-    width: 37em;
-  }
-
-  .reset-password-border {
-    width: 44em;
-  }
-
-  .reset-password-border input {
-    width: 42em;
-  }
-
-  .signup-border {
-    width: 47em;
-  }
-
-  .signup-border input {
-    width: 45em;
-  }
-
-  /******************************************* admin */
-  .admim-form-border {
-    width: 70%;
-  }
+	/******************************************* title, search bar, profile & trolley header */
+	.d-none.d-lg-block.fixed-top.navbar {
+		height: 150px;
+	}
+	.navbar-brand {
+		font-size: 3em;
+	}
+	input[type="search"]#lgSearchBar {
+		width: 29em;
+	}
+	.d-inline-block.form-inline {
+		margin-left: 2em;
+	}
+	.fas.fa-user-alt {
+		left: 19em;
+		top: 0.5em;
+	}
+	.fas.fa-shopping-cart {
+		top: 0.5em;
+		right: 2.3em;
+	}
+	.trolley-counter-number {
+		right: 1.5em;
+		top: 1.3em;
+		background-color: lightblue;
+	}
+	.shopping-cart-price {
+		right: 3em;
+		top: 2.9em;
+	}
+	/******************************************* desktop navbar header */
+	.desktop-nav {
+		margin-top: 5.1em;
+		background-color: lightblue;
+		height: 4em;
+	}
+	.desktop-links li {
+		display: inline;
+		font-size: 1.7em;
+	}
+	.desktop-nav .desktop-links a:hover {
+		background-color: #17a3b877;
+		box-shadow: 0.1em 0.1em;
+		padding: 0em 0.1em;
+	}
+	/******************************************* delivery header */
+	.delivery-cost-bg {
+		top: -0.4em;
+	}
+	/******************************************* home page */
+	.new-drinks-circle1 {
+		left: 0em;
+	}
+	.home-message {
+		margin-top: 1.5em;
+	}
+	.sort-by-section {
+		top: 9.5em;
+	}
+	/******************************************* about us */
+	.about_us_img1 img {
+		width: 30em;
+		height: 8em;
+	}
+	.about_us_img2 img {
+		width: 15em;
+		height: 10em;
+	}
+	/******************************************* shopping cart */
+	.shopping-cart-costs {
+		padding: 0em 0em 0em 19em;
+	}
+	.pay-btn-holder {
+		padding: 1em 0em 0em 2em;
+	}
+	/******************************************* make payment */
+	.drink-order-box,
+	.payment-form-border {
+		height: 530px;
+	}
+	/******************************************* completed payment */
+	.payment-summary {
+		width: 80vw;
+	}
+	/******************************************* profiles */
+	.update-form-border,
+	.order-history-border {
+		width: 29.5em;
+	}
+	/******************************************* allauth pages */
+	.verify-email-border {
+		width: 40em;
+	}
+	.add-email-border {
+		width: 40em;
+	}
+	.add-email-border input[type="email"] {
+		width: 38em;
+	}
+	.change-password-border {
+		width: 42em;
+	}
+	.change-password-border input {
+		width: 40em;
+	}
+	.reset-password2-border {
+		width: 39em;
+	}
+	.reset-password2-border input {
+		width: 37em;
+	}
+	.reset-password-border {
+		width: 44em;
+	}
+	.reset-password-border input {
+		width: 42em;
+	}
+	.signup-border {
+		width: 47em;
+	}
+	.signup-border input {
+		width: 45em;
+	}
+	/******************************************* admin */
+	.admim-form-border {
+		width: 70%;
+	}
 }
 
+
 /* bootstrap media query */
+
 @media (min-width: 1200px) {
-  /******************************************* title, search bar, profile & trolley header */
-  .fas.fa-user-alt {
-    left: 24.5em;
-  }
-
-  input[type="search"]#lgSearchBar {
-    width: 42.5em;
-  }
-
-  /******************************************* home page */
-  .new-drinks-circle1 {
-    left: 1em;
-  }
-
-  /******************************************* shopping cart */
-  .shopping-cart-costs {
-    padding: 0em 0em 0em 24em;
-  }
-
-  .pay-btn-holder {
-    padding: 0.9em 0em 0em 1em;
-  }
-
-  /******************************************* completed payment */
-  .payment-summary {
-    width: 950px;
-    height: 420px;
-  }
-
-  /******************************************* profiles */
-  .update-form-border,
-  .order-history-border {
-    width: 34.5em;
-  }
-
-  /******************************************* admin */
-  .admim-form-border {
-    width: 60%;
-  }
+	/******************************************* title, search bar, profile & trolley header */
+	.fas.fa-user-alt {
+		left: 24.5em;
+	}
+	input[type="search"]#lgSearchBar {
+		width: 42.5em;
+	}
+	/******************************************* home page */
+	.new-drinks-circle1 {
+		left: 1em;
+	}
+	/******************************************* shopping cart */
+	.shopping-cart-costs {
+		padding: 0em 0em 0em 24em;
+	}
+	.pay-btn-holder {
+		padding: 0.9em 0em 0em 1em;
+	}
+	/******************************************* completed payment */
+	.payment-summary {
+		width: 950px;
+		height: 420px;
+	}
+	/******************************************* profiles */
+	.update-form-border,
+	.order-history-border {
+		width: 34.5em;
+	}
+	/******************************************* admin */
+	.admim-form-border {
+		width: 60%;
+	}
 }
 
 @media (min-width: 1300px) {
-  /******************************************* title, search bar, profile & trolley header */
-  .fas.fa-user-alt {
-    left: 28em;
-  }
-
-  input[type="search"]#lgSearchBar {
-    width: 50.5em;
-  }
+	/******************************************* title, search bar, profile & trolley header */
+	.fas.fa-user-alt {
+		left: 28em;
+	}
+	input[type="search"]#lgSearchBar {
+		width: 50.5em;
+	}
 }

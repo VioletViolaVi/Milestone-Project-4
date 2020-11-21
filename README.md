@@ -522,7 +522,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
 - Run the HTML and CSS code used to make the “__*My Profile*__” page, in the W3C Markup Validation Service and CSS Validation Service respectively and ensure no errors display.
 - Without being logged in, attempt to access the “__*My Profile*__” page by entering the Slurps home page and clicking on the person icon.
 - Make sure the website redirects to the “__*Log In*__” page as only logged in users are permitted to access their profiles. 
-- Click on the “__*sign up*__” link at the top of the “__*Log In*__” page’s form to be taken to the “__*Sign Up*__” page and complete the form using “__Test*__” for the username, “__test@test.com*__” for the email and a random password for the password fields. 
+- Click on the “__*sign up*__” link at the top of the “__*Log In*__” page’s form to be taken to the “__*Sign Up*__” page and complete the form using “__*Test*__” for the username, “__*test@test.com*__” for the email and a random password for the password fields. 
 - Afterwards, click the “__*SIGN UP*__” button and ensure the website redirects back to the “__*My Profile*__” page.
 - Personal Details Form:
     - Make sure that on first arrival of the “__*My Profile*__” page, its “__*Personal Details*__” form is empty. Click on the “__*UPDATE INFORMATION*__” button whilst the form is still empty to ensure input fields that have not been edited can still be submitted. This means the form correctly does not require users to fill in each input field and therefore users are free to decide which personal details they wish to save on their account. 
@@ -858,7 +858,7 @@ The “__*Shipping Address*__” form input was split into two inputs:  “__*St
     - Enter the number “__*5*__” in one of these drink’s forms and then press the “__*ADD*__” button to see if the drink option and its quantity get saved in the shopping cart.
 - Sort By Button Functionality:
     - Open the Slurps website to land on the homepage.
-    - Click on the “__*Sort By...*__” dropdown button and ensure there is an option to sort the drinks based on their price in ascending and descending order; labelled “__*Price(Low-High)*__” and “__Price(High-Low)*__”.
+    - Click on the “__*Sort By...*__” dropdown button and ensure there is an option to sort the drinks based on their price in ascending and descending order; labelled “__*Price(Low-High)*__” and “__*Price(High-Low)*__”.
     - Click on the “__*Price(Low-High)*__” option in the “__*Sort By...*__” dropdown button.
     - Ensure the page reloads and then view the costs of the first drink shown, in each of the “__*Search results for: “”*__”, “__*New Drinks*__”, “__*Juices*__” and “__*Milkshakes*__” sections to see if its price is the cheapest one in comparison to all the other prices in each section. 
     - View the rest of the drinks and make sure their prices are displayed from lowest to highest.
@@ -1035,7 +1035,7 @@ This project was deployed to Heroku using the following steps:
 25. Click on the “__*Users*__” link, then the “__*Add user*__” button and then enter a username for the project
 26. Enable programmatic access before clicking the “__*Next Emissions*__”  button.
 27. Select the project’s user and then click the: “__*Next Tags*__”, “__*Next Review*__”and the “__*Create user*__” buttons.
-28. Download and save the “__.csv*__” file containing the user’s access key and secret access key to be used to authenticate them from the Django app.
+28. Download and save the “__*.csv*__” file containing the user’s access key and secret access key to be used to authenticate them from the Django app.
 29. Add media files to “__*S3*__” by creating a new folder, named “__*media*__”, in the “__*Overview*__” tab of the AWS website and uploading the project’s images in this folder.
 30. Click the “__*Next*__” button and then under the “__*Manage Public Permissions*__” select the “__*Grant public read access to these objects*__” option. Afterwards, click the “__*Next*__” button through to the end, before clicking “__*Upload*__”.
 ### Heroku Website

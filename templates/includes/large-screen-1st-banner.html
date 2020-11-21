@@ -1,32 +1,30 @@
 <nav class="d-none d-lg-block fixed-top navbar bg-light p-0">
-    <div class="ml-4 text-left">
-        <a class="navbar-brand font-weight-bolder mr-0" href="{% url 'home' %}">Slurps</a>    
-        <form method="GET" action="{% url 'home' %}" class="d-inline-block form-inline">
-            {% csrf_token %}
-            <div class="input-group">
-                <div class="input-group-prepend">                            
-                    <button class="input-group-text" id="basic-addon1" type="submit">
-                       <i class="fas fa-search text-body font-weight-bolder"></i>
-                    </button>                        
-                </div>
-                <input value="{% if typed_in_search %}{{ typed_in_search }}{% endif %}" id="lgSearchBar" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
-            </div>                    
-        </form>                    
-    </div> 
-
-    <a href="{% url 'user_profiles' %}" class="text-body">
-        <i class="fas fa-user-alt"></i>
-    </a>
-
-    <a href="{% url 'shopping_cart' %}" class="text-body">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="trolley-counter-number text-center font-weight-bold">{{ drink_counter}}</span>
-        <span class="shopping-cart-price font-weight-bold">                                  
-            {% if shopping_cart_items %}
-                £{{ subtotal|floatformat:2 }}
-            {% else %}
-                £0.00
-            {% endif %}
-        </span> 
-    </a>   
+   <div class="ml-4 text-left">
+      <a class="navbar-brand font-weight-bolder mr-0" href="{% url 'home' %}">Slurps</a>    
+      <form method="GET" action="{% url 'home' %}" class="d-inline-block form-inline">
+         {% csrf_token %}
+         <div class="input-group">
+            <div class="input-group-prepend">                            
+               <button class="input-group-text" id="basic-addon1" type="submit">
+               <i class="fas fa-search text-body font-weight-bolder"></i>
+               </button>                        
+            </div>
+            <input value="{% if typed_in_search %}{{ typed_in_search }}{% endif %}" id="lgSearchBar" type="search" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" required>
+         </div>
+      </form>
+   </div>
+   <a href="{% url 'user_profiles' %}" class="text-body">
+   <i class="fas fa-user-alt"></i>
+   </a>
+   <a href="{% url 'shopping_cart' %}" class="text-body">
+   <i class="fas fa-shopping-cart"></i>
+   <span class="trolley-counter-number text-center font-weight-bold">{{ drink_counter}}</span>
+   <span class="shopping-cart-price font-weight-bold">                                  
+   {% if shopping_cart_items %}
+   £{{ subtotal|floatformat:2 }}
+   {% else %}
+   £0.00
+   {% endif %}
+   </span> 
+   </a>   
 </nav>

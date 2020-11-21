@@ -14,19 +14,27 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='About_us_part',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('programmatic_name', models.CharField(max_length=255)),
-                ('friendly_name', models.CharField(blank=True, max_length=255, null=True)),
+                ('friendly_name', models.CharField(
+                    blank=True, max_length=255, null=True)),
             ],
         ),
         migrations.CreateModel(
             name='About_us',
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.AutoField(
+                    auto_created=True, primary_key=True,
+                    serialize=False, verbose_name='ID')),
                 ('image', models.ImageField(upload_to='')),
                 ('title', models.CharField(max_length=255)),
                 ('paragraph', models.TextField()),
-                ('about_us_part', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='home.about_us_part')),
+                ('about_us_part', models.ForeignKey(
+                    blank=True, null=True,
+                    on_delete=django.db.models.deletion.SET_NULL,
+                    to='home.about_us_part')),
             ],
         ),
     ]
