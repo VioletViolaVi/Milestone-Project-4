@@ -73,6 +73,7 @@ class TestForms(TestCase):
                                "email": "Test",
                                "phone_number": "Test",
                                "street_address1": "Test",
+                               "street_address2": "",
                                "postcode": "Test",
                                "country": "Test",
                                })

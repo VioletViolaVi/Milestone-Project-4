@@ -22,7 +22,9 @@ class TestForms(TestCase):
         self.assertIs(widget, CustomClearableFileInput)
 
     def test_about_us_form_image_and_image_description_are_not_required(self):
-        form = AboutUsForm({"title": "Test",
+        form = AboutUsForm({"image": "",
+                            "image_description": "",
+                            "title": "Test",
                             "paragraph": "Test",
                             "section": "Test",
                             })
