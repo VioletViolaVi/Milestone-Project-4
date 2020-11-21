@@ -267,10 +267,10 @@
     "pk": 25,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-beans.PNG",
-      "drink_name": "chocolate coffee pudding milkshake",
-      "price": 19,
-      "millilitres": 800,
+      "image": "juice-kiwi.PNG",
+      "drink_name": "kiwi & orange tat soi juice",
+      "price": 11,
+      "millilitres": 700,
       "drink_type": 1
     }
   },
@@ -278,9 +278,9 @@
     "pk": 26,
     "model": "home.drink",
     "fields": {
-      "image": "juice-double.PNG",
-      "drink_name": "blackberry strawberry & blueberry juice",
-      "price": 19,
+      "image": "milkshake-banana.PNG",
+      "drink_name": "banana crumble & whipped cream milkshake",
+      "price": 20,
       "millilitres": 800,
       "drink_type": 1
     }
@@ -289,10 +289,10 @@
     "pk": 27,
     "model": "home.drink",
     "fields": {
-      "image": "milkshake-coconut.PNG",
-      "drink_name": "coconut mint & pistachio milkshake",
-      "price": 20,
-      "millilitres": 800,
+      "image": "juice-melon.PNG",
+      "drink_name": "melon & papaya juice",
+      "price": 12,
+      "millilitres": 700,
       "drink_type": 1
     }
   },
@@ -300,10 +300,10 @@
     "pk": 28,
     "model": "home.drink",
     "fields": {
-      "image": "juice-spotty.PNG",
-      "drink_name": "strawberry figs & acai berry juice",
-      "price": 16,
-      "millilitres": 800,
+      "image": "milkshake-berries.PNG",
+      "drink_name": "raspberry & blueberry milkshake",
+      "price": 13,
+      "millilitres": 700,
       "drink_type": 1
     }
   }
