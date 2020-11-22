@@ -8,7 +8,6 @@ class TestForms(TestCase):
         self.assertTrue("user", str)
 
         placeholders = {
-            "default_full_name": "Full Name",
             "default_phone_number": "Phone Number",
             "default_street_address1": "Street Address 1",
             "default_street_address2": "Street Address 2",
@@ -16,7 +15,6 @@ class TestForms(TestCase):
         }
         self.assertTrue(placeholders, dict)
 
-        self.assertTrue("default_full_name", str)
         self.assertTrue("Full Name", str)
         self.assertTrue("default_phone_number", str)
         self.assertTrue("Phone Number", str)

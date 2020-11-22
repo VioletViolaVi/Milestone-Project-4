@@ -1,7 +1,7 @@
 Hello {{ drink_order.full_name }}!
 
 Thank you for your payment of £{{ drink_order.grand_total }} to Slurps.
-Your order will be delivered to {{ drink_order.street_address1 }} {{ drink_order.street_address2 }}, {{ drink_order.postcode }}.
+Your order will be delivered to {{ drink_order.street_address1 }},{% if drink_order.street_address2 %} {{ drink_order.street_address2 }},{% endif %} {{ drink_order.postcode }}.
 Please allow for 1-2 hours from the purchase time to receive your order.
 Your order details are below:
 
