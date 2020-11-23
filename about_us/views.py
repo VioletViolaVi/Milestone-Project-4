@@ -75,7 +75,7 @@ def change_about_us(request, about_us_id):
             request, f'You are editing the mission:\
                  "{about_us.title.title()}".')
 
-    template = "about_us/edit_about_us.html"
+    template = "about_us/change_about_us.html"
     context = {
         "form": form,
         "about_us": about_us,
