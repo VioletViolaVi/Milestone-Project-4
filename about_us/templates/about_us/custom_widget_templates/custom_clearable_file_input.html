@@ -1,5 +1,6 @@
 {% if widget.is_initial %}
 <div>
+   {{MEDIA_URL}} 
    <img src="{{MEDIA_URL}}{{ widget.value }}" alt="{{ widget.value }}" width="200" height="120" class="rounded">    
 </div>
 {% endif %}

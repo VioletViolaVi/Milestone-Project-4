@@ -1,11 +1,12 @@
 {% if widget.is_initial %}
 <div>
-    <img src="{{MEDIA_URL}}{{ widget.value }}" alt="{{ widget.value }}" width="95" height="120" class="rounded" />
+   {{MEDIA_URL}}
+   <img src="{{MEDIA_URL}}{{ widget.value }}" alt="{{ widget.value }}" width="95" height="120" class="rounded" />
 </div>
 {% endif %}
 <div class="btn rounded pl-0">
-    <input id="adminBrowseImage" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+   <input id="adminBrowseImage" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </div>
 <strong>
-    <p id="adminBrowseImagePara" class="text-danger font-weight-bolder"></p>
+   <p id="adminBrowseImagePara" class="text-danger font-weight-bolder"></p>
 </strong>
