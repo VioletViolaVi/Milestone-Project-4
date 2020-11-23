@@ -6,7 +6,7 @@
     {% endfor %}
 
     {% if juice.image %}  
-        <img src="media/{{ juice.image }}" alt="{{ juice.drink_name|capfirst }} photo." class="rounded">
+        <img src="{{MEDIA_URL}}{{ juice.image }}" alt="{{ juice.drink_name|capfirst }} photo." class="rounded">
     {% else %}
         <img class="mb-1 rounded" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available.">  
     {% endif %}                                         

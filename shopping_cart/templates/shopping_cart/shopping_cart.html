@@ -17,7 +17,7 @@
                <div class="row">
                   <div class="col-6 col-md-5 col-lg-6 col-xl-5 px-0">  
                      {% if shopping_cart.drink.image %}   
-                     <img class="mb-1 shopping_cart_img rounded" src="/media/{{ shopping_cart.drink.image }}">   
+                     <img class="mb-1 shopping_cart_img rounded" src="{{MEDIA_URL}}{{ shopping_cart.drink.image }}">   
                      {% else %}
                      <img class="mb-1 shopping_cart_img rounded" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available.">  
                      {% endif %}                                                      

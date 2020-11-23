@@ -6,7 +6,7 @@
             <div class="col-12 mb-4">
                 <div class="about_us_img1 mt-3">
                     {% if main.image %}
-                    <img src="{{MEDIA_URL}}/{{ main.image }}" alt="{{ main.image_description }}" />
+                    <img src="{{MEDIA_URL}}{{ main.image }}" alt="{{ main.image_description }}" />
                     {% else %}
                     <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available." />
                     {% endif %}
@@ -19,7 +19,7 @@
             <div class="col-12 col-md-4 mb-3">
                 <div class="about_us_img2">
                     {% if sub.image %}
-                    <img src="{{MEDIA_URL}}/{{ sub.image }}" alt="{{ sub.image_description }}" />
+                    <img src="{{MEDIA_URL}}{{ sub.image }}" alt="{{ sub.image_description }}" />
                     {% else %}
                     <img class="mb-1" src="{{ MEDIA_URL }}no-image.PNG" alt="No image available." />
                     {% endif %}
