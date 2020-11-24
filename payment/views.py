@@ -105,7 +105,7 @@ def payment(request):
             try:
                 user_profiles = UserProfiles.objects.get(user=request.user)
                 drink_order_form = DrinkOrderForm(initial={
-                    "full_name": user_profiles.user,
+                    "full_name": user_profiles.user.username,
                     "email": user_profiles.user.email,
                     "phone_number": user_profiles.default_phone_number,
                     "street_address1": user_profiles.default_street_address1,
