@@ -75,7 +75,7 @@ def payment(request):
                     drink_order.delete()
                     return redirect(reverse("shopping_cart"))
 
-            request.session["save_info"] = "save-info" in request.POST
+            request.session["save_info"] = "save_info" in request.POST
             return redirect(reverse("payment_success",
                                     args=[drink_order.drink_order_number]))
         else:
