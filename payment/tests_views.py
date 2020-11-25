@@ -45,7 +45,7 @@ class TestViews(TestCase):
                              cart wasn't found in our database. \
                                  Please call us for assistance!", str)
         self.assertTrue("save_info", str)
-        # self.assertTrue("save-info", str)
+        self.assertTrue("save-info", str)
         self.assertTrue("payment_success", str)
 
         self.assertTrue("There was an error with your form. \
